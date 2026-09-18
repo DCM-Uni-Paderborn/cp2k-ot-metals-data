@@ -257,7 +257,7 @@ plot = [r"\begin{tikzpicture}",
         ]
 for key, left, right, labels, title, xmax in [
     ("al_cg_response", "baseline_steps", "response_steps",
-     "Kinetic,$S$ inverse,Single inverse,Full all", "(a) Al, 600 K", 250),
+     "Kinetic,Overlap inverse,Single inverse,Full all", "(a) Al, 600 K", 250),
     ("direct_hxc_kernel", "secant_steps", "kernel_steps",
      "Al 600 K,Al 3000 K,Fe UKS,Cu", "(b) Direct Hxc kernel", 155)
 ]:
