@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "publication_ready": false,
+  "matrix_experiment": {
+    "status": "reproducible",
+    "source": "verify_derivatives.py",
+    "results": "derivative-results.json",
+    "scope": "Independent finite matrices; not self-consistent CP2K calculations"
+  },
+  "electronic_structure_records": {
+    "source": "recorded-results.json",
+    "status": "transcribed_records_only",
+    "groups": [
+      "al_cg_response", "al_response_refresh", "direct_hxc_kernel",
+      "compatibility", "cu", "ni", "gfn2_fixed_H",
+      "generalized_smearing", "joint_spin", "motion"
+    ],
+    "missing_for_all_groups": [
+      "complete original inputs and dependencies",
+      "full raw outputs",
+      "exact executable and build environment",
+      "machine and process configuration"
+    ],
+    "specific_gaps": {
+      "al_cg_response": "Resolve the PBE/PADE functional/potential shorthand from the original inputs",
+      "compatibility": "Recover all 100 per-case records, including failures and extended runs",
+      "generalized_smearing": "Verify smearing widths and orbital-space settings against original inputs",
+      "motion": "A single propagated step is not long-time energy-conservation evidence"
+    }
+  },
+  "release_gates": [
+    "recover original electronic-structure evidence or replace it with explicitly new calculations",
+    "provide public or reviewer access",
+    "freeze a persistent, citable data release"
+  ]
+}

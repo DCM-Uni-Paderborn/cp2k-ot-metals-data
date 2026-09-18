@@ -1,0 +1,12 @@
+{
+  "experiment": "independent finite-matrix validation, not CP2K",
+  "python": "3.14.6",
+  "system": "Darwin",
+  "release": "24.6.0",
+  "machine": "arm64",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}

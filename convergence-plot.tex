@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=1 by 2,vertical sep=2.2cm},
+width=0.82\linewidth,height=5cm,xbar,/pgf/bar width=5pt,
+xmin=0,ymin=-0.65,ymax=3.65,ytick={0,1,2,3},y dir=reverse,
+xlabel={OT iterations},xmajorgrids,grid style={black!12},
+tick label style={font=\footnotesize},title style={font=\small},
+nodes near coords,nodes near coords style={font=\scriptsize,text=black},
+point meta=x,every node near coord/.append style={/pgf/number format/precision=0},
+legend style={font=\scriptsize,draw=none,at={(1,1)},anchor=north east}]
+\nextgroupplot[yticklabels={Kinetic,$S$ inverse,Single inverse,Full all},title={(a) Al, 600 K},xmax=250]
+\addplot[color=black!55,fill=black!55,draw=none,area legend,/pgf/bar shift=3pt] coordinates {(99,0) (111,1) (130,2) (206,3)};
+\addplot[color=green!45!black,fill=green!45!black,draw=none,area legend,/pgf/bar shift=-3pt] coordinates {(53,0) (49,1) (48,2) (54,3)};
+\legend{Baseline,Response}
+\nextgroupplot[yticklabels={Al 600 K,Al 3000 K,Fe UKS,Cu},title={(b) Direct Hxc kernel},xmax=155]
+\addplot[color=black!55,fill=black!55,draw=none,area legend,/pgf/bar shift=3pt] coordinates {(53,0) (80,1) (68,2) (124,3)};
+\addplot[color=green!45!black,fill=green!45!black,draw=none,area legend,/pgf/bar shift=-3pt] coordinates {(41,0) (57,1) (64,2) (118,3)};
+\end{groupplot}
+\end{tikzpicture}

@@ -1,0 +1,92 @@
+{
+  "description": "Previously recorded CP2K development validation. Not a new timing campaign. Detailed development provenance is retained separately in local working records.",
+  "al_cg_response": {
+    "source": "Recorded aluminium calibrated-response validation",
+    "temperature_K": 600,
+    "eps_scf": 1e-6,
+    "k_mesh": [3, 1, 1],
+    "atoms": 4,
+    "mpi_ranks": 2,
+    "omp_threads": 1,
+    "preconditioners": ["FULL_KINETIC", "FULL_S_INVERSE", "FULL_SINGLE_INVERSE", "FULL_ALL"],
+    "baseline_steps": [99, 111, 130, 206],
+    "response_steps": [53, 49, 48, 54],
+    "full_kinetic_time_s": [13.34, 8.91],
+    "full_kinetic_free_energy_Ha": [-8.160967333618348, -8.160967333848317],
+    "caveat": "The historical record describes the functional/potential combination as PBE/PADE. Recover the original full input before final publication; do not silently label it pure PBE or LDA. Single reported timings have no error bars."
+  },
+  "al_response_refresh": {
+    "source": "Recorded reference-gradient synchronization validation",
+    "cases": ["CG 1e-6", "L-BFGS 1e-6", "L-BFGS 1e-8"],
+    "before_steps": [25, 34, 221],
+    "after_steps": [26, 29, 124],
+    "tight_free_energy_agreement_Ha": 3e-13
+  },
+  "direct_hxc_kernel": {
+    "source": "Recorded direct-Hxc-kernel validation",
+    "cases": ["Al 600 K", "Al 3000 K", "Fe UKS", "Cu"],
+    "secant_steps": [53, 80, 68, 124],
+    "kernel_steps": [41, 57, 64, 118],
+    "caveat": "Direct kernel cost can increase elapsed time. These cases are not interchangeable with other Cu/Ni companions."
+  },
+  "compatibility": {
+    "source": "Recorded 100-case direct metallic OT compatibility audit, 31 August 2026",
+    "total": 100,
+    "converged_250": 97,
+    "orbital_preconditioned_total": 80,
+    "orbital_preconditioned_converged": 80,
+    "none_occupation_on_total": 10,
+    "none_occupation_on_converged": 10,
+    "none_occupation_off_total": 10,
+    "none_occupation_off_converged": 7,
+    "mean_converged_steps": 16.7,
+    "caveat": "Recorded development audit; original 100-row run manifest must be archived before this result is treated as a publication benchmark."
+  },
+  "cu": {
+    "source": "Recorded copper validation",
+    "temperature_K": 800,
+    "k_mesh": [2, 1, 1],
+    "eps_scf": 1e-5,
+    "ot_steps": 32,
+    "ot_free_energy_Ha": -48.49730257352592,
+    "diagonalization_free_energy_Ha": -48.49730266888157
+  },
+  "ni": {
+    "source": "Recorded spin-polarized nickel validation",
+    "temperature_K": 1000,
+    "k_mesh": [3, 2, 1],
+    "baseline_steps": 117,
+    "response_steps": 94,
+    "free_energy_Ha": -37.336535075919265,
+    "minus_TS_Ha": -5.8375920965e-4,
+    "integrated_spin": 1.3333583061
+  },
+  "gfn2_fixed_H": {
+    "source": "Recorded GFN2 fixed-Hamiltonian inner-solver validation",
+    "outer_steps": 10,
+    "free_energy_Ha": -1.194939346653323,
+    "diagonalization_agreement_Ha": 2.9e-13,
+    "minus_TS_Ha": -1.18720770936e-3
+  },
+  "generalized_smearing": {
+    "source": "Recorded generalized-smearing validation",
+    "methods": ["GAUSSIAN", "METHFESSEL_PAXTON", "MARZARI_VANDERBILT"],
+    "ot_steps": [15, 15, 16],
+    "ot_generalized_free_energy_Ha": [-2.977126996245875, -2.975935843898080, -2.976427997093175],
+    "diagonalization_generalized_free_energy_Ha": [-2.977126996351920, -2.975935843990641, -2.976427997241058]
+  },
+  "joint_spin": {
+    "source": "Recorded joint-spin-response validation",
+    "direct_sum_unit_error": 1.4e-17,
+    "stalled_uks_baseline_steps_lower_bound": 240,
+    "safeguarded_uks_steps": 7
+  },
+  "motion": {
+    "source": "Recorded motion and finite-difference validation",
+    "propagated_NVE_steps": 1,
+    "conserved_quantity_change_Ha_approx": 1e-9,
+    "force_fd_error_Ha_per_bohr_approx": 2.7e-7,
+    "maximum_virial_fd_error_au_approx": 8.8e-7,
+    "caveat": "One-step lifecycle check, not a long-time energy-conservation study."
+  }
+}
