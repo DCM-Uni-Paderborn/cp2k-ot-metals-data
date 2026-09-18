@@ -15,6 +15,10 @@ for name, expected in checksums.items():
 coverage = json.loads((ROOT / "coverage.json").read_text())
 records = json.loads((ROOT / "recorded-results.json").read_text())
 assert set(coverage["electronic_structure_records"]["groups"]) == set(records) - {"description"}
+for key, tolerance in (("rks", 1e-14), ("roks", 1e-13)):
+    pair = records["kpoint_symmetry"][key]
+    difference = abs(pair["full_free_energy_Ha"] - pair["reduced_free_energy_Ha"])
+    assert abs(difference - pair["absolute_difference_Ha_approx"]) < tolerance
 model = json.loads((ROOT / "derivative-results.json").read_text())
 for key in ("number_error", "constant_energy_gauge_error",
             "projector_trace_response_error", "basis_gauge_cancellation_error",
