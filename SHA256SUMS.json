@@ -1,14 +1,14 @@
 {
   "README.txt": "c4ebe6160869e67a606f07e0177bb56125f26e9b944e211ae3b6bf85865afd89",
-  "coverage.json": "e07a5ed2a6b782bb14d7da53f004c0803712df6dc539d97377db7a6f34cc8177",
+  "coverage.json": "e260470ee40cdc7f9a6021e64945a68b298e3184c4283c5ae033bd7c1d5b20c8",
   "environment.json": "0a3c1fb174ecb1399b6527981fff71bf868eab0dd83366265ace12e6ed1c4e0f",
   "requirements.txt": "a9e82655df0456a613d1fd51c62702f79e7f380c60ce70579d14a12141a83162",
   "verify_derivatives.py": "0573bac1f5633d38f86e3bf50d36ce57e10b196d1de3fa004ed5a835cea93225",
-  "verify_archive.py": "21e724debc56df554d1ebf05964f9e7bd1e0f86b54a1f4f78a528964a8c3c08a",
+  "verify_archive.py": "0a849b1f86c2e24bef5f5a32ffe23215c587e3ee3da41d8f12f00b18564b7bb5",
   "prepare_archive.py": "7450ea737eff9872157af85c76323a6c6c72aa6aa17d86189796e0e9bdbd47b8",
-  "recorded-results.json": "fb05a3256547b0568c9f2814016a593da68f83c008c40f8a90cc15350436517e",
+  "recorded-results.json": "c40aacc4914f3f690c2ee6cfe5d1275b5d56ef25b13fd55f9038b1ee659bfc89",
   "derivative-results.json": "c436b2bbfc74b4cdadee29097d19ce15f98a52fdc21acaa6c3f169f4c7b421d7",
   "derivative-plot.tex": "63abc5391fe9e92efe0b42b9142298259c927de50fea888bcf4df68805bda483",
   "convergence-plot.tex": "b8d54c8073d52081eab3e6e0ed8c6f291c73fcca754fda6a23807759c32bbdba",
-  "supplement-readme.txt": "239aaa4b4c71bb4fc51c3822bb484c3a2456c6c6ec247cc5f0d8437156fa9e30"
+  "supplement-readme.txt": "3f44acdeba900a22fd52022dd60093c1292001acff1b03fa4bbb28bd8cf7ac14"
 }

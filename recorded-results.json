@@ -104,6 +104,23 @@
     },
     "caveat": "Transcribed endpoint records, not newly run calculations. Pointwise density-difference norms and paired electron-number residuals are not available. Recover original inputs and outputs before treating these as a complete reproducible symmetry-validation dataset."
   },
+  "lattice_fft_application": {
+    "source": "Transcribed five-repeat gathered/distributed lattice-FFT application comparison",
+    "system": "16-cell GFN2 N2 replicated model",
+    "sampling": "Gamma",
+    "cells": 16,
+    "repetitions_per_implementation_and_configuration": 5,
+    "comparison": ["gathered FFT application", "distributed RHS-batched FFT application"],
+    "mpi_ranks": [2, 4],
+    "omp_threads_per_rank": 14,
+    "ot_steps_all_runs": 36,
+    "energy_agreement": "Within MPI-distribution roundoff; numerical endpoints not transcribed",
+    "gathered_kernel_median_s": [0.178, 0.245],
+    "distributed_kernel_median_s": [0.126, 0.157],
+    "gathered_total_median_s": [12.129, 16.591],
+    "distributed_total_median_s": [12.038, 16.588],
+    "caveat": "Historical medians, not new timings. Both implementations use FFT preconditioning. This is not FFT versus a conventional operator, not a metal benchmark, and not evidence of general end-to-end acceleration. Original temporary input and per-run output paths are no longer present. Raw distributions, uncertainty estimates, hardware details and complete build provenance remain to be archived or replaced by explicitly new calculations."
+  },
   "motion": {
     "source": "Recorded motion and finite-difference validation",
     "propagated_NVE_steps": 1,

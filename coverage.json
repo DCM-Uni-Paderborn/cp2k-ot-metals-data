@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "date": "2026-09-18",
+  "date": "2026-09-23",
   "publication_ready": false,
   "matrix_experiment": {
     "status": "reproducible",
@@ -14,7 +14,8 @@
     "groups": [
       "al_cg_response", "al_response_refresh", "direct_hxc_kernel",
       "compatibility", "cu", "ni", "gfn2_fixed_H",
-      "generalized_smearing", "joint_spin", "kpoint_symmetry", "motion"
+      "generalized_smearing", "joint_spin", "kpoint_symmetry", "motion",
+      "lattice_fft_application"
     ],
     "missing_for_all_groups": [
       "complete original inputs and dependencies",
@@ -27,7 +28,8 @@
       "compatibility": "Recover all 100 per-case records, including failures and extended runs",
       "generalized_smearing": "Verify smearing widths and orbital-space settings against original inputs",
       "motion": "A single propagated step is not long-time energy-conservation evidence",
-      "kpoint_symmetry": "Only free-energy endpoints and the ROKS integrated-spin difference are recorded; pointwise density-difference norms and paired electron-number residuals are unavailable"
+      "kpoint_symmetry": "Only free-energy endpoints and the ROKS integrated-spin difference are recorded; pointwise density-difference norms and paired electron-number residuals are unavailable",
+      "lattice_fft_application": "Only five-repeat kernel/total medians and common iteration count are transcribed. Original temporary input/output paths are absent. No per-run distributions or uncertainty estimates. The comparison is gathered versus distributed FFT application in a Gamma-point GFN2 model, not FFT versus a conventional operator or a metallic acceleration benchmark."
     }
   },
   "release_gates": [

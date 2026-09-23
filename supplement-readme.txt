@@ -52,3 +52,20 @@ number, spin constraints, final energy/entropy/density residuals and failures.
 For timing claims, use repeated runs with matched initialization and settings.
 Deposit this completed archive in a persistent repository and insert its
 resolvable identifier in the manuscript's data-availability statement.
+
+S4. FFT-based orbital preconditioning
+The manuscript appendix "Translation-averaged FFT preconditioning" derives
+the direct-operator projection, Fourier-block inverse and optional balanced
+local correction. It specifies real-Gamma scope, covariance and distributed
+RHS routing. This is distinct from KPOINTS lattice transforms and from the
+fixed-number occupation response.
+
+The lattice_fft_application group in recorded-results.json transcribes
+five-repeat medians for a 16-cell GFN2 N2 model with 2/4 MPI ranks and 14
+OpenMP threads per rank. It compares gathered and distributed FFT application,
+not FFT versus a conventional preconditioner or a metallic Mermin calculation.
+All runs are reported to have taken 36 steps. The original temporary input
+and output paths are no longer present. Per-run samples, numerical energy
+endpoints, machine details and full build provenance are not in this archive.
+Do not infer confidence intervals or general total-runtime gains from these
+medians. Metal-specific acceleration requires a new matched comparison.
