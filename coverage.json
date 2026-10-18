@@ -1,40 +1,45 @@
 {
-  "schema_version": 1,
-  "date": "2026-09-23",
-  "publication_ready": false,
+  "schema_version": 2,
+  "date": "2026-10-18",
+  "publication_ready": true,
+  "publication_scope": "Verified dataset only, not manuscript or author approval",
+  "release": "validation-2026-10-18",
+  "public_release_authorized": true,
   "matrix_experiment": {
-    "status": "reproducible",
+    "status": "reproduced",
     "source": "verify_derivatives.py",
     "results": "derivative-results.json",
-    "scope": "Independent finite matrices; not self-consistent CP2K calculations"
+    "scope": "Independent finite matrices, not self-consistent CP2K"
   },
-  "electronic_structure_records": {
+  "electronic_structure_calculations": {
+    "status": "completed_with_reported_numerical_limits",
+    "root": "validation-20261018",
+    "manifest": "validation-20261018/manifest.json",
+    "results": "validation-20261018/analysis.json",
+    "evidence": [
+      "complete inputs",
+      "raw outputs",
+      "basis and potential files",
+      "source and dependency pins",
+      "compiler and numerical-library configuration",
+      "CPU/MPI/OpenMP configuration",
+      "separate binary checksums",
+      "analysis scripts"
+    ],
+    "scope": "Matched compact solver tests, not converged materials predictions"
+  },
+  "historical_records": {
     "source": "recorded-results.json",
-    "status": "transcribed_records_only",
-    "groups": [
-      "al_cg_response", "al_response_refresh", "direct_hxc_kernel",
-      "compatibility", "cu", "ni", "gfn2_fixed_H",
-      "generalized_smearing", "joint_spin", "kpoint_symmetry", "motion",
-      "lattice_fft_application"
-    ],
-    "missing_for_all_groups": [
-      "complete original inputs and dependencies",
-      "full raw outputs",
-      "exact executable and build environment",
-      "machine and process configuration"
-    ],
-    "specific_gaps": {
-      "al_cg_response": "Resolve the PBE/PADE functional/potential shorthand from the original inputs",
-      "compatibility": "Recover all 100 per-case records, including failures and extended runs",
-      "generalized_smearing": "Verify smearing widths and orbital-space settings against original inputs",
-      "motion": "A single propagated step is not long-time energy-conservation evidence",
-      "kpoint_symmetry": "Only free-energy endpoints and the ROKS integrated-spin difference are recorded; pointwise density-difference norms and paired electron-number residuals are unavailable",
-      "lattice_fft_application": "Only five-repeat kernel/total medians and common iteration count are transcribed. Original temporary input/output paths are absent. No per-run distributions or uncertainty estimates. The comparison is gathered versus distributed FFT application in a Gamma-point GFN2 model, not FFT versus a conventional operator or a metallic acceleration benchmark."
-    }
+    "status": "transcriptions_not_used_for_replacement_tables",
+    "raw_evidence_complete": false
   },
-  "release_gates": [
-    "recover original electronic-structure evidence or replace it with explicitly new calculations",
-    "provide public or reviewer access",
-    "freeze a persistent, citable data release"
-  ]
+  "limitations": [
+    "Full-AO Ni and several denser-mesh or constrained cases exhaust their numerical budgets",
+    "Tight finite-temperature dynamics does not complete for every minimizer",
+    "Occupation-preconditioner OFF can report SCF convergence at an inequivalent endpoint",
+    "Only wavefunctions, not complete minimizer histories, are restarted",
+    "Compact models do not establish materials accuracy, general speedup, or long-time stability"
+  ],
+  "release_gates": [],
+  "submission_approved": false
 }

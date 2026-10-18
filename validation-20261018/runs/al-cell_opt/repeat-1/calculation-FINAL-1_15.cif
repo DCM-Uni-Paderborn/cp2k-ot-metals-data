@@ -1,0 +1,60 @@
+# CIF file created by CP2K particle_methods:write_final_structure
+data_calculation
+_audit_creation_date                  2026-10-18
+_audit_creation_method
+;
+CP2K version 2026.2 (Development Version) (revision f6c7e1d)
+Project name calculation
+submitted by kuehne88@ctu021
+processed in /data/home2/kuehne88/ot-metals-validation-20261018/runs/al-cell_opt/repeat-1
+generated at 2026-10-18 22:24:41.083
+  -*WARNING*-  -*WARNING*-  -*WARNING*-  -*WARNING*-  -*WARNING*-  -*WARNING*- 
+ WARNING| the lines enclosed in between -*WARNING*- contain metadata
+ WARNING| provided in a tentative format for the newly implemented
+ WARNING| CIF output from CP2K version 2026.2, which may be unstable
+ WARNING| and subject to overhaul in a future release. Contact the
+ WARNING| developers in case a stabilized format is needed for some
+ WARNING| downstream CIF parser with text pattern matchers (regexp).
+ - Optimization type: CELL_OPT
+ - Optimization converged: FALSE
+ - Requested initial cell symmetry: NONE
+ - Cell is numerically orthorhombic: FALSE
+ - Periodicity of cell: T T T
+ - Cell is subject to optimization: TRUE
+ - Cell has constraint on direction: NONE
+ - Keep angles between the cell vectors during optimization: TRUE
+ - Keep initial cell symmetry during optimization: FALSE
+ - Keep initial cell volume during optimization: FALSE
+ - Final cell vectors A, B, C by rows [angstrom]:
+          0.0000000000        4.9929157927        4.9929157927
+          1.5188089949        0.0000000000        1.5188089949
+          1.5188089425        1.5188089425        0.0000000000
+ -*WARNING*- -*WARNING*- -*WARNING*- -*WARNING*- -*WARNING*- -*WARNING*- 
+;
+
+_symmetry_space_group_name_H-M             'P 1'
+_cell_length_a                        7.06104923
+_cell_length_b                        2.14792028
+_cell_length_c                        2.14792021
+_cell_angle_alpha                    60.00000000
+_cell_angle_beta                     60.00000000
+_cell_angle_gamma                    60.00000000
+_symmetry_Int_Tables_number                    1
+_chemical_formula_structural       'Al1'
+_chemical_formula_sum              'Al2'
+_cell_volume                         23.03512341
+_cell_formula_units_Z                          2
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+  1  'x, y, z'
+loop_
+ _atom_site_type_symbol
+ _atom_site_label
+ _atom_site_symmetry_multiplicity
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_occupancy
+  Al    Al1       1    0.99846250    0.00057666    0.00057666    1.00
+  Al    Al2       1    0.49845103    0.00559625    0.00559625    1.00

@@ -1,0 +1,383 @@
+*************************** Testing started ****************************
+
+----------------------------- Settings ---------------------------------
+MPI ranks:      2
+OpenMP threads: 1
+GPU devices:    0
+Workers:        1
+Timeout [s]:    600
+Work base dir:  /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02
+MPI exec:       srun --mpi=pmix --exclusive --exact --mem=2G --cpu-bind=cores --ntasks={N} --cpus-per-task=1
+Smoke test:     False
+Valgrind:       False
+Keepalive:      False
+Flag slow:      False
+Debug:          False
+Binary dir:     /data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin
+CP2K data dir:  /data/home2/kuehne88/ot-metals-validation-20261018/source-spin-fix/data
+VERSION:        psmp
+Flags:          omp,fftw3,parallel,scalapack,mpi_f08,spglib,openblas,libwignernj
+------------------------------------------------------------------------
+Copying test files ... done
+Skipping QMMM/QS/regtest-mpi because its requirements are not satisfied.
+Skipping QS/regtest-libgint because its requirements are not satisfied.
+Skipping MIMIC/regtest-qmmm because its requirements are not satisfied.
+Skipping TMC/regtest_ana_on_the_fly because its requirements are not satisfied.
+Skipping QS/regtest-cusolver because its requirements are not satisfied.
+Skipping QS/regtest-dlaf because its requirements are not satisfied.
+Skipping QS/regtest-dlaf-2 because its requirements are not satisfied.
+Skipping QS/regtest-openpmd because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-cuda because its requirements are not satisfied.
+Skipping QS/regtest-pexsi because its requirements are not satisfied.
+Skipping Fist/regtest-deepmd because its requirements are not satisfied.
+Skipping Fist/regtest-quip because its requirements are not satisfied.
+Skipping QS/regtest-skala-cuda because its requirements are not satisfied.
+Skipping QS/regtest-wannier90-projections because its requirements are not satisfied.
+Skipping QS/regtest-ec because its requirements are not satisfied.
+Skipping xTB/regtest-gfn0-m1 because its requirements are not satisfied.
+Skipping QS/regtest-acc-2 because its requirements are not satisfied.
+Skipping QS/regtest-debug-5 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-force-3 because its requirements are not satisfied.
+Skipping xTB/regtest-gfn0-m3 because its requirements are not satisfied.
+Skipping xTB/regtest-gfn0-m4 because its requirements are not satisfied.
+Skipping QS/regtest-kp-2 because its requirements are not satisfied.
+Skipping QS/regtest-debug-7 because its requirements are not satisfied.
+Skipping QS/regtest-bse because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-4 because its requirements are not satisfied.
+Skipping xTB/regtest-gfn0-m2 because its requirements are not satisfied.
+Skipping QS/regtest-gpw-1 because its requirements are not satisfied.
+Skipping QS/regtest-debug-6 because its requirements are not satisfied.
+Skipping QS/regtest-hfx because its requirements are not satisfied.
+Skipping QS/regtest-kg because its requirements are not satisfied.
+Skipping QS/regtest-gapw_xc because its requirements are not satisfied.
+Skipping QS/regtest-admm-gapw because its requirements are not satisfied.
+Skipping QS/regtest-scalable-gw because its requirements are not satisfied.
+Skipping QS/regtest-kp-1 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-force because its requirements are not satisfied.
+Skipping QS/regtest-embed because its requirements are not satisfied.
+Skipping QS/regtest-acc-4 because its requirements are not satisfied.
+Skipping QS/regtest-xastdp because its requirements are not satisfied.
+Skipping SIRIUS/regtest-1 because its requirements are not satisfied.
+Skipping QS/regtest-nlcc-1 because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-gfn2-1 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-force-libxc because its requirements are not satisfied.
+Skipping QS/regtest-ed because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-force-2 because its requirements are not satisfied.
+Skipping QS/regtest-ec-force because its requirements are not satisfied.
+Skipping xTB/regtest-gfn0 because its requirements are not satisfied.
+Skipping QS/regtest-dcdft-force because its requirements are not satisfied.
+Skipping QS/regtest-gw-cubic because its requirements are not satisfied.
+Skipping QS/regtest-acc-3 because its requirements are not satisfied.
+Skipping QS/regtest-kp-hfx-ri-admm-2 because its requirements are not satisfied.
+Skipping QS/regtest-kp-1-spglib because its requirements are not satisfied.
+Skipping QS/regtest-hfx-ri because its requirements are not satisfied.
+Skipping QS/regtest-hfx-wfn-fitting because its requirements are not satisfied.
+Skipping QS/regtest-gapw because its requirements are not satisfied.
+Skipping QS/regtest-rtbse-linearized-restart because its requirements are not satisfied.
+Skipping QS/regtest-hfx-ri-2 because its requirements are not satisfied.
+Skipping QS/regtest-gw-realspace because its requirements are not satisfied.
+Skipping QS/regtest-dcdft-stress because its requirements are not satisfied.
+Skipping QS/regtest-dcdft-gapw because its requirements are not satisfied.
+Skipping QS/regtest-ec-stress because its requirements are not satisfied.
+Skipping QS/regtest-gw because its requirements are not satisfied.
+Skipping QS/regtest-debug-4 because its requirements are not satisfied.
+Skipping QS/regtest-kp-1-spg because its requirements are not satisfied.
+Skipping QS/regtest-acc-5-4 because its requirements are not satisfied.
+Skipping QS/regtest-dft-vdw-corr-3 because its requirements are not satisfied.
+Skipping QS/regtest-rVV10 because its requirements are not satisfied.
+Skipping QS/regtest-stda-force because its requirements are not satisfied.
+Skipping QS/regtest-dcdr because its requirements are not satisfied.
+Skipping QS/regtest-admm-1 because its requirements are not satisfied.
+Skipping QS/regtest-rtbse-linearized-rirs because its requirements are not satisfied.
+Skipping QS/regtest-rpa-cubic-scaling-2 because its requirements are not satisfied.
+Skipping QS/regtest-dft-vdw-corr-2 because its requirements are not satisfied.
+Skipping QS/regtest-rtbse-linearized because its requirements are not satisfied.
+Skipping QS/regtest-skala-native-gapw-gth because its requirements are not satisfied.
+Skipping QS/regtest-skala-native-gapw-base because its requirements are not satisfied.
+Skipping QS/regtest-as-dft because its requirements are not satisfied.
+Skipping QS/regtest-as-selection because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-gapw because its requirements are not satisfied.
+Skipping QS/regtest-gapw-4 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-stda because its requirements are not satisfied.
+Skipping QS/regtest-acc-1-2 because its requirements are not satisfied.
+Skipping QS/regtest-gw-kpoints because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt because its requirements are not satisfied.
+Skipping QS/regtest-as-1 because its requirements are not satisfied.
+Skipping QS/regtest-rixs because its requirements are not satisfied.
+Skipping QS/regtest-kp-hfx-ri-2 because its requirements are not satisfied.
+Skipping QS/regtest-ri-rpa because its requirements are not satisfied.
+Skipping QS/regtest-hfx-periodic because its requirements are not satisfied.
+Skipping QS/regtest-acc-1-3 because its requirements are not satisfied.
+Skipping QS/regtest-mp2-grad-1 because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-gfn1-grad because its requirements are not satisfied.
+Skipping QS/regtest-dft-vdw-corr-4 because its requirements are not satisfied.
+Skipping QS/regtest-rpa-cubic-scaling because its requirements are not satisfied.
+Skipping QS/regtest-dft-d4-auto-ref because its requirements are not satisfied.
+Skipping QS/regtest-libxc because its requirements are not satisfied.
+Skipping QS/regtest-stda-force-3 because its requirements are not satisfied.
+Skipping QS/regtest-skala-native-gpw-coords because its requirements are not satisfied.
+Skipping QS/regtest-rtbse because its requirements are not satisfied.
+Skipping QS/regtest-admm-4 because its requirements are not satisfied.
+Skipping QS/regtest-gw2x because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-sf-force because its requirements are not satisfied.
+Skipping QS/regtest-hybrid-4 because its requirements are not satisfied.
+Skipping QS/regtest-acc-5-5 because its requirements are not satisfied.
+Skipping QS/regtest-hfx-block because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-force-gapw-4 because its requirements are not satisfied.
+Skipping QS/regtest-dft-d3-auto-ref because its requirements are not satisfied.
+Skipping QS/regtest-kp-hfx-ri-admm because its requirements are not satisfied.
+Skipping QS/regtest-rtbse-linearized-open-shell because its requirements are not satisfied.
+Skipping QS/regtest-skala-native-gpw-mol because its requirements are not satisfied.
+Skipping QS/regtest-ri-laplace-mp2-cubic-2 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-2 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-force-gapw-3 because its requirements are not satisfied.
+Skipping QS/regtest-mp2-block because its requirements are not satisfied.
+Skipping QS/regtest-lsroks because its requirements are not satisfied.
+Skipping QS/regtest-gapw-lsroks-hybrid because its requirements are not satisfied.
+Skipping QS/regtest-gapw-lsroks-meta because its requirements are not satisfied.
+Skipping QS/regtest-gapw-lsroks-meta-hybrid because its requirements are not satisfied.
+Skipping QS/regtest-gapw-lsroks-gauxc-pbe because its requirements are not satisfied.
+Skipping QS/regtest-gapw-lsroks-skala because its requirements are not satisfied.
+Skipping QS/regtest-gpw-9 because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-cdft because its requirements are not satisfied.
+Skipping QS/regtest-mp2-grad-2 because its requirements are not satisfied.
+Skipping QS/regtest-dft-d3bj-s-ref because its requirements are not satisfied.
+Skipping QS/regtest-ri-rpa-grad because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-force-gapw-2 because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-gfn1 because its requirements are not satisfied.
+Skipping QS/regtest-admm-2 because its requirements are not satisfied.
+Skipping QS/regtest-debug-2 because its requirements are not satisfied.
+Skipping QS/regtest-admm-dm because its requirements are not satisfied.
+Skipping QS/regtest-mp2-grad-solvers because its requirements are not satisfied.
+Skipping QS/regtest-admm-qps-2 because its requirements are not satisfied.
+Skipping DFTB/regtest-scc-1-4 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-force-gapw-5 because its requirements are not satisfied.
+Skipping QS/regtest-dft-d3-lib-ref because its requirements are not satisfied.
+Skipping QS/regtest-admm-3 because its requirements are not satisfied.
+Skipping QS/regtest-ec-meta because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-gfn2-3 because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-gfn1-periodic because its requirements are not satisfied.
+Skipping QS/regtest-skala-native-gapw-ecp because its requirements are not satisfied.
+Skipping QS/regtest-dcdft-hfx because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-3 because its requirements are not satisfied.
+Skipping QS/regtest-stda-force-2 because its requirements are not satisfied.
+Skipping QS/regtest-acc-5-3 because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-gfn2-5 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-lri because its requirements are not satisfied.
+Skipping QS/regtest-admm-libxc because its requirements are not satisfied.
+Skipping QS/regtest-acc-5-2 because its requirements are not satisfied.
+Skipping xTB/regtest-3-spglib because its requirements are not satisfied.
+Skipping QS/regtest-mom-2 because its requirements are not satisfied.
+Skipping QS/regtest-dft-d3-bj-auto-ref because its requirements are not satisfied.
+Skipping QS/regtest-dft-d2-auto-ref because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-gfn2-2 because its requirements are not satisfied.
+Skipping QS/regtest-dft-d3bj-lib-ref because its requirements are not satisfied.
+Skipping QS/regtest-smeagol-2 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-soc because its requirements are not satisfied.
+Skipping QS/regtest-hybrid-3 because its requirements are not satisfied.
+Skipping QS/regtest-ri-mp2 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-sf because its requirements are not satisfied.
+Skipping QS/regtest-kp-hfx-ri because its requirements are not satisfied.
+Skipping QS/regtest-mp2-admm-grad because its requirements are not satisfied.
+Skipping QS/regtest-dft-d3-s-ref because its requirements are not satisfied.
+Skipping QS/regtest-rtp-6 because its requirements are not satisfied.
+Skipping QS/regtest-debug-3 because its requirements are not satisfied.
+Skipping QS/regtest-as-2 because its requirements are not satisfied.
+Skipping QS/regtest-sparsity because its requirements are not satisfied.
+Skipping QS/regtest-mp2-lr-grad because its requirements are not satisfied.
+Skipping QS/regtest-rma because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-admm because its requirements are not satisfied.
+Skipping QS/regtest-hybrid-2 because its requirements are not satisfied.
+Skipping QS/regtest-sos-mp2-grad because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-rse-1 because its requirements are not satisfied.
+Skipping QS/regtest-mp2-stress because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-grad-numer-meta because its requirements are not satisfied.
+Skipping QS/regtest-skala-native-gpw-mech because its requirements are not satisfied.
+Skipping QS/regtest-hfx-stress because its requirements are not satisfied.
+Skipping QMMM/QS/regtest-gapw because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-api because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-gradients because its requirements are not satisfied.
+Skipping QS/regtest-cohsex because its requirements are not satisfied.
+Skipping QS/regtest-admm-qps because its requirements are not satisfied.
+Skipping QS/regtest-mp2-admm-stress because its requirements are not satisfied.
+Skipping QS/regtest-mp2-lr-stress because its requirements are not satisfied.
+Skipping QS/regtest-rpa-sigma because its requirements are not satisfied.
+Skipping QS/regtest-rpa-lr because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-gfn2-4 because its requirements are not satisfied.
+Skipping QS/regtest-elpa-qr because its requirements are not satisfied.
+Skipping xTB/regtest-tblite-ipea1 because its requirements are not satisfied.
+Skipping QS/regtest-ri-rpa-rse because its requirements are not satisfied.
+Skipping QS/regtest-rma-3D because its requirements are not satisfied.
+Skipping QS/regtest-pao-5 because its requirements are not satisfied.
+Skipping QS/regtest-ri-mp2-opt because its requirements are not satisfied.
+Skipping LIBTEST/libvori because its requirements are not satisfied.
+Skipping QS/regtest-mp2-lr because its requirements are not satisfied.
+Skipping LIBTEST/libbqb because its requirements are not satisfied.
+Skipping QS/regtest-mp2-admm-grad-numer because its requirements are not satisfied.
+Skipping QS/regtest-ri-laplace-mp2 because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-bse because its requirements are not satisfied.
+Skipping QS/regtest-mp2-admm-stress-numer because its requirements are not satisfied.
+Skipping QS/regtest-libint-backend because its requirements are not satisfied.
+Skipping QS/regtest-as-fci because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-grad-meta because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-grad-laplace because its requirements are not satisfied.
+Skipping QS/regtest-admm-type because its requirements are not satisfied.
+Skipping xTB/regtest-gfn0-d because its requirements are not satisfied.
+Skipping QS/regtest-ri-rpa-exchange because its requirements are not satisfied.
+Skipping QS/regtest-hfx-2 because its requirements are not satisfied.
+Skipping QS/regtest-nlcc-2 because its requirements are not satisfied.
+Skipping QS/regtest-skala-native-gapw-ae-kp because its requirements are not satisfied.
+Skipping QS/regtest-trexio because its requirements are not satisfied.
+Skipping xTB/regtest-stda because its requirements are not satisfied.
+Skipping QS/regtest-mp2-2 because its requirements are not satisfied.
+Skipping QS/regtest-rs-dhft because its requirements are not satisfied.
+Skipping QS/regtest-mp2-4 because its requirements are not satisfied.
+Skipping QS/regtest-as-qcschema because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-gapw-gth because its requirements are not satisfied.
+Skipping QS/regtest-mp2-3 because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-gapw-ecp because its requirements are not satisfied.
+Skipping QS/regtest-hybrid-1 because its requirements are not satisfied.
+Skipping QS/regtest-stda because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-api-debug because its requirements are not satisfied.
+Skipping QS/regtest-stda-force-4 because its requirements are not satisfied.
+Skipping QS/regtest-sos-mp2-lr because its requirements are not satisfied.
+Skipping Fist/regtest-ace because its requirements are not satisfied.
+Skipping QS/regtest-hybrid-ace-gs because its requirements are not satisfied.
+Skipping QS/regtest-mp2-1 because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-3 because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-stress-numer-laplace because its requirements are not satisfied.
+Skipping QS/regtest-as-3 because its requirements are not satisfied.
+Skipping QS/regtest-elpa because its requirements are not satisfied.
+Skipping QS/regtest-acc-1-libxc because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-1 because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-stress-numer-meta because its requirements are not satisfied.
+Skipping QS/regtest-ri-laplace-mp2-cubic because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-gapw-base because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-skala because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-stress-meta because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-stress-laplace because its requirements are not satisfied.
+Skipping Fist/regtest-nequip because its requirements are not satisfied.
+Skipping QS/regtest-as because its requirements are not satisfied.
+Skipping QS/regtest-double-hybrid-2 because its requirements are not satisfied.
+Skipping QS/regtest-rtbse-gxac because its requirements are not satisfied.
+Skipping Fist/regtest-allegro because its requirements are not satisfied.
+Skipping QS/regtest-gauxc-gpw-nlcc because its requirements are not satisfied.
+Skipping QS/regtest-hf-3c because its requirements are not satisfied.
+Skipping Fist/regtest-mace because its requirements are not satisfied.
+Skipping QS/regtest-trexio-2 because its requirements are not satisfied.
+Skipping QS/regtest-kp-spglib because its requirements are not satisfied.
+Skipping QS/regtest-elpa-2 because its requirements are not satisfied.
+Skipping QS/regtest-eht-guess because its requirements are not satisfied.
+Skipping QS/regtest-gw-ic-model because its requirements are not satisfied.
+Skipping ATOM/regtest-libxc because its requirements are not satisfied.
+Skipping QMMM/xTB/regtest-tblite because its requirements are not satisfied.
+Skipping QS/regtest-tddfpt-static because its requirements are not satisfied.
+Skipping Fist/regtest-plumed2 because its requirements are not satisfied.
+Skipping 265 test directories because of --restrictdir.
+Launched 5 test directories and 1 worker...
+
+>>> /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-1
+    Al_fermi.inp                                                                          -8.172968387           OK (   5.19 sec)
+    Al-gamma-mermin-smoke.inp:E_total                                                      -3.10669579           OK (  17.03 sec)
+    Al-gamma-mermin-smoke.inp:M095                                                       -0.2746104022           OK
+    Al-kpoint-diag-reference.inp                                                          -2.903015361           OK (   5.75 sec)
+    Al-kpoint-otdiag.inp:E_total                                                          -2.063934595           OK (   7.80 sec)
+    Al-kpoint-otdiag.inp:NO_TEXT                                                                     -           OK
+    Al-kpoint-otdiag.inp:NO_TEXT                                                                     -           OK
+    Al-kpoint-otdiag-strict-full-all.inp:E_total                                          -2.171132526           OK (  10.47 sec)
+    Al-kpoint-otdiag-strict-full-all.inp:NO_TEXT                                                     -           OK
+    Al-kpoint-otdiag-strict-full-all.inp:NO_TEXT                                                     -           OK
+    Al-kpoint-otdiag-strict-full-all.inp:NO_TEXT                                                     -           OK
+    Al-kpoint-mermin-smoke.inp:E_total                                                    -2.903015358           OK (   8.94 sec)
+    Al-kpoint-mermin-smoke.inp:M072                                                     3.01766069e-11           OK
+    Al-kpoint-mermin-smoke.inp:M031                                                       -103113791.4           OK
+    Al-kpoint-mermin-fermi-low-rank.inp:E_total                                           -2.171129072           OK (  14.58 sec)
+    Al-kpoint-mermin-fermi-low-rank.inp:NO_TEXT                                                      -           OK
+    Al-kpoint-mermin-fermi-low-rank.inp:NO_TEXT                                                      -           OK
+    Al-kpoint-mermin-covariant.inp:E_total                                                -2.975637282           OK (  10.19 sec)
+    Al-kpoint-mermin-covariant.inp:NO_TEXT                                                           -           OK
+    Al-kpoint-mermin-covariant.inp:NO_TEXT                                                           -           OK
+<<< /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-1 (1 of 5) done in 79.96 sec
+>>> /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-4
+    Na-kpoint-mermin-uks-sd.inp:E_total                                                  -0.2808303194           OK (   8.28 sec)
+    Na-kpoint-mermin-uks-sd.inp:OT_kpoint_ref_refresh                                                -           OK
+    Na-kpoint-mermin-uks-cg.inp                                                          -0.2808303194           OK (   4.63 sec)
+    Al-kpoint-mermin-uks-fixed-moment.inp:E_total                                         -2.092002995           OK (   7.46 sec)
+    Al-kpoint-mermin-uks-fixed-moment.inp:NO_TEXT                                                    -           OK
+    Al-kpoint-mermin-uks-fixed-moment.inp:NO_TEXT                                                    -           OK
+    Al-kpoint-mermin-uks-common-mu.inp:E_total                                            -2.092003032           OK (   3.87 sec)
+    Al-kpoint-mermin-uks-common-mu.inp:Electronic_entropic_energy                       -4.6426318e-07           OK
+    Al-kpoint-mermin-uks-common-mu.inp:Integrated_spin_density                            0.9999844273           OK
+    Al-kpoint-mermin-uks-common-mu.inp:NO_TEXT                                                       -           OK
+    Al-kpoint-mermin-uks-common-mu.inp:NO_TEXT                                                       -           OK
+    Al-kpoint-mermin-roks.inp:E_total                                                     -2.181856663           OK (  10.87 sec)
+    Al-kpoint-mermin-roks.inp:Electronic_entropic_energy                              -7.227407736e-05           OK
+    Al-kpoint-mermin-roks.inp:Integrated_spin_density                                     0.9999998273           OK
+    Al-kpoint-mermin-roks.inp:NO_TEXT                                                                -           OK
+    Al-kpoint-mermin-roks.inp:NO_TEXT                                                                -           OK
+    Al-kpoint-mermin-roks-restart.inp:E_total                                             -2.181856795           OK (   9.78 sec)
+    Al-kpoint-mermin-roks-restart.inp:Electronic_entropic_energy                      -7.212144571e-05           OK
+    Al-kpoint-mermin-roks-restart.inp:Integrated_spin_density                             0.9999998273           OK
+    Al-kpoint-mermin-roks-restart.inp:NO_TEXT                                                        -           OK
+    Al-kpoint-mermin-roks-restart.inp:NO_TEXT                                                        -           OK
+    H3-kpoint-roks.inp:E_total                                                              -1.4879689           OK (  12.60 sec)
+    H3-kpoint-roks.inp:M072                                                               0.0674684616           OK
+    H3-kpoint-roks.inp:M031                                                               -15256.77292           OK
+    H3-kpoint-uks-opt.inp                                                                  -1.49734044           OK (  12.40 sec)
+    Al-kpoint-mermin-uks-full-space.inp:QS_number_of_molecular_orbitals                              4           OK (  12.38 sec)
+    Al-kpoint-mermin-uks-full-space.inp:E_total                                           -2.092002995           OK
+    Al-kpoint-mermin-uks-fractional-moment.inp:E_total                                    -2.085110851           OK (  17.37 sec)
+    Al-kpoint-mermin-uks-fractional-moment.inp:Integrated_spin_density                    0.4999998604           OK
+    Al-kpoint-mermin-uks-fractional-moment.inp:Electronic_entropic_energy              -0.003561623128           OK
+<<< /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-4 (2 of 5) done in 99.65 sec
+>>> /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-5
+    Al-kpoint-mermin-response.inp:E_total                                                 -3.995032366           OK (   7.81 sec)
+    Al-kpoint-mermin-response.inp:OT_mermin_response_update                                          -           OK
+    Al-kpoint-mermin-response-lbfgs.inp:E_total                                           -3.990589661           OK (   6.50 sec)
+    Al-kpoint-mermin-response-lbfgs.inp:OT_mermin_lbfgs_response_update                              -           OK
+    Al-kpoint-mermin-md.inp:M_INIT_ENERGY                                                 -4.065278275           OK (   5.51 sec)
+    Al-kpoint-mermin-md.inp:M_CONS_QTY                                                    -4.064786432           OK
+    Al-kpoint-mermin-geo-opt.inp                                                          -4.065348156           OK (   6.15 sec)
+    Al-kpoint-mermin-cell-opt.inp                                                         -2.085979237           OK (   7.16 sec)
+<<< /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-5 (3 of 5) done in 33.14 sec
+>>> /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-3
+    Al-kpoint-mermin-lbfgs.inp                                                            -8.159981757           OK (   6.45 sec)
+    Al-kpoint-mermin-lbfgs-occ.inp                                                        -2.903015358           OK (   8.85 sec)
+    Al-kpoint-mermin-broyden-occ.inp                                                      -2.903015358           OK (   8.81 sec)
+    Al-kpoint-mermin-diis-occ.inp                                                         -8.157340487           OK (   4.39 sec)
+<<< /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-3 (4 of 5) done in 28.50 sec
+>>> /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-2
+    Al-kpoint-mermin-gaussian.inp:E_total                                                 -2.201247329           OK (   7.32 sec)
+    Al-kpoint-mermin-gaussian.inp:NO_TEXT                                                            -           OK
+    Al-kpoint-mermin-gaussian.inp:NO_TEXT                                                            -           OK
+    Al-kpoint-mermin-methfessel-paxton.inp:E_total                                        -2.200056177           OK (   7.45 sec)
+    Al-kpoint-mermin-methfessel-paxton.inp:NO_TEXT                                                   -           OK
+    Al-kpoint-mermin-methfessel-paxton.inp:NO_TEXT                                                   -           OK
+    Al-kpoint-mermin-marzari-vanderbilt.inp:E_total                                       -2.199902246           OK (   7.93 sec)
+    Al-kpoint-mermin-marzari-vanderbilt.inp:NO_TEXT                                                  -           OK
+    Al-kpoint-mermin-marzari-vanderbilt.inp:NO_TEXT                                                  -           OK
+    Al-kpoint-mermin-auto.inp:E_total                                                     -3.004208133           OK (  14.65 sec)
+    Al-kpoint-mermin-auto.inp:OT_added_mos_auto_grow                                                 -           OK
+<<< /data/home2/kuehne88/ot-metals-validation-20261018/corrected-checks/regtests/TEST-2026-10-18_22-15-02/QS/regtest-ot-3-2 (5 of 5) done in 37.35 sec
+------------------------------- Errors ---------------------------------
+
+
+------------------------------- Timings --------------------------------
+Plot: name="timings", title="Timing Distribution", ylabel="time [s]"
+PlotPoint: name="100th_percentile", plot="timings", label="100th %ile", y=17.37, yerr=0.0
+PlotPoint: name="99th_percentile", plot="timings", label="99th %ile", y=17.27, yerr=0.0
+PlotPoint: name="98th_percentile", plot="timings", label="98th %ile", y=17.16, yerr=0.0
+PlotPoint: name="95th_percentile", plot="timings", label="95th %ile", y=15.84, yerr=0.0
+PlotPoint: name="90th_percentile", plot="timings", label="90th %ile", y=14.58, yerr=0.0
+PlotPoint: name="80th_percentile", plot="timings", label="80th %ile", y=12.38, yerr=0.0
+
+------------------------------- Summary --------------------------------
+Number of FAILED  tests 0
+Number of WRONG   tests 0
+Number of CORRECT tests 73
+Total number of   tests 73
+
+Summary: correct: 73 / 73; 5min
+Status: OK
+
+*************************** Testing ended ******************************

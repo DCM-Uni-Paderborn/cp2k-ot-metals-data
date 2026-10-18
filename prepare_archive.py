@@ -1,4 +1,4 @@
-"""Record the verification environment and checksums after inspecting a data update."""
+"""Record the matrix environment and checksums of the deposited scientific files."""
 
 import hashlib
 import importlib.metadata
@@ -20,8 +20,13 @@ environment = {
 names = ["README.txt", "coverage.json", "environment.json", "requirements.txt",
          "verify_derivatives.py", "verify_archive.py", "prepare_archive.py",
          "recorded-results.json", "derivative-results.json", "derivative-plot.tex",
-         "convergence-plot.tex", "supplement-readme.txt"]
+         "supplement-readme.txt", "LICENSE.cp2k"]
+for path in (ROOT / "validation-20261018").rglob("*"):
+    relative = path.relative_to(ROOT)
+    if not path.is_file() or "__pycache__" in relative.parts:
+        continue
+    names.append(str(relative))
 checksums = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
-             for name in names}
+             for name in sorted(set(names))}
 (ROOT / "SHA256SUMS.json").write_text(json.dumps(checksums, indent=2) + "\n")
 print(f"Recorded {len(checksums)} archive checksums.")

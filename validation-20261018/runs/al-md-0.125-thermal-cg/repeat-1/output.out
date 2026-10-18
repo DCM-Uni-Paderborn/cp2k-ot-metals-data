@@ -1,0 +1,2226 @@
+ DBCSR| CPU Multiplication driver                                           BLAS (U)
+ DBCSR| Multrec recursion limit                                              512 (U)
+ DBCSR| Multiplication stack size                                           1000 (D)
+ DBCSR| Maximum elements for images                                    UNLIMITED (U)
+ DBCSR| Multiplicative factor virtual images                                   1 (U)
+ DBCSR| Use multiplication densification                                       T (D)
+ DBCSR| Multiplication size stacks                                             3 (U)
+ DBCSR| Use memory pool for CPU allocation                                     F (U)
+ DBCSR| Number of 3D layers                                               SINGLE (U)
+ DBCSR| Use MPI memory allocation                                              F (U)
+ DBCSR| Use RMA algorithm                                                      F (U)
+ DBCSR| Use Communication thread                                               T (U)
+ DBCSR| Communication thread load                                             87 (D)
+ DBCSR| MPI: My process id                                                     0
+ DBCSR| MPI: Number of processes                                               2
+ DBCSR| OMP: Current number of threads                                         1
+ DBCSR| OMP: Max number of threads                                             1
+ DBCSR| Split modifier for TAS multiplication algorithm                  1.0E+00 (U)
+
+
+  **** **** ******  **  PROGRAM STARTED AT               2026-10-18 22:13:58.985
+ ***** ** ***  *** **   PROGRAM STARTED ON                                ctu021
+ **    ****   ******    PROGRAM STARTED BY                              kuehne88
+ ***** **    ** ** **   PROGRAM PROCESS ID                               3535558
+  **** **  *******  **  PROGRAM STARTED IN /data/home2/kuehne88/ot-metals-valida
+                                           tion-20261018/runs/al-md-0.125-therma
+                                           l-cg/repeat-1
+
+ CP2K| version string:                 CP2K version 2026.2 (Development Version)
+ CP2K| source code revision number:                                      f6c7e1d
+ CP2K| cp2kflags: omp fftw3 parallel scalapack mpi_f08 spglib openblas libwigner
+ CP2K|            nj
+ CP2K| is freely available from                            https://www.cp2k.org/
+ CP2K| Program compiled at                                   2026-10-18 22:05:25
+ CP2K| Program compiled on                                                ctu013
+ CP2K| Program compiled with                                  GCC version 14.3.0
+ CP2K| Program compiled for                                               x86_64
+ CP2K| Data directory path    /data/home2/kuehne88/ot-metals-validation-20261018
+ CP2K| Input file name                                                 input.inp
+
+ GLOBAL| Force Environment number                                              1
+ GLOBAL| Basis set file name                                        BASIS_MOLOPT
+ GLOBAL| Potential file name                                           POTENTIAL
+ GLOBAL| MM Potential file name                                     MM_POTENTIAL
+ GLOBAL| Coordinate file name                                      __STD_INPUT__
+ GLOBAL| Method name                                                        CP2K
+ GLOBAL| Project name                                                calculation
+ GLOBAL| Run type                                                             MD
+ GLOBAL| FFT library                                                       FFTW3
+ GLOBAL| Diagonalization library                                       ScaLAPACK
+ GLOBAL| Cholesky decomposition library                                ScaLAPACK
+ GLOBAL| DGEMM library                                                      BLAS
+ GLOBAL| Direct generalized diagonalization requested                          F
+ GLOBAL| Orthonormality check for eigenvectors                          DISABLED
+ GLOBAL| Matrix multiplication library                                 ScaLAPACK
+ GLOBAL| All-to-all communication in single precision                          F
+ GLOBAL| Grid backend                                                       AUTO
+ GLOBAL| Global print level                                               MEDIUM
+ GLOBAL| MPI I/O enabled                                                       T
+ GLOBAL| Total number of message passing processes                             2
+ GLOBAL| Number of distributed systems (nodes)                                 1
+ GLOBAL| Number of threads for this process                                    1
+ GLOBAL| This output is from process                                           0
+ GLOBAL| OpenMP stack size per thread (OMP_STACKSIZE)                       256M
+ GLOBAL| CPU model name                         AMD EPYC 9965 192-Core Processor
+
+ MEMORY| system memory details [Kb]
+ MEMORY|                        rank 0           min           max       average
+ MEMORY| MemTotal           1584700516    1584700516    1584700516    1584700516
+ MEMORY| MemFree            1412869904    1412869904    1412870912    1412870408
+ MEMORY| Buffers                     0             0             0             0
+ MEMORY| Cached               11947952      11947952      11947952      11947952
+ MEMORY| Slab                  4181364       4181364       4181364       4181364
+ MEMORY| SReclaimable           846140        846140        846140        846140
+ MEMORY| MemLikelyFree      1425663996    1425663996    1425665004    1425664500
+
+
+ *** Fundamental physical constants (SI units) ***
+
+ *** Literature: B. J. Mohr and B. N. Taylor,
+ ***             CODATA recommended values of the fundamental physical
+ ***             constants: 2006, Web Version 5.1
+ ***             http://physics.nist.gov/constants
+
+ Speed of light in vacuum [m/s]                             2.99792458000000E+08
+ Magnetic constant or permeability of vacuum [N/A**2]       1.25663706143592E-06
+ Electric constant or permittivity of vacuum [F/m]          8.85418781762039E-12
+ Planck constant (h) [J*s]                                  6.62606896000000E-34
+ Planck constant (h-bar) [J*s]                              1.05457162825177E-34
+ Elementary charge [C]                                      1.60217648700000E-19
+ Electron mass [kg]                                         9.10938215000000E-31
+ Electron g factor [ ]                                     -2.00231930436220E+00
+ Proton mass [kg]                                           1.67262163700000E-27
+ Fine-structure constant                                    7.29735253760000E-03
+ Rydberg constant [1/m]                                     1.09737315685270E+07
+ Avogadro constant [1/mol]                                  6.02214179000000E+23
+ Boltzmann constant [J/K]                                   1.38065040000000E-23
+ Atomic mass unit [kg]                                      1.66053878200000E-27
+ Bohr radius [m]                                            5.29177208590000E-11
+
+ *** Conversion factors ***
+
+ [u] -> [a.u.]                                              1.82288848426455E+03
+ [Angstrom] -> [Bohr] = [a.u.]                              1.88972613288564E+00
+ [a.u.] = [Bohr] -> [Angstrom]                              5.29177208590000E-01
+ [a.u.] -> [s]                                              2.41888432650478E-17
+ [a.u.] -> [fs]                                             2.41888432650478E-02
+ [a.u.] -> [J]                                              4.35974393937059E-18
+ [a.u.] -> [N]                                              8.23872205491840E-08
+ [a.u.] -> [K]                                              3.15774647902944E+05
+ [a.u.] -> [kJ/mol]                                         2.62549961709828E+03
+ [a.u.] -> [kcal/mol]                                       6.27509468713739E+02
+ [a.u.] -> [Pa]                                             2.94210107994716E+13
+ [a.u.] -> [bar]                                            2.94210107994716E+08
+ [a.u.] -> [atm]                                            2.90362800883016E+08
+ [a.u.] -> [eV]                                             2.72113838565563E+01
+ [a.u.] -> [Hz]                                             6.57968392072181E+15
+ [a.u.] -> [1/cm] (wave numbers)                            2.19474631370540E+05
+ [a.u./Bohr**2] -> [1/cm]                                   5.14048714338585E+03
+ 
+
+ *** WARNING in cell_methods.F:532 :: CELL%CANONICALIZE AUTO keeps the     ***
+ *** general input cell orientation. The cell matrix is not a lower        ***
+ *** triangle and does not conform to the program convention that A lies   ***
+ *** along the X-axis and B is in the XY plane. Set CELL%CANONICALIZE TRUE ***
+ *** to explicitly transform the cell and supported cell-dependent input   ***
+ *** to the canonical internal frame.                                      ***
+
+
+ CELL| Volume [angstrom^3]:                                            33.215062
+ CELL| Vector a [angstrom]:       0.000     4.050     4.050   |a| =     5.727565
+ CELL| Vector b [angstrom]:       2.025     0.000     2.025   |b| =     2.863782
+ CELL| Vector c [angstrom]:       2.025     2.025     0.000   |c| =     2.863782
+ CELL| Angle (b,c), alpha [degree]:                                    60.000000
+ CELL| Angle (a,c), beta  [degree]:                                    60.000000
+ CELL| Angle (a,b), gamma [degree]:                                    60.000000
+ CELL| Numerically orthorhombic:                                              NO
+ CELL| Periodicity                                                           XYZ
+
+ CELL_REF| Volume [angstrom^3]:                                        33.215062
+ CELL_REF| Vector a [angstrom     0.000     4.050     4.050   |a| =     5.727565
+ CELL_REF| Vector b [angstrom     2.025     0.000     2.025   |b| =     2.863782
+ CELL_REF| Vector c [angstrom     2.025     2.025     0.000   |c| =     2.863782
+ CELL_REF| Angle (b,c), alpha [degree]:                                60.000000
+ CELL_REF| Angle (a,c), beta  [degree]:                                60.000000
+ CELL_REF| Angle (a,b), gamma [degree]:                                60.000000
+ CELL_REF| Numerically orthorhombic:                                          NO
+ CELL_REF| Periodicity                                                       XYZ
+
+ GENERATE|  Preliminary Number of Bonds generated:                             0
+ GENERATE|  Achieved consistency in connectivity generation.
+
+ *** WARNING in kpoint_types.F:920 :: Full atomic k-point symmetry was     ***
+ *** requested for a cell matrix that does not follow the CP2K             ***
+ *** lower-triangular convention. Falling back to                          ***
+ *** KPOINTS%INVERSION_SYMMETRY_ONLY. Use ABC/ALPHA_BETA_GAMMA or          ***
+ *** canonical A/B/C vectors to enable full point-group k-point reduction. ***
+
+
+ *******************************************************************************
+ *******************************************************************************
+ **                                                                           **
+ **     #####                         ##              ##                      **
+ **    ##   ##            ##          ##              ##                      **
+ **   ##     ##                       ##            ######                    **
+ **   ##     ##  ##   ##  ##   #####  ##  ##   ####   ##    #####    #####    **
+ **   ##     ##  ##   ##  ##  ##      ## ##   ##      ##   ##   ##  ##   ##   **
+ **   ##  ## ##  ##   ##  ##  ##      ####     ###    ##   ######   ######    **
+ **    ##  ###   ##   ##  ##  ##      ## ##      ##   ##   ##       ##        **
+ **     #######   #####   ##   #####  ##  ##  ####    ##    #####   ##        **
+ **           ##                                                    ##        **
+ **                                                                           **
+ **                                                ... make the atoms dance   **
+ **                                                                           **
+ **            Copyright (C) by CP2K developers group (2000-2026)             **
+ **                      J. Chem. Phys. 152, 194103 (2020)                    **
+ **                                                                           **
+ *******************************************************************************
+ SCF smearing: automatically selected ADDED_MOS: 4
+
+ DFT| Spin restricted Kohn-Sham (RKS) calculation                            RKS
+ DFT| Multiplicity                                                             1
+ DFT| Number of spin states                                                    1
+ DFT| Charge                                                                   0
+ DFT| Self-interaction correction (SIC)                                       NO
+ DFT| Cutoffs: density                                              1.000000E-10
+ DFT|          gradient                                             1.000000E-10
+ DFT|          tau                                                  1.000000E-10
+ DFT|          cutoff_smoothing_range                               0.000000E+00
+ DFT| XC density smoothing                                                  NONE
+ DFT| XC derivatives                                                          PW
+
+ FUNCTIONAL| PBE:
+ FUNCTIONAL| J.P.Perdew, K.Burke, M.Ernzerhof, Phys. Rev. Letter, vol. 77, n 18,
+ FUNCTIONAL|  pp. 3865-3868, (1996) {spin unpolarized}                          
+
+
+ QS| Method:                                                                 GPW
+ QS| Density plane wave grid type                        NON-SPHERICAL FULLSPACE
+ QS| Number of grid levels:                                                    4
+ QS| Density cutoff [a.u.]:                                                150.0
+ QS| Using commensurate multigrids
+ QS| Multi grid cutoff [a.u.]: 1) grid level                               150.0
+ QS|                           2) grid level                                37.5
+ QS|                           3) grid level                                 9.4
+ QS|                           4) grid level                                 2.3
+ QS| Grid level progression factor:                                          4.0
+ QS| Relative density cutoff [a.u.]:                                        20.0
+ QS| Interaction thresholds: eps_pgf_orb:                                3.2E-06
+ QS|                         eps_filter_matrix:                          0.0E+00
+ QS|                         eps_core_charge:                            1.0E-13
+ QS|                         eps_rho_gspace:                             1.0E-11
+ QS|                         eps_rho_rspace:                             1.0E-11
+ QS|                         eps_gvg_rspace:                             3.2E-06
+ QS|                         eps_ppl:                                    1.0E-02
+ QS|                         eps_ppnl:                                   3.2E-08
+
+
+ ATOMIC KIND INFORMATION
+
+  1. Atomic kind: Al                                    Number of atoms:       2
+
+     Orbital Basis Set                                        DZVP-MOLOPT-SR-GTH
+
+       Number of orbital shell sets:                                           1
+       Number of orbital shells:                                               5
+       Number of primitive Cartesian functions:                                4
+       Number of Cartesian basis functions:                                   14
+       Number of spherical basis functions:                                   13
+       Norm type:                                                              2
+
+       Normalised Cartesian orbitals:
+
+                        Set   Shell   Orbital            Exponent    Coefficient
+
+                          1       1    2s                1.212902       0.147703
+                                                         0.454181       0.176942
+                                                         0.242419      -0.255412
+                                                         0.078268      -0.047918
+
+                          1       2    3s                1.212902      -0.205401
+                                                         0.454181      -0.282784
+                                                         0.242419       0.451246
+                                                         0.078268      -0.188270
+
+                          1       3    3px               1.212902       0.054477
+                                                         0.454181       0.028713
+                                                         0.242419      -0.164201
+                                                         0.078268      -0.027375
+                          1       3    3py               1.212902       0.054477
+                                                         0.454181       0.028713
+                                                         0.242419      -0.164201
+                                                         0.078268      -0.027375
+                          1       3    3pz               1.212902       0.054477
+                                                         0.454181       0.028713
+                                                         0.242419      -0.164201
+                                                         0.078268      -0.027375
+
+                          1       4    4px               1.212902      -0.161995
+                                                         0.454181       0.034524
+                                                         0.242419       0.284421
+                                                         0.078268      -0.077718
+                          1       4    4py               1.212902      -0.161995
+                                                         0.454181       0.034524
+                                                         0.242419       0.284421
+                                                         0.078268      -0.077718
+                          1       4    4pz               1.212902      -0.161995
+                                                         0.454181       0.034524
+                                                         0.242419       0.284421
+                                                         0.078268      -0.077718
+
+                          1       5    4dx2              1.212902       0.283929
+                                                         0.454181       0.086552
+                                                         0.242419       0.083045
+                                                         0.078268       0.004803
+                          1       5    4dxy              1.212902       0.491779
+                                                         0.454181       0.149912
+                                                         0.242419       0.143839
+                                                         0.078268       0.008319
+                          1       5    4dxz              1.212902       0.491779
+                                                         0.454181       0.149912
+                                                         0.242419       0.143839
+                                                         0.078268       0.008319
+                          1       5    4dy2              1.212902       0.283929
+                                                         0.454181       0.086552
+                                                         0.242419       0.083045
+                                                         0.078268       0.004803
+                          1       5    4dyz              1.212902       0.491779
+                                                         0.454181       0.149912
+                                                         0.242419       0.143839
+                                                         0.078268       0.008319
+                          1       5    4dz2              1.212902       0.283929
+                                                         0.454181       0.086552
+                                                         0.242419       0.083045
+                                                         0.078268       0.004803
+
+       Atomic covalent radius [Angstrom]:                                  1.180
+
+       Atomic van der Waals radius [Angstrom]:                             1.840
+
+     GTH Potential information for                                    GTH-PBE-q3
+
+       Description:                       Goedecker-Teter-Hutter pseudopotential
+                                           Goedecker et al., PRB 54, 1703 (1996)
+                                          Hartwigsen et al., PRB 58, 3641 (1998)
+                                                      Krack, TCA 114, 145 (2005)
+
+       Gaussian exponent of the core charge distribution:               2.469136
+       Electronic configuration (s p d ...):                               2   1
+
+       Parameters of the local part of the GTH pseudopotential:
+
+                          rloc        C1          C2          C3          C4
+                        0.450000   -7.554761
+
+       Parameters of the non-local part of the GTH pseudopotential:
+
+                   l      r(l)      h(i,j,l)
+
+                   0    0.487435    6.959938   -1.888836
+                                   -1.888836    2.438477
+                   1    0.562189    1.865299
+
+
+ MOLECULE KIND INFORMATION
+
+
+ All atoms are their own molecule, skipping detailed information
+
+
+ TOTAL NUMBERS AND MAXIMUM NUMBERS
+
+  Total number of            - Atomic kinds:                                   1
+                             - Atoms:                                          2
+                             - Shell sets:                                     2
+                             - Shells:                                        10
+                             - Primitive Cartesian functions:                  8
+                             - Cartesian basis functions:                     28
+                             - Spherical basis functions:                     26
+
+  Maximum angular momentum of- Orbital basis functions:                        2
+                             - Local part of the GTH pseudopotential:          0
+                             - Non-local part of the GTH pseudopotential:      2
+
+
+ MODULE QUICKSTEP: ATOMIC COORDINATES IN ANGSTROM
+
+   Atom Kind Element         X             Y             Z       Z(eff)     Mass
+      1    1 Al   13      0.000000      0.000000      0.000000   3.0000  26.9815
+      2    1 Al   13      0.025000      2.025000      2.025000   3.0000  26.9815
+
+
+
+ SCF PARAMETERS         Density guess:                                    ATOMIC
+                        --------------------------------------------------------
+                        max_scf:                                             500
+                        max_scf_history:                                       0
+                        max_diis:                                              4
+                        --------------------------------------------------------
+                        eps_scf:                                        1.00E-08
+                        eps_scf_history:                                0.00E+00
+                        eps_diis:                                       0.00E+00
+                        eps_eigval:                                     1.00E-05
+                        --------------------------------------------------------
+                        level_shift [a.u.]:                             0.000000
+                        added MOs (auto)                                  4    0
+                        --------------------------------------------------------
+                        Smear method:                                FERMI_DIRAC
+                        Electronic temperature [K]:                       3000.0
+                        Electronic temperature [a.u.]:                  9.50E-03
+                        Accuracy threshold:                             1.00E-10
+                        --------------------------------------------------------
+                        No outer SCF
+
+ PW_GRID| Information for grid number                                          1
+ PW_GRID| Grid distributed over                                     2 processors
+ PW_GRID| Real space group dimensions                                     2    1
+ PW_GRID| the grid is blocked:                                                NO
+ PW_GRID| Cutoff [a.u.]                                                    150.0
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1            -32      31                Points:          64
+ PW_GRID|   Bounds   2            -16      15                Points:          32
+ PW_GRID|   Bounds   3            -16      15                Points:          32
+ PW_GRID| Volume element (a.u.^3)  0.3420E-02     Volume (a.u.^3)       224.1464
+ PW_GRID| Grid span                                                    FULLSPACE
+ PW_GRID|   Distribution                         Average         Max         Min
+ PW_GRID|   G-Vectors                            32768.0       32768       32768
+ PW_GRID|   G-Rays                                 512.0         512         512
+ PW_GRID|   Real Space Points                    32768.0       32768       32768
+
+ PW_GRID| Information for grid number                                          2
+ PW_GRID| Number of the reference grid                                         1
+ PW_GRID| Grid distributed over                                     2 processors
+ PW_GRID| Real space group dimensions                                     2    1
+ PW_GRID| the grid is blocked:                                                NO
+ PW_GRID| Cutoff [a.u.]                                                     37.5
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1            -16      15                Points:          32
+ PW_GRID|   Bounds   2             -8       7                Points:          16
+ PW_GRID|   Bounds   3             -8       7                Points:          16
+ PW_GRID| Volume element (a.u.^3)  0.2736E-01     Volume (a.u.^3)       224.1464
+ PW_GRID| Grid span                                                    FULLSPACE
+ PW_GRID|   Distribution                         Average         Max         Min
+ PW_GRID|   G-Vectors                             4096.0        4128        4064
+ PW_GRID|   G-Rays                                 128.0         129         127
+ PW_GRID|   Real Space Points                     4096.0        4096        4096
+
+ PW_GRID| Information for grid number                                          3
+ PW_GRID| Number of the reference grid                                         1
+ PW_GRID| Grid distributed over                                     2 processors
+ PW_GRID| Real space group dimensions                                     2    1
+ PW_GRID| the grid is blocked:                                                NO
+ PW_GRID| Cutoff [a.u.]                                                      9.4
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1             -8       7                Points:          16
+ PW_GRID|   Bounds   2             -4       3                Points:           8
+ PW_GRID|   Bounds   3             -4       3                Points:           8
+ PW_GRID| Volume element (a.u.^3)  0.2189         Volume (a.u.^3)       224.1464
+ PW_GRID| Grid span                                                    FULLSPACE
+ PW_GRID|   Distribution                         Average         Max         Min
+ PW_GRID|   G-Vectors                              512.0         528         496
+ PW_GRID|   G-Rays                                  32.0          33          31
+ PW_GRID|   Real Space Points                      512.0         512         512
+
+ PW_GRID| Information for grid number                                          4
+ PW_GRID| Number of the reference grid                                         1
+ PW_GRID| Grid distributed over                                     2 processors
+ PW_GRID| Real space group dimensions                                     2    1
+ PW_GRID| the grid is blocked:                                                NO
+ PW_GRID| Cutoff [a.u.]                                                      2.3
+ PW_GRID| spherical cutoff:                                                   NO
+ PW_GRID|   Bounds   1             -4       3                Points:           8
+ PW_GRID|   Bounds   2             -2       1                Points:           4
+ PW_GRID|   Bounds   3             -2       1                Points:           4
+ PW_GRID| Volume element (a.u.^3)   1.751         Volume (a.u.^3)       224.1464
+ PW_GRID| Grid span                                                    FULLSPACE
+ PW_GRID|   Distribution                         Average         Max         Min
+ PW_GRID|   G-Vectors                               64.0          72          56
+ PW_GRID|   G-Rays                                   8.0           9           7
+ PW_GRID|   Real Space Points                       64.0          64          64
+
+ POISSON| Solver                                                        PERIODIC
+ POISSON| Periodicity                                                        XYZ
+
+ RS_GRID| Information for grid number                                          1
+ RS_GRID|   Bounds   1            -32      31                Points:          64
+ RS_GRID|   Bounds   2            -16      15                Points:          32
+ RS_GRID|   Bounds   3            -16      15                Points:          32
+ RS_GRID| Real space fully replicated
+ RS_GRID| Group size                                                           1
+
+ RS_GRID| Information for grid number                                          2
+ RS_GRID|   Bounds   1            -16      15                Points:          32
+ RS_GRID|   Bounds   2             -8       7                Points:          16
+ RS_GRID|   Bounds   3             -8       7                Points:          16
+ RS_GRID| Real space fully replicated
+ RS_GRID| Group size                                                           1
+
+ RS_GRID| Information for grid number                                          3
+ RS_GRID|   Bounds   1             -8       7                Points:          16
+ RS_GRID|   Bounds   2             -4       3                Points:           8
+ RS_GRID|   Bounds   3             -4       3                Points:           8
+ RS_GRID| Real space fully replicated
+ RS_GRID| Group size                                                           1
+
+ RS_GRID| Information for grid number                                          4
+ RS_GRID|   Bounds   1             -4       3                Points:           8
+ RS_GRID|   Bounds   2             -2       1                Points:           4
+ RS_GRID|   Bounds   3             -2       1                Points:           4
+ RS_GRID| Real space fully replicated
+ RS_GRID| Group size                                                           1
+
+ *******************************************************************************
+                                    Kpoints
+ *******************************************************************************
+ BRILLOUIN| K-point scheme                                        Monkhorst-Pack
+ BRILLOUIN| K-Point grid                                             3    2    1
+ BRILLOUIN| K-point symmetry accuracy                               0.100000E-05
+ BRILLOUIN| K-Point point group symmetrization                                ON
+ BRILLOUIN| Restrict symmetry to inversion                                    ON
+ BRILLOUIN| Wavefunction type                                            COMPLEX
+ BRILLOUIN| List of Kpoints [2 Pi/Bohr]                                        3
+ BRILLOUIN| Number           Weight            X              Y              Z
+ BRILLOUIN|     1           0.33333       -0.33333       -0.25000        0.00000
+ BRILLOUIN|     2           0.33333       -0.33333        0.25000        0.00000
+ BRILLOUIN|     3           0.33333        0.00000       -0.25000        0.00000
+ *******************************************************************************
+
+ MD_PAR| Molecular dynamics protocol (MD input parameters)
+ MD_PAR| Ensemble type                                                       NVE
+ MD_PAR| Number of time steps                                                 80
+ MD_PAR| Time step [fs]                                                 0.125000
+ MD_PAR| Temperature [K]                                              300.000000
+ MD_PAR| Temperature tolerance [K]                                      0.000000
+ MD_PAR| Print MD information every                                    1 step(s)
+ MD_PAR| File type   Print frequency [steps]                          File names
+ MD_PAR| Coordinates          1                            calculation-pos-1.xyz
+ MD_PAR| Velocities           1                            calculation-vel-1.xyz
+ MD_PAR| Energies             1                               calculation-1.ener
+ MD_PAR| Dump                20                            calculation-1.restart
+
+ ROT| Rotational analysis information
+ ROT| Principal axes and moments of inertia [a.u.]
+ ROT|                           1                   2                   3
+ ROT| Eigenvalues      1.72854824719E-10   7.20290523611E+05   7.20290523611E+05
+ ROT|      x              0.008729380730     -0.008728715559      0.999923800815
+ ROT|      y              0.707079839167     -0.707025960259     -0.012344738282
+ ROT|      z              0.707079839167      0.707133722180      0.000000000000
+ ROT| Number of rotovibrational vectors                                        5
+ ROT| Linear molecule detected
+
+ DOF| Calculation of degrees of freedom
+ DOF| Number of atoms                                                          2
+ DOF| Number of intramolecular constraints                                     0
+ DOF| Number of intermolecular constraints                                     0
+ DOF| Invariants (translations + rotations)                                    3
+ DOF| Degrees of freedom                                                       3
+
+ DOF| Restraints information
+ DOF| Number of intramolecular restraints                                      0
+ DOF| Number of intermolecular restraints                                      0
+
+ MD_VEL| Velocities initialization
+ MD_VEL| Initial temperature [K]                                      103.541109
+ MD_VEL| COM velocity             0.0000000000     0.0000000000     0.0000000000
+
+ *** WARNING in qs_scf_initialization.F:727 :: MO derivative methods flag ***
+ *** has been switched off for kpoint calculation                         ***
+
+
+ Extrapolation method: initial_guess
+
+ Atomic guess: The first density matrix is obtained in terms of atomic orbitals
+               and electronic configurations assigned to each atomic kind
+
+ Guess for atomic kind: Al
+
+ Electronic structure
+    Total number of core electrons                                         10.00
+    Total number of valence electrons                                       3.00
+    Total number of electrons                                              13.00
+    Multiplicity                                                   not specified
+    S   [  2.00  2.00] 2.00
+    P   [  6.00] 1.00
+
+
+ *******************************************************************************
+                  Iteration          Convergence                     Energy [au]
+ *******************************************************************************
+                          1        0.305915E-01                  -1.859601069933
+                          2        0.524000E-02                  -1.861110285590
+                          3        0.579159E-05                  -1.861153364112
+                          4        0.938920E-07                  -1.861153364138
+
+ Energy components [Hartree]           Total Energy ::           -1.861153364138
+                                        Band Energy ::           -0.553286143720
+                                     Kinetic Energy ::            0.692453408885
+                                   Potential Energy ::           -2.553606773023
+                                      Virial (-V/T) ::            3.687766917250
+                                        Core Energy ::           -2.745654507139
+                                          XC Energy ::           -0.605922783649
+                                     Coulomb Energy ::            1.490423926650
+                       Total Pseudopotential Energy ::           -3.492083735852
+                       Local Pseudopotential Energy ::           -3.961694608532
+                    Nonlocal Pseudopotential Energy ::            0.469610872680
+                                        Confinement ::            0.539758198286
+
+ Orbital energies  State     L     Occupation   Energy[a.u.]          Energy[eV]
+
+                       1     0          2.000      -0.248205           -6.754004
+
+                       1     1          1.000      -0.056876           -1.547674
+
+
+ Total Electron Density at R=0:                                         0.000121
+ Re-scaling the density matrix to get the right number of electrons
+                  # Electrons              Trace(P)               Scaling factor
+                            6                 6.000                        1.000
+
+ Number of electrons:                                                          6
+ Number of occupied orbitals:                                                  3
+ Number of molecular orbitals:                                                 7
+
+ Number of orbital functions:                                                 26
+ Number of independent orbital functions:                                     26
+
+
+ SCF WAVEFUNCTION OPTIMIZATION
+
+  ----------------------------------- OT ---------------------------------------
+  Allowing for rotations 
+  Optimizing orbital energies 
+  Minimizer      : CG                  : conjugate gradient
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Lattice FFT   : OFF
+  Precond_solver : DEFAULT
+  Line search    : 2PNT                : 2 energies, one gradient
+  stepsize       :    0.08000000                  energy_gap     :    0.20000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+ K-point ADDED_MOS AUTO: growing virtual-space buffer to: 8
+
+  ----------------------------------- OT ---------------------------------------
+  Allowing for rotations 
+  Optimizing orbital energies 
+  Minimizer      : CG                  : conjugate gradient
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Lattice FFT   : OFF
+  Precond_solver : DEFAULT
+  Line search    : 2PNT                : 2 energies, one gradient
+  stepsize       :    0.08000000                  energy_gap     :    0.20000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+     1 OT CG       0.64E-01    2.0     0.01272753        -4.1407361139 -4.14E+00
+     - OT LS       0.90E-01    0.3                       -4.1576852532
+     - OT LS       0.36E+00    0.3                       -4.1638887325
+     2 OT CG       0.29E+00    0.7     0.00633240        -4.2125227568 -7.18E-02
+     - OT LS       0.40E+00    0.3                       -4.2298092644
+     - OT LS       0.12E+01    0.3                       -4.2353645613
+     3 OT CG       0.93E+00    0.7     0.01027158        -4.1847998719  2.77E-02
+     - OT LS       0.13E+01    0.3                       -4.2235947591
+     - OT LS       0.64E+00    0.3                       -4.1814274570
+     4 OT CG       0.51E+00    0.7     0.00415272        -4.2418603310 -5.71E-02
+     - OT LS       0.72E+00    0.3                       -4.2475272845
+     - OT LS       0.20E+01    0.3                       -4.2493211166
+     5 OT CG       0.16E+01    0.7     0.00233385        -4.2539900169 -1.21E-02
+     - OT LS       0.79E+00    0.3                       -4.2528027219
+     - OT LS       0.74E+00    0.3                       -4.2578296745
+     6 OT CG       0.59E+00    1.2     0.00091608        -4.2577930709 -3.80E-03
+     - OT LS       0.83E+00    0.3                       -4.2584881777
+     - OT LS       0.12E+01    0.3                       -4.2586386625
+     7 OT CG       0.96E+00    1.8     0.00077004        -4.2587124065 -9.19E-04
+     - OT LS       0.13E+01    0.3                       -4.2593506736
+     - OT LS       0.15E+01    0.3                       -4.2594448530
+     8 OT CG       0.12E+01    1.7     0.00083013        -4.2594572705 -7.45E-04
+     - OT LS       0.17E+01    0.3                       -4.2601506643
+     - OT LS       0.13E+01    0.3                       -4.2600917667
+     9 OT CG       0.11E+01    1.7     0.00045452        -4.2601522592 -6.95E-04
+     - OT LS       0.15E+01    0.3                       -4.2603693819
+     - OT LS       0.13E+01    0.3                       -4.2603667579
+    10 OT CG       0.10E+01    1.7     0.00040207        -4.2603745002 -2.22E-04
+     - OT LS       0.14E+01    0.3                       -4.2606147088
+     - OT LS       0.32E+01    0.3                       -4.2606859384
+    11 OT CG       0.26E+01    1.8     0.00051242        -4.2608165565 -4.42E-04
+     - OT LS       0.13E+01    0.3                       -4.2603357106
+     - OT LS       0.91E+00    0.3                       -4.2609856714
+    12 OT CG       0.73E+00    1.9     0.00033454        -4.2610168131 -2.00E-04
+     - OT LS       0.10E+01    0.3                       -4.2611266102
+     - OT LS       0.16E+01    0.3                       -4.2611518968
+    13 OT CG       0.12E+01    1.7     0.00025141        -4.2611707957 -1.54E-04
+     - OT LS       0.17E+01    0.3                       -4.2612396710
+     - OT LS       0.12E+01    0.3                       -4.2612282634
+    14 OT CG       0.99E+00    0.7     0.00018913        -4.2612396727 -6.89E-05
+     - OT LS       0.14E+01    0.3                       -4.2612804966
+     - OT LS       0.14E+01    0.3                       -4.2612848367
+    15 OT CG       0.12E+01    1.2     0.00014184        -4.2612848951 -4.52E-05
+     - OT LS       0.16E+01    0.3                       -4.2613037998
+     - OT LS       0.11E+01    0.3                       -4.2612991888
+    16 OT CG-R     0.86E+00    1.7     0.00010185        -4.2613038918 -1.90E-05
+     - OT LS       0.43E+00    0.3                       -4.2612542339
+     - OT LS       0.31E+00    0.3                       -4.2613224732
+    17 OT CG       0.25E+00    0.7     0.00009662        -4.2613211074 -1.72E-05
+     - OT LS       0.35E+00    0.3                       -4.2613244927
+     - OT LS       0.78E+00    0.3                       -4.2613254900
+    18 OT CG       0.62E+00    0.7     0.00005634        -4.2613275261 -6.42E-06
+     - OT LS       0.87E+00    0.3                       -4.2613301387
+     - OT LS       0.12E+01    0.3                       -4.2613306754
+    19 OT CG       0.97E+00    0.7     0.00004482        -4.2613309489 -3.42E-06
+     - OT LS       0.14E+01    0.3                       -4.2613332874
+     - OT LS       0.15E+01    0.3                       -4.2613336098
+    20 OT CG       0.12E+01    0.7     0.00003631        -4.2613336407 -2.69E-06
+     - OT LS       0.17E+01    0.3                       -4.2613350740
+     - OT LS       0.12E+01    0.3                       -4.2613348629
+    21 OT CG       0.98E+00    0.7     0.00002588        -4.2613350744 -1.43E-06
+     - OT LS       0.14E+01    0.3                       -4.2613359734
+     - OT LS       0.22E+01    0.3                       -4.2613361901
+    22 OT CG       0.18E+01    0.7     0.00002524        -4.2613363795 -1.31E-06
+     - OT LS       0.25E+01    0.3                       -4.2613363944
+     - OT LS       0.89E+00    0.3                       -4.2613353064
+    23 OT CG       0.72E+00    1.2     0.00001271        -4.2613368771 -4.98E-07
+     - OT LS       0.10E+01    0.3                       -4.2613370125
+     - OT LS       0.11E+01    0.3                       -4.2613370294
+ K-point OT: rebuilding physical virtual subspace by full KS diagonalization.
+
+  ----------------------------------- OT ---------------------------------------
+  Allowing for rotations 
+  Optimizing orbital energies 
+  Minimizer      : CG                  : conjugate gradient
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Lattice FFT   : OFF
+  Precond_solver : DEFAULT
+  Line search    : 2PNT                : 2 energies, one gradient
+  stepsize       :    0.08000000                  energy_gap     :    0.20000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+    24 OT CG       0.64E-01    1.7     0.00000584        -4.2613470544 -1.02E-05
+     - OT LS       0.90E-01    0.3                       -4.2613470581
+     - OT LS       0.36E+00    0.3                       -4.2613470594
+    25 OT CG       0.29E+00    1.2     0.00000304        -4.2613470703 -1.59E-08
+     - OT LS       0.40E+00    0.3                       -4.2613470742
+     - OT LS       0.93E+00    0.3                       -4.2613470754
+    26 OT CG       0.74E+00    1.7     0.00000141        -4.2613470778 -7.45E-09
+     - OT LS       0.10E+01    0.3                       -4.2613470795
+     - OT LS       0.11E+01    0.3                       -4.2613470798
+    27 OT CG       0.91E+00    1.8     0.00000095        -4.2613470798 -1.97E-09
+     - OT LS       0.13E+01    0.3                       -4.2613470809
+     - OT LS       0.21E+01    0.3                       -4.2613470812
+    28 OT CG       0.16E+01    1.7     0.00000072        -4.2613470814 -1.63E-09
+     - OT LS       0.23E+01    0.3                       -4.2613470817
+     - OT LS       0.10E+01    0.3                       -4.2613470812
+    29 OT CG       0.83E+00    0.7     0.00000045        -4.2613470819 -4.74E-10
+     - OT LS       0.12E+01    0.3                       -4.2613470821
+     - OT LS       0.14E+01    0.3                       -4.2613470821
+    30 OT CG       0.11E+01    1.2     0.00000031        -4.2613470821 -2.55E-10
+     - OT LS       0.16E+01    0.3                       -4.2613470822
+     - OT LS       0.16E+01    0.3                       -4.2613470823
+    31 OT CG-R     0.13E+01    1.7     0.00000032        -4.2613470823 -1.34E-10
+     - OT LS       0.18E+01    0.3                       -4.2613470825
+     - OT LS       0.10E+01    0.3                       -4.2613470823
+    32 OT CG       0.80E+00    0.7     0.00000012        -4.2613470825 -2.67E-10
+     - OT LS       0.11E+01    0.3                       -4.2613470825
+     - OT LS       0.59E+00    0.3                       -4.2613470825
+    33 OT CG       0.47E+00    0.7     0.00000005        -4.2613470825 -6.10E-12
+     - OT LS       0.66E+00    0.3                       -4.2613470825
+     - OT LS       0.66E+00    0.3                       -4.2613470825
+    34 OT CG       0.53E+00    0.7     0.00000003        -4.2613470825 -2.39E-12
+     - OT LS       0.74E+00    0.3                       -4.2613470825
+     - OT LS       0.74E+00    0.3                       -4.2613470825
+    35 OT CG       0.60E+00    0.7     0.00000002        -4.2613470825 -2.32E-12
+     - OT LS       0.30E+00    0.3                       -4.2613470825
+     - OT LS       0.12E+01    0.3                       -4.2613470825
+    36 OT CG       0.95E+00    0.7     0.00000001        -4.2613470825  3.46E-13
+     - OT LS       0.13E+01    0.3                       -4.2613470825
+     - OT LS       0.73E+00    0.3                       -4.2613470825
+ K-point OT: rebuilding physical virtual subspace by full KS diagonalization.
+
+  ----------------------------------- OT ---------------------------------------
+  Allowing for rotations 
+  Optimizing orbital energies 
+  Minimizer      : CG                  : conjugate gradient
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Lattice FFT   : OFF
+  Precond_solver : DEFAULT
+  Line search    : 2PNT                : 2 energies, one gradient
+  stepsize       :    0.08000000                  energy_gap     :    0.20000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+    37 OT CG       0.64E-01    1.7     0.00000028        -4.2613470828 -2.45E-10
+     - OT LS       0.90E-01    0.3                       -4.2613470828
+     - OT LS       0.90E-01    0.3                       -4.2613470828
+    38 OT CG       0.72E-01    1.2     0.00000024        -4.2613470828 -1.10E-11
+     - OT LS       0.10E+00    0.3                       -4.2613470828
+     - OT LS       0.33E+00    0.3                       -4.2613470828
+    39 OT CG       0.26E+00    1.7     0.00000012        -4.2613470828 -1.73E-11
+     - OT LS       0.37E+00    0.3                       -4.2613470828
+     - OT LS       0.26E+00    0.3                       -4.2613470828
+    40 OT CG       0.21E+00    1.7     0.00000009        -4.2613470828 -5.03E-12
+     - OT LS       0.10E+00    0.3                       -4.2613470828
+     - OT LS       0.21E-02    0.3                       -4.2613470828
+    41 OT CG       0.17E-02    1.7     0.00000009        -4.2613470828  1.54E-12
+     - OT LS       0.23E-02    0.3                       -4.2613470828
+     - OT LS       0.98E-03    0.3                       -4.2613470828
+    42 OT CG       0.79E-03    1.7     0.00000009        -4.2613470828  1.98E-12
+     - OT LS       0.11E-02    0.3                       -4.2613470828
+     - OT LS       0.11E-02    0.3                       -4.2613470828
+    43 OT CG       0.88E-03    1.7     0.00000009        -4.2613470828 -1.84E-12
+     - OT LS       0.12E-02    0.3                       -4.2613470828
+     - OT LS       0.75E-03    0.3                       -4.2613470828
+    44 OT CG       0.60E-03    1.7     0.00000009        -4.2613470828  4.33E-13
+     - OT LS       0.84E-03    0.3                       -4.2613470828
+     - OT LS       0.84E-03    0.3                       -4.2613470828
+    45 OT CG       0.67E-03    1.8     0.00000009        -4.2613470828 -2.40E-12
+     - OT LS       0.33E-03    0.3                       -4.2613470828
+     - OT LS       0.20E-03    0.3                       -4.2613470828
+    46 OT CG       0.16E-03    1.7     0.00000008        -4.2613470828  5.58E-13
+     - OT LS       0.80E-04    0.3                       -4.2613470828
+     - OT LS       0.16E-05    0.3                       -4.2613470828
+    47 OT CG       0.13E-05    1.7     0.00000008        -4.2613470828  8.36E-13
+     - OT LS       0.64E-06    0.3                       -4.2613470828
+     - OT LS       0.25E-05    0.3                       -4.2613470828
+    48 OT CG       0.20E-05    1.7     0.00000008        -4.2613470828  1.34E-12
+     - OT LS       0.10E-05    0.3                       -4.2613470828
+     - OT LS       0.20E-07    0.3                       -4.2613470828
+ K-point OT: rebuilding physical virtual subspace by full KS diagonalization.
+
+  ----------------------------------- OT ---------------------------------------
+  Allowing for rotations 
+  Optimizing orbital energies 
+  Minimizer      : CG                  : conjugate gradient
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Lattice FFT   : OFF
+  Precond_solver : DEFAULT
+  Line search    : 2PNT                : 2 energies, one gradient
+  stepsize       :    0.08000000                  energy_gap     :    0.20000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+    49 OT CG       0.64E-01    1.7     0.00000027        -4.2613470828  2.81E-11
+     - OT LS       0.90E-01    0.3                       -4.2613470828
+     - OT LS       0.90E-01    0.3                       -4.2613470828
+    50 OT CG       0.72E-01    1.2     0.00000024        -4.2613470828 -1.11E-11
+     - OT LS       0.10E+00    0.3                       -4.2613470828
+     - OT LS       0.10E+00    0.3                       -4.2613470828
+    51 OT CG       0.80E-01    1.7     0.00000020        -4.2613470828 -5.82E-12
+     - OT LS       0.11E+00    0.3                       -4.2613470828
+     - OT LS       0.11E+00    0.3                       -4.2613470828
+    52 OT CG       0.90E-01    1.7     0.00000017        -4.2613470828 -6.47E-12
+     - OT LS       0.13E+00    0.3                       -4.2613470828
+     - OT LS       0.35E+00    0.3                       -4.2613470828
+    53 OT CG       0.28E+00    1.7     0.00000009        -4.2613470828 -4.17E-12
+     - OT LS       0.39E+00    0.3                       -4.2613470828
+     - OT LS       0.39E+00    0.3                       -4.2613470828
+    54 OT CG       0.32E+00    0.7     0.00000006        -4.2613470828 -4.53E-12
+     - OT LS       0.44E+00    0.3                       -4.2613470828
+     - OT LS       0.44E+00    0.3                       -4.2613470828
+    55 OT CG       0.35E+00    1.2     0.00000004        -4.2613470828 -9.63E-13
+     - OT LS       0.50E+00    0.3                       -4.2613470828
+     - OT LS       0.50E+00    0.3                       -4.2613470828
+    56 OT CG       0.40E+00    1.7     0.00000004        -4.2613470828 -1.98E-12
+     - OT LS       0.20E+00    0.3                       -4.2613470828
+     - OT LS       0.40E-02    0.3                       -4.2613470828
+    57 OT CG       0.32E-02    1.7     0.00000004        -4.2613470828  1.92E-12
+     - OT LS       0.44E-02    0.3                       -4.2613470828
+     - OT LS       0.44E-02    0.3                       -4.2613470828
+    58 OT CG       0.36E-02    0.7     0.00000004        -4.2613470828 -1.70E-12
+     - OT LS       0.18E-02    0.3                       -4.2613470828
+     - OT LS       0.71E-02    0.3                       -4.2613470828
+    59 OT CG       0.57E-02    0.7     0.00000004        -4.2613470828  9.80E-13
+     - OT LS       0.28E-02    0.3                       -4.2613470828
+     - OT LS       0.11E-01    0.3                       -4.2613470828
+    60 OT CG       0.91E-02    0.7     0.00000004        -4.2613470828 -2.13E-13
+     - OT LS       0.45E-02    0.3                       -4.2613470828
+     - OT LS       0.18E-01    0.3                       -4.2613470828
+ K-point OT: rebuilding physical virtual subspace by full KS diagonalization.
+
+  ----------------------------------- OT ---------------------------------------
+  Allowing for rotations 
+  Optimizing orbital energies 
+  Minimizer      : CG                  : conjugate gradient
+  Preconditioner : FULL_SINGLE_INVERSE : inversion of 
+                                         H + eS - 2*(Sc)(c^T*H*c+const)(Sc)^T
+  Lattice FFT   : OFF
+  Precond_solver : DEFAULT
+  Line search    : 2PNT                : 2 energies, one gradient
+  stepsize       :    0.08000000                  energy_gap     :    0.20000000
+  eps_taylor     :   0.10000E-15                  max_taylor     :             4
+  ----------------------------------- OT ---------------------------------------
+
+  Step     Update method      Time    Convergence         Total energy    Change
+  ------------------------------------------------------------------------------
+    61 OT CG       0.64E-01    1.7     0.00000027        -4.2613470828  3.41E-11
+     - OT LS       0.90E-01    0.3                       -4.2613470828
+     - OT LS       0.90E-01    0.3                       -4.2613470828
+    62 OT CG       0.72E-01    1.2     0.00000023        -4.2613470828 -1.11E-11
+     - OT LS       0.10E+00    0.3                       -4.2613470828
+     - OT LS       0.10E+00    0.3                       -4.2613470828
+    63 OT CG       0.80E-01    1.7     0.00000020        -4.2613470828 -4.54E-12
+     - OT LS       0.11E+00    0.3                       -4.2613470828
+     - OT LS       0.45E+00    0.3                       -4.2613470828
+    64 OT CG       0.36E+00    1.7     0.00000008        -4.2613470828 -1.34E-11
+     - OT LS       0.50E+00    0.3                       -4.2613470828
+     - OT LS       0.28E+00    0.3                       -4.2613470828
+    65 OT CG       0.22E+00    1.7     0.00000006        -4.2613470828 -1.09E-12
+     - OT LS       0.31E+00    0.3                       -4.2613470828
+     - OT LS       0.31E+00    0.3                       -4.2613470828
+    66 OT CG       0.25E+00    0.7     0.00000005        -4.2613470828 -2.19E-12
+     - OT LS       0.35E+00    0.3                       -4.2613470828
+     - OT LS       0.17E+00    0.3                       -4.2613470828
+    67 OT CG       0.13E+00    1.2     0.00000005        -4.2613470828 -9.29E-13
+     - OT LS       0.19E+00    0.3                       -4.2613470828
+     - OT LS       0.72E-01    0.3                       -4.2613470828
+    68 OT CG       0.58E-01    1.7     0.00000005        -4.2613470828 -1.49E-12
+     - OT LS       0.81E-01    0.3                       -4.2613470828
+     - OT LS       0.31E-01    0.3                       -4.2613470828
+    69 OT CG       0.25E-01    1.7     0.00000004        -4.2613470828  1.61E-12
+     - OT LS       0.12E-01    0.3                       -4.2613470828
+     - OT LS       0.49E-01    0.3                       -4.2613470828
+    70 OT CG       0.39E-01    0.7     0.00000004        -4.2613470828 -1.83E-12
+     - OT LS       0.20E-01    0.3                       -4.2613470828
+     - OT LS       0.79E-01    0.3                       -4.2613470828
+    71 OT CG       0.63E-01    0.7     0.00000004        -4.2613470828  3.39E-12
+     - OT LS       0.88E-01    0.3                       -4.2613470828
+     - OT LS       0.88E-01    0.3                       -4.2613470828
+    72 OT CG       0.71E-01    0.7     0.00000004        -4.2613470828 -2.09E-12
+     - OT LS       0.35E-01    0.3                       -4.2613470828
+     - OT LS       0.71E-03    0.3                       -4.2613470828
+    73 OT CG       0.56E-03    0.7     0.00000004        -4.2613470828  1.00E-12
+     - OT LS       0.79E-03    0.3                       -4.2613470828
+     - OT LS       0.40E-03    0.3                       -4.2613470828
+    74 OT CG       0.32E-03    0.7     0.00000004        -4.2613470828  2.98E-13
+     - OT LS       0.44E-03    0.3                       -4.2613470828
+     - OT LS       0.28E-03    0.3                       -4.2613470828
+    75 OT CG       0.23E-03    1.2     0.00000004        -4.2613470828 -1.12E-12
+     - OT LS       0.32E-03    0.3                       -4.2613470828
+     - OT LS       0.32E-03    0.3                       -4.2613470828
+    76 OT CG       0.25E-03    1.7     0.00000004        -4.2613470828 -6.20E-13
+     - OT LS       0.13E-03    0.3                       -4.2613470828
+     - OT LS       0.25E-05    0.3                       -4.2613470828
+    77 OT CG       0.20E-05    1.7     0.00000004        -4.2613470828  3.72E-13
+     - OT LS       0.10E-05    0.3                       -4.2613470828
+     - OT LS       0.40E-05    0.3                       -4.2613470828
+    78 OT CG       0.32E-05    1.7     0.00000004        -4.2613470828  6.01E-13
+     - OT LS       0.16E-05    0.3                       -4.2613470828
+     - OT LS       0.32E-07    0.3                       -4.2613470828
+    79 OT CG       0.26E-07    1.7     0.00000004        -4.2613470828  6.22E-15
+     - OT LS       0.13E-07    0.3                       -4.2613470828
+     - OT LS       0.52E-07    0.3                       -4.2613470828
+    80 OT CG       0.41E-07    1.7     0.00000004        -4.2613470828  4.44E-15
+     - OT LS       0.21E-07    0.3                       -4.2613470828
+     - OT LS       0.83E-07    0.3                       -4.2613470828
+    81 OT CG       0.66E-07    1.7     0.00000004        -4.2613470828  1.51E-14
+     - OT LS       0.33E-07    0.3                       -4.2613470828
+     - OT LS       0.13E-06    0.3                       -4.2613470828
+    82 OT CG       0.11E-06    1.7     0.00000004        -4.2613470828  1.95E-14
+     - OT LS       0.53E-07    0.3                       -4.2613470828
+     - OT LS       0.21E-06    0.3                       -4.2613470828
+    83 OT CG       0.17E-06    1.7     0.00000004        -4.2613470828  3.02E-14
+     - OT LS       0.85E-07    0.3                       -4.2613470828
+     - OT LS       0.34E-06    0.3                       -4.2613470828
+    84 OT CG       0.27E-06    1.7     0.00000004        -4.2613470828  4.97E-14
+     - OT LS       0.14E-06    0.3                       -4.2613470828
+     - OT LS       0.54E-06    0.3                       -4.2613470828
+    85 OT CG       0.43E-06    1.8     0.00000004        -4.2613470828  7.73E-14
+     - OT LS       0.22E-06    0.3                       -4.2613470828
+     - OT LS       0.87E-06    0.3                       -4.2613470828
+    86 OT CG       0.69E-06    1.8     0.00000004        -4.2613470828  1.31E-13
+     - OT LS       0.35E-06    0.3                       -4.2613470828
+     - OT LS       0.14E-05    0.3                       -4.2613470828
+    87 OT CG       0.11E-05    1.8     0.00000004        -4.2613470828  2.10E-13
+     - OT LS       0.55E-06    0.3                       -4.2613470828
+     - OT LS       0.22E-05    0.3                       -4.2613470828
+    88 OT CG       0.18E-05    1.8     0.00000004        -4.2613470828  3.31E-13
+     - OT LS       0.89E-06    0.3                       -4.2613470828
+     - OT LS       0.35E-05    0.3                       -4.2613470828
+    89 OT CG       0.28E-05    1.7     0.00000004        -4.2613470828  5.24E-13
+     - OT LS       0.40E-05    0.3                       -4.2613470828
+     - OT LS       0.40E-05    0.3                       -4.2613470828
+    90 OT CG       0.32E-05    1.8     0.00000004        -4.2613470828 -3.94E-12
+     - OT LS       0.16E-05    0.3                       -4.2613470828
+     - OT LS       0.64E-05    0.3                       -4.2613470828
+    91 OT CG       0.51E-05    1.7     0.00000004        -4.2613470828  9.49E-13
+     - OT LS       0.25E-05    0.3                       -4.2613470828
+     - OT LS       0.20E-04    0.3                       -4.2613470828
+    92 OT CG       0.16E-04    1.7     0.00000004        -4.2613470828  3.03E-12
+     - OT LS       0.23E-04    0.3                       -4.2613470828
+     - OT LS       0.13E-04    0.3                       -4.2613470828
+    93 OT CG       0.11E-04    1.8     0.00000004        -4.2613470828 -2.52E-12
+     - OT LS       0.54E-05    0.3                       -4.2613470828
+     - OT LS       0.11E-06    0.3                       -4.2613470828
+    94 OT CG       0.86E-07    1.7     0.00000004        -4.2613470828  1.15E-14
+     - OT LS       0.43E-07    0.3                       -4.2613470828
+     - OT LS       0.17E-06    0.3                       -4.2613470828
+    95 OT CG       0.14E-06    1.7     0.00000004        -4.2613470828  2.75E-14
+     - OT LS       0.69E-07    0.3                       -4.2613470828
+     - OT LS       0.28E-06    0.3                       -4.2613470828
+    96 OT CG       0.22E-06    1.7     0.00000004        -4.2613470828  3.91E-14
+     - OT LS       0.11E-06    0.3                       -4.2613470828
+     - OT LS       0.44E-06    0.3                       -4.2613470828
+    97 OT CG       0.35E-06    1.7     0.00000004        -4.2613470828  6.57E-14
+     - OT LS       0.18E-06    0.3                       -4.2613470828
+     - OT LS       0.35E-08    0.3                       -4.2613470828
+    98 OT CG       0.28E-08    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.14E-08    0.3                       -4.2613470828
+     - OT LS       0.56E-08    0.3                       -4.2613470828
+    99 OT CG       0.45E-08    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.23E-08    0.3                       -4.2613470828
+     - OT LS       0.90E-08    0.3                       -4.2613470828
+   100 OT CG       0.72E-08    1.7     0.00000004        -4.2613470828  5.33E-15
+     - OT LS       0.10E-07    0.3                       -4.2613470828
+     - OT LS       0.72E-08    0.3                       -4.2613470828
+   101 OT CG       0.58E-08    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.29E-08    0.3                       -4.2613470828
+     - OT LS       0.29E-08    0.3                       -4.2613470828
+   102 OT CG       0.23E-08    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.12E-08    0.3                       -4.2613470828
+     - OT LS       0.46E-08    0.3                       -4.2613470828
+   103 OT CG       0.37E-08    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.18E-08    0.3                       -4.2613470828
+     - OT LS       0.74E-08    0.3                       -4.2613470828
+   104 OT CG       0.59E-08    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.30E-08    0.3                       -4.2613470828
+     - OT LS       0.12E-07    0.3                       -4.2613470828
+   105 OT CG       0.95E-08    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.47E-08    0.3                       -4.2613470828
+     - OT LS       0.19E-07    0.3                       -4.2613470828
+   106 OT CG       0.15E-07    1.7     0.00000004        -4.2613470828  5.33E-15
+     - OT LS       0.21E-07    0.3                       -4.2613470828
+     - OT LS       0.42E-07    0.3                       -4.2613470828
+   107 OT CG       0.34E-07    1.8     0.00000004        -4.2613470828  5.33E-15
+     - OT LS       0.17E-07    0.3                       -4.2613470828
+     - OT LS       0.17E-07    0.3                       -4.2613470828
+   108 OT CG       0.14E-07    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.68E-08    0.3                       -4.2613470828
+     - OT LS       0.27E-07    0.3                       -4.2613470828
+   109 OT CG       0.22E-07    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.11E-07    0.3                       -4.2613470828
+     - OT LS       0.43E-07    0.3                       -4.2613470828
+   110 OT CG       0.35E-07    1.7     0.00000004        -4.2613470828  7.11E-15
+     - OT LS       0.17E-07    0.3                       -4.2613470828
+     - OT LS       0.69E-07    0.3                       -4.2613470828
+   111 OT CG       0.56E-07    1.7     0.00000004        -4.2613470828  1.24E-14
+     - OT LS       0.28E-07    0.3                       -4.2613470828
+     - OT LS       0.11E-06    0.3                       -4.2613470828
+   112 OT CG       0.89E-07    1.7     0.00000004        -4.2613470828  1.42E-14
+     - OT LS       0.44E-07    0.3                       -4.2613470828
+     - OT LS       0.18E-06    0.3                       -4.2613470828
+   113 OT CG       0.14E-06    1.7     0.00000004        -4.2613470828  3.11E-14
+     - OT LS       0.71E-07    0.3                       -4.2613470828
+     - OT LS       0.28E-06    0.3                       -4.2613470828
+   114 OT CG       0.23E-06    1.7     0.00000004        -4.2613470828  4.26E-14
+     - OT LS       0.11E-06    0.3                       -4.2613470828
+     - OT LS       0.23E-08    0.3                       -4.2613470828
+   115 OT CG       0.18E-08    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.25E-08    0.3                       -4.2613470828
+     - OT LS       0.91E-09    0.3                       -4.2613470828
+   116 OT CG       0.73E-09    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.10E-08    0.3                       -4.2613470828
+     - OT LS       0.20E-08    0.3                       -4.2613470828
+   117 OT CG       0.16E-08    1.8     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.82E-09    0.3                       -4.2613470828
+     - OT LS       0.41E-09    0.3                       -4.2613470828
+   118 OT CG       0.33E-09    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.46E-09    0.3                       -4.2613470828
+     - OT LS       0.33E-09    0.3                       -4.2613470828
+   119 OT CG       0.26E-09    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.13E-09    0.3                       -4.2613470828
+     - OT LS       0.52E-09    0.3                       -4.2613470828
+   120 OT CG       0.42E-09    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.58E-09    0.3                       -4.2613470828
+     - OT LS       0.42E-09    0.3                       -4.2613470828
+   121 OT CG       0.33E-09    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.47E-09    0.3                       -4.2613470828
+     - OT LS       0.17E-09    0.3                       -4.2613470828
+   122 OT CG       0.13E-09    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.67E-10    0.3                       -4.2613470828
+     - OT LS       0.33E-10    0.3                       -4.2613470828
+   123 OT CG       0.27E-10    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.13E-10    0.3                       -4.2613470828
+     - OT LS       0.67E-11    0.3                       -4.2613470828
+   124 OT CG       0.53E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.27E-11    0.3                       -4.2613470828
+     - OT LS       0.11E-10    0.3                       -4.2613470828
+   125 OT CG       0.85E-11    1.8     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.43E-11    0.3                       -4.2613470828
+     - OT LS       0.43E-11    0.3                       -4.2613470828
+   126 OT CG       0.34E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.48E-11    0.3                       -4.2613470828
+     - OT LS       0.17E-11    0.3                       -4.2613470828
+   127 OT CG       0.14E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.68E-12    0.3                       -4.2613470828
+     - OT LS       0.34E-12    0.3                       -4.2613470828
+   128 OT CG       0.27E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.38E-12    0.3                       -4.2613470828
+     - OT LS       0.77E-12    0.3                       -4.2613470828
+   129 OT CG       0.61E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.31E-12    0.3                       -4.2613470828
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+   130 OT CG       0.98E-12    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+   131 OT CG       0.11E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.15E-11    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   132 OT CG       0.88E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.44E-12    0.3                       -4.2613470828
+     - OT LS       0.18E-11    0.3                       -4.2613470828
+   133 OT CG       0.14E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.70E-12    0.3                       -4.2613470828
+     - OT LS       0.70E-12    0.3                       -4.2613470828
+   134 OT CG       0.56E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.79E-12    0.3                       -4.2613470828
+     - OT LS       0.28E-12    0.3                       -4.2613470828
+   135 OT CG       0.22E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.31E-12    0.3                       -4.2613470828
+     - OT LS       0.63E-12    0.3                       -4.2613470828
+   136 OT CG       0.50E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.71E-12    0.3                       -4.2613470828
+     - OT LS       0.50E-12    0.3                       -4.2613470828
+   137 OT CG       0.40E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.56E-12    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   138 OT CG       0.90E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.13E-11    0.3                       -4.2613470828
+     - OT LS       0.13E-11    0.3                       -4.2613470828
+   139 OT CG       0.10E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+     - OT LS       0.51E-12    0.3                       -4.2613470828
+   140 OT CG       0.40E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.20E-12    0.3                       -4.2613470828
+     - OT LS       0.81E-12    0.3                       -4.2613470828
+   141 OT CG       0.65E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.32E-12    0.3                       -4.2613470828
+     - OT LS       0.16E-12    0.3                       -4.2613470828
+   142 OT CG       0.13E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.18E-12    0.3                       -4.2613470828
+     - OT LS       0.13E-12    0.3                       -4.2613470828
+   143 OT CG       0.10E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.52E-13    0.3                       -4.2613470828
+     - OT LS       0.21E-12    0.3                       -4.2613470828
+   144 OT CG       0.17E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.23E-12    0.3                       -4.2613470828
+     - OT LS       0.17E-12    0.3                       -4.2613470828
+   145 OT CG       0.13E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.66E-13    0.3                       -4.2613470828
+     - OT LS       0.27E-12    0.3                       -4.2613470828
+   146 OT CG       0.21E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.30E-12    0.3                       -4.2613470828
+     - OT LS       0.21E-12    0.3                       -4.2613470828
+   147 OT CG       0.17E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.24E-12    0.3                       -4.2613470828
+     - OT LS       0.17E-12    0.3                       -4.2613470828
+   148 OT CG       0.14E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.68E-13    0.3                       -4.2613470828
+     - OT LS       0.27E-12    0.3                       -4.2613470828
+   149 OT CG       0.22E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.11E-12    0.3                       -4.2613470828
+     - OT LS       0.54E-13    0.3                       -4.2613470828
+   150 OT CG       0.43E-13    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.61E-13    0.3                       -4.2613470828
+     - OT LS       0.43E-13    0.3                       -4.2613470828
+   151 OT CG       0.35E-13    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.17E-13    0.3                       -4.2613470828
+     - OT LS       0.69E-13    0.3                       -4.2613470828
+   152 OT CG       0.56E-13    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.28E-13    0.3                       -4.2613470828
+     - OT LS       0.11E-12    0.3                       -4.2613470828
+   153 OT CG       0.89E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.44E-13    0.3                       -4.2613470828
+     - OT LS       0.18E-12    0.3                       -4.2613470828
+   154 OT CG       0.14E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.71E-13    0.3                       -4.2613470828
+     - OT LS       0.28E-12    0.3                       -4.2613470828
+   155 OT CG       0.23E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.11E-12    0.3                       -4.2613470828
+     - OT LS       0.46E-12    0.3                       -4.2613470828
+   156 OT CG       0.36E-12    1.7     0.00000004        -4.2613470828  3.55E-15
+     - OT LS       0.51E-12    0.3                       -4.2613470828
+     - OT LS       0.36E-12    0.3                       -4.2613470828
+   157 OT CG       0.29E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.15E-12    0.3                       -4.2613470828
+     - OT LS       0.73E-13    0.3                       -4.2613470828
+   158 OT CG       0.58E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.29E-13    0.3                       -4.2613470828
+     - OT LS       0.12E-12    0.3                       -4.2613470828
+   159 OT CG       0.93E-13    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.47E-13    0.3                       -4.2613470828
+     - OT LS       0.23E-13    0.3                       -4.2613470828
+   160 OT CG       0.19E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.26E-13    0.3                       -4.2613470828
+     - OT LS       0.19E-13    0.3                       -4.2613470828
+   161 OT CG       0.15E-13    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.75E-14    0.3                       -4.2613470828
+     - OT LS       0.30E-13    0.3                       -4.2613470828
+   162 OT CG       0.24E-13    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.12E-13    0.3                       -4.2613470828
+     - OT LS       0.48E-13    0.3                       -4.2613470828
+   163 OT CG       0.38E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.19E-13    0.3                       -4.2613470828
+     - OT LS       0.76E-13    0.3                       -4.2613470828
+   164 OT CG       0.61E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.31E-13    0.3                       -4.2613470828
+     - OT LS       0.15E-13    0.3                       -4.2613470828
+   165 OT CG       0.12E-13    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.17E-13    0.3                       -4.2613470828
+     - OT LS       0.12E-13    0.3                       -4.2613470828
+   166 OT CG       0.98E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.14E-13    0.3                       -4.2613470828
+     - OT LS       0.27E-13    0.3                       -4.2613470828
+   167 OT CG       0.22E-13    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.31E-13    0.3                       -4.2613470828
+     - OT LS       0.31E-13    0.3                       -4.2613470828
+   168 OT CG       0.25E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.12E-13    0.3                       -4.2613470828
+     - OT LS       0.61E-14    0.3                       -4.2613470828
+   169 OT CG       0.49E-14    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.69E-14    0.3                       -4.2613470828
+     - OT LS       0.14E-13    0.3                       -4.2613470828
+   170 OT CG       0.11E-13    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.15E-13    0.3                       -4.2613470828
+     - OT LS       0.15E-13    0.3                       -4.2613470828
+   171 OT CG       0.12E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.62E-14    0.3                       -4.2613470828
+     - OT LS       0.31E-14    0.3                       -4.2613470828
+   172 OT CG       0.25E-14    1.8     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.12E-14    0.3                       -4.2613470828
+     - OT LS       0.25E-16    0.3                       -4.2613470828
+   173 OT CG       0.20E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.28E-16    0.3                       -4.2613470828
+     - OT LS       0.55E-16    0.3                       -4.2613470828
+   174 OT CG       0.44E-16    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.62E-16    0.3                       -4.2613470828
+     - OT LS       0.44E-16    0.3                       -4.2613470828
+   175 OT CG       0.35E-16    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.18E-16    0.3                       -4.2613470828
+     - OT LS       0.88E-17    0.3                       -4.2613470828
+   176 OT CG       0.71E-17    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.99E-17    0.3                       -4.2613470828
+     - OT LS       0.20E-16    0.3                       -4.2613470828
+   177 OT CG       0.16E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.22E-16    0.3                       -4.2613470828
+     - OT LS       0.44E-16    0.3                       -4.2613470828
+   178 OT CG       0.35E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.18E-16    0.3                       -4.2613470828
+     - OT LS       0.71E-16    0.3                       -4.2613470828
+   179 OT CG       0.57E-16    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.79E-16    0.3                       -4.2613470828
+     - OT LS       0.16E-15    0.3                       -4.2613470828
+   180 OT CG       0.13E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.63E-16    0.3                       -4.2613470828
+     - OT LS       0.25E-15    0.3                       -4.2613470828
+   181 OT CG       0.20E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.28E-15    0.3                       -4.2613470828
+     - OT LS       0.20E-15    0.3                       -4.2613470828
+   182 OT CG       0.16E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.23E-15    0.3                       -4.2613470828
+     - OT LS       0.45E-15    0.3                       -4.2613470828
+   183 OT CG       0.36E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.51E-15    0.3                       -4.2613470828
+     - OT LS       0.36E-15    0.3                       -4.2613470828
+   184 OT CG       0.29E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.15E-15    0.3                       -4.2613470828
+     - OT LS       0.58E-15    0.3                       -4.2613470828
+   185 OT CG       0.47E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.65E-15    0.3                       -4.2613470828
+     - OT LS       0.65E-15    0.3                       -4.2613470828
+   186 OT CG       0.52E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.26E-15    0.3                       -4.2613470828
+     - OT LS       0.13E-15    0.3                       -4.2613470828
+   187 OT CG       0.10E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.15E-15    0.3                       -4.2613470828
+     - OT LS       0.10E-15    0.3                       -4.2613470828
+   188 OT CG       0.83E-16    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.42E-16    0.3                       -4.2613470828
+     - OT LS       0.17E-15    0.3                       -4.2613470828
+   189 OT CG       0.13E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.19E-15    0.3                       -4.2613470828
+     - OT LS       0.13E-15    0.3                       -4.2613470828
+   190 OT CG       0.11E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.15E-15    0.3                       -4.2613470828
+     - OT LS       0.11E-15    0.3                       -4.2613470828
+   191 OT CG       0.85E-16    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.43E-16    0.3                       -4.2613470828
+     - OT LS       0.21E-16    0.3                       -4.2613470828
+   192 OT CG       0.17E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.24E-16    0.3                       -4.2613470828
+     - OT LS       0.48E-16    0.3                       -4.2613470828
+   193 OT CG       0.38E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.19E-16    0.3                       -4.2613470828
+     - OT LS       0.77E-16    0.3                       -4.2613470828
+   194 OT CG       0.61E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.86E-16    0.3                       -4.2613470828
+     - OT LS       0.17E-15    0.3                       -4.2613470828
+   195 OT CG       0.14E-15    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.19E-15    0.3                       -4.2613470828
+     - OT LS       0.69E-16    0.3                       -4.2613470828
+   196 OT CG       0.55E-16    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.77E-16    0.3                       -4.2613470828
+     - OT LS       0.15E-15    0.3                       -4.2613470828
+   197 OT CG       0.12E-15    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.17E-15    0.3                       -4.2613470828
+     - OT LS       0.12E-15    0.3                       -4.2613470828
+   198 OT CG       0.98E-16    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.49E-16    0.3                       -4.2613470828
+     - OT LS       0.20E-15    0.3                       -4.2613470828
+   199 OT CG       0.16E-15    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.22E-15    0.3                       -4.2613470828
+     - OT LS       0.22E-15    0.3                       -4.2613470828
+   200 OT CG       0.18E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.25E-15    0.3                       -4.2613470828
+     - OT LS       0.18E-15    0.3                       -4.2613470828
+   201 OT CG       0.14E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.71E-16    0.3                       -4.2613470828
+     - OT LS       0.28E-15    0.3                       -4.2613470828
+   202 OT CG       0.23E-15    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.32E-15    0.3                       -4.2613470828
+     - OT LS       0.32E-15    0.3                       -4.2613470828
+   203 OT CG       0.25E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.35E-15    0.3                       -4.2613470828
+     - OT LS       0.25E-15    0.3                       -4.2613470828
+   204 OT CG       0.20E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.10E-15    0.3                       -4.2613470828
+     - OT LS       0.40E-15    0.3                       -4.2613470828
+   205 OT CG       0.32E-15    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.16E-15    0.3                       -4.2613470828
+     - OT LS       0.65E-15    0.3                       -4.2613470828
+   206 OT CG       0.52E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.72E-15    0.3                       -4.2613470828
+     - OT LS       0.72E-15    0.3                       -4.2613470828
+   207 OT CG       0.58E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.29E-15    0.3                       -4.2613470828
+     - OT LS       0.14E-15    0.3                       -4.2613470828
+   208 OT CG       0.12E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.16E-15    0.3                       -4.2613470828
+     - OT LS       0.16E-15    0.3                       -4.2613470828
+   209 OT CG       0.13E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.65E-16    0.3                       -4.2613470828
+     - OT LS       0.26E-15    0.3                       -4.2613470828
+   210 OT CG       0.21E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.29E-15    0.3                       -4.2613470828
+     - OT LS       0.21E-15    0.3                       -4.2613470828
+   211 OT CG       0.17E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.23E-15    0.3                       -4.2613470828
+     - OT LS       0.83E-16    0.3                       -4.2613470828
+   212 OT CG       0.66E-16    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.93E-16    0.3                       -4.2613470828
+     - OT LS       0.19E-15    0.3                       -4.2613470828
+   213 OT CG       0.15E-15    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.74E-16    0.3                       -4.2613470828
+     - OT LS       0.74E-16    0.3                       -4.2613470828
+   214 OT CG       0.60E-16    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.30E-16    0.3                       -4.2613470828
+     - OT LS       0.12E-15    0.3                       -4.2613470828
+   215 OT CG       0.95E-16    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.13E-15    0.3                       -4.2613470828
+     - OT LS       0.27E-15    0.3                       -4.2613470828
+   216 OT CG       0.21E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.11E-15    0.3                       -4.2613470828
+     - OT LS       0.43E-15    0.3                       -4.2613470828
+   217 OT CG       0.34E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.17E-15    0.3                       -4.2613470828
+     - OT LS       0.68E-15    0.3                       -4.2613470828
+   218 OT CG       0.55E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.77E-15    0.3                       -4.2613470828
+     - OT LS       0.15E-14    0.3                       -4.2613470828
+   219 OT CG       0.12E-14    1.7     0.00000004        -4.2613470828  3.55E-15
+     - OT LS       0.17E-14    0.3                       -4.2613470828
+     - OT LS       0.17E-14    0.3                       -4.2613470828
+   220 OT CG       0.14E-14    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.69E-15    0.3                       -4.2613470828
+     - OT LS       0.34E-15    0.3                       -4.2613470828
+   221 OT CG       0.27E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.38E-15    0.3                       -4.2613470828
+     - OT LS       0.27E-15    0.3                       -4.2613470828
+   222 OT CG       0.22E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.11E-15    0.3                       -4.2613470828
+     - OT LS       0.44E-15    0.3                       -4.2613470828
+   223 OT CG       0.35E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.18E-15    0.3                       -4.2613470828
+     - OT LS       0.88E-16    0.3                       -4.2613470828
+   224 OT CG       0.70E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.35E-16    0.3                       -4.2613470828
+     - OT LS       0.14E-15    0.3                       -4.2613470828
+   225 OT CG       0.11E-15    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.16E-15    0.3                       -4.2613470828
+     - OT LS       0.31E-15    0.3                       -4.2613470828
+   226 OT CG       0.25E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.13E-15    0.3                       -4.2613470828
+     - OT LS       0.50E-15    0.3                       -4.2613470828
+   227 OT CG       0.40E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.20E-15    0.3                       -4.2613470828
+     - OT LS       0.10E-15    0.3                       -4.2613470828
+   228 OT CG       0.81E-16    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.11E-15    0.3                       -4.2613470828
+     - OT LS       0.81E-16    0.3                       -4.2613470828
+   229 OT CG       0.64E-16    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.90E-16    0.3                       -4.2613470828
+     - OT LS       0.18E-15    0.3                       -4.2613470828
+   230 OT CG       0.14E-15    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.72E-16    0.3                       -4.2613470828
+     - OT LS       0.36E-16    0.3                       -4.2613470828
+   231 OT CG       0.29E-16    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.40E-16    0.3                       -4.2613470828
+     - OT LS       0.81E-16    0.3                       -4.2613470828
+   232 OT CG       0.65E-16    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.91E-16    0.3                       -4.2613470828
+     - OT LS       0.65E-16    0.3                       -4.2613470828
+   233 OT CG       0.52E-16    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.72E-16    0.3                       -4.2613470828
+     - OT LS       0.72E-16    0.3                       -4.2613470828
+   234 OT CG       0.58E-16    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.81E-16    0.3                       -4.2613470828
+     - OT LS       0.16E-15    0.3                       -4.2613470828
+   235 OT CG       0.13E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.18E-15    0.3                       -4.2613470828
+     - OT LS       0.65E-16    0.3                       -4.2613470828
+   236 OT CG       0.52E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.26E-16    0.3                       -4.2613470828
+     - OT LS       0.10E-15    0.3                       -4.2613470828
+   237 OT CG       0.83E-16    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.12E-15    0.3                       -4.2613470828
+     - OT LS       0.83E-16    0.3                       -4.2613470828
+   238 OT CG       0.66E-16    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.93E-16    0.3                       -4.2613470828
+     - OT LS       0.66E-16    0.3                       -4.2613470828
+   239 OT CG       0.53E-16    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.74E-16    0.3                       -4.2613470828
+     - OT LS       0.15E-15    0.3                       -4.2613470828
+   240 OT CG       0.12E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.17E-15    0.3                       -4.2613470828
+     - OT LS       0.12E-15    0.3                       -4.2613470828
+   241 OT CG       0.95E-16    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.48E-16    0.3                       -4.2613470828
+     - OT LS       0.19E-15    0.3                       -4.2613470828
+   242 OT CG       0.15E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.76E-16    0.3                       -4.2613470828
+     - OT LS       0.76E-16    0.3                       -4.2613470828
+   243 OT CG       0.61E-16    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.85E-16    0.3                       -4.2613470828
+     - OT LS       0.17E-15    0.3                       -4.2613470828
+   244 OT CG       0.14E-15    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.19E-15    0.3                       -4.2613470828
+     - OT LS       0.14E-15    0.3                       -4.2613470828
+   245 OT CG       0.11E-15    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.55E-16    0.3                       -4.2613470828
+     - OT LS       0.22E-15    0.3                       -4.2613470828
+   246 OT CG       0.17E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.24E-15    0.3                       -4.2613470828
+     - OT LS       0.17E-15    0.3                       -4.2613470828
+   247 OT CG       0.14E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.70E-16    0.3                       -4.2613470828
+     - OT LS       0.35E-16    0.3                       -4.2613470828
+   248 OT CG       0.28E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.39E-16    0.3                       -4.2613470828
+     - OT LS       0.78E-16    0.3                       -4.2613470828
+   249 OT CG       0.63E-16    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.31E-16    0.3                       -4.2613470828
+     - OT LS       0.13E-15    0.3                       -4.2613470828
+   250 OT CG       0.10E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.50E-16    0.3                       -4.2613470828
+     - OT LS       0.20E-15    0.3                       -4.2613470828
+   251 OT CG       0.16E-15    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.22E-15    0.3                       -4.2613470828
+     - OT LS       0.45E-15    0.3                       -4.2613470828
+   252 OT CG       0.36E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.50E-15    0.3                       -4.2613470828
+     - OT LS       0.36E-15    0.3                       -4.2613470828
+   253 OT CG       0.29E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.14E-15    0.3                       -4.2613470828
+     - OT LS       0.57E-15    0.3                       -4.2613470828
+   254 OT CG       0.46E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.64E-15    0.3                       -4.2613470828
+     - OT LS       0.46E-15    0.3                       -4.2613470828
+   255 OT CG       0.37E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.18E-15    0.3                       -4.2613470828
+     - OT LS       0.74E-15    0.3                       -4.2613470828
+   256 OT CG       0.59E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.82E-15    0.3                       -4.2613470828
+     - OT LS       0.82E-15    0.3                       -4.2613470828
+   257 OT CG       0.66E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.92E-15    0.3                       -4.2613470828
+     - OT LS       0.33E-15    0.3                       -4.2613470828
+   258 OT CG       0.26E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.37E-15    0.3                       -4.2613470828
+     - OT LS       0.37E-15    0.3                       -4.2613470828
+   259 OT CG       0.30E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.41E-15    0.3                       -4.2613470828
+     - OT LS       0.30E-15    0.3                       -4.2613470828
+   260 OT CG       0.24E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.12E-15    0.3                       -4.2613470828
+     - OT LS       0.47E-15    0.3                       -4.2613470828
+   261 OT CG       0.38E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.53E-15    0.3                       -4.2613470828
+     - OT LS       0.38E-15    0.3                       -4.2613470828
+   262 OT CG       0.30E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.42E-15    0.3                       -4.2613470828
+     - OT LS       0.15E-15    0.3                       -4.2613470828
+   263 OT CG       0.12E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.17E-15    0.3                       -4.2613470828
+     - OT LS       0.12E-15    0.3                       -4.2613470828
+   264 OT CG       0.97E-16    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.48E-16    0.3                       -4.2613470828
+     - OT LS       0.19E-15    0.3                       -4.2613470828
+   265 OT CG       0.15E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.22E-15    0.3                       -4.2613470828
+     - OT LS       0.15E-15    0.3                       -4.2613470828
+   266 OT CG       0.12E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.62E-16    0.3                       -4.2613470828
+     - OT LS       0.25E-15    0.3                       -4.2613470828
+   267 OT CG       0.20E-15    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.28E-15    0.3                       -4.2613470828
+     - OT LS       0.55E-15    0.3                       -4.2613470828
+   268 OT CG       0.44E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.62E-15    0.3                       -4.2613470828
+     - OT LS       0.44E-15    0.3                       -4.2613470828
+   269 OT CG       0.36E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.50E-15    0.3                       -4.2613470828
+     - OT LS       0.99E-15    0.3                       -4.2613470828
+   270 OT CG       0.80E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.11E-14    0.3                       -4.2613470828
+     - OT LS       0.22E-14    0.3                       -4.2613470828
+   271 OT CG       0.18E-14    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.89E-15    0.3                       -4.2613470828
+     - OT LS       0.36E-14    0.3                       -4.2613470828
+   272 OT CG       0.29E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.40E-14    0.3                       -4.2613470828
+     - OT LS       0.29E-14    0.3                       -4.2613470828
+   273 OT CG       0.23E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.11E-14    0.3                       -4.2613470828
+     - OT LS       0.46E-14    0.3                       -4.2613470828
+   274 OT CG       0.36E-14    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.18E-14    0.3                       -4.2613470828
+     - OT LS       0.73E-14    0.3                       -4.2613470828
+   275 OT CG       0.58E-14    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.82E-14    0.3                       -4.2613470828
+     - OT LS       0.82E-14    0.3                       -4.2613470828
+   276 OT CG       0.65E-14    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.92E-14    0.3                       -4.2613470828
+     - OT LS       0.33E-14    0.3                       -4.2613470828
+   277 OT CG       0.26E-14    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.37E-14    0.3                       -4.2613470828
+     - OT LS       0.73E-14    0.3                       -4.2613470828
+   278 OT CG       0.59E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.82E-14    0.3                       -4.2613470828
+     - OT LS       0.59E-14    0.3                       -4.2613470828
+   279 OT CG       0.47E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.23E-14    0.3                       -4.2613470828
+     - OT LS       0.12E-14    0.3                       -4.2613470828
+   280 OT CG       0.94E-15    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.13E-14    0.3                       -4.2613470828
+     - OT LS       0.94E-15    0.3                       -4.2613470828
+   281 OT CG       0.75E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.10E-14    0.3                       -4.2613470828
+     - OT LS       0.21E-14    0.3                       -4.2613470828
+   282 OT CG       0.17E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.24E-14    0.3                       -4.2613470828
+     - OT LS       0.17E-14    0.3                       -4.2613470828
+   283 OT CG       0.13E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.67E-15    0.3                       -4.2613470828
+     - OT LS       0.27E-14    0.3                       -4.2613470828
+   284 OT CG       0.22E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.30E-14    0.3                       -4.2613470828
+     - OT LS       0.60E-14    0.3                       -4.2613470828
+   285 OT CG       0.48E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.24E-14    0.3                       -4.2613470828
+     - OT LS       0.12E-14    0.3                       -4.2613470828
+   286 OT CG       0.96E-15    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.13E-14    0.3                       -4.2613470828
+     - OT LS       0.96E-15    0.3                       -4.2613470828
+   287 OT CG       0.77E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.11E-14    0.3                       -4.2613470828
+     - OT LS       0.22E-14    0.3                       -4.2613470828
+   288 OT CG       0.17E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.24E-14    0.3                       -4.2613470828
+     - OT LS       0.24E-14    0.3                       -4.2613470828
+   289 OT CG       0.19E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.27E-14    0.3                       -4.2613470828
+     - OT LS       0.54E-14    0.3                       -4.2613470828
+   290 OT CG       0.43E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.22E-14    0.3                       -4.2613470828
+     - OT LS       0.22E-14    0.3                       -4.2613470828
+   291 OT CG       0.17E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.24E-14    0.3                       -4.2613470828
+     - OT LS       0.49E-14    0.3                       -4.2613470828
+   292 OT CG       0.39E-14    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.19E-14    0.3                       -4.2613470828
+     - OT LS       0.78E-14    0.3                       -4.2613470828
+   293 OT CG       0.62E-14    1.7     0.00000004        -4.2613470828  3.55E-15
+     - OT LS       0.87E-14    0.3                       -4.2613470828
+     - OT LS       0.62E-14    0.3                       -4.2613470828
+   294 OT CG       0.50E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.70E-14    0.3                       -4.2613470828
+     - OT LS       0.70E-14    0.3                       -4.2613470828
+   295 OT CG       0.56E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.28E-14    0.3                       -4.2613470828
+     - OT LS       0.14E-14    0.3                       -4.2613470828
+   296 OT CG       0.11E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.16E-14    0.3                       -4.2613470828
+     - OT LS       0.56E-15    0.3                       -4.2613470828
+   297 OT CG       0.45E-15    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.22E-15    0.3                       -4.2613470828
+     - OT LS       0.89E-15    0.3                       -4.2613470828
+   298 OT CG       0.71E-15    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.36E-15    0.3                       -4.2613470828
+     - OT LS       0.14E-14    0.3                       -4.2613470828
+   299 OT CG       0.11E-14    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.57E-15    0.3                       -4.2613470828
+     - OT LS       0.23E-14    0.3                       -4.2613470828
+   300 OT CG       0.18E-14    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.91E-15    0.3                       -4.2613470828
+     - OT LS       0.36E-14    0.3                       -4.2613470828
+   301 OT CG       0.29E-14    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.41E-14    0.3                       -4.2613470828
+     - OT LS       0.41E-14    0.3                       -4.2613470828
+   302 OT CG       0.33E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.16E-14    0.3                       -4.2613470828
+     - OT LS       0.65E-14    0.3                       -4.2613470828
+   303 OT CG       0.52E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.73E-14    0.3                       -4.2613470828
+     - OT LS       0.26E-14    0.3                       -4.2613470828
+   304 OT CG       0.21E-14    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.29E-14    0.3                       -4.2613470828
+     - OT LS       0.59E-14    0.3                       -4.2613470828
+   305 OT CG       0.47E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.66E-14    0.3                       -4.2613470828
+     - OT LS       0.66E-14    0.3                       -4.2613470828
+   306 OT CG       0.52E-14    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.26E-14    0.3                       -4.2613470828
+     - OT LS       0.10E-13    0.3                       -4.2613470828
+   307 OT CG       0.84E-14    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.42E-14    0.3                       -4.2613470828
+     - OT LS       0.17E-13    0.3                       -4.2613470828
+   308 OT CG       0.13E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.19E-13    0.3                       -4.2613470828
+     - OT LS       0.38E-13    0.3                       -4.2613470828
+   309 OT CG       0.30E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.15E-13    0.3                       -4.2613470828
+     - OT LS       0.75E-14    0.3                       -4.2613470828
+   310 OT CG       0.60E-14    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.84E-14    0.3                       -4.2613470828
+     - OT LS       0.84E-14    0.3                       -4.2613470828
+   311 OT CG       0.67E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.94E-14    0.3                       -4.2613470828
+     - OT LS       0.34E-14    0.3                       -4.2613470828
+   312 OT CG       0.27E-14    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.38E-14    0.3                       -4.2613470828
+     - OT LS       0.27E-14    0.3                       -4.2613470828
+   313 OT CG       0.22E-14    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.11E-14    0.3                       -4.2613470828
+     - OT LS       0.43E-14    0.3                       -4.2613470828
+   314 OT CG       0.34E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.17E-14    0.3                       -4.2613470828
+     - OT LS       0.69E-14    0.3                       -4.2613470828
+   315 OT CG       0.55E-14    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.77E-14    0.3                       -4.2613470828
+     - OT LS       0.77E-14    0.3                       -4.2613470828
+   316 OT CG       0.62E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.87E-14    0.3                       -4.2613470828
+     - OT LS       0.62E-14    0.3                       -4.2613470828
+   317 OT CG       0.49E-14    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.25E-14    0.3                       -4.2613470828
+     - OT LS       0.99E-14    0.3                       -4.2613470828
+   318 OT CG       0.79E-14    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.40E-14    0.3                       -4.2613470828
+     - OT LS       0.16E-13    0.3                       -4.2613470828
+   319 OT CG       0.13E-13    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.63E-14    0.3                       -4.2613470828
+     - OT LS       0.25E-13    0.3                       -4.2613470828
+   320 OT CG       0.20E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.10E-13    0.3                       -4.2613470828
+     - OT LS       0.41E-13    0.3                       -4.2613470828
+   321 OT CG       0.32E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.45E-13    0.3                       -4.2613470828
+     - OT LS       0.91E-13    0.3                       -4.2613470828
+   322 OT CG       0.73E-13    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.10E-12    0.3                       -4.2613470828
+     - OT LS       0.73E-13    0.3                       -4.2613470828
+   323 OT CG       0.58E-13    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.29E-13    0.3                       -4.2613470828
+     - OT LS       0.12E-12    0.3                       -4.2613470828
+   324 OT CG       0.93E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.13E-12    0.3                       -4.2613470828
+     - OT LS       0.93E-13    0.3                       -4.2613470828
+   325 OT CG       0.74E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.37E-13    0.3                       -4.2613470828
+     - OT LS       0.15E-12    0.3                       -4.2613470828
+   326 OT CG       0.12E-12    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.17E-12    0.3                       -4.2613470828
+     - OT LS       0.12E-12    0.3                       -4.2613470828
+   327 OT CG       0.95E-13    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.48E-13    0.3                       -4.2613470828
+     - OT LS       0.24E-13    0.3                       -4.2613470828
+   328 OT CG       0.19E-13    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.27E-13    0.3                       -4.2613470828
+     - OT LS       0.19E-13    0.3                       -4.2613470828
+   329 OT CG       0.15E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.21E-13    0.3                       -4.2613470828
+     - OT LS       0.15E-13    0.3                       -4.2613470828
+   330 OT CG       0.12E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.61E-14    0.3                       -4.2613470828
+     - OT LS       0.24E-13    0.3                       -4.2613470828
+   331 OT CG       0.19E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.97E-14    0.3                       -4.2613470828
+     - OT LS       0.39E-13    0.3                       -4.2613470828
+   332 OT CG       0.31E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.44E-13    0.3                       -4.2613470828
+     - OT LS       0.16E-13    0.3                       -4.2613470828
+   333 OT CG       0.12E-13    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.17E-13    0.3                       -4.2613470828
+     - OT LS       0.17E-13    0.3                       -4.2613470828
+   334 OT CG       0.14E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.70E-14    0.3                       -4.2613470828
+     - OT LS       0.28E-13    0.3                       -4.2613470828
+   335 OT CG       0.22E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.31E-13    0.3                       -4.2613470828
+     - OT LS       0.22E-13    0.3                       -4.2613470828
+   336 OT CG       0.18E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.89E-14    0.3                       -4.2613470828
+     - OT LS       0.36E-13    0.3                       -4.2613470828
+   337 OT CG       0.29E-13    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.40E-13    0.3                       -4.2613470828
+     - OT LS       0.80E-13    0.3                       -4.2613470828
+   338 OT CG       0.64E-13    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.32E-13    0.3                       -4.2613470828
+     - OT LS       0.13E-12    0.3                       -4.2613470828
+   339 OT CG       0.10E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.51E-13    0.3                       -4.2613470828
+     - OT LS       0.51E-13    0.3                       -4.2613470828
+   340 OT CG       0.41E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.57E-13    0.3                       -4.2613470828
+     - OT LS       0.11E-12    0.3                       -4.2613470828
+   341 OT CG       0.92E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.46E-13    0.3                       -4.2613470828
+     - OT LS       0.18E-12    0.3                       -4.2613470828
+   342 OT CG       0.15E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.21E-12    0.3                       -4.2613470828
+     - OT LS       0.15E-12    0.3                       -4.2613470828
+   343 OT CG       0.12E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.59E-13    0.3                       -4.2613470828
+     - OT LS       0.24E-12    0.3                       -4.2613470828
+   344 OT CG       0.19E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.94E-13    0.3                       -4.2613470828
+     - OT LS       0.94E-13    0.3                       -4.2613470828
+   345 OT CG       0.75E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.38E-13    0.3                       -4.2613470828
+     - OT LS       0.15E-12    0.3                       -4.2613470828
+   346 OT CG       0.12E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.17E-12    0.3                       -4.2613470828
+     - OT LS       0.12E-12    0.3                       -4.2613470828
+   347 OT CG       0.96E-13    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.48E-13    0.3                       -4.2613470828
+     - OT LS       0.19E-12    0.3                       -4.2613470828
+   348 OT CG       0.15E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.77E-13    0.3                       -4.2613470828
+     - OT LS       0.31E-12    0.3                       -4.2613470828
+   349 OT CG       0.25E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.35E-12    0.3                       -4.2613470828
+     - OT LS       0.69E-12    0.3                       -4.2613470828
+   350 OT CG       0.55E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.28E-12    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   351 OT CG       0.88E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+     - OT LS       0.88E-12    0.3                       -4.2613470828
+   352 OT CG       0.71E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.99E-12    0.3                       -4.2613470828
+     - OT LS       0.71E-12    0.3                       -4.2613470828
+   353 OT CG       0.57E-12    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.28E-12    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   354 OT CG       0.90E-12    1.7     0.00000004        -4.2613470828  3.55E-15
+     - OT LS       0.13E-11    0.3                       -4.2613470828
+     - OT LS       0.90E-12    0.3                       -4.2613470828
+   355 OT CG       0.72E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.10E-11    0.3                       -4.2613470828
+     - OT LS       0.20E-11    0.3                       -4.2613470828
+   356 OT CG       0.16E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.81E-12    0.3                       -4.2613470828
+     - OT LS       0.32E-11    0.3                       -4.2613470828
+   357 OT CG       0.26E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.36E-11    0.3                       -4.2613470828
+     - OT LS       0.26E-11    0.3                       -4.2613470828
+   358 OT CG       0.21E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.10E-11    0.3                       -4.2613470828
+     - OT LS       0.42E-11    0.3                       -4.2613470828
+   359 OT CG       0.33E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.17E-11    0.3                       -4.2613470828
+     - OT LS       0.83E-12    0.3                       -4.2613470828
+   360 OT CG       0.66E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.93E-12    0.3                       -4.2613470828
+     - OT LS       0.66E-12    0.3                       -4.2613470828
+   361 OT CG       0.53E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.74E-12    0.3                       -4.2613470828
+     - OT LS       0.53E-12    0.3                       -4.2613470828
+   362 OT CG       0.43E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.60E-12    0.3                       -4.2613470828
+     - OT LS       0.60E-12    0.3                       -4.2613470828
+   363 OT CG       0.48E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.24E-12    0.3                       -4.2613470828
+     - OT LS       0.95E-12    0.3                       -4.2613470828
+   364 OT CG       0.76E-12    1.7     0.00000004        -4.2613470828  3.55E-15
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+     - OT LS       0.76E-12    0.3                       -4.2613470828
+   365 OT CG       0.61E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.30E-12    0.3                       -4.2613470828
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+   366 OT CG       0.98E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+     - OT LS       0.49E-12    0.3                       -4.2613470828
+   367 OT CG       0.39E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.55E-12    0.3                       -4.2613470828
+     - OT LS       0.39E-12    0.3                       -4.2613470828
+   368 OT CG       0.31E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.16E-12    0.3                       -4.2613470828
+     - OT LS       0.62E-12    0.3                       -4.2613470828
+   369 OT CG       0.50E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.70E-12    0.3                       -4.2613470828
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+   370 OT CG       0.11E-11    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.16E-11    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   371 OT CG       0.89E-12    1.7     0.00000004        -4.2613470828 -3.55E-15
+     - OT LS       0.45E-12    0.3                       -4.2613470828
+     - OT LS       0.18E-11    0.3                       -4.2613470828
+   372 OT CG       0.14E-11    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.20E-11    0.3                       -4.2613470828
+     - OT LS       0.20E-11    0.3                       -4.2613470828
+   373 OT CG       0.16E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.22E-11    0.3                       -4.2613470828
+     - OT LS       0.22E-11    0.3                       -4.2613470828
+   374 OT CG       0.18E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.90E-12    0.3                       -4.2613470828
+     - OT LS       0.36E-11    0.3                       -4.2613470828
+   375 OT CG       0.29E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.40E-11    0.3                       -4.2613470828
+     - OT LS       0.80E-11    0.3                       -4.2613470828
+   376 OT CG       0.64E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.32E-11    0.3                       -4.2613470828
+     - OT LS       0.13E-10    0.3                       -4.2613470828
+   377 OT CG       0.10E-10    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.51E-11    0.3                       -4.2613470828
+     - OT LS       0.21E-10    0.3                       -4.2613470828
+   378 OT CG       0.16E-10    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.23E-10    0.3                       -4.2613470828
+     - OT LS       0.16E-10    0.3                       -4.2613470828
+   379 OT CG       0.13E-10    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.66E-11    0.3                       -4.2613470828
+     - OT LS       0.33E-11    0.3                       -4.2613470828
+   380 OT CG       0.26E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.37E-11    0.3                       -4.2613470828
+     - OT LS       0.26E-11    0.3                       -4.2613470828
+   381 OT CG       0.21E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+     - OT LS       0.53E-12    0.3                       -4.2613470828
+   382 OT CG       0.42E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.59E-12    0.3                       -4.2613470828
+     - OT LS       0.42E-12    0.3                       -4.2613470828
+   383 OT CG       0.34E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.17E-12    0.3                       -4.2613470828
+     - OT LS       0.67E-12    0.3                       -4.2613470828
+   384 OT CG       0.54E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.27E-12    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   385 OT CG       0.86E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.43E-12    0.3                       -4.2613470828
+     - OT LS       0.17E-11    0.3                       -4.2613470828
+   386 OT CG       0.14E-11    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.19E-11    0.3                       -4.2613470828
+     - OT LS       0.39E-11    0.3                       -4.2613470828
+   387 OT CG       0.31E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.15E-11    0.3                       -4.2613470828
+     - OT LS       0.62E-11    0.3                       -4.2613470828
+   388 OT CG       0.50E-11    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.69E-11    0.3                       -4.2613470828
+     - OT LS       0.69E-11    0.3                       -4.2613470828
+   389 OT CG       0.55E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.28E-11    0.3                       -4.2613470828
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+   390 OT CG       0.11E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.16E-11    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   391 OT CG       0.89E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+     - OT LS       0.89E-12    0.3                       -4.2613470828
+   392 OT CG       0.71E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.36E-12    0.3                       -4.2613470828
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+   393 OT CG       0.11E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.16E-11    0.3                       -4.2613470828
+     - OT LS       0.32E-11    0.3                       -4.2613470828
+   394 OT CG       0.25E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.36E-11    0.3                       -4.2613470828
+     - OT LS       0.25E-11    0.3                       -4.2613470828
+   395 OT CG       0.20E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.29E-11    0.3                       -4.2613470828
+     - OT LS       0.57E-11    0.3                       -4.2613470828
+   396 OT CG       0.46E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.64E-11    0.3                       -4.2613470828
+     - OT LS       0.23E-11    0.3                       -4.2613470828
+   397 OT CG       0.18E-11    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.26E-11    0.3                       -4.2613470828
+     - OT LS       0.18E-11    0.3                       -4.2613470828
+   398 OT CG       0.15E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.20E-11    0.3                       -4.2613470828
+     - OT LS       0.41E-11    0.3                       -4.2613470828
+   399 OT CG       0.33E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.46E-11    0.3                       -4.2613470828
+     - OT LS       0.46E-11    0.3                       -4.2613470828
+   400 OT CG       0.37E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.18E-11    0.3                       -4.2613470828
+     - OT LS       0.92E-12    0.3                       -4.2613470828
+   401 OT CG       0.73E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.10E-11    0.3                       -4.2613470828
+     - OT LS       0.73E-12    0.3                       -4.2613470828
+   402 OT CG       0.59E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.29E-12    0.3                       -4.2613470828
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+   403 OT CG       0.94E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.13E-11    0.3                       -4.2613470828
+     - OT LS       0.26E-11    0.3                       -4.2613470828
+   404 OT CG       0.21E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.29E-11    0.3                       -4.2613470828
+     - OT LS       0.29E-11    0.3                       -4.2613470828
+   405 OT CG       0.24E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+     - OT LS       0.47E-11    0.3                       -4.2613470828
+   406 OT CG       0.38E-11    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.53E-11    0.3                       -4.2613470828
+     - OT LS       0.11E-10    0.3                       -4.2613470828
+   407 OT CG       0.84E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.12E-10    0.3                       -4.2613470828
+     - OT LS       0.24E-10    0.3                       -4.2613470828
+   408 OT CG       0.19E-10    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.26E-10    0.3                       -4.2613470828
+     - OT LS       0.26E-10    0.3                       -4.2613470828
+   409 OT CG       0.21E-10    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.30E-10    0.3                       -4.2613470828
+     - OT LS       0.21E-10    0.3                       -4.2613470828
+   410 OT CG       0.17E-10    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.85E-11    0.3                       -4.2613470828
+     - OT LS       0.34E-10    0.3                       -4.2613470828
+   411 OT CG       0.27E-10    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.14E-10    0.3                       -4.2613470828
+     - OT LS       0.54E-10    0.3                       -4.2613470828
+   412 OT CG       0.43E-10    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.22E-10    0.3                       -4.2613470828
+     - OT LS       0.87E-10    0.3                       -4.2613470828
+   413 OT CG       0.69E-10    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.97E-10    0.3                       -4.2613470828
+     - OT LS       0.69E-10    0.3                       -4.2613470828
+   414 OT CG       0.55E-10    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.28E-10    0.3                       -4.2613470828
+     - OT LS       0.11E-09    0.3                       -4.2613470828
+   415 OT CG       0.89E-10    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.12E-09    0.3                       -4.2613470828
+     - OT LS       0.89E-10    0.3                       -4.2613470828
+   416 OT CG       0.71E-10    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.99E-10    0.3                       -4.2613470828
+     - OT LS       0.99E-10    0.3                       -4.2613470828
+   417 OT CG       0.79E-10    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.40E-10    0.3                       -4.2613470828
+     - OT LS       0.16E-09    0.3                       -4.2613470828
+   418 OT CG       0.13E-09    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.64E-10    0.3                       -4.2613470828
+     - OT LS       0.32E-10    0.3                       -4.2613470828
+   419 OT CG       0.25E-10    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.36E-10    0.3                       -4.2613470828
+     - OT LS       0.13E-10    0.3                       -4.2613470828
+   420 OT CG       0.10E-10    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.14E-10    0.3                       -4.2613470828
+     - OT LS       0.28E-10    0.3                       -4.2613470828
+   421 OT CG       0.23E-10    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.32E-10    0.3                       -4.2613470828
+     - OT LS       0.23E-10    0.3                       -4.2613470828
+   422 OT CG       0.18E-10    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.26E-10    0.3                       -4.2613470828
+     - OT LS       0.91E-11    0.3                       -4.2613470828
+   423 OT CG       0.73E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.10E-10    0.3                       -4.2613470828
+     - OT LS       0.36E-11    0.3                       -4.2613470828
+   424 OT CG       0.29E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.15E-11    0.3                       -4.2613470828
+     - OT LS       0.58E-11    0.3                       -4.2613470828
+   425 OT CG       0.47E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.65E-11    0.3                       -4.2613470828
+     - OT LS       0.47E-11    0.3                       -4.2613470828
+   426 OT CG       0.37E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.52E-11    0.3                       -4.2613470828
+     - OT LS       0.19E-11    0.3                       -4.2613470828
+   427 OT CG       0.15E-11    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.21E-11    0.3                       -4.2613470828
+     - OT LS       0.15E-11    0.3                       -4.2613470828
+   428 OT CG       0.12E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.60E-12    0.3                       -4.2613470828
+     - OT LS       0.24E-11    0.3                       -4.2613470828
+   429 OT CG       0.19E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.96E-12    0.3                       -4.2613470828
+     - OT LS       0.48E-12    0.3                       -4.2613470828
+   430 OT CG       0.38E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.19E-12    0.3                       -4.2613470828
+     - OT LS       0.96E-13    0.3                       -4.2613470828
+   431 OT CG       0.76E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.11E-12    0.3                       -4.2613470828
+     - OT LS       0.38E-13    0.3                       -4.2613470828
+   432 OT CG       0.31E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.43E-13    0.3                       -4.2613470828
+     - OT LS       0.86E-13    0.3                       -4.2613470828
+   433 OT CG       0.68E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.34E-13    0.3                       -4.2613470828
+     - OT LS       0.14E-12    0.3                       -4.2613470828
+   434 OT CG       0.11E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.55E-13    0.3                       -4.2613470828
+     - OT LS       0.22E-12    0.3                       -4.2613470828
+   435 OT CG       0.18E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.25E-12    0.3                       -4.2613470828
+     - OT LS       0.88E-13    0.3                       -4.2613470828
+   436 OT CG       0.70E-13    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.35E-13    0.3                       -4.2613470828
+     - OT LS       0.14E-12    0.3                       -4.2613470828
+   437 OT CG       0.11E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.16E-12    0.3                       -4.2613470828
+     - OT LS       0.31E-12    0.3                       -4.2613470828
+   438 OT CG       0.25E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.35E-12    0.3                       -4.2613470828
+     - OT LS       0.35E-12    0.3                       -4.2613470828
+   439 OT CG       0.28E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.14E-12    0.3                       -4.2613470828
+     - OT LS       0.56E-12    0.3                       -4.2613470828
+   440 OT CG       0.45E-12    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.63E-12    0.3                       -4.2613470828
+     - OT LS       0.63E-12    0.3                       -4.2613470828
+   441 OT CG       0.50E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.71E-12    0.3                       -4.2613470828
+     - OT LS       0.25E-12    0.3                       -4.2613470828
+   442 OT CG       0.20E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.28E-12    0.3                       -4.2613470828
+     - OT LS       0.20E-12    0.3                       -4.2613470828
+   443 OT CG       0.16E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.81E-13    0.3                       -4.2613470828
+     - OT LS       0.32E-12    0.3                       -4.2613470828
+   444 OT CG       0.26E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.36E-12    0.3                       -4.2613470828
+     - OT LS       0.36E-12    0.3                       -4.2613470828
+   445 OT CG       0.29E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.41E-12    0.3                       -4.2613470828
+     - OT LS       0.14E-12    0.3                       -4.2613470828
+   446 OT CG       0.12E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.16E-12    0.3                       -4.2613470828
+     - OT LS       0.16E-12    0.3                       -4.2613470828
+   447 OT CG       0.13E-12    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.65E-13    0.3                       -4.2613470828
+     - OT LS       0.26E-12    0.3                       -4.2613470828
+   448 OT CG       0.21E-12    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.29E-12    0.3                       -4.2613470828
+     - OT LS       0.21E-12    0.3                       -4.2613470828
+   449 OT CG       0.17E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.83E-13    0.3                       -4.2613470828
+     - OT LS       0.33E-12    0.3                       -4.2613470828
+   450 OT CG       0.27E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.37E-12    0.3                       -4.2613470828
+     - OT LS       0.37E-12    0.3                       -4.2613470828
+   451 OT CG       0.30E-12    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.15E-12    0.3                       -4.2613470828
+     - OT LS       0.59E-12    0.3                       -4.2613470828
+   452 OT CG       0.48E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.24E-12    0.3                       -4.2613470828
+     - OT LS       0.95E-12    0.3                       -4.2613470828
+   453 OT CG       0.76E-12    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   454 OT CG       0.85E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+     - OT LS       0.24E-11    0.3                       -4.2613470828
+   455 OT CG       0.19E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.27E-11    0.3                       -4.2613470828
+     - OT LS       0.19E-11    0.3                       -4.2613470828
+   456 OT CG       0.15E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.76E-12    0.3                       -4.2613470828
+     - OT LS       0.31E-11    0.3                       -4.2613470828
+   457 OT CG       0.24E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+     - OT LS       0.61E-12    0.3                       -4.2613470828
+   458 OT CG       0.49E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.68E-12    0.3                       -4.2613470828
+     - OT LS       0.49E-12    0.3                       -4.2613470828
+   459 OT CG       0.39E-12    1.7     0.00000004        -4.2613470828 -3.55E-15
+     - OT LS       0.20E-12    0.3                       -4.2613470828
+     - OT LS       0.78E-12    0.3                       -4.2613470828
+   460 OT CG       0.63E-12    1.7     0.00000004        -4.2613470828  3.55E-15
+     - OT LS       0.88E-12    0.3                       -4.2613470828
+     - OT LS       0.63E-12    0.3                       -4.2613470828
+   461 OT CG       0.50E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.70E-12    0.3                       -4.2613470828
+     - OT LS       0.25E-12    0.3                       -4.2613470828
+   462 OT CG       0.20E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.28E-12    0.3                       -4.2613470828
+     - OT LS       0.20E-12    0.3                       -4.2613470828
+   463 OT CG       0.16E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.80E-13    0.3                       -4.2613470828
+     - OT LS       0.32E-12    0.3                       -4.2613470828
+   464 OT CG       0.26E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.36E-12    0.3                       -4.2613470828
+     - OT LS       0.36E-12    0.3                       -4.2613470828
+   465 OT CG       0.29E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.14E-12    0.3                       -4.2613470828
+     - OT LS       0.57E-12    0.3                       -4.2613470828
+   466 OT CG       0.46E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.23E-12    0.3                       -4.2613470828
+     - OT LS       0.23E-12    0.3                       -4.2613470828
+   467 OT CG       0.18E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.92E-13    0.3                       -4.2613470828
+     - OT LS       0.37E-12    0.3                       -4.2613470828
+   468 OT CG       0.29E-12    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.41E-12    0.3                       -4.2613470828
+     - OT LS       0.29E-12    0.3                       -4.2613470828
+   469 OT CG       0.24E-12    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.12E-12    0.3                       -4.2613470828
+     - OT LS       0.47E-12    0.3                       -4.2613470828
+   470 OT CG       0.38E-12    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.53E-12    0.3                       -4.2613470828
+     - OT LS       0.38E-12    0.3                       -4.2613470828
+   471 OT CG       0.30E-12    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.15E-12    0.3                       -4.2613470828
+     - OT LS       0.60E-12    0.3                       -4.2613470828
+   472 OT CG       0.48E-12    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.67E-12    0.3                       -4.2613470828
+     - OT LS       0.48E-12    0.3                       -4.2613470828
+   473 OT CG       0.39E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.54E-12    0.3                       -4.2613470828
+     - OT LS       0.39E-12    0.3                       -4.2613470828
+   474 OT CG       0.31E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.43E-12    0.3                       -4.2613470828
+     - OT LS       0.86E-12    0.3                       -4.2613470828
+   475 OT CG       0.69E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.35E-12    0.3                       -4.2613470828
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+   476 OT CG       0.11E-11    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.55E-12    0.3                       -4.2613470828
+     - OT LS       0.22E-11    0.3                       -4.2613470828
+   477 OT CG       0.18E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.88E-12    0.3                       -4.2613470828
+     - OT LS       0.35E-11    0.3                       -4.2613470828
+   478 OT CG       0.28E-11    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.40E-11    0.3                       -4.2613470828
+     - OT LS       0.28E-11    0.3                       -4.2613470828
+   479 OT CG       0.23E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+     - OT LS       0.45E-11    0.3                       -4.2613470828
+   480 OT CG       0.36E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.18E-11    0.3                       -4.2613470828
+     - OT LS       0.72E-11    0.3                       -4.2613470828
+   481 OT CG       0.58E-11    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.81E-11    0.3                       -4.2613470828
+     - OT LS       0.58E-11    0.3                       -4.2613470828
+   482 OT CG       0.46E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.23E-11    0.3                       -4.2613470828
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+   483 OT CG       0.93E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.13E-11    0.3                       -4.2613470828
+     - OT LS       0.26E-11    0.3                       -4.2613470828
+   484 OT CG       0.21E-11    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.29E-11    0.3                       -4.2613470828
+     - OT LS       0.29E-11    0.3                       -4.2613470828
+   485 OT CG       0.23E-11    1.7     0.00000004        -4.2613470828 -2.66E-15
+     - OT LS       0.12E-11    0.3                       -4.2613470828
+     - OT LS       0.46E-11    0.3                       -4.2613470828
+   486 OT CG       0.37E-11    1.7     0.00000004        -4.2613470828  3.55E-15
+     - OT LS       0.52E-11    0.3                       -4.2613470828
+     - OT LS       0.52E-11    0.3                       -4.2613470828
+   487 OT CG       0.42E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.21E-11    0.3                       -4.2613470828
+     - OT LS       0.83E-11    0.3                       -4.2613470828
+   488 OT CG       0.67E-11    1.7     0.00000004        -4.2613470828  1.78E-15
+     - OT LS       0.93E-11    0.3                       -4.2613470828
+     - OT LS       0.67E-11    0.3                       -4.2613470828
+   489 OT CG       0.53E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.27E-11    0.3                       -4.2613470828
+     - OT LS       0.27E-11    0.3                       -4.2613470828
+   490 OT CG       0.21E-11    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+     - OT LS       0.43E-11    0.3                       -4.2613470828
+   491 OT CG       0.34E-11    1.7     0.00000004        -4.2613470828  2.66E-15
+     - OT LS       0.48E-11    0.3                       -4.2613470828
+     - OT LS       0.34E-11    0.3                       -4.2613470828
+   492 OT CG       0.27E-11    1.7     0.00000004        -4.2613470828 -1.78E-15
+     - OT LS       0.14E-11    0.3                       -4.2613470828
+     - OT LS       0.68E-12    0.3                       -4.2613470828
+   493 OT CG       0.55E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+     - OT LS       0.27E-12    0.3                       -4.2613470828
+     - OT LS       0.11E-11    0.3                       -4.2613470828
+   494 OT CG       0.87E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.44E-12    0.3                       -4.2613470828
+     - OT LS       0.44E-12    0.3                       -4.2613470828
+   495 OT CG       0.35E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.49E-12    0.3                       -4.2613470828
+     - OT LS       0.17E-12    0.3                       -4.2613470828
+   496 OT CG       0.14E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.70E-13    0.3                       -4.2613470828
+     - OT LS       0.28E-12    0.3                       -4.2613470828
+   497 OT CG       0.22E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.11E-12    0.3                       -4.2613470828
+     - OT LS       0.45E-12    0.3                       -4.2613470828
+   498 OT CG       0.36E-12    1.7     0.00000004        -4.2613470828  8.88E-16
+     - OT LS       0.50E-12    0.3                       -4.2613470828
+     - OT LS       0.36E-12    0.3                       -4.2613470828
+   499 OT CG       0.29E-12    1.7     0.00000004        -4.2613470828 -8.88E-16
+     - OT LS       0.40E-12    0.3                       -4.2613470828
+     - OT LS       0.80E-12    0.3                       -4.2613470828
+   500 OT CG       0.64E-12    1.7     0.00000004        -4.2613470828  0.00E+00
+
+  Leaving inner SCF loop after reaching   500 steps.
+
+
+  Electronic density on regular grids:         -6.0000000000        0.0000000000
+  Core density on regular grids:                5.9999999998       -0.0000000002
+  Total charge density on r-space grids:       -0.0000000002
+  Total charge density g-space grids:          -0.0000000002
+
+  Overlap energy of the core charge distribution:               0.00000000000000
+  Self energy of the core charge distribution:                -11.28379167095513
+  Core Hamiltonian energy:                                      2.26750917235704
+  Hartree energy:                                               6.36901390397021
+  Exchange-correlation energy:                                 -1.60581821970610
+  Electronic entropic energy:                                  -0.00826026848230
+  Fermi energy:                                                 0.33760448505240
+
+  Total energy:                                                -4.26134708281627
+  Total energy (extrapolated to T->0):                         -4.25721694857512
+
+ *******************************************************************************
+ *   ___                                                                       *
+ *  /   \                                                                      *
+ * [ABORT]                                                                     *
+ *  \___/     SCF run NOT converged. To continue the calculation regardless,   *
+ *    |             please set the keyword IGNORE_CONVERGENCE_FAILURE.         *
+ *  O/|                                                                        *
+ * /| |                                                                        *
+ * / \                                                            qs_scf.F:995 *
+ *******************************************************************************
+
+
+ ===== Routine Calling Stack ===== 
+
+            5 scf_env_do_scf
+            4 qs_energies
+            3 qs_forces
+            2 qs_mol_dyn_low
+            1 CP2K

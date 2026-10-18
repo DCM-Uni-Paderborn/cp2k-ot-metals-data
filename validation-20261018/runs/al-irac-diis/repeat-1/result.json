@@ -1,0 +1,183 @@
+{
+  "case": "al-irac-diis",
+  "group": "options",
+  "repetition": 1,
+  "ranks": 2,
+  "threads_per_rank": 1,
+  "returncode": 0,
+  "binary_sha256": "2e42be0cfdd2d60524aa933843be0e1c828f98c0f313bfc5fe0e221c1fcfbbaa",
+  "elapsed_including_launcher_s": 77.6965038832277,
+  "hostname": "ctu003",
+  "command": [
+    "srun",
+    "--mpi=pmix",
+    "--exclusive",
+    "--exact",
+    "--mem=2G",
+    "--cpu-bind=cores",
+    "--nodes=1",
+    "--ntasks=2",
+    "--cpus-per-task=1",
+    "/data/home2/kuehne88/ot-metals-validation-20261018/build/bin/cp2k.psmp",
+    "-i",
+    "input.inp",
+    "-o",
+    "output.out"
+  ],
+  "normal_end": true,
+  "scf_converged": true,
+  "converged_steps": [
+    40
+  ],
+  "printed_iterations": 40,
+  "free_energy_Ha": -2.05033783376712,
+  "minus_TS_Ha": -0.00069766920018,
+  "fermi_energy_Ha": 0.26852053322241,
+  "integrated_spin": null,
+  "total_charge_error": -1e-10,
+  "band_boundary_warnings": 0,
+  "cp2k_time_s": 74.68,
+  "actual_mpi_ranks": 2,
+  "launcher_valid": true,
+  "last_scf_row": "40 OT DIIS     0.80E-01    3.2     0.00000022        -2.0503378337 -3.25E-07",
+  "last_scf_iteration": 40,
+  "last_scf_residual": 2.2e-07,
+  "iteration_limit_reached": false,
+  "electron_count_grid": 3.0,
+  "electron_count_grid_error": 0.0,
+  "force_rows_Ha_per_bohr": [
+    [
+      1.11933419e-13,
+      4.15507688e-13,
+      -3.82180957e-13
+    ]
+  ],
+  "stress_bar": [
+    [
+      -17440.1568542,
+      164.278962913,
+      223.905347675
+    ],
+    [
+      164.278962913,
+      -17437.9634938,
+      205.370356997
+    ],
+    [
+      223.905347675,
+      205.370356997,
+      -17444.6161161
+    ]
+  ],
+  "finite_entropy": true,
+  "generalized_correction_Ha": null,
+  "objective_correction_Ha": -0.00069766920018,
+  "geometry_converged": false,
+  "kpoint_count": 14.0,
+  "printed_kpoints": [
+    [
+      1,
+      0.07407,
+      -0.33333,
+      -0.33333,
+      -0.33333
+    ],
+    [
+      2,
+      0.07407,
+      -0.33333,
+      -0.33333,
+      0.0
+    ],
+    [
+      3,
+      0.07407,
+      -0.33333,
+      -0.33333,
+      0.33333
+    ],
+    [
+      4,
+      0.07407,
+      -0.33333,
+      0.0,
+      -0.33333
+    ],
+    [
+      5,
+      0.07407,
+      -0.33333,
+      0.0,
+      0.0
+    ],
+    [
+      6,
+      0.07407,
+      -0.33333,
+      0.0,
+      0.33333
+    ],
+    [
+      7,
+      0.07407,
+      -0.33333,
+      0.33333,
+      -0.33333
+    ],
+    [
+      8,
+      0.07407,
+      -0.33333,
+      0.33333,
+      0.0
+    ],
+    [
+      9,
+      0.07407,
+      -0.33333,
+      0.33333,
+      0.33333
+    ],
+    [
+      10,
+      0.07407,
+      0.0,
+      -0.33333,
+      -0.33333
+    ],
+    [
+      11,
+      0.07407,
+      0.0,
+      -0.33333,
+      0.0
+    ],
+    [
+      12,
+      0.07407,
+      0.0,
+      -0.33333,
+      0.33333
+    ],
+    [
+      13,
+      0.07407,
+      0.0,
+      0.0,
+      -0.33333
+    ],
+    [
+      14,
+      0.03704,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "ao_count": 13.0,
+  "printed_mo_counts": [
+    13
+  ],
+  "last_mo_count": 13,
+  "full_ks_subspace_rebuilds": 2
+}

@@ -1,0 +1,184 @@
+{
+  "case": "al-base-cg",
+  "group": "pilot",
+  "repetition": 2,
+  "ranks": 2,
+  "threads_per_rank": 1,
+  "returncode": 0,
+  "time_limit_s": 900,
+  "binary_sha256": "2e42be0cfdd2d60524aa933843be0e1c828f98c0f313bfc5fe0e221c1fcfbbaa",
+  "elapsed_including_launcher_s": 57.15082270465791,
+  "hostname": "ctu003",
+  "command": [
+    "srun",
+    "--mpi=pmix",
+    "--exclusive",
+    "--exact",
+    "--mem=2G",
+    "--cpu-bind=cores",
+    "--nodes=1",
+    "--ntasks=2",
+    "--cpus-per-task=1",
+    "/data/home2/kuehne88/ot-metals-validation-20261018/build/bin/cp2k.psmp",
+    "-i",
+    "input.inp",
+    "-o",
+    "output.out"
+  ],
+  "normal_end": true,
+  "scf_converged": true,
+  "converged_steps": [
+    14
+  ],
+  "printed_iterations": 14,
+  "free_energy_Ha": -2.050337829497446,
+  "minus_TS_Ha": -0.00069766956613,
+  "fermi_energy_Ha": 0.26851929674703,
+  "integrated_spin": null,
+  "total_charge_error": -1e-10,
+  "band_boundary_warnings": 0,
+  "cp2k_time_s": 53.688,
+  "actual_mpi_ranks": 2,
+  "launcher_valid": true,
+  "last_scf_row": "14 OT CG       0.64E-01    3.2     0.00000069        -2.0503378293 -1.09E-05",
+  "last_scf_iteration": 14,
+  "last_scf_residual": 6.9e-07,
+  "iteration_limit_reached": false,
+  "electron_count_grid": 3.0,
+  "electron_count_grid_error": 0.0,
+  "force_rows_Ha_per_bohr": [
+    [
+      -3.10844746e-13,
+      -1.57877911e-12,
+      1.40970518e-12
+    ]
+  ],
+  "stress_bar": [
+    [
+      -17341.0300936,
+      -841.663027831,
+      -1164.36345133
+    ],
+    [
+      -841.663027831,
+      -17287.3409157,
+      -1071.27967436
+    ],
+    [
+      -1164.36345133,
+      -1071.27967436,
+      -17728.7501508
+    ]
+  ],
+  "finite_entropy": true,
+  "generalized_correction_Ha": null,
+  "objective_correction_Ha": -0.00069766956613,
+  "geometry_converged": false,
+  "kpoint_count": 14.0,
+  "printed_kpoints": [
+    [
+      1,
+      0.07407,
+      -0.33333,
+      -0.33333,
+      -0.33333
+    ],
+    [
+      2,
+      0.07407,
+      -0.33333,
+      -0.33333,
+      0.0
+    ],
+    [
+      3,
+      0.07407,
+      -0.33333,
+      -0.33333,
+      0.33333
+    ],
+    [
+      4,
+      0.07407,
+      -0.33333,
+      0.0,
+      -0.33333
+    ],
+    [
+      5,
+      0.07407,
+      -0.33333,
+      0.0,
+      0.0
+    ],
+    [
+      6,
+      0.07407,
+      -0.33333,
+      0.0,
+      0.33333
+    ],
+    [
+      7,
+      0.07407,
+      -0.33333,
+      0.33333,
+      -0.33333
+    ],
+    [
+      8,
+      0.07407,
+      -0.33333,
+      0.33333,
+      0.0
+    ],
+    [
+      9,
+      0.07407,
+      -0.33333,
+      0.33333,
+      0.33333
+    ],
+    [
+      10,
+      0.07407,
+      0.0,
+      -0.33333,
+      -0.33333
+    ],
+    [
+      11,
+      0.07407,
+      0.0,
+      -0.33333,
+      0.0
+    ],
+    [
+      12,
+      0.07407,
+      0.0,
+      -0.33333,
+      0.33333
+    ],
+    [
+      13,
+      0.07407,
+      0.0,
+      0.0,
+      -0.33333
+    ],
+    [
+      14,
+      0.03704,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "ao_count": 13.0,
+  "printed_mo_counts": [
+    13
+  ],
+  "last_mo_count": 13,
+  "full_ks_subspace_rebuilds": 1
+}

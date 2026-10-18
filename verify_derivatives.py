@@ -202,29 +202,6 @@ fig.savefig(FIGURES / "derivative-checks.pdf")
 fig.savefig(FIGURES / "derivative-checks.png", dpi=180)
 plt.close(fig)
 
-data = json.loads((ROOT / "recorded-results.json").read_text())
-fig, axs = plt.subplots(1, 2, figsize=(7.0, 3.4), constrained_layout=True)
-for ax, key, left, right, labels, title in [
-    (axs[0], "al_cg_response", "baseline_steps", "response_steps", ["Kinetic", "S inverse", "Single inverse", "Full all"], "(a) Calibrated response, Al at 600 K"),
-    (axs[1], "direct_hxc_kernel", "secant_steps", "kernel_steps", ["Al 600 K", "Al 3000 K", "Fe UKS", "Cu"], "(b) Direct Hxc kernel")]:
-    block = data[key]
-    y = np.arange(len(labels))
-    ax.barh(y - 0.17, block[left], height=0.32, color="#69757a", label="Baseline")
-    ax.barh(y + 0.17, block[right], height=0.32, color="#21845b", label="Response")
-    for shift, name in [(-0.17, left), (0.17, right)]:
-        for pos, value in zip(y + shift, block[name]):
-            ax.text(value + 2, pos, str(value), va="center", fontsize=8)
-    ax.set_yticks(y, labels)
-    ax.invert_yaxis()
-    ax.set_xlim(0, max(block[left]) * 1.2)
-    ax.set_xlabel("OT iterations")
-    ax.set_title(title, fontsize=9, loc="left")
-    ax.xaxis.grid(True, alpha=0.2)
-    ax.set_axisbelow(True)
-axs[0].legend(frameon=False, fontsize=8, loc="upper right")
-fig.savefig(FIGURES / "recorded-convergence.pdf")
-fig.savefig(FIGURES / "recorded-convergence.png", dpi=180)
-plt.close(fig)
 print(json.dumps({k: v for k, v in summary.items() if k != "finite_difference_scan"}, indent=2))
 
 # Text-only figures keep the Overleaf source self-contained and use the same data.
@@ -244,29 +221,3 @@ for col, label, color, marker in [
              rf"\addlegendentry{{{label}}}"]
 plot += [r"\end{loglogaxis}", r"\end{tikzpicture}"]
 (ROOT / "derivative-plot.tex").write_text("\n".join(plot) + "\n")
-
-plot = [r"\begin{tikzpicture}",
-        r"\begin{groupplot}[group style={group size=1 by 2,vertical sep=2.2cm},",
-        r"width=0.82\linewidth,height=5cm,xbar,/pgf/bar width=5pt,",
-        r"xmin=0,ymin=-0.65,ymax=3.65,ytick={0,1,2,3},y dir=reverse,",
-        r"xlabel={OT iterations},xmajorgrids,grid style={black!12},",
-        r"tick label style={font=\footnotesize},title style={font=\small},",
-        r"nodes near coords,nodes near coords style={font=\scriptsize,text=black},",
-        r"point meta=x,every node near coord/.append style={/pgf/number format/precision=0},",
-        r"legend style={font=\scriptsize,draw=none,at={(1,1)},anchor=north east}]"
-        ]
-for key, left, right, labels, title, xmax in [
-    ("al_cg_response", "baseline_steps", "response_steps",
-     "Kinetic,Overlap inverse,Single inverse,Full all", "(a) Al, 600 K", 250),
-    ("direct_hxc_kernel", "secant_steps", "kernel_steps",
-     "Al 600 K,Al 3000 K,Fe UKS,Cu", "(b) Direct Hxc kernel", 155)
-]:
-    plot.append(rf"\nextgroupplot[yticklabels={{{labels}}},title={{{title}}},xmax={xmax}]")
-    for name, color, shift in [(left, "black!55", "3pt"),
-                                (right, "green!45!black", "-3pt")]:
-        coords = " ".join(f"({value},{i})" for i, value in enumerate(data[key][name]))
-        plot.append(rf"\addplot[color={color},fill={color},draw=none,area legend,/pgf/bar shift={shift}] coordinates {{{coords}}};")
-    if key == "al_cg_response":
-        plot.append(r"\legend{Baseline,Response}")
-plot += [r"\end{groupplot}", r"\end{tikzpicture}"]
-(ROOT / "convergence-plot.tex").write_text("\n".join(plot) + "\n")

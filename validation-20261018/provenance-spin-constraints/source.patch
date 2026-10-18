@@ -1,0 +1,442 @@
+diff --git a/src/kpoint_methods.F b/src/kpoint_methods.F
+index 265339cc89..9a63a1c7b4 100644
+--- a/src/kpoint_methods.F
++++ b/src/kpoint_methods.F
+@@ -110,7 +110,9 @@ MODULE kpoint_methods
+                                               neighbor_list_set_p_type
+    USE scf_control_types,               ONLY: smear_type
+    USE smearing_utils,                  ONLY: Smearkp,&
+-                                              Smearkp2
++                                              Smearkp2,&
++                                              smearing_separate_spin,&
++                                              smearing_spin_targets
+    USE util,                            ONLY: get_limit,&
+                                               sort
+ 
+@@ -1515,6 +1517,7 @@ CONTAINS
+       REAL(KIND=dp), ALLOCATABLE, DIMENSION(:, :)        :: smatrix
+       REAL(KIND=dp), ALLOCATABLE, DIMENSION(:, :, :)     :: weig, wocc
+       REAL(KIND=dp), ALLOCATABLE, DIMENSION(:, :, :, :)  :: icoeff, rcoeff
++      REAL(KIND=dp), DIMENSION(2)                        :: spin_targets
+       REAL(KIND=dp), DIMENSION(:), POINTER               :: eigenvalues, occupation, wkp
+       TYPE(cp_cfm_type), POINTER                         :: cmo_coeff
+       TYPE(cp_fm_type), POINTER                          :: mo_coeff
+@@ -1531,17 +1534,19 @@ CONTAINS
+       CALL get_kpoint_info(kpoint, nkp=nkp)
+       kp => kpoint%kp_env(1)%kpoint_env
+       nspin = SIZE(kp%mos)
+-      my_separate_spin_occupations = smear%fixed_mag_mom > 0.0_dp
++      my_separate_spin_occupations = smearing_separate_spin(smear%fixed_mag_mom)
+       IF (PRESENT(separate_spin_occupations)) THEN
+          my_separate_spin_occupations = my_separate_spin_occupations .OR. separate_spin_occupations
+       END IF
+       mo_set => kp%mos(1)
+       CALL get_mo_set(mo_set, nmo=nmo, nao=nao, nelectron=nelectron)
+       ne_a = nelectron
++      ne_b = 0
+       IF (nspin == 2) THEN
+          CALL get_mo_set(kp%mos(2), nmo=nb, nelectron=ne_b)
+          CPASSERT(nmo == nb)
+       END IF
++      spin_targets(:) = smearing_spin_targets([ne_a, ne_b], smear%fixed_mag_mom)
+       ALLOCATE (weig(nmo, nkp, nspin), wocc(nmo, nkp, nspin))
+       weig = 0.0_dp
+       wocc = 0.0_dp
+@@ -1635,11 +1640,11 @@ CONTAINS
+                                smear%electronic_temperature, 2.0_dp, smear_fermi_dirac)
+                   kTS_spin(1) = kTS
+                ELSE IF (my_separate_spin_occupations) THEN
+-                  nel = REAL(ne_a, KIND=dp)
++                  nel = spin_targets(1)
+                   CALL Smearkp(wocc(:, :, 1), mus(1), kTS, weig(:, :, 1), nel, wkp, &
+                                smear%electronic_temperature, 1.0_dp, smear_fermi_dirac)
+                   kTS_spin(1) = kTS
+-                  nel = REAL(ne_b, KIND=dp)
++                  nel = spin_targets(2)
+                   CALL Smearkp(wocc(:, :, 2), mus(2), kTS, weig(:, :, 2), nel, wkp, &
+                                smear%electronic_temperature, 1.0_dp, smear_fermi_dirac)
+                   kTS_spin(2) = kTS
+@@ -1658,11 +1663,11 @@ CONTAINS
+                                smear%smearing_width, 2.0_dp, smear%method)
+                   kTS_spin(1) = kTS
+                ELSE IF (my_separate_spin_occupations) THEN
+-                  nel = REAL(ne_a, KIND=dp)
++                  nel = spin_targets(1)
+                   CALL Smearkp(wocc(:, :, 1), mus(1), kTS, weig(:, :, 1), nel, wkp, &
+                                smear%smearing_width, 1.0_dp, smear%method)
+                   kTS_spin(1) = kTS
+-                  nel = REAL(ne_b, KIND=dp)
++                  nel = spin_targets(2)
+                   CALL Smearkp(wocc(:, :, 2), mus(2), kTS, weig(:, :, 2), nel, wkp, &
+                                smear%smearing_width, 1.0_dp, smear%method)
+                   kTS_spin(2) = kTS
+diff --git a/src/kpoint_smearing_unittest.F b/src/kpoint_smearing_unittest.F
+index 20c8075519..694605f75f 100644
+--- a/src/kpoint_smearing_unittest.F
++++ b/src/kpoint_smearing_unittest.F
+@@ -17,7 +17,9 @@ PROGRAM kpoint_smearing_unittest
+    USE reference_manager,               ONLY: remove_all_references
+    USE scf_control_types,               ONLY: smear_type
+    USE smearing_utils,                  ONLY: Smearkp,&
+-                                              smearing_response_weight
++                                              smearing_response_weight,&
++                                              smearing_separate_spin,&
++                                              smearing_spin_targets
+ 
+    IMPLICIT NONE
+ 
+@@ -73,10 +75,49 @@ PROGRAM kpoint_smearing_unittest
+    END IF
+ 
+    CALL test_fixed_n_smearing_response()
++   CALL test_fixed_spin_populations()
+    CALL remove_all_references()
+ 
+ CONTAINS
+ 
++! **************************************************************************************************
++!> \brief Check fractional, zero, integer-preserving, and unconstrained spin targets.
++! **************************************************************************************************
++   SUBROUTINE test_fixed_spin_populations()
++      INTEGER                                            :: imethod, ispin
++      INTEGER, DIMENSION(4)                              :: methods
++      REAL(KIND=dp)                                      :: kTS, mu, number
++      REAL(KIND=dp), DIMENSION(2)                        :: targets, weights
++      REAL(KIND=dp), DIMENSION(4, 2)                     :: eigenvalues, occupation
++
++      IF (smearing_separate_spin(-100.0_dp)) ERROR STOP "Unconstrained spin was fixed"
++      IF (.NOT. smearing_separate_spin(-1.0_dp)) ERROR STOP "Integer spin populations were released"
++      IF (.NOT. smearing_separate_spin(0.0_dp)) ERROR STOP "Zero magnetization was not constrained"
++      IF (.NOT. smearing_separate_spin(0.5_dp)) ERROR STOP "Fractional magnetization was not constrained"
++      targets(:) = smearing_spin_targets([3, 1], -1.0_dp)
++      IF (MAXVAL(ABS(targets - [3.0_dp, 1.0_dp])) > 1.0E-14_dp) THEN
++         ERROR STOP "Integer spin targets changed"
++      END IF
++      targets(:) = smearing_spin_targets([3, 1], 0.0_dp)
++      IF (MAXVAL(ABS(targets - 2.0_dp)) > 1.0E-14_dp) ERROR STOP "Zero-moment targets are wrong"
++      targets(:) = smearing_spin_targets([3, 1], 0.5_dp)
++      IF (MAXVAL(ABS(targets - [2.25_dp, 1.75_dp])) > 1.0E-14_dp) THEN
++         ERROR STOP "Fractional spin targets were rounded"
++      END IF
++      weights(:) = [0.4_dp, 0.6_dp]
++      eigenvalues(:, 1) = [-0.3_dp, -0.1_dp, 0.1_dp, 0.3_dp]
++      eigenvalues(:, 2) = [-0.2_dp, 0.0_dp, 0.2_dp, 0.4_dp]
++      methods(:) = [smear_fermi_dirac, smear_gaussian, smear_mp, smear_mv]
++      DO imethod = 1, SIZE(methods)
++         DO ispin = 1, 2
++            CALL Smearkp(occupation, mu, kTS, eigenvalues, targets(ispin), weights, &
++                         0.15_dp, 1.0_dp, methods(imethod))
++            number = SUM(occupation(:, 1))*weights(1) + SUM(occupation(:, 2))*weights(2)
++            IF (ABS(number - targets(ispin)) > 1.0E-10_dp) ERROR STOP "Spin population constraint failed"
++         END DO
++      END DO
++   END SUBROUTINE test_fixed_spin_populations
++
+ ! **************************************************************************************************
+ !> \brief Check the fixed-N occupation response for every supported K-point smearing method.
+ ! **************************************************************************************************
+diff --git a/src/qs_environment.F b/src/qs_environment.F
+index ca5ac66dab..70d42174ad 100644
+--- a/src/qs_environment.F
++++ b/src/qs_environment.F
+@@ -2395,13 +2395,12 @@ CONTAINS
+ 
+       IF (dft_control%nspins == 2) THEN
+          ! Check and set number of added (unoccupied) orbitals for beta spin
+-         IF (scf_control%added_mos(2) < 0) THEN
+-            n_mo_add = n_ao - n_mo(2)  ! use all available MOs
+-         ELSE IF (scf_control%added_mos(2) > 0) THEN
+-            n_mo_add = scf_control%added_mos(2)
+-         ELSE
++         IF (scf_control%added_mos(2) == 0) THEN
+             n_mo_add = scf_control%added_mos(1)
++         ELSE
++            n_mo_add = scf_control%added_mos(2)
+          END IF
++         IF (n_mo_add < 0) n_mo_add = n_ao - n_mo(2)  ! use all available MOs
+          IF (n_mo_add > n_ao - n_mo(2)) THEN
+             CPWARN("More ADDED_MOs requested for beta spin than available.")
+          END IF
+diff --git a/src/qs_scf_loop_utils.F b/src/qs_scf_loop_utils.F
+index c8a38c6a1f..c9ae381edf 100644
+--- a/src/qs_scf_loop_utils.F
++++ b/src/qs_scf_loop_utils.F
+@@ -142,7 +142,9 @@ MODULE qs_scf_loop_utils
+    USE smeagol_interface,               ONLY: run_smeagol_emtrans
+    USE smearing_utils,                  ONLY: Smearkp,&
+                                               Smearkp2,&
+-                                              smearing_response_weight
++                                              smearing_response_weight,&
++                                              smearing_separate_spin,&
++                                              smearing_spin_targets
+    USE tblite_interface,                ONLY: tb_native_scc_mixer_active
+ #include "./base/base_uses.f90"
+ 
+@@ -1943,7 +1945,7 @@ CONTAINS
+                                                             local_channel, local_kpoint, ne_a, &
+                                                             ne_b, nelectron, nkpoint, nmo
+       REAL(KIND=dp)                                      :: kTS, mu, nel, sigma
+-      REAL(KIND=dp), DIMENSION(2)                        :: mus
++      REAL(KIND=dp), DIMENSION(2)                        :: mus, spin_targets
+       TYPE(kpoint_env_type), POINTER                     :: kp
+ 
+       CPASSERT(smear%do_smear)
+@@ -1963,6 +1965,7 @@ CONTAINS
+       ne_a = nelectron
+       ne_b = 0
+       IF (nspin_energy == 2) CALL get_mo_set(kp%mos(2), nelectron=ne_b)
++      spin_targets(:) = smearing_spin_targets([ne_a, ne_b], smear%fixed_mag_mom)
+ 
+       ALLOCATE (trial_eigenvalues(nmo, nkpoint, nspin_energy))
+       ALLOCATE (trial_occupation(nmo, nkpoint, nspin_energy))
+@@ -1990,12 +1993,12 @@ CONTAINS
+          nel = REAL(nelectron, KIND=dp)
+          CALL Smearkp(trial_occupation(:, :, 1), mus(1), trial_kTS, &
+                       trial_eigenvalues(:, :, 1), nel, wkp, sigma, 2.0_dp, smear%method)
+-      ELSE IF (restricted_roks .OR. smear%fixed_mag_mom > 0.0_dp) THEN
+-         nel = REAL(ne_a, KIND=dp)
++      ELSE IF (restricted_roks .OR. smearing_separate_spin(smear%fixed_mag_mom)) THEN
++         nel = spin_targets(1)
+          CALL Smearkp(trial_occupation(:, :, 1), mus(1), kTS, &
+                       trial_eigenvalues(:, :, 1), nel, wkp, sigma, 1.0_dp, smear%method)
+          trial_kTS = kTS
+-         nel = REAL(ne_b, KIND=dp)
++         nel = spin_targets(2)
+          CALL Smearkp(trial_occupation(:, :, 2), mus(2), kTS, &
+                       trial_eigenvalues(:, :, 2), nel, wkp, sigma, 1.0_dp, smear%method)
+          trial_kTS = trial_kTS + kTS
+@@ -2062,7 +2065,7 @@ CONTAINS
+ 
+       ngroups = 1
+       IF (restricted_roks .OR. &
+-          (nspin_energy == 2 .AND. smear%fixed_mag_mom > 0.0_dp)) ngroups = 2
++          (nspin_energy == 2 .AND. smearing_separate_spin(smear%fixed_mag_mom))) ngroups = 2
+       nmo = SIZE(trial_eigenvalues, 1)
+       ALLOCATE (fixed_n_residual(ngroups), fixed_n_weight(ngroups), &
+                 preconditioner_count(ngroups), preconditioner_shift(ngroups), &
+@@ -2313,7 +2316,7 @@ CONTAINS
+       ngroups = 1
+       IF (restricted_roks) THEN
+          ngroups = nspin_energy
+-      ELSE IF (nspin_ot == 2 .AND. smear%fixed_mag_mom > 0.0_dp) THEN
++      ELSE IF (nspin_ot == 2 .AND. smearing_separate_spin(smear%fixed_mag_mom)) THEN
+          ngroups = 2
+       END IF
+       nrotation_groups = ngroups
+diff --git a/src/smearing_utils.F b/src/smearing_utils.F
+index 826bb03663..05a9e3f5e5 100644
+--- a/src/smearing_utils.F
++++ b/src/smearing_utils.F
+@@ -48,6 +48,7 @@ MODULE smearing_utils
+    PUBLIC :: SmearOcc, SmearFixed, SmearFixedDeriv, SmearFixedDerivMV
+    PUBLIC :: Smearkp, Smearkp2
+    PUBLIC :: smearing_response_weight
++   PUBLIC :: smearing_separate_spin, smearing_spin_targets
+    PRIVATE :: cite_smearing
+ 
+    CHARACTER(len=*), PARAMETER, PRIVATE :: moduleN = 'smearing_utils'
+@@ -57,6 +58,38 @@ MODULE smearing_utils
+    REAL(KIND=dp), PARAMETER, PRIVATE                     :: MPMV_MAX_NEWTON_STEP = 2.0_dp
+ 
+ CONTAINS
++! **************************************************************************************************
++!> \brief Whether a smearing constraint fixes the separate spin populations.
++!> \param fixed_mag_mom Requested spin difference, or a negative constraint selector.
++!> \return True for a prescribed moment or the integer-population selector -1.
++! **************************************************************************************************
++   PURE LOGICAL FUNCTION smearing_separate_spin(fixed_mag_mom)
++      REAL(KIND=dp), INTENT(IN)                          :: fixed_mag_mom
++
++      smearing_separate_spin = fixed_mag_mom >= 0.0_dp .OR. fixed_mag_mom == -1.0_dp
++   END FUNCTION smearing_separate_spin
++
++! **************************************************************************************************
++!> \brief Resolve real-valued spin targets without rounding a prescribed moment.
++!> \param nelectron Initial integer spin populations.
++!> \param fixed_mag_mom Prescribed difference, or a negative constraint selector.
++!> \return Target populations. Negative selectors preserve the initial populations.
++! **************************************************************************************************
++   PURE FUNCTION smearing_spin_targets(nelectron, fixed_mag_mom) RESULT(targets)
++      INTEGER, DIMENSION(2), INTENT(IN)                  :: nelectron
++      REAL(KIND=dp), INTENT(IN)                          :: fixed_mag_mom
++      REAL(KIND=dp), DIMENSION(2)                        :: targets
++
++      REAL(KIND=dp)                                      :: total
++
++      targets(:) = REAL(nelectron, dp)
++      IF (fixed_mag_mom >= 0.0_dp) THEN
++         total = SUM(targets)
++         targets(1) = 0.5_dp*(total + fixed_mag_mom)
++         targets(2) = 0.5_dp*(total - fixed_mag_mom)
++      END IF
++   END FUNCTION smearing_spin_targets
++
+ ! **************************************************************************************************
+ !> \brief   Citation of Smearing methods
+ !> \param method ...
+diff --git a/tests/QS/regtest-ot-3-4/Al-kpoint-mermin-uks-fractional-moment.inp b/tests/QS/regtest-ot-3-4/Al-kpoint-mermin-uks-fractional-moment.inp
+new file mode 100644
+index 0000000000..98eea53905
+--- /dev/null
++++ b/tests/QS/regtest-ot-3-4/Al-kpoint-mermin-uks-fractional-moment.inp
+@@ -0,0 +1,68 @@
++&GLOBAL
++  PRINT_LEVEL LOW
++  PROJECT Al_kpoint_mermin_uks_fractional_moment
++  RUN_TYPE ENERGY
++&END GLOBAL
++
++&FORCE_EVAL
++  METHOD QUICKSTEP
++  &DFT
++    BASIS_SET_FILE_NAME BASIS_MOLOPT
++    POTENTIAL_FILE_NAME POTENTIAL
++    UKS TRUE
++    &KPOINTS
++      FULL_GRID OFF
++      PARALLEL_GROUP_SIZE 0
++      SCHEME MONKHORST-PACK 2 1 1
++      SYMMETRY ON
++    &END KPOINTS
++    &MGRID
++      CUTOFF 40
++    &END MGRID
++    &QS
++      EPS_DEFAULT 1.0E-8
++    &END QS
++    &SCF
++      ADDED_MOS AUTO
++      EPS_SCF 1.0E-7
++      MAX_SCF 80
++      SCF_GUESS ATOMIC
++      &OT
++        ALGORITHM STRICT
++        ENERGIES
++        LINESEARCH 2PNT
++        MINIMIZER LBFGS
++        OCCUPATION_PRECONDITIONER
++        PRECONDITIONER FULL_ALL
++        ROTATION
++      &END OT
++      &PRINT
++        &RESTART OFF
++        &END RESTART
++      &END PRINT
++      &SMEAR
++        ELECTRONIC_TEMPERATURE 1000
++        FIXED_MAGNETIC_MOMENT 0.5
++        METHOD FERMI_DIRAC
++      &END SMEAR
++    &END SCF
++    &XC
++      &XC_FUNCTIONAL PADE
++      &END XC_FUNCTIONAL
++    &END XC
++  &END DFT
++  &SUBSYS
++    &CELL
++      ABC 2.8637824638 2.8637824638 2.8637824638
++      ALPHA_BETA_GAMMA 60.0 60.0 60.0
++    &END CELL
++    &COORD
++      Al 0.0 0.0 0.0
++    &END COORD
++    &KIND Al
++      BASIS_SET SZV-MOLOPT-SR-GTH-q3
++      MAGNETIZATION 1.0
++      POTENTIAL GTH-PADE-q3
++    &END KIND
++  &END SUBSYS
++&END FORCE_EVAL
+diff --git a/tests/QS/regtest-ot-3-4/Al-kpoint-mermin-uks-full-space.inp b/tests/QS/regtest-ot-3-4/Al-kpoint-mermin-uks-full-space.inp
+new file mode 100644
+index 0000000000..94c82d6271
+--- /dev/null
++++ b/tests/QS/regtest-ot-3-4/Al-kpoint-mermin-uks-full-space.inp
+@@ -0,0 +1,68 @@
++&GLOBAL
++  PRINT_LEVEL LOW
++  PROJECT Al_kpoint_mermin_uks_full_space
++  RUN_TYPE ENERGY
++&END GLOBAL
++
++&FORCE_EVAL
++  METHOD QUICKSTEP
++  &DFT
++    BASIS_SET_FILE_NAME BASIS_MOLOPT
++    POTENTIAL_FILE_NAME POTENTIAL
++    UKS TRUE
++    &KPOINTS
++      FULL_GRID OFF
++      PARALLEL_GROUP_SIZE 0
++      SCHEME MONKHORST-PACK 2 1 1
++      SYMMETRY ON
++    &END KPOINTS
++    &MGRID
++      CUTOFF 40
++    &END MGRID
++    &QS
++      EPS_DEFAULT 1.0E-8
++    &END QS
++    &SCF
++      ADDED_MOS -1
++      EPS_SCF 1.0E-7
++      MAX_SCF 80
++      SCF_GUESS ATOMIC
++      &OT
++        ALGORITHM STRICT
++        ENERGIES
++        LINESEARCH 2PNT
++        MINIMIZER LBFGS
++        OCCUPATION_PRECONDITIONER
++        PRECONDITIONER FULL_ALL
++        ROTATION
++      &END OT
++      &PRINT
++        &RESTART OFF
++        &END RESTART
++      &END PRINT
++      &SMEAR
++        ELECTRONIC_TEMPERATURE 1000
++        FIXED_MAGNETIC_MOMENT 1.0
++        METHOD FERMI_DIRAC
++      &END SMEAR
++    &END SCF
++    &XC
++      &XC_FUNCTIONAL PADE
++      &END XC_FUNCTIONAL
++    &END XC
++  &END DFT
++  &SUBSYS
++    &CELL
++      ABC 2.8637824638 2.8637824638 2.8637824638
++      ALPHA_BETA_GAMMA 60.0 60.0 60.0
++    &END CELL
++    &COORD
++      Al 0.0 0.0 0.0
++    &END COORD
++    &KIND Al
++      BASIS_SET SZV-MOLOPT-SR-GTH-q3
++      MAGNETIZATION 1.0
++      POTENTIAL GTH-PADE-q3
++    &END KIND
++  &END SUBSYS
++&END FORCE_EVAL
+diff --git a/tests/QS/regtest-ot-3-4/TEST_FILES.toml b/tests/QS/regtest-ot-3-4/TEST_FILES.toml
+index c4915a1562..2f4e5bd0ce 100644
+--- a/tests/QS/regtest-ot-3-4/TEST_FILES.toml
++++ b/tests/QS/regtest-ot-3-4/TEST_FILES.toml
+@@ -39,4 +39,13 @@
+                                            {matcher="M072", tol=1e-6, ref=6.74684616E-02},
+                                            {matcher="M031", tol=1e-6, ref=-1.52567729226E+04}]
+ "H3-kpoint-uks-opt.inp"                 = [{matcher="M007", tol=1e-9, ref=-1.4973404398}]
++"Al-kpoint-mermin-uks-full-space.inp"  = [
++  {matcher="QS_number_of_molecular_orbitals", tol=0.0, ref=4.0},
++  {matcher="E_total", tol=1e-9, ref=-2.092002995440717},
++]
++"Al-kpoint-mermin-uks-fractional-moment.inp" = [
++  {matcher="E_total", tol=1e-9, ref=-2.085110851347407},
++  {matcher="Integrated_spin_density", tol=1e-6, ref=0.5},
++  {matcher="Electronic_entropic_energy", tol=1e-5, ref=-0.00356162312810},
++]
+ #EOF

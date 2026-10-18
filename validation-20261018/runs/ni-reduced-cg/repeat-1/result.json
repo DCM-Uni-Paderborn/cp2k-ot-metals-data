@@ -1,0 +1,81 @@
+{
+  "case": "ni-reduced-cg",
+  "group": "variational-subspace",
+  "repetition": 1,
+  "ranks": 2,
+  "threads_per_rank": 1,
+  "returncode": 124,
+  "binary_sha256": "2e42be0cfdd2d60524aa933843be0e1c828f98c0f313bfc5fe0e221c1fcfbbaa",
+  "elapsed_including_launcher_s": 900.0700473943725,
+  "hostname": "ctu021",
+  "command": [
+    "srun",
+    "--mpi=pmix",
+    "--exclusive",
+    "--exact",
+    "--mem=2G",
+    "--cpu-bind=cores",
+    "--nodes=1",
+    "--ntasks=2",
+    "--cpus-per-task=1",
+    "/data/home2/kuehne88/ot-metals-validation-20261018/build/bin/cp2k.psmp",
+    "-i",
+    "input.inp",
+    "-o",
+    "output.out"
+  ],
+  "normal_end": false,
+  "scf_converged": false,
+  "converged_steps": [],
+  "printed_iterations": 74,
+  "free_energy_Ha": null,
+  "minus_TS_Ha": null,
+  "fermi_energy_Ha": null,
+  "integrated_spin": null,
+  "total_charge_error": null,
+  "band_boundary_warnings": 0,
+  "cp2k_time_s": null,
+  "actual_mpi_ranks": 2,
+  "launcher_valid": true,
+  "last_scf_row": "74 OT CG       0.80E+00    3.6     0.00000469       -37.3369296945 -2.39E-07",
+  "last_scf_iteration": 74,
+  "last_scf_residual": 4.69e-06,
+  "iteration_limit_reached": false,
+  "force_rows_Ha_per_bohr": [],
+  "stress_bar": [],
+  "finite_entropy": false,
+  "generalized_correction_Ha": null,
+  "objective_correction_Ha": null,
+  "geometry_converged": false,
+  "kpoint_count": 3.0,
+  "printed_kpoints": [
+    [
+      1,
+      0.33333,
+      -0.33333,
+      -0.25,
+      0.0
+    ],
+    [
+      2,
+      0.33333,
+      -0.33333,
+      0.25,
+      0.0
+    ],
+    [
+      3,
+      0.33333,
+      0.0,
+      -0.25,
+      0.0
+    ]
+  ],
+  "ao_count": 18.0,
+  "printed_mo_counts": [
+    10,
+    10
+  ],
+  "last_mo_count": 10,
+  "full_ks_subspace_rebuilds": 4
+}

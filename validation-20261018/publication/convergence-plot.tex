@@ -1,0 +1,20 @@
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=1 by 2,vertical sep=1.5cm},
+width=0.85\linewidth,height=5cm,ybar,/pgf/bar width=9pt,
+symbolic x coords={Al,Cu,Ni},xtick={Al,Cu,Ni},enlarge x limits=0.22,
+ymajorgrids,grid style={black!12},tick label style={font=\small},
+legend image code/.code={\path[#1] (0cm,-0.08cm) rectangle (0.18cm,0.08cm);},
+legend style={draw=none,font=\small,at={(0.5,1.03)},anchor=south,legend columns=3,column sep=5pt}]
+\nextgroupplot[ylabel={Electronic iterations},ymin=0]
+\addplot[fill=blue!60!black,draw=none] coordinates {(Al,14) (Cu,18)};
+\addlegendentry{CG}
+\addplot[fill=green!40!black,draw=none] coordinates {(Al,19) (Cu,24)};
+\addlegendentry{L-BFGS}
+\addplot[fill=black!45,draw=none] coordinates {(Al,6) (Cu,11) (Ni,67)};
+\addlegendentry{Diagonalization}
+\nextgroupplot[ylabel={CP2K elapsed time / s},ymode=log]
+\addplot[fill=blue!60!black,draw=none] coordinates {(Al,53.688) (Cu,101.699)};
+\addplot[fill=green!40!black,draw=none] coordinates {(Al,61.648) (Cu,114.453)};
+\addplot[fill=black!45,draw=none] coordinates {(Al,6.397) (Cu,28.227) (Ni,316.024)};
+\end{groupplot}
+\end{tikzpicture}

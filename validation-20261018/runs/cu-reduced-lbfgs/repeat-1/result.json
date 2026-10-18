@@ -1,0 +1,113 @@
+{
+  "case": "cu-reduced-lbfgs",
+  "group": "variational-subspace",
+  "repetition": 1,
+  "ranks": 2,
+  "threads_per_rank": 1,
+  "returncode": 0,
+  "binary_sha256": "2e42be0cfdd2d60524aa933843be0e1c828f98c0f313bfc5fe0e221c1fcfbbaa",
+  "elapsed_including_launcher_s": 70.83489095792174,
+  "hostname": "ctu021",
+  "command": [
+    "srun",
+    "--mpi=pmix",
+    "--exclusive",
+    "--exact",
+    "--mem=2G",
+    "--cpu-bind=cores",
+    "--nodes=1",
+    "--ntasks=2",
+    "--cpus-per-task=1",
+    "/data/home2/kuehne88/ot-metals-validation-20261018/build/bin/cp2k.psmp",
+    "-i",
+    "input.inp",
+    "-o",
+    "output.out"
+  ],
+  "normal_end": true,
+  "scf_converged": true,
+  "converged_steps": [
+    20
+  ],
+  "printed_iterations": 20,
+  "free_energy_Ha": -48.099639382773304,
+  "minus_TS_Ha": -0.00241886740019,
+  "fermi_energy_Ha": 0.2625125959981,
+  "integrated_spin": null,
+  "total_charge_error": 4.9e-09,
+  "band_boundary_warnings": 0,
+  "cp2k_time_s": 68.272,
+  "actual_mpi_ranks": 2,
+  "launcher_valid": true,
+  "last_scf_row": "20 OT LBFGS    0.72E+00    1.6     0.00000072       -48.0996393822 -3.91E-09",
+  "last_scf_iteration": 20,
+  "last_scf_residual": 7.2e-07,
+  "iteration_limit_reached": false,
+  "electron_count_grid": 10.999999995,
+  "electron_count_grid_error": 5e-09,
+  "force_rows_Ha_per_bohr": [
+    [
+      2.25905311e-15,
+      1.65784122e-15,
+      5.74432654e-15
+    ]
+  ],
+  "stress_bar": [
+    [
+      126004.797045,
+      -205420.006832,
+      -205408.906434
+    ],
+    [
+      -205420.006832,
+      126076.675024,
+      -205482.117588
+    ],
+    [
+      -205408.906434,
+      -205482.117588,
+      126059.149198
+    ]
+  ],
+  "finite_entropy": true,
+  "generalized_correction_Ha": null,
+  "objective_correction_Ha": -0.00241886740019,
+  "geometry_converged": false,
+  "kpoint_count": 4.0,
+  "printed_kpoints": [
+    [
+      1,
+      0.25,
+      -0.25,
+      -0.25,
+      -0.25
+    ],
+    [
+      2,
+      0.25,
+      -0.25,
+      -0.25,
+      0.25
+    ],
+    [
+      3,
+      0.25,
+      -0.25,
+      0.25,
+      -0.25
+    ],
+    [
+      4,
+      0.25,
+      -0.25,
+      0.25,
+      0.25
+    ]
+  ],
+  "ao_count": 18.0,
+  "printed_mo_counts": [
+    10
+  ],
+  "last_mo_count": 10,
+  "full_ks_subspace_rebuilds": 1
+}

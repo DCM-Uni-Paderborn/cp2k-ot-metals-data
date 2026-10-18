@@ -1,0 +1,8 @@
+ M src/kpoint_methods.F
+ M src/kpoint_smearing_unittest.F
+ M src/qs_environment.F
+ M src/qs_scf_loop_utils.F
+ M src/smearing_utils.F
+ M tests/QS/regtest-ot-3-4/TEST_FILES.toml
+?? tests/QS/regtest-ot-3-4/Al-kpoint-mermin-uks-fractional-moment.inp
+?? tests/QS/regtest-ot-3-4/Al-kpoint-mermin-uks-full-space.inp

@@ -1,0 +1,93 @@
+{
+  "case": "al-spin-common-cg",
+  "group": "spin-probes",
+  "repetition": 1,
+  "ranks": 2,
+  "threads_per_rank": 1,
+  "returncode": 0,
+  "binary_sha256": "52c99bbed234eb56a76bf1faad88e63ea6caa7401adcd46c2c0389b9445296f5",
+  "elapsed_including_launcher_s": 97.652209488675,
+  "hostname": "ctu035",
+  "command": [
+    "srun",
+    "--mpi=pmix",
+    "--exclusive",
+    "--exact",
+    "--mem=2G",
+    "--cpu-bind=cores",
+    "--nodes=1",
+    "--ntasks=2",
+    "--cpus-per-task=1",
+    "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+    "-i",
+    "input.inp",
+    "-o",
+    "output.out"
+  ],
+  "normal_end": true,
+  "scf_converged": true,
+  "converged_steps": [
+    26
+  ],
+  "printed_iterations": 26,
+  "free_energy_Ha": -2.092139323393955,
+  "minus_TS_Ha": -9.07977957e-06,
+  "fermi_energy_Ha": 0.47132010729013,
+  "integrated_spin": 0.9997084222,
+  "total_charge_error": 1e-10,
+  "band_boundary_warnings": 0,
+  "cp2k_time_s": 94.551,
+  "actual_mpi_ranks": 2,
+  "launcher_valid": true,
+  "last_scf_row": "26 OT CG       0.64E-01    2.7     0.00000001        -2.0921393234 -7.40E-13",
+  "last_scf_iteration": 26,
+  "last_scf_residual": 1e-08,
+  "iteration_limit_reached": false,
+  "electron_count_grid": 2.9999999998,
+  "electron_count_grid_error": 2e-10,
+  "force_rows_Ha_per_bohr": [
+    [
+      5.97915461e-13,
+      1.41796132e-13,
+      4.52920696e-13
+    ]
+  ],
+  "stress_bar": [
+    [
+      172852.26046,
+      -1562553.13816,
+      -1562553.09357
+    ],
+    [
+      -1562553.13816,
+      172852.290341,
+      1562553.1761
+    ],
+    [
+      -1562553.09357,
+      1562553.1761,
+      172852.226066
+    ]
+  ],
+  "finite_entropy": true,
+  "generalized_correction_Ha": null,
+  "objective_correction_Ha": -9.07977957e-06,
+  "geometry_converged": false,
+  "kpoint_count": 1.0,
+  "printed_kpoints": [
+    [
+      1,
+      1.0,
+      -0.25,
+      0.0,
+      0.0
+    ]
+  ],
+  "ao_count": 4.0,
+  "printed_mo_counts": [
+    4,
+    4
+  ],
+  "last_mo_count": 4,
+  "full_ks_subspace_rebuilds": 2
+}

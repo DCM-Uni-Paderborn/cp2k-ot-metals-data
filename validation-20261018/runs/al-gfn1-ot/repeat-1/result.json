@@ -1,0 +1,75 @@
+{
+  "case": "al-gfn1-ot",
+  "group": "tblite",
+  "repetition": 1,
+  "ranks": 2,
+  "threads_per_rank": 1,
+  "returncode": 0,
+  "binary_sha256": "ce806e9036a648813fc5bbf437dfabb7bfdba0c1ebe03266ca3e618cfa77de4a",
+  "elapsed_including_launcher_s": 7.456748830154538,
+  "hostname": "ctu003",
+  "command": [
+    "srun",
+    "--mpi=pmix",
+    "--exclusive",
+    "--exact",
+    "--mem=2G",
+    "--cpu-bind=cores",
+    "--nodes=1",
+    "--ntasks=2",
+    "--cpus-per-task=1",
+    "/data/home2/kuehne88/ot-metals-validation-20261018/build-tblite/bin/cp2k.psmp",
+    "-i",
+    "input.inp",
+    "-o",
+    "output.out"
+  ],
+  "normal_end": true,
+  "scf_converged": true,
+  "converged_steps": [
+    6
+  ],
+  "printed_iterations": 6,
+  "free_energy_Ha": -1.147392467367666,
+  "minus_TS_Ha": -0.00118720770937,
+  "fermi_energy_Ha": -0.55617828158086,
+  "integrated_spin": null,
+  "total_charge_error": null,
+  "band_boundary_warnings": 0,
+  "cp2k_time_s": 3.505,
+  "actual_mpi_ranks": 2,
+  "launcher_valid": true,
+  "last_scf_row": "6 OT SD       0.80E-01    0.3     2.1194E-10        -1.1473924674  9.84E-14",
+  "last_scf_iteration": 6,
+  "last_scf_residual": 2.1194e-10,
+  "iteration_limit_reached": false,
+  "force_rows_Ha_per_bohr": [],
+  "stress_bar": [],
+  "finite_entropy": true,
+  "generalized_correction_Ha": null,
+  "objective_correction_Ha": -0.00118720770937,
+  "geometry_converged": false,
+  "kpoint_count": 2.0,
+  "printed_kpoints": [
+    [
+      1,
+      0.66667,
+      -0.33333,
+      0.0,
+      0.0
+    ],
+    [
+      2,
+      0.33333,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "ao_count": 9.0,
+  "printed_mo_counts": [
+    9
+  ],
+  "last_mo_count": 9,
+  "full_ks_subspace_rebuilds": 0
+}

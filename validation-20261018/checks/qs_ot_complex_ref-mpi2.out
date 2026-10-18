@@ -1,0 +1,35 @@
+srun: Step created for StepId=666020.6
+complex rotation spectral-norm error:   5.551115E-17
+fixed-N Mermin gradient/Hessian errors:  8.556335E-12  2.838683E-11
+fixed-N complex occupation-projector error:  2.904895E-10
+finite complex rotation response errors:  1.857929E-11  4.714719E-09  9.994228E-11  0.000000E+00
+fixed-N rotation Schur errors:  2.825431E-16  1.216574E-07
+fixed-N multigroup Schur errors:  5.551115E-17  0.000000E+00  1.040834E-17
+ROKS fixed-N rotation Schur errors:  7.524363E-17  4.033635E-08
+symmetric absolute solve error:  1.110223E-16
+projected response preservation/residual errors:   2.220446E-16   2.220446E-16
+symmetric SR1 secant/symmetry/rejection errors:  1.665335E-16  0.000000E+00  0.000000E+00
+density secant direct/overlap/gauge/sign/calibrated/rejected errors:  1.387779E-17  0.000000E+00  4.163336E-17  0.000000E+00  5.551115E-17  0.000000E+00
+joint-spin density secant direct error/coupling:  6.938894E-18  3.298372E-04
+finite complex density tangent errors:  7.680239E-11  5.551114E-11
+moving-subspace density secant error:  4.996004E-16
+real finite rotation slope fd/predicted/error -2.122122E-02 -2.122122E-02  6.304368E-11
+complex rotation Frechet finite-difference error  1.865942E-10
+sparse complex Frechet block-union error  0.000000E+00
+complex finite REF rotation orbital error  4.440892E-16
+complex finite REF slope fd/predicted/error -1.917700E-01 -1.917700E-01  1.203049E-10
+complex finite rotation slope fd/predicted/error  3.874434E-02  3.874434E-02  1.817538E-10
+split-complex GEMM N/N, C/N, N/C errors:  5.551115E-17  5.721958E-17  5.551115E-17
+complex FULL_SINGLE gauge/hermitian/min-eigenvalue  4.440892E-16  0.000000E+00  6.823578E-01
+complex S/KINETIC inverse errors  2.220446E-16  4.440892E-16
+complex FULL_SINGLE hermitian/min-eigenvalue  4.972076E-16  1.403494E+00
+complex FULL_ALL phase/orthogonality/descent  3.140185E-16  3.677507E-19  5.824752E-01
+complex FERMI_LOW_RANK covariance/descent  7.473417E-17  9.533529E-02
+complex FULL_ALL_COVARIANT covariance/descent  1.335805E-15  6.071730E-01
+complex occupation-block covariance/cross-block/max-eigenvalue/descent  9.130909E-16  1.117344E-16  4.290177E-01  7.683470E-01
+complex OT W error/hermitian/gauge  1.110765E-16  5.551115E-17  1.861901E-16
+complex finite-STRICT derivative: fd/predicted/error  9.430627E-03  9.430627E-03  2.604214E-10
+complex finite-STRICT rotation: fd/predicted/error  3.651534E-03  3.651534E-03  5.038988E-11
+complex finite-STRICT orthonormality error  1.110223E-15
+complex finite-REF pullback: fd/predicted/error -2.743483E-01 -2.743483E-01  4.468015E-11
+discarded projected-gradient error  2.118857E-01

@@ -1,0 +1,21 @@
+{
+  "dbcsr": {
+    "source_revision": "cd3b353bcae4ae40afc71b244ef35396a1015bb1",
+    "source_status": [
+      " M CMakeLists.txt",
+      "?? src/acc/libsmm_acc/parameters/parameters_B200.json"
+    ],
+    "installed_libraries": {
+      "libdbcsr.so.2.10.0-dirty": "3207c8b040b9a5d65df24ab710d26f27eb9278d42495f6372f38609131b8071c",
+      "libdbcsr_c.so.2.10.0-dirty": "838d42ca796f523410b064cd3187f18c9c6e834f9230a4f4ed843ca661fd5dcd"
+    },
+    "cpu_scope": "USE_ACCEL=none. The tracked CMake change only registers the B200 CUDA architecture. The untracked B200 tuning parameters are not used by this CPU build."
+  },
+  "spglib": {
+    "source_revision": "c633404d67b2aa341ae748819c542e81c0c1f55d",
+    "source_status": [],
+    "installed_libraries": {
+      "libsymspg.so.2.6.0": "3fee56ea8a678d93c52620c399f521a7d5567abffb79ab20a328af40dd9ff375"
+    }
+  }
+}

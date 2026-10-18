@@ -1,0 +1,38 @@
+ CP2K version 2026.2 (Development Version)
+ Source code revision f6c7e1d
+ cp2kflags: omp fftw3 parallel scalapack mpi_f08 spglib openblas libdftd4 s_dftd3 mctc-lib tblite libwignernj
+ compiler: GCC version 14.3.0
+ compiler options:
+   -cpp -I /home/kuehne88/ot-metals-validation-20261018/source/src -I /
+   home/kuehne88/ot-metals-validation-20261018/build-tblite/src -I /hom
+   e/kuehne88/ot-metals-validation-20261018/source/src/base -I /home/ku
+   ehne88/ot-metals-validation-20261018/source/src/common -I /home/kueh
+   ne88/ot-metals-validation-20261018/source/src/motion -I /home/kuehne
+   88/ot-metals-validation-20261018/source/src/dbm -I /home/kuehne88/ot
+   -metals-validation-20261018/build-tblite/src/mod_files -I /home/kueh
+   ne88/ot-metals-validation-20261018/dependencies/tblite/include -I /h
+   ome/kuehne88/ot-metals-validation-20261018/dependencies/tblite/inclu
+   de/tblite/GNU-14.3.0 -I /data/rosi/shared/eb/easybuild/turin/softwar
+   e/OpenBLAS/0.3.30-GCC-14.3.0/include -I /home/kuehne88/ot-metals-val
+   idation-20261018/dependencies/tblite/include/toml-f/modules -I /home
+   /kuehne88/ot-metals-validation-20261018/dependencies/tblite/include/
+   mctc-lib/modules -I /home/kuehne88/ot-metals-validation-20261018/dep
+   endencies/tblite/include/dftd4/GNU-14.3.0 -I /home/kuehne88/ot-metal
+   s-validation-20261018/dependencies/tblite/include/multicharge/GNU-14
+   .3.0 -I /home/kuehne88/ot-metals-validation-20261018/dependencies/tb
+   lite/include/s-dftd3/GNU-14.3.0 -I /home/kuehne88/cp2k-native-skala/
+   install/spglib/include -I /data/rosi/shared/eb/easybuild/turin/softw
+   are/FFTW/3.3.10-GCC-14.3.0/include -I /home/kuehne88/ot-metals-valid
+   ation-20261018/dependencies/wignernj/include -I /home/kuehne88/cp2k-
+   native-skala/install/dbcsr-cpu/include -I /data/rosi/shared/eb/easyb
+   uild/turin/software/OpenMPI/5.0.8-GCC-14.3.0/include -I /data/rosi/s
+   hared/eb/easybuild/turin/software/OpenMPI/5.0.8-GCC-14.3.0/lib -imul
+   tiarch x86_64-linux-gnu -D_REENTRANT -D IK=i4 -D __COMPILE_ARCH="x86
+   _64" -D __COMPILE_HOST="ctu013" -D __DATA_DIR="/usr/local/share/cp2k
+   /data" -D __DFTD4 -D __FFTW3 -D __MPI_F08 -D __OPENBLAS -D __SPGLIB 
+   -D __S_DFTD3 -D __TBLITE -D __parallel -D __SHORT_FILE__="start/cp2k
+   .F" -mtune=generic -march=x86-64 -g -O3 -O3 -Wno-deprecated-declarat
+   ions -Wno-maybe-uninitialized -Wuninitialized -Wuse-without-only -st
+   d=f2008 -fPIE -ffree-form -fimplicit-none -fno-omit-frame-pointer -f
+   backtrace -fallow-argument-mismatch -funroll-loops -fopenmp -fpre-in
+   clude=/usr/include/finclude/math-vector-fortran.h

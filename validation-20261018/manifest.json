@@ -1,0 +1,5260 @@
+{
+  "source_revision": "f6c7e1d6e4538564667591a51bda8dc52854de82",
+  "source_url": "https://github.com/cp2k/cp2k",
+  "phase": "complete",
+  "units": {
+    "energy": "hartree",
+    "length": "angstrom",
+    "temperature": "K"
+  },
+  "data_sha256": {
+    "BASIS_SET": "1d60d67ad5f22253185fda9d27b23558521e04a2b0c5efabaf44a33fe2208182",
+    "BASIS_MOLOPT": "686dd72e7601ee41d4a173e4c7c3946f1e750f03095090f44d3821c180a81a61",
+    "POTENTIAL": "b0e5adf52fc7b7dcf3f2d156ae3f1327780f6f4d11973db329545e5c73bdc361"
+  },
+  "cases": [
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-base-cg",
+      "group": "pilot",
+      "input_sha256": "3e5540aec61b4b7a9384bab6ef181e69d4384f0ed3355e4ab90b63bde04d9530",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "name": "al-base-lbfgs",
+      "group": "pilot",
+      "input_sha256": "1e5011724d1119fac58e5a6e13f52df900ea09cf21a75ba0193f075f7988c670",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "name": "al-base-diag",
+      "group": "pilot",
+      "input_sha256": "f4dc9215fe73ab24c67e683c271e3e5687045b1192fcd999c4c2ecc5a70b612f",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "CG",
+      "name": "cu-base-cg",
+      "group": "pilot",
+      "input_sha256": "5fe74dccc8f4a32240037da90e3968624513c7465ee31d721f86a4acc7198e8e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "LBFGS",
+      "name": "cu-base-lbfgs",
+      "group": "pilot",
+      "input_sha256": "229f0cad401f01d8710f6a7c6db03856c9c6057d37741729d26d056712187fca",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "DIAG",
+      "name": "cu-base-diag",
+      "group": "pilot",
+      "input_sha256": "2516b8d32c0a82ab41c4df45026fd3cdf23c346cade713059d7612cd07672362",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "name": "ni-base-cg",
+      "group": "pilot",
+      "input_sha256": "31b2da2a88bb9aadcdf48c5b829fafc416561d19a490290e26ece9331496c960",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "LBFGS",
+      "name": "ni-base-lbfgs",
+      "group": "pilot",
+      "input_sha256": "31c46182b2decc7a8e108e8f88e9d684bc14a8d571d2f1a46cc7ce85d5264590",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "name": "ni-base-diag",
+      "group": "pilot",
+      "input_sha256": "56b133eae6ebac6611abd11ec575c7534e3942f02517a0236b15b22a59103e71",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-hot-cg",
+      "group": "temperature",
+      "input_sha256": "1372e1d0205db86e546d6e2055d41e9e9fb9adcca8507661c016f9389209d4d6",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-dense-cg",
+      "group": "mesh",
+      "input_sha256": "8b4d17996ac206f310dee88fb090ace99c7295bf09fcafb423a23433b16ef878",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "name": "al-hot-lbfgs",
+      "group": "temperature",
+      "input_sha256": "b197d4abeacdc63e9a1689954be8b8d2e361550fbe5f6d44b1c69f96b2b3f11e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "name": "al-dense-lbfgs",
+      "group": "mesh",
+      "input_sha256": "ade7248dd3487f811f6f504fe2ee7660e62f3169cdeacddbb177354f0b361400",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "name": "al-hot-diag",
+      "group": "temperature",
+      "input_sha256": "22d39baa5e8859ffa8681d0e2ecb4dcae7ec36fcb7291419db974c69cdbc26ac",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "name": "al-dense-diag",
+      "group": "mesh",
+      "input_sha256": "b9c59e4639adea84513dab0a98143694ed9234ed5456f6c2dbe6813c787da51d",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 2000,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "CG",
+      "name": "cu-hot-cg",
+      "group": "temperature",
+      "input_sha256": "d4c352baaca5e69390355790b234aeed182d90c7d7fbcf5b0bbe0adaa3a40ff1",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "CG",
+      "name": "cu-dense-cg",
+      "group": "mesh",
+      "input_sha256": "2902cd6607a0cfbaa91e67a5962a32b18230842a2f4bc298e350dce9d67db9f9",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 2000,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "LBFGS",
+      "name": "cu-hot-lbfgs",
+      "group": "temperature",
+      "input_sha256": "1ae895e2829c004ccfaf2b28baf8b3194a37216b09ef8d16e54408bb96fa77af",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "LBFGS",
+      "name": "cu-dense-lbfgs",
+      "group": "mesh",
+      "input_sha256": "f01944aff344cf6bdc67f35ad3918b4476d0a6592700373e6eb8639fd6e54bf6",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 2000,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "DIAG",
+      "name": "cu-hot-diag",
+      "group": "temperature",
+      "input_sha256": "57cce083b20247bb2a5773a5e363c87108a714c49759abf2913f70a1d43dcde2",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "DIAG",
+      "name": "cu-dense-diag",
+      "group": "mesh",
+      "input_sha256": "1306f14ed3fd856d8b73ed1611441bf1beef802930d4530ad5b866b5ddf554b7",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "name": "ni-hot-cg",
+      "group": "temperature",
+      "input_sha256": "058112db042cec9ce322b3fcab6f5c9e2d1d0310a709559ba4aa615161854c7d",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "name": "ni-dense-cg",
+      "group": "mesh",
+      "input_sha256": "978e216b3cefc08ed7b3f97232857a50bb3329953f661f1b8ca3aaa3f65ba61e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "LBFGS",
+      "name": "ni-hot-lbfgs",
+      "group": "temperature",
+      "input_sha256": "09bc091e0d81817b8dcda1a94b20f70d5db804ab2e9391ba63157e3ba4afe161",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "LBFGS",
+      "name": "ni-dense-lbfgs",
+      "group": "mesh",
+      "input_sha256": "a1b17bb80e740187d03bfacaef8b7838179c409d4f86cc310a5a0fccfb4f1c8c",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "name": "ni-hot-diag",
+      "group": "temperature",
+      "input_sha256": "7c717d5734d9e7d94887b893ea8223b74ab9136a2e9c23e43bfe53255aa8ab74",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "name": "ni-dense-diag",
+      "group": "mesh",
+      "input_sha256": "1534a4f678f4494012c92102d1fe9f3bf0515d07d5c689c0a6ecb3e5ac3fd9d3",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-strict-cg",
+      "group": "options",
+      "algorithm": "STRICT",
+      "input_sha256": "3e5540aec61b4b7a9384bab6ef181e69d4384f0ed3355e4ab90b63bde04d9530",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "name": "al-strict-diis",
+      "group": "options",
+      "algorithm": "STRICT",
+      "input_sha256": "64281a78db20d5f377c5c8384a1c160654255b9bcdac846477a256a40d8fd1e2",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "BROYDEN",
+      "name": "al-strict-broyden",
+      "group": "options",
+      "algorithm": "STRICT",
+      "input_sha256": "69dd7abcbbcd5d25b55ef4bc9e5c89c3a09928cecd5a87268102358d15013cf7",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "name": "al-strict-lbfgs",
+      "group": "options",
+      "algorithm": "STRICT",
+      "input_sha256": "1e5011724d1119fac58e5a6e13f52df900ea09cf21a75ba0193f075f7988c670",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-irac-cg",
+      "group": "options",
+      "algorithm": "IRAC",
+      "input_sha256": "dda010d2da9fb04a78ea467eda6c1749e3a606358d0989faaf23d7a0ba850142",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "name": "al-irac-diis",
+      "group": "options",
+      "algorithm": "IRAC",
+      "input_sha256": "575d47683a28fa408fba148ff2ae3d376c959fede91c5303b8bd585b12ed408d",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "BROYDEN",
+      "name": "al-irac-broyden",
+      "group": "options",
+      "algorithm": "IRAC",
+      "input_sha256": "d2454cc1a01209fa088be5a74b32372d9b9b400a44ac6113c512f990c7d5541c",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "name": "al-irac-lbfgs",
+      "group": "options",
+      "algorithm": "IRAC",
+      "input_sha256": "b75283a4eb4c28044b87abf4b95a0205cc3187097feb456bf2a86a30a41ab51e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-preconditioner-full_kinetic",
+      "group": "preconditioners",
+      "preconditioner": "FULL_KINETIC",
+      "input_sha256": "b38f9a3ed6af96f99c1232a49fd9c3fbade225ede466df6f880f290a3bc86a55",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-preconditioner-full_s_inverse",
+      "group": "preconditioners",
+      "preconditioner": "FULL_S_INVERSE",
+      "input_sha256": "6668aa2673571a08028ae58311e917e089def58907da6b687bad51f6ea96bb8e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-preconditioner-full_all",
+      "group": "preconditioners",
+      "preconditioner": "FULL_ALL",
+      "input_sha256": "d5d83d581a070a8f07763354b89b73a4f5e465c6d327cf528f5dcff47f3ebf0f",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-preconditioner-fermi_low_rank",
+      "group": "preconditioners",
+      "preconditioner": "FERMI_LOW_RANK",
+      "input_sha256": "bff2d1bcbeeddd5ab0fb091b3e2f7be18dc82ddd7af847c1a3f04f15e5bcc352",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-preconditioner-full_all_covariant",
+      "group": "preconditioners",
+      "preconditioner": "FULL_ALL_COVARIANT",
+      "input_sha256": "84c39013bd0903e8309b223846d6fdecf1e746fab7852930f10a7f81aaa50edd",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-full-mesh",
+      "group": "symmetry",
+      "full_grid": true,
+      "input_sha256": "cdeedefa2d154dfc903e42afa16ed866550d63d4f5e5d2f8aafe425f75f188b1",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-gamma",
+      "group": "gamma",
+      "gamma": true,
+      "input_sha256": "1b6332326bc3bf4743c5dddc343658af4dbb882f46b1bea783eed39416563958",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        1,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-explicit-gamma",
+      "group": "gamma",
+      "input_sha256": "2b9f8567562afd4924596c0563b26272b2c4b23a1f958b27e2344ec7080cd3e1",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-auto",
+      "group": "adaptive",
+      "added_mos": "AUTO",
+      "input_sha256": "ccd8246f147029d965bf2f8f791b2977b823e058d243bd0f182ca4eddd373d8a",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-no-occupation-preconditioner",
+      "group": "ablation",
+      "occupation_preconditioner": false,
+      "input_sha256": "694c6871d2fa8d54eed4a999bf953aaafbd6ed4628a20d9854832593d1c39830",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-force-reference",
+      "group": "finite-difference",
+      "input_sha256": "7dc8d07f97cd7b4198fd1f137af37003ac63bf9b84f388281873d66980506fd6",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.024,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-displacement-0.001--1",
+      "group": "finite-difference",
+      "displacement_A": -0.001,
+      "input_sha256": "2b5bc35fa615abc93cffaba89b28e9f817897f549ab5fd3787881403827b0d2f",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.026000000000000002,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-displacement-0.001-+1",
+      "group": "finite-difference",
+      "displacement_A": 0.001,
+      "input_sha256": "eed56832ea6fcf4f54c6cfee97be5610ef4886e4c07396a8e01f54f0697817be",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.0245,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-displacement-0.0005--1",
+      "group": "finite-difference",
+      "displacement_A": -0.0005,
+      "input_sha256": "23e988ef540014c2d79a322ee6fde4d46df935c1c0da706d28bfca73cbb504a2",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025500000000000002,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-displacement-0.0005-+1",
+      "group": "finite-difference",
+      "displacement_A": 0.0005,
+      "input_sha256": "12f083e75b7e33f216037f7c8ec73df62fab3339a82f2aeb69764d7b92f1331f",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.05,
+          4.05
+        ],
+        [
+          2.0247975,
+          0.0,
+          2.025
+        ],
+        [
+          2.0247975,
+          2.025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.024997500000000002,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-strain-00--1",
+      "group": "finite-difference",
+      "strain": [
+        0,
+        0,
+        -0.0001
+      ],
+      "input_sha256": "36b2fc6bcd242301027415fa92bc3592f98a7834f759adeb30844ca68e5e2930",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.05,
+          4.05
+        ],
+        [
+          2.0252025,
+          0.0,
+          2.025
+        ],
+        [
+          2.0252025,
+          2.025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0250025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-strain-00-+1",
+      "group": "finite-difference",
+      "strain": [
+        0,
+        0,
+        0.0001
+      ],
+      "input_sha256": "691f61ac956633799d45bce4f0684117ffa66b2242080fd2e0d1f545e71ab634",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.049595,
+          4.05
+        ],
+        [
+          2.025,
+          0.0,
+          2.025
+        ],
+        [
+          2.025,
+          2.0247975,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.0247975,
+          2.025
+        ]
+      ],
+      "name": "al-strain-11--1",
+      "group": "finite-difference",
+      "strain": [
+        1,
+        1,
+        -0.0001
+      ],
+      "input_sha256": "20d192200293f5239c0e8909e127a9e338d0a74c567af33af21db5ccb2840084",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.050405,
+          4.05
+        ],
+        [
+          2.025,
+          0.0,
+          2.025
+        ],
+        [
+          2.025,
+          2.0252025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.0252025,
+          2.025
+        ]
+      ],
+      "name": "al-strain-11-+1",
+      "group": "finite-difference",
+      "strain": [
+        1,
+        1,
+        0.0001
+      ],
+      "input_sha256": "70e109d9b8e60863638d2621071c1dcdf97e10c3762acb09eb2cd6b5d8af8be7",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.05,
+          4.049595
+        ],
+        [
+          2.025,
+          0.0,
+          2.0247975
+        ],
+        [
+          2.025,
+          2.025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.025,
+          2.0247975
+        ]
+      ],
+      "name": "al-strain-22--1",
+      "group": "finite-difference",
+      "strain": [
+        2,
+        2,
+        -0.0001
+      ],
+      "input_sha256": "0920f2edb11ef5c5b477a7684cf66dce8c91827991785b04969e757ab787d6b3",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.05,
+          4.050405
+        ],
+        [
+          2.025,
+          0.0,
+          2.0252025
+        ],
+        [
+          2.025,
+          2.025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.025,
+          2.0252025
+        ]
+      ],
+      "name": "al-strain-22-+1",
+      "group": "finite-difference",
+      "strain": [
+        2,
+        2,
+        0.0001
+      ],
+      "input_sha256": "db6eaf066947bd8da071a06f226db40ac5c2df1a96f0b035d61dc2672bede8ce",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          -0.0002025,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          -0.00010125,
+          2.025
+        ],
+        [
+          2.0248987499999997,
+          2.0248987499999997,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.02489875,
+          2.02499875,
+          2.025
+        ]
+      ],
+      "name": "al-strain-01--1",
+      "group": "finite-difference",
+      "strain": [
+        0,
+        1,
+        -0.0001
+      ],
+      "input_sha256": "331388d6908216b34403c021e5f325e71e10cb465929522f7cb7a63708789e1d",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0002025,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0.00010125,
+          2.025
+        ],
+        [
+          2.02510125,
+          2.02510125,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025101250000000002,
+          2.02500125,
+          2.025
+        ]
+      ],
+      "name": "al-strain-01-+1",
+      "group": "finite-difference",
+      "strain": [
+        0,
+        1,
+        0.0001
+      ],
+      "input_sha256": "6ee4158dc99d5e50ccd027375995a8848d8d96d589ac13d0bc4a97eb2f897a94",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          -0.0002025,
+          4.05,
+          4.05
+        ],
+        [
+          2.0248987499999997,
+          0.0,
+          2.0248987499999997
+        ],
+        [
+          2.025,
+          2.025,
+          -0.00010125
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.02489875,
+          2.025,
+          2.02499875
+        ]
+      ],
+      "name": "al-strain-02--1",
+      "group": "finite-difference",
+      "strain": [
+        0,
+        2,
+        -0.0001
+      ],
+      "input_sha256": "b32c084d41e66e0557f1ef908f5e91bac087ef1217bfa9abee5aa8758b1e18fd",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0002025,
+          4.05,
+          4.05
+        ],
+        [
+          2.02510125,
+          0.0,
+          2.02510125
+        ],
+        [
+          2.025,
+          2.025,
+          0.00010125
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025101250000000002,
+          2.025,
+          2.02500125
+        ]
+      ],
+      "name": "al-strain-02-+1",
+      "group": "finite-difference",
+      "strain": [
+        0,
+        2,
+        0.0001
+      ],
+      "input_sha256": "a60a0ae6c21ade60e3c326fdb4c3dc6dd356a573f77b3f6f5fd346c525ca6a25",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.0497974999999995,
+          4.0497974999999995
+        ],
+        [
+          2.025,
+          -0.00010125,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          -0.00010125
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.0248987499999997,
+          2.0248987499999997
+        ]
+      ],
+      "name": "al-strain-12--1",
+      "group": "finite-difference",
+      "strain": [
+        1,
+        2,
+        -0.0001
+      ],
+      "input_sha256": "42620cd2910e6dc26181d10c8f7efae27cc062a9c5330c5c4cd1a19f9d36eec2",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.0502025,
+          4.0502025
+        ],
+        [
+          2.025,
+          0.00010125,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0.00010125
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.02510125,
+          2.02510125
+        ]
+      ],
+      "name": "al-strain-12-+1",
+      "group": "finite-difference",
+      "strain": [
+        1,
+        2,
+        0.0001
+      ],
+      "input_sha256": "51f8104bb32ed4c26330a28725b894e49d1121e4d735781acdc23d1a440c35d9",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.25",
+      "group": "dynamics",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 40\n    TIMESTEP 0.25\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.25,
+      "md_steps": 40,
+      "input_sha256": "ecb668eeb544deeb1924c7c4ef15fa09189ed9737571383930a7f30b41a80a03",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.125",
+      "group": "dynamics",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 80\n    TIMESTEP 0.125\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.125,
+      "md_steps": 80,
+      "input_sha256": "2582f98a5bf94e53a6e8b682779fe5eb400bde8b099b4d7e3cad4ef099f47da4",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-geo_opt",
+      "group": "optimization",
+      "run_type": "GEO_OPT",
+      "motion": "&MOTION\n  &GEO_OPT\n    OPTIMIZER BFGS\n    MAX_ITER 15\n    MAX_FORCE 1.0E-4\n  &END GEO_OPT\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n  &END PRINT\n&END MOTION",
+      "input_sha256": "a80359bad18a0cd64ba3d0772b9a3a5cf0bce1c5502c253a5cc940490a313bde",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-cell_opt",
+      "group": "optimization",
+      "run_type": "CELL_OPT",
+      "motion": "&MOTION\n  &CELL_OPT\n    OPTIMIZER BFGS\n    MAX_ITER 15\n    KEEP_ANGLES TRUE\n  &END CELL_OPT\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n  &END PRINT\n&END MOTION",
+      "input_sha256": "5e49fa5c6c41c242ee9b1aaf1755ac1bacc2c1ad172c633ee9c101cc5e2909fc",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-restart-write-cg",
+      "group": "restart",
+      "write_restart": true,
+      "input_sha256": "c55a533c7455155af2db0fd696c0370cd2d545d7926ac2615c9af172e72aafb4",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-restart-read-cg",
+      "group": "restart",
+      "write_restart": false,
+      "restart_file": "initial.kp",
+      "depends_on": "al-restart-write-cg",
+      "input_sha256": "ddd2ee6b9f0728550fed8192488943546065568c22796ee02d3e1704abd9d9ed",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "name": "al-restart-write-diis",
+      "group": "restart",
+      "write_restart": true,
+      "input_sha256": "1bdedcd661d7a3497037c813a94e4dbb2e4148c99fd0f261ed82c7cf3542f8b1",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "name": "al-restart-read-diis",
+      "group": "restart",
+      "write_restart": false,
+      "restart_file": "initial.kp",
+      "depends_on": "al-restart-write-diis",
+      "input_sha256": "4459f74b779ad3368cbca4f4697cd9bcb83302c1f196984288b98a0f48dd7881",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "name": "al-restart-write-lbfgs",
+      "group": "restart",
+      "write_restart": true,
+      "input_sha256": "5a3f943ddeee91bed244672b9bf949832fae393dfc2ee4578df1184b9d1fe1a8",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "name": "al-restart-read-lbfgs",
+      "group": "restart",
+      "write_restart": false,
+      "restart_file": "initial.kp",
+      "depends_on": "al-restart-write-lbfgs",
+      "input_sha256": "9c2abab730fbdde586cc0502b76f1991e04592803e61a49d9491009da4759f26",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "name": "ni-base-cg-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "6b5c41bd3ee40309da9650396c8d070aeffea65c48d7f68afb52fbcab4c024d9",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-base-cg",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "LBFGS",
+      "name": "ni-base-lbfgs-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "d38f3905a5d119e1d57009201133db8b53048a907c4111e4d8667b15db653d3c",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-base-lbfgs",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "name": "ni-base-diag-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "3f95ee5e0faa13835b73a0842caf1620a7442965c589d6385c511f0bdc013c8e",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-base-diag",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "name": "ni-hot-cg-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "f822d98faad187e87387fb1beab40183cb4fc1f79dcb4ceeabc2a0a5ddce2190",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-hot-cg",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "name": "ni-dense-cg-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "d40c80454b3d1ab676612e2cf8bedf4b3ef0fdd5703115e50587c8df668d700d",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-dense-cg",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "LBFGS",
+      "name": "ni-hot-lbfgs-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "e07c15da7489dccec0ac6e53ca09b9eac2a5fcfa5c88088d5ae53291d444aaf4",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-hot-lbfgs",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "LBFGS",
+      "name": "ni-dense-lbfgs-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "6c80f8df209962ce90f55d0daf6693e9ea375fb810e6034e7df18ebd12b1dc5a",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-dense-lbfgs",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "name": "ni-hot-diag-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "eae7ce4c83dafaafd09892cf8b11ca4f6b5d42323f925486880f1b108ceed95a",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-hot-diag",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "name": "ni-dense-diag-full-spin-space",
+      "group": "spin-controls",
+      "input_sha256": "eaef071b61d51f9be547765a2430bc8f30d657c5c0eaf30631dc8041a6429468",
+      "added_mos": "-1 -1",
+      "paired_one_value_input": "ni-dense-diag",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-force-reference-thermal",
+      "group": "thermal-properties",
+      "input_sha256": "9a29ae3b7d97635ac680945ddf87c4f95168c37eebd2be8efedd7922be899fa0",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.024,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-displacement-0.001--1-thermal",
+      "group": "thermal-properties",
+      "displacement_A": -0.001,
+      "input_sha256": "666b37ac5e693e0deff32e578210da7818fa1956b74097f1bead6c1e72801430",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.026000000000000002,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-displacement-0.001-+1-thermal",
+      "group": "thermal-properties",
+      "displacement_A": 0.001,
+      "input_sha256": "5c9fd2fce60e0bc665f7d36631291f1ba369ebfbcaf39ad0dea1abeb1fcfed38",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.0245,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-displacement-0.0005--1-thermal",
+      "group": "thermal-properties",
+      "displacement_A": -0.0005,
+      "input_sha256": "e952627aeb02261f2a321bf013171ab628c3228ebbfe253788e136be90e0ece0",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025500000000000002,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-displacement-0.0005-+1-thermal",
+      "group": "thermal-properties",
+      "displacement_A": 0.0005,
+      "input_sha256": "a18e1fa1b627d60a6786d96642174d8dc6afcaf5d1f699babc5df57ec401b980",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.05,
+          4.05
+        ],
+        [
+          2.0247975,
+          0.0,
+          2.025
+        ],
+        [
+          2.0247975,
+          2.025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.024997500000000002,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-strain-00--1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        0,
+        0,
+        -0.0001
+      ],
+      "input_sha256": "c3651d1e8a449f8489516ab0eb65596444f6e1fcb52ce0b19d46ac97778f4263",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.05,
+          4.05
+        ],
+        [
+          2.0252025,
+          0.0,
+          2.025
+        ],
+        [
+          2.0252025,
+          2.025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0250025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-strain-00-+1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        0,
+        0,
+        0.0001
+      ],
+      "input_sha256": "133ceffc9420840ea6865498cca2aebb97d1869b1acfe30d79d04e04a79982f5",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.049595,
+          4.05
+        ],
+        [
+          2.025,
+          0.0,
+          2.025
+        ],
+        [
+          2.025,
+          2.0247975,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.0247975,
+          2.025
+        ]
+      ],
+      "name": "al-strain-11--1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        1,
+        1,
+        -0.0001
+      ],
+      "input_sha256": "995cfd7880df76728c7b4a40414d4ec1eedec0a90d84f7be21d1578c3049f820",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.050405,
+          4.05
+        ],
+        [
+          2.025,
+          0.0,
+          2.025
+        ],
+        [
+          2.025,
+          2.0252025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.0252025,
+          2.025
+        ]
+      ],
+      "name": "al-strain-11-+1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        1,
+        1,
+        0.0001
+      ],
+      "input_sha256": "f933ed45c987cd99c31fc8c2b46f78620da9309e9d453ccc9939342b858d76d6",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.05,
+          4.049595
+        ],
+        [
+          2.025,
+          0.0,
+          2.0247975
+        ],
+        [
+          2.025,
+          2.025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.025,
+          2.0247975
+        ]
+      ],
+      "name": "al-strain-22--1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        2,
+        2,
+        -0.0001
+      ],
+      "input_sha256": "1244725dc3b1554b4c887a8f9aaa59c9789a54892947d30c6a2088b9c1fbe64e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.05,
+          4.050405
+        ],
+        [
+          2.025,
+          0.0,
+          2.0252025
+        ],
+        [
+          2.025,
+          2.025,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.025,
+          2.0252025
+        ]
+      ],
+      "name": "al-strain-22-+1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        2,
+        2,
+        0.0001
+      ],
+      "input_sha256": "c75385b5a6be2349ee6eaef074d859f83dd9dce4a64bb6bb3df566a6cd007a9a",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          -0.0002025,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          -0.00010125,
+          2.025
+        ],
+        [
+          2.0248987499999997,
+          2.0248987499999997,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.02489875,
+          2.02499875,
+          2.025
+        ]
+      ],
+      "name": "al-strain-01--1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        0,
+        1,
+        -0.0001
+      ],
+      "input_sha256": "d46e883b05484c0abf13a64e5277b86b0047bfd3e566f92aaca300f02c9e87b1",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0002025,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0.00010125,
+          2.025
+        ],
+        [
+          2.02510125,
+          2.02510125,
+          0.0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025101250000000002,
+          2.02500125,
+          2.025
+        ]
+      ],
+      "name": "al-strain-01-+1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        0,
+        1,
+        0.0001
+      ],
+      "input_sha256": "2837fa281c5a0c104743314b37009f46dd47cabc39648df888c899abbe437bb6",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          -0.0002025,
+          4.05,
+          4.05
+        ],
+        [
+          2.0248987499999997,
+          0.0,
+          2.0248987499999997
+        ],
+        [
+          2.025,
+          2.025,
+          -0.00010125
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.02489875,
+          2.025,
+          2.02499875
+        ]
+      ],
+      "name": "al-strain-02--1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        0,
+        2,
+        -0.0001
+      ],
+      "input_sha256": "17c14b8c1fccd68563a9ee0ab3901e3d9a42c9034ebd949febab67c2c7dfceae",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0002025,
+          4.05,
+          4.05
+        ],
+        [
+          2.02510125,
+          0.0,
+          2.02510125
+        ],
+        [
+          2.025,
+          2.025,
+          0.00010125
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025101250000000002,
+          2.025,
+          2.02500125
+        ]
+      ],
+      "name": "al-strain-02-+1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        0,
+        2,
+        0.0001
+      ],
+      "input_sha256": "5c7dd1cff90410228cda6928c14415a257676516741f5960579bc7658813688c",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.0497974999999995,
+          4.0497974999999995
+        ],
+        [
+          2.025,
+          -0.00010125,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          -0.00010125
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.0248987499999997,
+          2.0248987499999997
+        ]
+      ],
+      "name": "al-strain-12--1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        1,
+        2,
+        -0.0001
+      ],
+      "input_sha256": "dde6f7851fc7b421a45ca6752b2bfb3f7ee1a1d0024d1c8a1ecee4b591056d16",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0.0,
+          4.0502025,
+          4.0502025
+        ],
+        [
+          2.025,
+          0.00010125,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0.00010125
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.025,
+          2.02510125,
+          2.02510125
+        ]
+      ],
+      "name": "al-strain-12-+1-thermal",
+      "group": "thermal-properties",
+      "strain": [
+        1,
+        2,
+        0.0001
+      ],
+      "input_sha256": "b8fe8218b3b7db8b1bb2610a85bbc1d9679aaddf4b116d6644ca734b7a17a95e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.25-thermal",
+      "group": "thermal-properties",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 40\n    TIMESTEP 0.25\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.25,
+      "md_steps": 40,
+      "input_sha256": "4aeef6851a22446a3529cd924d436bd637a15c01b8747dde2f12704705af2e30",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.125-thermal",
+      "group": "thermal-properties",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 80\n    TIMESTEP 0.125\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.125,
+      "md_steps": 80,
+      "input_sha256": "dc3b070549b6c13960bdaa4aeb053305f6717277915f7fe1a62150b63d464a75",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-geo_opt-thermal",
+      "group": "thermal-properties",
+      "run_type": "GEO_OPT",
+      "motion": "&MOTION\n  &GEO_OPT\n    OPTIMIZER BFGS\n    MAX_ITER 15\n    MAX_FORCE 1.0E-4\n  &END GEO_OPT\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n  &END PRINT\n&END MOTION",
+      "input_sha256": "d7ca3fe50e3a00a03e276ef7b3f07fd37ee22625845fcabab81724048c0bb061",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-cell_opt-thermal",
+      "group": "thermal-properties",
+      "run_type": "CELL_OPT",
+      "motion": "&MOTION\n  &CELL_OPT\n    OPTIMIZER BFGS\n    MAX_ITER 15\n    KEEP_ANGLES TRUE\n  &END CELL_OPT\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n  &END PRINT\n&END MOTION",
+      "input_sha256": "995fba3d356918ba2cb5544256ee51c47bef7801c3f287a9f0216f25de53cfd0",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-force-reference-thermal-diag",
+      "group": "thermal-properties",
+      "input_sha256": "c3f57ca417f81c36b3d2ef8c0795581e28101ffd1e1fefb2a2220ffdda25b7a0",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-gaussian-cg",
+      "group": "general-smearing",
+      "smearing": "GAUSSIAN",
+      "smear_extra": "SIGMA 0.01",
+      "input_sha256": "adbb8f0be80c98840b5f1eb8228c11859c06b2dc3febffe4496b3b766c66b4d8",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "name": "al-gaussian-diag",
+      "group": "general-smearing",
+      "smearing": "GAUSSIAN",
+      "smear_extra": "SIGMA 0.01",
+      "input_sha256": "573c74ed49e7867b2d8774cb6626bb5dbc3c1b500e836cdf683489de87dc9b69",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-methfessel_paxton-cg",
+      "group": "general-smearing",
+      "smearing": "METHFESSEL_PAXTON",
+      "smear_extra": "SIGMA 0.01",
+      "input_sha256": "798236e54d96599a9dfd74112a92bf9fe4cf0c0fe75761f90c9bf2ad524f535a",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "name": "al-methfessel_paxton-diag",
+      "group": "general-smearing",
+      "smearing": "METHFESSEL_PAXTON",
+      "smear_extra": "SIGMA 0.01",
+      "input_sha256": "aab024539d520537ca340768b746d167d563161b100c27909268060ec12c76ae",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-marzari_vanderbilt-cg",
+      "group": "general-smearing",
+      "smearing": "MARZARI_VANDERBILT",
+      "smear_extra": "SIGMA 0.01",
+      "input_sha256": "5e3ad039282208990d7cf65c73d2e755913d1a0cd37170c3f5342963ffe3ca3a",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "name": "al-marzari_vanderbilt-diag",
+      "group": "general-smearing",
+      "smearing": "MARZARI_VANDERBILT",
+      "smear_extra": "SIGMA 0.01",
+      "input_sha256": "c0891b3c4fc052e984699efb419c239466654debdfbfe93701310c05f3fb0518",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "eps_scf": 1e-07,
+      "cell": [
+        [
+          2.863782463805517,
+          0,
+          0
+        ],
+        [
+          1.4318912319027586,
+          2.4801083645679673,
+          0
+        ],
+        [
+          1.4318912319027586,
+          0.8267027881893225,
+          2.338268590217984
+        ]
+      ],
+      "name": "al-canonical-reduced",
+      "group": "symmetry-controls",
+      "input_sha256": "c1c113ae5675a55b5f315436296f50fba62c4bd70a442fc8d3eafb6f0702e6df",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "eps_scf": 1e-07,
+      "cell": [
+        [
+          2.863782463805517,
+          0,
+          0
+        ],
+        [
+          1.4318912319027586,
+          2.4801083645679673,
+          0
+        ],
+        [
+          1.4318912319027586,
+          0.8267027881893225,
+          2.338268590217984
+        ]
+      ],
+      "name": "al-canonical-full",
+      "group": "symmetry-controls",
+      "full_grid": true,
+      "input_sha256": "d0b95fced0a0ada967df7d9a78404f99ac96e4cca8fe2791bb7bca5c42ed7d25",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "added_mos": "-1 -1",
+      "name": "ni-fixed-moment-cg",
+      "group": "symmetry-controls",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT 1.0",
+      "input_sha256": "3979f9d9cfb555636252ff6de8656686f01a3ed183cdac4b27b49ca622f0c1bc",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "added_mos": "-1 -1",
+      "name": "ni-fixed-moment-diag",
+      "group": "symmetry-controls",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT 1.0",
+      "input_sha256": "44d747cdf241c84e22138abf456eb98dd01c465087bd56d916ad286d0fc2254e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "name": "al-gfn1-diag",
+      "group": "tblite",
+      "model": "GFN1",
+      "method": "DIAG",
+      "temperature": 500,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "input_sha256": "975d297d64e4ddfd417c91a16176ea479f053652ae3901ba39b057d2f764e8b5",
+      "executable_configuration": "tblite"
+    },
+    {
+      "name": "al-gfn1-ot",
+      "group": "tblite",
+      "model": "GFN1",
+      "method": "OT",
+      "temperature": 500,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "input_sha256": "54badcdfc6792b7e7edd53720aa3979565b0d60b5bae054ce3f7f7373541602c",
+      "executable_configuration": "tblite"
+    },
+    {
+      "name": "al-gfn2-diag",
+      "group": "tblite",
+      "model": "GFN2",
+      "method": "DIAG",
+      "temperature": 500,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "input_sha256": "0cc4a1162dda14f5abf8f7942728a532e931fad552c674cf156ae5ed5416e8b1",
+      "executable_configuration": "tblite"
+    },
+    {
+      "name": "al-gfn2-ot",
+      "group": "tblite",
+      "model": "GFN2",
+      "method": "OT",
+      "temperature": 500,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "input_sha256": "3421235da01483f6561f6ad9dd46f569d6af059bb06e7b8cceda08f2093bba2b",
+      "executable_configuration": "tblite"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH-q3",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PADE-q3",
+      "functional": "PADE",
+      "electrons": 3,
+      "temperature": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "cutoff": 40,
+      "spin": true,
+      "element": "Al",
+      "multiplicity": 2,
+      "eps_scf": 1e-07,
+      "added_mos": "-1 -1",
+      "name": "al-spin-common-cg",
+      "group": "spin-probes",
+      "method": "CG",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT -100",
+      "input_sha256": "c4e2eae25f6bb39fafeba78d0c10102a7cafe64f5426a1370001902380f4bce5",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH-q3",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PADE-q3",
+      "functional": "PADE",
+      "electrons": 3,
+      "temperature": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "cutoff": 40,
+      "spin": true,
+      "element": "Al",
+      "multiplicity": 2,
+      "eps_scf": 1e-07,
+      "added_mos": "-1 -1",
+      "name": "al-spin-common-diag",
+      "group": "spin-probes",
+      "method": "DIAG",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT -100",
+      "input_sha256": "44afaa0b8e116552bd15fe0510c2dccdfb70a2b6b0199616a9ed246b118bc500",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH-q3",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PADE-q3",
+      "functional": "PADE",
+      "electrons": 3,
+      "temperature": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "cutoff": 40,
+      "spin": true,
+      "element": "Al",
+      "multiplicity": 2,
+      "eps_scf": 1e-07,
+      "added_mos": "-1 -1",
+      "name": "al-spin-integer-cg",
+      "group": "spin-probes",
+      "method": "CG",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT -1",
+      "input_sha256": "38dc2f35eda82399904b92003a8b3b2fa3073a1d5234dd5f6071bc788b02c978",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH-q3",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PADE-q3",
+      "functional": "PADE",
+      "electrons": 3,
+      "temperature": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "cutoff": 40,
+      "spin": true,
+      "element": "Al",
+      "multiplicity": 2,
+      "eps_scf": 1e-07,
+      "added_mos": "-1 -1",
+      "name": "al-spin-integer-diag",
+      "group": "spin-probes",
+      "method": "DIAG",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT -1",
+      "input_sha256": "d6264e61fad1ef9e626852507b7afbfd442b7e79b9ad2b5438b8c2ed44e56822",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH-q3",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PADE-q3",
+      "functional": "PADE",
+      "electrons": 3,
+      "temperature": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "cutoff": 40,
+      "spin": true,
+      "element": "Al",
+      "multiplicity": 2,
+      "eps_scf": 1e-07,
+      "added_mos": "-1 -1",
+      "name": "al-spin-zero-cg",
+      "group": "spin-probes",
+      "method": "CG",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT 0",
+      "input_sha256": "63a20d7cc85f071faddfeb065ac55c63983833838449f6bd65e55c357ee4f464",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH-q3",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PADE-q3",
+      "functional": "PADE",
+      "electrons": 3,
+      "temperature": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "cutoff": 40,
+      "spin": true,
+      "element": "Al",
+      "multiplicity": 2,
+      "eps_scf": 1e-07,
+      "added_mos": "-1 -1",
+      "name": "al-spin-zero-diag",
+      "group": "spin-probes",
+      "method": "DIAG",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT 0",
+      "input_sha256": "34dfa93525b5e051228c1f3171375c3f0f6efa7ff3eefcc9b7f77c868caa94e3",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH-q3",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PADE-q3",
+      "functional": "PADE",
+      "electrons": 3,
+      "temperature": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "cutoff": 40,
+      "spin": true,
+      "element": "Al",
+      "multiplicity": 2,
+      "eps_scf": 1e-07,
+      "added_mos": "-1 -1",
+      "name": "al-spin-fractional-cg",
+      "group": "spin-probes",
+      "method": "CG",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT 0.5",
+      "input_sha256": "08d82aa0830c55b808d603ff9c1588569d80767dbe87560c6c5c1a3e56ca9282",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH-q3",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PADE-q3",
+      "functional": "PADE",
+      "electrons": 3,
+      "temperature": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "cutoff": 40,
+      "spin": true,
+      "element": "Al",
+      "multiplicity": 2,
+      "eps_scf": 1e-07,
+      "added_mos": "-1 -1",
+      "name": "al-spin-fractional-diag",
+      "group": "spin-probes",
+      "method": "DIAG",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT 0.5",
+      "input_sha256": "d0f8ee0f094c67033a5757fbe7cb5b2ff86215b4edeea0ed04c9d1473b99446d",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "added_mos": "-1 -1",
+      "name": "ni-fixed-moment-corrected-cg",
+      "group": "spin-probes",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT 1.0",
+      "input_sha256": "3979f9d9cfb555636252ff6de8656686f01a3ed183cdac4b27b49ca622f0c1bc",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "added_mos": "-1 -1",
+      "name": "ni-fixed-moment-corrected-diag",
+      "group": "spin-probes",
+      "smear_extra": "FIXED_MAGNETIC_MOMENT 1.0",
+      "input_sha256": "44d747cdf241c84e22138abf456eb98dd01c465087bd56d916ad286d0fc2254e",
+      "source_configuration": "spin-constraint-correction",
+      "executable_configuration": "spin-corrected"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.25-adaptive",
+      "group": "adaptive-dynamics",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 40\n    TIMESTEP 0.25\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.25,
+      "md_steps": 40,
+      "input_sha256": "189a3664dde6950161d534c77e9b10655049c12e93c0b836fd4dc6d1d33d9ec7",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.125-adaptive",
+      "group": "adaptive-dynamics",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 80\n    TIMESTEP 0.125\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.125,
+      "md_steps": 80,
+      "input_sha256": "96a39fa3ba04b487e4d9a42825a428e99c29368af554f521238125a1e1ea7685",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.25-thermal-adaptive",
+      "group": "adaptive-dynamics",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 40\n    TIMESTEP 0.25\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.25,
+      "md_steps": 40,
+      "input_sha256": "0170778f57658d9fbe18a1178c5b21f226a0b464574a18027acc5cad9759a9b0",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.125-thermal-adaptive",
+      "group": "adaptive-dynamics",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 80\n    TIMESTEP 0.125\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.125,
+      "md_steps": 80,
+      "input_sha256": "11113a659511c491a80eff7ec5200ca7620ecce65c48c82944cc4ae9e50702c7",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.25-thermal-lbfgs",
+      "group": "motion-minimizers",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 40\n    TIMESTEP 0.25\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.25,
+      "md_steps": 40,
+      "input_sha256": "4f1e55dfc2cb86cf57536c9d783a0ec217fe64d93310625d079069d1c26b3a02",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.125-thermal-lbfgs",
+      "group": "motion-minimizers",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 80\n    TIMESTEP 0.125\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.125,
+      "md_steps": 80,
+      "input_sha256": "03b9ba68669f082df5a8ff1fa4d87b112aaa00dc27a74e7f0121dd9c0dc609a1",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "LBFGS",
+      "added_mos": "AUTO",
+      "name": "al-reduced-lbfgs",
+      "group": "variational-subspace",
+      "input_sha256": "62131dd6120272a939e2bed7d027762ee3011b97c94d50ca7374be1996659dcc",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "added_mos": "AUTO",
+      "name": "al-reduced-diag",
+      "group": "variational-subspace",
+      "input_sha256": "1a887e60e74f6fe0283fcd719ffb31a56c201c77d9085410490983a1125cb438",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "CG",
+      "added_mos": "AUTO",
+      "name": "cu-reduced-cg",
+      "group": "variational-subspace",
+      "input_sha256": "b235c7034d735e9fc2d9d33aaac0839e267215b8bcff9d11f8d9602e333945ee",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "LBFGS",
+      "added_mos": "AUTO",
+      "name": "cu-reduced-lbfgs",
+      "group": "variational-subspace",
+      "input_sha256": "55ff526a6582c00337fd3aab7e00ce7b4f42118f2106d3b5e58f4e61acd7f7d7",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "DIAG",
+      "added_mos": "AUTO",
+      "name": "cu-reduced-diag",
+      "group": "variational-subspace",
+      "input_sha256": "4f7c4923ccb971d0ca020eff2c6c59dc51f47247f19b936b1d527547e2dc77f9",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "CG",
+      "added_mos": "AUTO",
+      "name": "ni-reduced-cg",
+      "group": "variational-subspace",
+      "input_sha256": "ae38a001b93d4754625bb401ebeba65e0918608b5a4c2294696cfed7473fe38e",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "LBFGS",
+      "added_mos": "AUTO",
+      "name": "ni-reduced-lbfgs",
+      "group": "variational-subspace",
+      "input_sha256": "2495a65a005abfa3488c206a78f255870335cb638e19b33e683df340b1121ecc",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "DIAG",
+      "added_mos": "AUTO",
+      "name": "ni-reduced-diag",
+      "group": "variational-subspace",
+      "input_sha256": "1466a970f4318e1285ecf757574bdf0a7dcf384c12ce55f45d70f5401564df93",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_SINGLE_INVERSE",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.25-thermal-cg",
+      "group": "default-motion",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 40\n    TIMESTEP 0.25\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.25,
+      "md_steps": 40,
+      "input_sha256": "19488e08d6183857278a72009a56524bc5897d5686d21cab5b37534cb3b1c8d1",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "eps_scf": 1e-08,
+      "preconditioner": "FULL_SINGLE_INVERSE",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.125-thermal-cg",
+      "group": "default-motion",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 80\n    TIMESTEP 0.125\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.125,
+      "md_steps": 80,
+      "input_sha256": "96d4dcc8ca68505aa1c0299d219abd65429d28becb6ad7985020d8a99c6bde43",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-07,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.25-thermal-eps7",
+      "group": "motion-tolerance",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 40\n    TIMESTEP 0.25\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.25,
+      "md_steps": 40,
+      "input_sha256": "82d1f033d10e5d4a82d3cdfbcafa572dd6059a472773c10912dc514530804853",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIIS",
+      "eps_scf": 1e-07,
+      "preconditioner": "FULL_ALL",
+      "max_scf": 500,
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          2.025,
+          0,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0.025,
+          2.025,
+          2.025
+        ]
+      ],
+      "name": "al-md-0.125-thermal-eps7",
+      "group": "motion-tolerance",
+      "run_type": "MD",
+      "motion": "&MOTION\n  &MD\n    ENSEMBLE NVE\n    STEPS 80\n    TIMESTEP 0.125\n  &END MD\n  &PRINT\n    &RESTART OFF\n    &END RESTART\n    &RESTART_HISTORY OFF\n    &END RESTART_HISTORY\n    &TRAJECTORY\n      &EACH\n        MD 1\n      &END EACH\n    &END TRAJECTORY\n  &END PRINT\n&END MOTION",
+      "velocity": "    &VELOCITY\n      0.00010 0 0\n      -0.00010 0 0\n    &END VELOCITY\n",
+      "timestep_fs": 0.125,
+      "md_steps": 80,
+      "input_sha256": "4298fb4b0f8152f7c609833b5d6b3b0f397e8fbce55f955240a8c3173ef5b09a",
+      "added_mos": "AUTO",
+      "executable_configuration": "cpu"
+    }
+  ],
+  "executable_configurations": {
+    "cpu": {
+      "base_source_revision": "f6c7e1d6e4538564667591a51bda8dc52854de82",
+      "provenance_directory": "provenance",
+      "binary_sha256": "2e42be0cfdd2d60524aa933843be0e1c828f98c0f313bfc5fe0e221c1fcfbbaa"
+    },
+    "tblite": {
+      "base_source_revision": "f6c7e1d6e4538564667591a51bda8dc52854de82",
+      "provenance_directory": "provenance-tblite",
+      "binary_sha256": "ce806e9036a648813fc5bbf437dfabb7bfdba0c1ebe03266ca3e618cfa77de4a"
+    },
+    "spin-corrected": {
+      "base_source_revision": "f6c7e1d6e4538564667591a51bda8dc52854de82",
+      "provenance_directory": "provenance-spin-constraints",
+      "binary_sha256": "52c99bbed234eb56a76bf1faad88e63ea6caa7401adcd46c2c0389b9445296f5",
+      "source_patch": "production-spin-corrections.patch",
+      "source_patch_sha256": "5e2626d5409524cb177d19b34bd43d21b72bae508286e34bb4a537e8ad1810f7"
+    }
+  }
+}

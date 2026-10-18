@@ -1,0 +1,28 @@
+ CP2K version 2026.2 (Development Version)
+ Source code revision f6c7e1d
+ cp2kflags: omp fftw3 parallel scalapack mpi_f08 spglib openblas libwignernj
+ compiler: GCC version 14.3.0
+ compiler options:
+   -cpp -I /home/kuehne88/ot-metals-validation-20261018/source/src -I /
+   home/kuehne88/ot-metals-validation-20261018/build/src -I /home/kuehn
+   e88/ot-metals-validation-20261018/source/src/base -I /home/kuehne88/
+   ot-metals-validation-20261018/source/src/common -I /home/kuehne88/ot
+   -metals-validation-20261018/source/src/motion -I /home/kuehne88/ot-m
+   etals-validation-20261018/source/src/dbm -I /home/kuehne88/ot-metals
+   -validation-20261018/build/src/mod_files -I /home/kuehne88/cp2k-nati
+   ve-skala/install/spglib/include -I /data/rosi/shared/eb/easybuild/tu
+   rin/software/FFTW/3.3.10-GCC-14.3.0/include -I /home/kuehne88/ot-met
+   als-validation-20261018/dependencies/wignernj/include -I /home/kuehn
+   e88/cp2k-native-skala/install/dbcsr-cpu/include -I /data/rosi/shared
+   /eb/easybuild/turin/software/OpenBLAS/0.3.30-GCC-14.3.0/include -I /
+   data/rosi/shared/eb/easybuild/turin/software/OpenMPI/5.0.8-GCC-14.3.
+   0/include -I /data/rosi/shared/eb/easybuild/turin/software/OpenMPI/5
+   .0.8-GCC-14.3.0/lib -imultiarch x86_64-linux-gnu -D_REENTRANT -D __C
+   OMPILE_ARCH="x86_64" -D __COMPILE_HOST="ctu013" -D __DATA_DIR="/usr/
+   local/share/cp2k/data" -D __FFTW3 -D __MPI_F08 -D __OPENBLAS -D __SP
+   GLIB -D __parallel -D __SHORT_FILE__="start/cp2k.F" -mtune=generic -
+   march=x86-64 -g -O3 -O3 -Wno-deprecated-declarations -Wno-maybe-unin
+   itialized -Wuninitialized -Wuse-without-only -std=f2008 -fPIE -ffree
+   -form -fimplicit-none -fno-omit-frame-pointer -fbacktrace -fallow-ar
+   gument-mismatch -funroll-loops -fopenmp -fpre-include=/usr/include/f
+   include/math-vector-fortran.h

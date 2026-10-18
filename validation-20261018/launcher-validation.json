@@ -1,0 +1,10 @@
+{
+  "launcher": "Slurm srun with explicit --mpi=pmix",
+  "required_mpi_ranks": 2,
+  "threads_per_rank": 1,
+  "acceptance": "The GLOBAL total message-passing process count must equal the requested rank count.",
+  "preliminary_attempts": "Excluded. Without the explicit MPI plugin the preliminary job steps created independent singleton MPI worlds and collided in their output directories.",
+  "preliminary_attempts_used_for_timings_or_physics": false,
+  "preliminary_data_retention": "Preserved separately outside the publication archive.",
+  "trajectory_checks": "Seven finite columns, monotone times, and consistent thermodynamic records. Conserved energy is column six, not wall time."
+}

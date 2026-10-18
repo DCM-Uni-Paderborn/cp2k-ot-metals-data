@@ -1,0 +1,823 @@
+Collected 152 completed or failed attempts.
+{
+  "pairs": [
+    {
+      "case": "al-base-cg",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 4.833474953613859e-09,
+      "delta_minus_TS_Ha": -5.129749999993952e-09,
+      "delta_objective_correction_Ha": -5.129749999993952e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-base-lbfgs",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.540318095294424e-09,
+      "delta_minus_TS_Ha": -8.7727099999527e-09,
+      "delta_objective_correction_Ha": -8.7727099999527e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-base-cg",
+      "reference": "cu-base-diag",
+      "delta_free_energy_Ha": 3.831175376944884e-10,
+      "delta_minus_TS_Ha": -5.399999024324753e-13,
+      "delta_objective_correction_Ha": -5.399999024324753e-13,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-base-lbfgs",
+      "reference": "cu-base-diag",
+      "delta_free_energy_Ha": 2.1727686316808104e-10,
+      "delta_minus_TS_Ha": 2.0000017267318704e-13,
+      "delta_objective_correction_Ha": 2.0000017267318704e-13,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-hot-cg",
+      "reference": "al-hot-diag",
+      "delta_free_energy_Ha": 5.5829079137481585e-09,
+      "delta_minus_TS_Ha": 3.399345000019288e-08,
+      "delta_objective_correction_Ha": 3.399345000019288e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-dense-cg",
+      "reference": "al-dense-diag",
+      "delta_free_energy_Ha": 1.63911157979868e-07,
+      "delta_minus_TS_Ha": 2.1185573000005904e-07,
+      "delta_objective_correction_Ha": 2.1185573000005904e-07,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-hot-lbfgs",
+      "reference": "al-hot-diag",
+      "delta_free_energy_Ha": 8.471532808584925e-09,
+      "delta_minus_TS_Ha": 4.397198999969015e-08,
+      "delta_objective_correction_Ha": 4.397198999969015e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-dense-lbfgs",
+      "reference": "al-dense-diag",
+      "delta_free_energy_Ha": 2.282046862589482e-08,
+      "delta_minus_TS_Ha": -5.265735999993547e-08,
+      "delta_objective_correction_Ha": -5.265735999993547e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-hot-cg",
+      "reference": "cu-hot-diag",
+      "delta_free_energy_Ha": 3.9666758766543353e-10,
+      "delta_minus_TS_Ha": 5.409999965372281e-11,
+      "delta_objective_correction_Ha": 5.409999965372281e-11,
+      "delta_spin": null,
+      "delta_electron_count": -1.000000082740371e-10
+    },
+    {
+      "case": "cu-dense-cg",
+      "reference": "cu-dense-diag",
+      "delta_free_energy_Ha": 6.959275822282507e-08,
+      "delta_minus_TS_Ha": -2.8451620300000034e-06,
+      "delta_objective_correction_Ha": -2.8451620300000034e-06,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-hot-lbfgs",
+      "reference": "cu-hot-diag",
+      "delta_free_energy_Ha": 6.760672022210201e-09,
+      "delta_minus_TS_Ha": -7.200000057966394e-11,
+      "delta_objective_correction_Ha": -7.200000057966394e-11,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-strict-cg",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 4.833474953613859e-09,
+      "delta_minus_TS_Ha": -5.129749999993952e-09,
+      "delta_objective_correction_Ha": -5.129749999993952e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-strict-diis",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 5.563682847764539e-10,
+      "delta_minus_TS_Ha": -4.749439999921987e-09,
+      "delta_objective_correction_Ha": -4.749439999921987e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-strict-broyden",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 5.9223781434525335e-09,
+      "delta_minus_TS_Ha": -4.006089999986605e-09,
+      "delta_objective_correction_Ha": -4.006089999986605e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-strict-lbfgs",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.540318095294424e-09,
+      "delta_minus_TS_Ha": -8.7727099999527e-09,
+      "delta_objective_correction_Ha": -8.7727099999527e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-irac-cg",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 4.833079270127882e-09,
+      "delta_minus_TS_Ha": -5.16503999997437e-09,
+      "delta_objective_correction_Ha": -5.16503999997437e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-irac-diis",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 5.638010058817144e-10,
+      "delta_minus_TS_Ha": -4.763799999981701e-09,
+      "delta_objective_correction_Ha": -4.763799999981701e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-irac-broyden",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.4144596605092374e-10,
+      "delta_minus_TS_Ha": -4.728849999947882e-09,
+      "delta_objective_correction_Ha": -4.728849999947882e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-irac-lbfgs",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.013221950785237e-09,
+      "delta_minus_TS_Ha": -6.835999999572906e-10,
+      "delta_objective_correction_Ha": -6.835999999572906e-10,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-full_kinetic",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 2.1374431113940773e-09,
+      "delta_minus_TS_Ha": -3.973109999962261e-09,
+      "delta_objective_correction_Ha": -3.973109999962261e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-full_s_inverse",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 2.1372739134051244e-09,
+      "delta_minus_TS_Ha": -3.973069999949411e-09,
+      "delta_objective_correction_Ha": -3.973069999949411e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-full_all",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 2.1374488845538053e-09,
+      "delta_minus_TS_Ha": -3.973059999919093e-09,
+      "delta_objective_correction_Ha": -3.973059999919093e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-fermi_low_rank",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.1042754266554766e-08,
+      "delta_minus_TS_Ha": -1.8223099999478687e-09,
+      "delta_objective_correction_Ha": -1.8223099999478687e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-full_all_covariant",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 2.137518162470542e-09,
+      "delta_minus_TS_Ha": -3.973119999992579e-09,
+      "delta_objective_correction_Ha": -3.973119999992579e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-full-mesh",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 4.833474953613859e-09,
+      "delta_minus_TS_Ha": -5.129749999993952e-09,
+      "delta_objective_correction_Ha": -5.129749999993952e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-gamma",
+      "reference": "al-explicit-gamma",
+      "delta_free_energy_Ha": 0.0,
+      "delta_minus_TS_Ha": 0.0,
+      "delta_objective_correction_Ha": 0.0,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-auto",
+      "reference": "al-reduced-diag",
+      "delta_free_energy_Ha": 3.0859608202149502e-09,
+      "delta_minus_TS_Ha": -3.893369999985984e-09,
+      "delta_objective_correction_Ha": -3.893369999985984e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-no-occupation-preconditioner",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 0.0025394602062931426,
+      "delta_minus_TS_Ha": 0.00053936478459,
+      "delta_objective_correction_Ha": 0.00053936478459,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "ni-dense-cg-full-spin-space",
+      "reference": "ni-dense-diag-full-spin-space",
+      "delta_free_energy_Ha": 2.0654845656054022e-07,
+      "delta_minus_TS_Ha": 1.0910270000006987e-07,
+      "delta_objective_correction_Ha": 1.0910270000006987e-07,
+      "delta_spin": -1.3532000000537892e-06,
+      "delta_electron_count": -1.000000082740371e-10
+    },
+    {
+      "case": "ni-hot-lbfgs-full-spin-space",
+      "reference": "ni-hot-diag-full-spin-space",
+      "delta_free_energy_Ha": 1.9702834208601416e-07,
+      "delta_minus_TS_Ha": -1.479166300000223e-07,
+      "delta_objective_correction_Ha": -1.479166300000223e-07,
+      "delta_spin": -3.82000000520577e-08,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "ni-dense-lbfgs-full-spin-space",
+      "reference": "ni-dense-diag-full-spin-space",
+      "delta_free_energy_Ha": 7.692536385661697e-07,
+      "delta_minus_TS_Ha": -2.0389273300001117e-06,
+      "delta_objective_correction_Ha": -2.0389273300001117e-06,
+      "delta_spin": -9.229700000057406e-06,
+      "delta_electron_count": -1.000000082740371e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "reference": "al-force-reference-thermal-diag",
+      "delta_free_energy_Ha": -4.11182199400173e-11,
+      "delta_minus_TS_Ha": 8.877114999854274e-08,
+      "delta_objective_correction_Ha": 8.877114999854274e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-gaussian-cg",
+      "reference": "al-gaussian-diag",
+      "delta_free_energy_Ha": 4.501829398151358e-08,
+      "delta_minus_TS_Ha": null,
+      "delta_objective_correction_Ha": 6.633966999998117e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-methfessel_paxton-cg",
+      "reference": "al-methfessel_paxton-diag",
+      "delta_free_energy_Ha": 7.063194917833471e-09,
+      "delta_minus_TS_Ha": null,
+      "delta_objective_correction_Ha": -5.252400000392912e-10,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-marzari_vanderbilt-cg",
+      "reference": "al-marzari_vanderbilt-diag",
+      "delta_free_energy_Ha": 2.4301449741415126e-09,
+      "delta_minus_TS_Ha": null,
+      "delta_objective_correction_Ha": -7.692329999971909e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-gfn1-ot",
+      "reference": "al-gfn1-diag",
+      "delta_free_energy_Ha": 1.4099832412739488e-13,
+      "delta_minus_TS_Ha": -1.0000030317702802e-14,
+      "delta_objective_correction_Ha": -1.0000030317702802e-14,
+      "delta_spin": null,
+      "delta_electron_count": null
+    },
+    {
+      "case": "al-gfn2-ot",
+      "reference": "al-gfn2-diag",
+      "delta_free_energy_Ha": -7.30526750203353e-14,
+      "delta_minus_TS_Ha": 0.0,
+      "delta_objective_correction_Ha": 0.0,
+      "delta_spin": null,
+      "delta_electron_count": null
+    },
+    {
+      "case": "al-spin-common-cg",
+      "reference": "al-spin-common-diag",
+      "delta_free_energy_Ha": -1.0822454044046026e-12,
+      "delta_minus_TS_Ha": -1.0880000000503616e-11,
+      "delta_objective_correction_Ha": -1.0880000000503616e-11,
+      "delta_spin": -3.000000248221113e-10,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-spin-integer-cg",
+      "reference": "al-spin-integer-diag",
+      "delta_free_energy_Ha": 4.884981308350689e-15,
+      "delta_minus_TS_Ha": 0.0,
+      "delta_objective_correction_Ha": 0.0,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-spin-zero-cg",
+      "reference": "al-spin-zero-diag",
+      "delta_free_energy_Ha": 9.681144774731365e-14,
+      "delta_minus_TS_Ha": 0.0,
+      "delta_objective_correction_Ha": 0.0,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-spin-fractional-cg",
+      "reference": "al-spin-fractional-diag",
+      "delta_free_energy_Ha": 1.1191048088221578e-13,
+      "delta_minus_TS_Ha": -1.0000247158137299e-14,
+      "delta_objective_correction_Ha": -1.0000247158137299e-14,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-reduced-lbfgs",
+      "reference": "al-reduced-diag",
+      "delta_free_energy_Ha": 1.91467597332462e-09,
+      "delta_minus_TS_Ha": -4.511130000041559e-09,
+      "delta_objective_correction_Ha": -4.511130000041559e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-reduced-cg",
+      "reference": "cu-reduced-diag",
+      "delta_free_energy_Ha": 2.1157831042728503e-10,
+      "delta_minus_TS_Ha": 1.3799998470342967e-12,
+      "delta_objective_correction_Ha": 1.3799998470342967e-12,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-reduced-lbfgs",
+      "reference": "cu-reduced-diag",
+      "delta_free_energy_Ha": 1.4907897138982662e-09,
+      "delta_minus_TS_Ha": 5.100000283198014e-13,
+      "delta_objective_correction_Ha": 5.100000283198014e-13,
+      "delta_spin": null,
+      "delta_electron_count": 1.000000082740371e-10
+    },
+    {
+      "case": "ni-reduced-cg",
+      "reference": "ni-reduced-diag",
+      "delta_free_energy_Ha": 1.90653778986416e-07,
+      "delta_minus_TS_Ha": 8.030523100000398e-07,
+      "delta_objective_correction_Ha": 8.030523100000398e-07,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "ni-reduced-lbfgs",
+      "reference": "ni-reduced-diag",
+      "delta_free_energy_Ha": 9.026010872048573e-08,
+      "delta_minus_TS_Ha": 5.465622500000619e-07,
+      "delta_objective_correction_Ha": 5.465622500000619e-07,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    }
+  ],
+  "force_checks": [
+    {
+      "case": "al-force-reference",
+      "step_A": 0.001,
+      "analytical_Ha_per_bohr": -0.00375368698,
+      "numerical_Ha_per_bohr": -0.0037537149408008973,
+      "absolute_error_Ha_per_bohr": 2.7960800897276067e-08
+    },
+    {
+      "case": "al-force-reference",
+      "step_A": 0.0005,
+      "analytical_Ha_per_bohr": -0.00375368698,
+      "numerical_Ha_per_bohr": -0.003753714621433331,
+      "absolute_error_Ha_per_bohr": 2.764143333102917e-08
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "step_A": 0.001,
+      "analytical_Ha_per_bohr": -0.00188691729,
+      "numerical_Ha_per_bohr": -0.0018869182023992024,
+      "absolute_error_Ha_per_bohr": 9.123992024146627e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "step_A": 0.0005,
+      "analytical_Ha_per_bohr": -0.00188691729,
+      "numerical_Ha_per_bohr": -0.0018869189341950829,
+      "absolute_error_Ha_per_bohr": 1.6441950828182533e-09
+    }
+  ],
+  "stress_checks": [
+    {
+      "case": "al-force-reference",
+      "component": [
+        0,
+        0
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0010820772336099275,
+      "numerical_Ha_per_bohr3": -0.0010820777456706434,
+      "absolute_error_Ha_per_bohr3": 5.120607158778934e-10
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        1,
+        1
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0010821234751958904,
+      "numerical_Ha_per_bohr3": -0.001082122762724394,
+      "absolute_error_Ha_per_bohr3": 7.124714962968015e-10
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        2,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0010821225162587487,
+      "numerical_Ha_per_bohr3": -0.0010821227629225188,
+      "absolute_error_Ha_per_bohr3": 2.466637701384333e-10
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        0,
+        1
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0031678937931858544,
+      "numerical_Ha_per_bohr3": -0.0031678937436744247,
+      "absolute_error_Ha_per_bohr3": 4.951142967835054e-11
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        0,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0031678943001568795,
+      "numerical_Ha_per_bohr3": -0.0031678937439121747,
+      "absolute_error_Ha_per_bohr3": 5.562447048107488e-10
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        1,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": 0.003167636257632381,
+      "numerical_Ha_per_bohr3": 0.0031676363509895995,
+      "absolute_error_Ha_per_bohr3": 9.335721865705304e-11
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        0,
+        0
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0011032689356132862,
+      "numerical_Ha_per_bohr3": -0.0011032688000239578,
+      "absolute_error_Ha_per_bohr3": 1.3558932839344284e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        1,
+        1
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.001103299596915379,
+      "numerical_Ha_per_bohr3": -0.0011032999832410679,
+      "absolute_error_Ha_per_bohr3": 3.8632568888710694e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        2,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": 0.001306439066321622,
+      "numerical_Ha_per_bohr3": 0.0013064297048031852,
+      "absolute_error_Ha_per_bohr3": 9.36151843674779e-09
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        0,
+        1
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0031577088396455982,
+      "numerical_Ha_per_bohr3": -0.0031577082093448188,
+      "absolute_error_Ha_per_bohr3": 6.303007794514204e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        0,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0004353023835139623,
+      "numerical_Ha_per_bohr3": -0.00043530440686460035,
+      "absolute_error_Ha_per_bohr3": 2.023350638077903e-09
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        1,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": 0.0004350819416928363,
+      "numerical_Ha_per_bohr3": 0.0004350846062740388,
+      "absolute_error_Ha_per_bohr3": 2.6645812024926954e-09
+    }
+  ],
+  "dynamics": [
+    {
+      "case": "al-md-0.125",
+      "samples": 81,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 5.999999608263806e-09,
+      "endpoint_change_Ha": 1.9999992773023223e-09,
+      "least_squares_drift_Ha_per_fs": 1.712736908035641e-10,
+      "temperature_K": 600,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": -1
+    },
+    {
+      "case": "al-md-0.125-adaptive",
+      "samples": 81,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 5.000000413701855e-09,
+      "endpoint_change_Ha": 0.0,
+      "least_squares_drift_Ha_per_fs": 1.987353371299743e-11,
+      "temperature_K": 600,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": "AUTO"
+    },
+    {
+      "case": "al-md-0.125-thermal-eps7",
+      "samples": 81,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 1.147999999950855e-06,
+      "endpoint_change_Ha": -1.147000000756293e-06,
+      "least_squares_drift_Ha_per_fs": -1.45006504085281e-07,
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "eps_scf": 1e-07,
+      "added_mos": "AUTO"
+    },
+    {
+      "case": "al-md-0.25",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 2.6999999569454758e-08,
+      "endpoint_change_Ha": 1.3999999382008355e-08,
+      "least_squares_drift_Ha_per_fs": 1.4898954463501385e-09,
+      "temperature_K": 600,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": -1
+    },
+    {
+      "case": "al-md-0.25-adaptive",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 1.999999987845058e-08,
+      "endpoint_change_Ha": 9.999991945619513e-10,
+      "least_squares_drift_Ha_per_fs": 4.947734363135752e-11,
+      "temperature_K": 600,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": "AUTO"
+    },
+    {
+      "case": "al-md-0.25-thermal",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 9.000000744663339e-09,
+      "endpoint_change_Ha": -9.000000744663339e-09,
+      "least_squares_drift_Ha_per_fs": -7.623694010578158e-10,
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": -1
+    },
+    {
+      "case": "al-md-0.25-thermal-adaptive",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 6.000000496442226e-09,
+      "endpoint_change_Ha": -3.000000248221113e-09,
+      "least_squares_drift_Ha_per_fs": -2.5714287841895263e-10,
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": "AUTO"
+    },
+    {
+      "case": "al-md-0.25-thermal-eps7",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 1.1049999999457327e-06,
+      "endpoint_change_Ha": -1.1049999999457327e-06,
+      "least_squares_drift_Ha_per_fs": -1.2838466900599208e-07,
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "eps_scf": 1e-07,
+      "added_mos": "AUTO"
+    }
+  ],
+  "interrupted_dynamics": [
+    {
+      "case": "al-md-0.125-thermal",
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "timestep_fs": 0.125,
+      "added_mos": -1,
+      "completed_time_fs": 2.625,
+      "requested_time_fs": 10.0,
+      "returncode": 124,
+      "normal_end": false,
+      "stopping_status": "Time limit",
+      "last_scf_residual": 1e-08,
+      "last_scf_iteration": 223
+    },
+    {
+      "case": "al-md-0.125-thermal-adaptive",
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "timestep_fs": 0.125,
+      "added_mos": "AUTO",
+      "completed_time_fs": 5.75,
+      "requested_time_fs": 10.0,
+      "returncode": 124,
+      "normal_end": false,
+      "stopping_status": "Time limit",
+      "last_scf_residual": 1e-08,
+      "last_scf_iteration": 131
+    },
+    {
+      "case": "al-md-0.125-thermal-cg",
+      "temperature_K": 3000,
+      "method": "CG",
+      "timestep_fs": 0.125,
+      "added_mos": "AUTO",
+      "completed_time_fs": 0.0,
+      "requested_time_fs": 10.0,
+      "returncode": 1,
+      "normal_end": false,
+      "stopping_status": "SCF limit",
+      "last_scf_residual": 4e-08,
+      "last_scf_iteration": 500
+    },
+    {
+      "case": "al-md-0.125-thermal-lbfgs",
+      "temperature_K": 3000,
+      "method": "LBFGS",
+      "timestep_fs": 0.125,
+      "added_mos": "AUTO",
+      "completed_time_fs": 3.875,
+      "requested_time_fs": 10.0,
+      "returncode": 124,
+      "normal_end": false,
+      "stopping_status": "Time limit",
+      "last_scf_residual": 1e-07,
+      "last_scf_iteration": 93
+    },
+    {
+      "case": "al-md-0.25-thermal-cg",
+      "temperature_K": 3000,
+      "method": "CG",
+      "timestep_fs": 0.25,
+      "added_mos": "AUTO",
+      "completed_time_fs": 0.0,
+      "requested_time_fs": 10.0,
+      "returncode": 1,
+      "normal_end": false,
+      "stopping_status": "SCF limit",
+      "last_scf_residual": 4e-08,
+      "last_scf_iteration": 500
+    },
+    {
+      "case": "al-md-0.25-thermal-lbfgs",
+      "temperature_K": 3000,
+      "method": "LBFGS",
+      "timestep_fs": 0.25,
+      "added_mos": "AUTO",
+      "completed_time_fs": 6.25,
+      "requested_time_fs": 10.0,
+      "returncode": 124,
+      "normal_end": false,
+      "stopping_status": "Time limit",
+      "last_scf_residual": 6e-08,
+      "last_scf_iteration": 17
+    }
+  ],
+  "attempts": 152,
+  "completed": 138,
+  "rejected_launcher_attempts": 0,
+  "scf_converged": 138,
+  "optimization": [
+    {
+      "case": "al-cell_opt",
+      "run_type": "CELL_OPT",
+      "temperature_K": 600,
+      "nuclear_steps": 15.0,
+      "converged": false,
+      "step_limit_reached": true,
+      "returncode": 0,
+      "scf_solves": 16
+    },
+    {
+      "case": "al-cell_opt-thermal",
+      "run_type": "CELL_OPT",
+      "temperature_K": 3000,
+      "nuclear_steps": 13.0,
+      "converged": false,
+      "step_limit_reached": false,
+      "returncode": 124,
+      "scf_solves": 14
+    },
+    {
+      "case": "al-geo_opt",
+      "run_type": "GEO_OPT",
+      "temperature_K": 600,
+      "nuclear_steps": 5.0,
+      "converged": true,
+      "step_limit_reached": false,
+      "returncode": 0,
+      "scf_solves": 7
+    },
+    {
+      "case": "al-geo_opt-thermal",
+      "run_type": "GEO_OPT",
+      "temperature_K": 3000,
+      "nuclear_steps": 5.0,
+      "converged": true,
+      "step_limit_reached": false,
+      "returncode": 0,
+      "scf_solves": 7
+    }
+  ],
+  "planned_first_attempts": 136,
+  "pending_first_attempts": []
+}

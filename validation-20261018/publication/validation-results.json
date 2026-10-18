@@ -1,0 +1,6697 @@
+{
+  "cases": [
+    {
+      "case": "al-base-cg",
+      "group": "pilot",
+      "attempts": 3,
+      "converged": 3,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 6.9e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337829497446,
+      "minus_TS_Ha": -0.00069766956613,
+      "objective_correction_Ha": -0.00069766956613,
+      "steps": [
+        [
+          14
+        ],
+        [
+          14
+        ],
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        56.914,
+        53.688,
+        49.715
+      ],
+      "median_cp2k_time_s": 53.688
+    },
+    {
+      "case": "al-base-lbfgs",
+      "group": "pilot",
+      "attempts": 3,
+      "converged": 3,
+      "method": "LBFGS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 1.5e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337832790603,
+      "minus_TS_Ha": -0.00069767320909,
+      "objective_correction_Ha": -0.00069767320909,
+      "steps": [
+        [
+          19
+        ],
+        [
+          19
+        ],
+        [
+          19
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        65.2,
+        61.648,
+        61.177
+      ],
+      "median_cp2k_time_s": 61.648
+    },
+    {
+      "case": "al-base-diag",
+      "group": "pilot",
+      "attempts": 3,
+      "converged": 3,
+      "method": "DIAG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 6,
+      "last_scf_residual": 5.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337834330921,
+      "minus_TS_Ha": -0.00069766443638,
+      "objective_correction_Ha": -0.00069766443638,
+      "steps": [
+        [
+          6
+        ],
+        [
+          6
+        ],
+        [
+          6
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        6.397,
+        6.782,
+        5.802
+      ],
+      "median_cp2k_time_s": 6.397
+    },
+    {
+      "case": "cu-base-cg",
+      "group": "pilot",
+      "attempts": 3,
+      "converged": 3,
+      "method": "CG",
+      "temperature_K": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 18,
+      "last_scf_residual": 4.7e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.09963938388169,
+      "minus_TS_Ha": -0.00241886740123,
+      "objective_correction_Ha": -0.00241886740123,
+      "steps": [
+        [
+          18
+        ],
+        [
+          18
+        ],
+        [
+          18
+        ]
+      ],
+      "electron_count": 10.9999999949,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        81.85,
+        101.699,
+        108.762
+      ],
+      "median_cp2k_time_s": 101.699
+    },
+    {
+      "case": "cu-base-lbfgs",
+      "group": "pilot",
+      "attempts": 3,
+      "converged": 3,
+      "method": "LBFGS",
+      "temperature_K": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 24,
+      "last_scf_residual": 6e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.09963938404753,
+      "minus_TS_Ha": -0.00241886740049,
+      "objective_correction_Ha": -0.00241886740049,
+      "steps": [
+        [
+          24
+        ],
+        [
+          24
+        ],
+        [
+          24
+        ]
+      ],
+      "electron_count": 10.9999999949,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        1,
+        1,
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        113.164,
+        116.717,
+        114.453
+      ],
+      "median_cp2k_time_s": 114.453
+    },
+    {
+      "case": "cu-base-diag",
+      "group": "pilot",
+      "attempts": 3,
+      "converged": 3,
+      "method": "DIAG",
+      "temperature_K": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 11,
+      "last_scf_residual": 4.4e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.099639384264805,
+      "minus_TS_Ha": -0.00241886740069,
+      "objective_correction_Ha": -0.00241886740069,
+      "steps": [
+        [
+          11
+        ],
+        [
+          11
+        ],
+        [
+          11
+        ]
+      ],
+      "electron_count": 10.9999999949,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        28.095,
+        28.985,
+        28.227
+      ],
+      "median_cp2k_time_s": 28.227
+    },
+    {
+      "case": "al-hot-cg",
+      "group": "temperature",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 13,
+      "last_scf_residual": 6.1e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.053545939730443,
+      "minus_TS_Ha": -0.00536460007371,
+      "objective_correction_Ha": -0.00536460007371,
+      "steps": [
+        [
+          13
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        54.896
+      ],
+      "median_cp2k_time_s": 54.896
+    },
+    {
+      "case": "al-dense-cg",
+      "group": "mesh",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 21,
+      "last_scf_residual": 8.6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.0698176839105,
+      "minus_TS_Ha": -0.0005088957085,
+      "objective_correction_Ha": -0.0005088957085,
+      "steps": [
+        [
+          21
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 32.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        128.996
+      ],
+      "median_cp2k_time_s": 128.996
+    },
+    {
+      "case": "al-hot-lbfgs",
+      "group": "temperature",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 3.9e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.053545936841818,
+      "minus_TS_Ha": -0.00536459009517,
+      "objective_correction_Ha": -0.00536459009517,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        49.4
+      ],
+      "median_cp2k_time_s": 49.4
+    },
+    {
+      "case": "al-dense-lbfgs",
+      "group": "mesh",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 600,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 2e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.069817825001189,
+      "minus_TS_Ha": -0.00050916022159,
+      "objective_correction_Ha": -0.00050916022159,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 32.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        83.544
+      ],
+      "median_cp2k_time_s": 83.544
+    },
+    {
+      "case": "al-hot-diag",
+      "group": "temperature",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 6,
+      "last_scf_residual": 5.7e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.053545945313351,
+      "minus_TS_Ha": -0.00536463406716,
+      "objective_correction_Ha": -0.00536463406716,
+      "steps": [
+        [
+          6
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        5.63
+      ],
+      "median_cp2k_time_s": 5.63
+    },
+    {
+      "case": "al-dense-diag",
+      "group": "mesh",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 600,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 6,
+      "last_scf_residual": 9.1e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.069817847821658,
+      "minus_TS_Ha": -0.00050910756423,
+      "objective_correction_Ha": -0.00050910756423,
+      "steps": [
+        [
+          6
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 32.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        6.2
+      ],
+      "median_cp2k_time_s": 6.2
+    },
+    {
+      "case": "cu-hot-cg",
+      "group": "temperature",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 2000,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 18,
+      "last_scf_residual": 4.7e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.103267688515,
+      "minus_TS_Ha": -0.00604722759032,
+      "objective_correction_Ha": -0.00604722759032,
+      "steps": [
+        [
+          18
+        ]
+      ],
+      "electron_count": 10.9999999949,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        104.046
+      ],
+      "median_cp2k_time_s": 104.046
+    },
+    {
+      "case": "cu-dense-cg",
+      "group": "mesh",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 800,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 29,
+      "last_scf_residual": 8.2e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.12115747022525,
+      "minus_TS_Ha": -0.00062364274161,
+      "objective_correction_Ha": -0.00062364274161,
+      "steps": [
+        [
+          29
+        ]
+      ],
+      "electron_count": 10.9999999949,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 32.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        292.959
+      ],
+      "median_cp2k_time_s": 292.959
+    },
+    {
+      "case": "cu-hot-lbfgs",
+      "group": "temperature",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 2000,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 20,
+      "last_scf_residual": 7.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.10326768215099,
+      "minus_TS_Ha": -0.00604722771642,
+      "objective_correction_Ha": -0.00604722771642,
+      "steps": [
+        [
+          20
+        ]
+      ],
+      "electron_count": 10.999999995,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        89.657
+      ],
+      "median_cp2k_time_s": 89.657
+    },
+    {
+      "case": "cu-dense-lbfgs",
+      "group": "mesh",
+      "attempts": 1,
+      "converged": 0,
+      "method": "LBFGS",
+      "temperature_K": 800,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 86,
+      "last_scf_residual": 7.246e-05,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "cu-hot-diag",
+      "group": "temperature",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 2000,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 11,
+      "last_scf_residual": 4.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.103267688911664,
+      "minus_TS_Ha": -0.00604722764442,
+      "objective_correction_Ha": -0.00604722764442,
+      "steps": [
+        [
+          11
+        ]
+      ],
+      "electron_count": 10.999999995,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        25.787
+      ],
+      "median_cp2k_time_s": 25.787
+    },
+    {
+      "case": "cu-dense-diag",
+      "group": "mesh",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 800,
+      "mesh": [
+        4,
+        4,
+        4
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 13,
+      "last_scf_residual": 2e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.12115753981801,
+      "minus_TS_Ha": -0.00062079757958,
+      "objective_correction_Ha": -0.00062079757958,
+      "steps": [
+        [
+          13
+        ]
+      ],
+      "electron_count": 10.9999999949,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 32.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        29.256
+      ],
+      "median_cp2k_time_s": 29.256
+    },
+    {
+      "case": "al-strict-cg",
+      "group": "options",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 6.9e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337829497446,
+      "minus_TS_Ha": -0.00069766956613,
+      "objective_correction_Ha": -0.00069766956613,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        54.415
+      ],
+      "median_cp2k_time_s": 54.415
+    },
+    {
+      "case": "al-strict-diis",
+      "group": "options",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 40,
+      "last_scf_residual": 2.2e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337833774553,
+      "minus_TS_Ha": -0.00069766918582,
+      "objective_correction_Ha": -0.00069766918582,
+      "steps": [
+        [
+          40
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        65.534
+      ],
+      "median_cp2k_time_s": 65.534
+    },
+    {
+      "case": "al-strict-broyden",
+      "group": "options",
+      "attempts": 1,
+      "converged": 1,
+      "method": "BROYDEN",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 25,
+      "last_scf_residual": 7.6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337828408543,
+      "minus_TS_Ha": -0.00069766844247,
+      "objective_correction_Ha": -0.00069766844247,
+      "steps": [
+        [
+          25
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        51.346
+      ],
+      "median_cp2k_time_s": 51.346
+    },
+    {
+      "case": "al-strict-lbfgs",
+      "group": "options",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 1.5e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337832790603,
+      "minus_TS_Ha": -0.00069767320909,
+      "objective_correction_Ha": -0.00069767320909,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        54.798
+      ],
+      "median_cp2k_time_s": 54.798
+    },
+    {
+      "case": "al-irac-cg",
+      "group": "options",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 6.9e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337829497842,
+      "minus_TS_Ha": -0.00069766960142,
+      "objective_correction_Ha": -0.00069766960142,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        49.298
+      ],
+      "median_cp2k_time_s": 49.298
+    },
+    {
+      "case": "al-irac-diis",
+      "group": "options",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 40,
+      "last_scf_residual": 2.2e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.05033783376712,
+      "minus_TS_Ha": -0.00069766920018,
+      "objective_correction_Ha": -0.00069766920018,
+      "steps": [
+        [
+          40
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        74.68
+      ],
+      "median_cp2k_time_s": 74.68
+    },
+    {
+      "case": "al-irac-broyden",
+      "group": "options",
+      "attempts": 1,
+      "converged": 1,
+      "method": "BROYDEN",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 105,
+      "last_scf_residual": 1.4e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337834189475,
+      "minus_TS_Ha": -0.00069766916523,
+      "objective_correction_Ha": -0.00069766916523,
+      "steps": [
+        [
+          105
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        166.238
+      ],
+      "median_cp2k_time_s": 166.238
+    },
+    {
+      "case": "al-irac-lbfgs",
+      "group": "options",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 17,
+      "last_scf_residual": 3.6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337833317699,
+      "minus_TS_Ha": -0.00069766511998,
+      "objective_correction_Ha": -0.00069766511998,
+      "steps": [
+        [
+          17
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        39.399
+      ],
+      "median_cp2k_time_s": 39.399
+    },
+    {
+      "case": "al-preconditioner-full_kinetic",
+      "group": "preconditioners",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 4.8e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337832193478,
+      "minus_TS_Ha": -0.00069766840949,
+      "objective_correction_Ha": -0.00069766840949,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        51.262
+      ],
+      "median_cp2k_time_s": 51.262
+    },
+    {
+      "case": "al-preconditioner-full_s_inverse",
+      "group": "preconditioners",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 4.8e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337832193647,
+      "minus_TS_Ha": -0.00069766840945,
+      "objective_correction_Ha": -0.00069766840945,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        51.376
+      ],
+      "median_cp2k_time_s": 51.376
+    },
+    {
+      "case": "al-preconditioner-full_all",
+      "group": "preconditioners",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 4.8e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337832193472,
+      "minus_TS_Ha": -0.00069766840944,
+      "objective_correction_Ha": -0.00069766840944,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        49.909
+      ],
+      "median_cp2k_time_s": 49.909
+    },
+    {
+      "case": "al-preconditioner-fermi_low_rank",
+      "group": "preconditioners",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 8.9e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337823288167,
+      "minus_TS_Ha": -0.00069766625869,
+      "objective_correction_Ha": -0.00069766625869,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        55.771
+      ],
+      "median_cp2k_time_s": 55.771
+    },
+    {
+      "case": "al-preconditioner-full_all_covariant",
+      "group": "preconditioners",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 4.8e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337832193403,
+      "minus_TS_Ha": -0.0006976684095,
+      "objective_correction_Ha": -0.0006976684095,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        51.047
+      ],
+      "median_cp2k_time_s": 51.047
+    },
+    {
+      "case": "al-full-mesh",
+      "group": "symmetry",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 6.9e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337829497446,
+      "minus_TS_Ha": -0.00069766956613,
+      "objective_correction_Ha": -0.00069766956613,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        50.337
+      ],
+      "median_cp2k_time_s": 50.337
+    },
+    {
+      "case": "al-gamma",
+      "group": "gamma",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 53,
+      "last_scf_residual": 5.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -1.93491167752665,
+      "minus_TS_Ha": -0.00263497423406,
+      "objective_correction_Ha": -0.00263497423406,
+      "steps": [
+        [
+          53
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": null,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        125.074
+      ],
+      "median_cp2k_time_s": 125.074
+    },
+    {
+      "case": "al-explicit-gamma",
+      "group": "gamma",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        1,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 53,
+      "last_scf_residual": 5.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -1.93491167752665,
+      "minus_TS_Ha": -0.00263497423406,
+      "objective_correction_Ha": -0.00263497423406,
+      "steps": [
+        [
+          53
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        121.506
+      ],
+      "median_cp2k_time_s": 121.506
+    },
+    {
+      "case": "al-auto",
+      "group": "adaptive",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 7.4e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337831246335,
+      "minus_TS_Ha": -0.00069766832973,
+      "objective_correction_Ha": -0.00069766832973,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 6,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        57.881
+      ],
+      "median_cp2k_time_s": 57.881
+    },
+    {
+      "case": "al-no-occupation-preconditioner",
+      "group": "ablation",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 199,
+      "last_scf_residual": 9.8e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.047798374124628,
+      "minus_TS_Ha": -0.00015829965179,
+      "objective_correction_Ha": -0.00015829965179,
+      "steps": [
+        [
+          199
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        371.667
+      ],
+      "median_cp2k_time_s": 371.667
+    },
+    {
+      "case": "al-force-reference",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4368e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540230849092969,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        17.553
+      ],
+      "median_cp2k_time_s": 17.553
+    },
+    {
+      "case": "al-displacement-0.001--1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.41e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540237800695239,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        17.776
+      ],
+      "median_cp2k_time_s": 17.776
+    },
+    {
+      "case": "al-displacement-0.001-+1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4637e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540223613708801,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        17.829
+      ],
+      "median_cp2k_time_s": 17.829
+    },
+    {
+      "case": "al-displacement-0.0005--1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4234e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540234360366616,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        15.157
+      ],
+      "median_cp2k_time_s": 15.157
+    },
+    {
+      "case": "al-displacement-0.0005-+1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4503e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540227266874001,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        14.913
+      ],
+      "median_cp2k_time_s": 14.913
+    },
+    {
+      "case": "al-strain-00--1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4366e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540255096073183,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        17.922
+      ],
+      "median_cp2k_time_s": 17.922
+    },
+    {
+      "case": "al-strain-00-+1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4372e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540206587316691,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        18.136
+      ],
+      "median_cp2k_time_s": 18.136
+    },
+    {
+      "case": "al-strain-11--1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4403e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540255097078366,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        23.311
+      ],
+      "median_cp2k_time_s": 23.311
+    },
+    {
+      "case": "al-strain-11-+1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4335e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540206586303792,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        19.207
+      ],
+      "median_cp2k_time_s": 19.207
+    },
+    {
+      "case": "al-strain-22--1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4362e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540255097078372,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        14.414
+      ],
+      "median_cp2k_time_s": 14.414
+    },
+    {
+      "case": "al-strain-22-+1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4376e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540206586303789,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        19.737
+      ],
+      "median_cp2k_time_s": 19.737
+    },
+    {
+      "case": "al-strain-01--1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4471e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540301851167744,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        17.632
+      ],
+      "median_cp2k_time_s": 17.632
+    },
+    {
+      "case": "al-strain-01-+1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4267e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540159836800642,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        17.869
+      ],
+      "median_cp2k_time_s": 17.869
+    },
+    {
+      "case": "al-strain-02--1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4193e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.54030185116775,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        17.728
+      ],
+      "median_cp2k_time_s": 17.728
+    },
+    {
+      "case": "al-strain-02-+1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4544e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540159836800638,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        14.43
+      ],
+      "median_cp2k_time_s": 14.43
+    },
+    {
+      "case": "al-strain-12--1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.425e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540159842571351,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        14.4
+      ],
+      "median_cp2k_time_s": 14.4
+    },
+    {
+      "case": "al-strain-12-+1",
+      "group": "finite-difference",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 19,
+      "last_scf_residual": 8.4488e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540301845399727,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        18.091
+      ],
+      "median_cp2k_time_s": 18.091
+    },
+    {
+      "case": "al-md-0.25",
+      "group": "dynamics",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 13,
+      "last_scf_residual": 4.3879e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540232192164217,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        391.409
+      ],
+      "median_cp2k_time_s": 391.409
+    },
+    {
+      "case": "al-md-0.125",
+      "group": "dynamics",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 12,
+      "last_scf_residual": 6.2667e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540232224795926,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        715.062
+      ],
+      "median_cp2k_time_s": 715.062
+    },
+    {
+      "case": "al-geo_opt",
+      "group": "optimization",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 1,
+      "last_scf_residual": 3.7673e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540319515255177,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19,
+          17,
+          16,
+          10,
+          11,
+          8,
+          1
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        63.291
+      ],
+      "median_cp2k_time_s": 63.291
+    },
+    {
+      "case": "al-cell_opt",
+      "group": "optimization",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 16,
+      "last_scf_residual": 9.8944e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -5.003716589753227,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19,
+          18,
+          18,
+          19,
+          19,
+          20,
+          19,
+          19,
+          19,
+          19,
+          20,
+          16,
+          16,
+          18,
+          18,
+          16
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        16
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        494.053
+      ],
+      "median_cp2k_time_s": 494.053
+    },
+    {
+      "case": "al-restart-write-cg",
+      "group": "restart",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 7.7e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.236935890113232,
+      "minus_TS_Ha": -0.00142464925124,
+      "objective_correction_Ha": -0.00142464925124,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        31.313
+      ],
+      "median_cp2k_time_s": 31.313
+    },
+    {
+      "case": "al-restart-read-cg",
+      "group": "restart",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 1,
+      "last_scf_residual": 3e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.236935890158927,
+      "minus_TS_Ha": -0.00142464925124,
+      "objective_correction_Ha": -0.00142464925124,
+      "steps": [
+        [
+          1
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        2.985
+      ],
+      "median_cp2k_time_s": 2.985
+    },
+    {
+      "case": "al-restart-write-diis",
+      "group": "restart",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 9.6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.236935889805041,
+      "minus_TS_Ha": -0.00142464925123,
+      "objective_correction_Ha": -0.00142464925123,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        14.708
+      ],
+      "median_cp2k_time_s": 14.708
+    },
+    {
+      "case": "al-restart-read-diis",
+      "group": "restart",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 1,
+      "last_scf_residual": 5e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.236935890157973,
+      "minus_TS_Ha": -0.00142464925124,
+      "objective_correction_Ha": -0.00142464925124,
+      "steps": [
+        [
+          1
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        3.043
+      ],
+      "median_cp2k_time_s": 3.043
+    },
+    {
+      "case": "al-restart-write-lbfgs",
+      "group": "restart",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 11,
+      "last_scf_residual": 2.9e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.236935890070892,
+      "minus_TS_Ha": -0.00142464925124,
+      "objective_correction_Ha": -0.00142464925124,
+      "steps": [
+        [
+          11
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        18.651
+      ],
+      "median_cp2k_time_s": 18.651
+    },
+    {
+      "case": "al-restart-read-lbfgs",
+      "group": "restart",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 1,
+      "last_scf_residual": 2e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.236935890158807,
+      "minus_TS_Ha": -0.00142464925124,
+      "objective_correction_Ha": -0.00142464925124,
+      "steps": [
+        [
+          1
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        2.967
+      ],
+      "median_cp2k_time_s": 2.967
+    },
+    {
+      "case": "ni-base-cg-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 1,
+      "converged": 0,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 56,
+      "last_scf_residual": 5.17e-06,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "ni-base-lbfgs-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 1,
+      "converged": 0,
+      "method": "LBFGS",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 86,
+      "last_scf_residual": 2.39e-06,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "ni-base-diag-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 3,
+      "converged": 3,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 67,
+      "last_scf_residual": 9.6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.33693001177831,
+      "minus_TS_Ha": -0.00050352573568,
+      "objective_correction_Ha": -0.00050352573568,
+      "steps": [
+        [
+          67
+        ],
+        [
+          67
+        ],
+        [
+          67
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        0,
+        0,
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 1.3333333341,
+      "cp2k_times_s": [
+        301.767,
+        316.024,
+        316.031
+      ],
+      "median_cp2k_time_s": 316.024
+    },
+    {
+      "case": "ni-hot-cg-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 1,
+      "converged": 0,
+      "method": "CG",
+      "temperature_K": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 60,
+      "last_scf_residual": 3.62e-06,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "ni-dense-cg-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 37,
+      "last_scf_residual": 9.4e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.25793390917592,
+      "minus_TS_Ha": -0.00105145241615,
+      "objective_correction_Ha": -0.00105145241615,
+      "steps": [
+        [
+          37
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 12.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.9997214466,
+      "cp2k_times_s": [
+        684.696
+      ],
+      "median_cp2k_time_s": 684.696
+    },
+    {
+      "case": "ni-hot-lbfgs-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 75,
+      "last_scf_residual": 8.2e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.33815144499277,
+      "minus_TS_Ha": -0.00387951926748,
+      "objective_correction_Ha": -0.00387951926748,
+      "steps": [
+        [
+          75
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        4
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 1.3333632385,
+      "cp2k_times_s": [
+        780.957
+      ],
+      "median_cp2k_time_s": 780.957
+    },
+    {
+      "case": "ni-dense-lbfgs-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 29,
+      "last_scf_residual": 8.9e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.257933346470736,
+      "minus_TS_Ha": -0.00105360044618,
+      "objective_correction_Ha": -0.00105360044618,
+      "steps": [
+        [
+          29
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 12.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.9997135701,
+      "cp2k_times_s": [
+        420.613
+      ],
+      "median_cp2k_time_s": 420.613
+    },
+    {
+      "case": "ni-hot-diag-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 2000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 151,
+      "last_scf_residual": 6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.33815164202111,
+      "minus_TS_Ha": -0.00387937135085,
+      "objective_correction_Ha": -0.00387937135085,
+      "steps": [
+        [
+          151
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 1.3333632767,
+      "cp2k_times_s": [
+        665.712
+      ],
+      "median_cp2k_time_s": 665.712
+    },
+    {
+      "case": "ni-dense-diag-full-spin-space",
+      "group": "spin-controls",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        4,
+        3,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 135,
+      "last_scf_residual": 6.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.257934115724375,
+      "minus_TS_Ha": -0.00105156151885,
+      "objective_correction_Ha": -0.00105156151885,
+      "steps": [
+        [
+          135
+        ]
+      ],
+      "electron_count": 9.9999999963,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 12.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.9997227998,
+      "cp2k_times_s": [
+        634.008
+      ],
+      "median_cp2k_time_s": 634.008
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 60,
+      "last_scf_residual": 9.1845e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261347082824296,
+      "minus_TS_Ha": -0.00826025912034,
+      "objective_correction_Ha": -0.00826025912034,
+      "steps": [
+        [
+          60
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        54.796
+      ],
+      "median_cp2k_time_s": 54.796
+    },
+    {
+      "case": "al-displacement-0.001--1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 71,
+      "last_scf_residual": 9.1903e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261350577239325,
+      "minus_TS_Ha": -0.00825995220294,
+      "objective_correction_Ha": -0.00825995220294,
+      "steps": [
+        [
+          71
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        52.987
+      ],
+      "median_cp2k_time_s": 52.987
+    },
+    {
+      "case": "al-displacement-0.001-+1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 60,
+      "last_scf_residual": 9.6319e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.26134344572205,
+      "minus_TS_Ha": -0.00826057934734,
+      "objective_correction_Ha": -0.00826057934734,
+      "steps": [
+        [
+          60
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        55.644
+      ],
+      "median_cp2k_time_s": 55.644
+    },
+    {
+      "case": "al-displacement-0.0005--1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 69,
+      "last_scf_residual": 9.1854e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261348847869834,
+      "minus_TS_Ha": -0.0082601042234,
+      "objective_correction_Ha": -0.0082601042234,
+      "steps": [
+        [
+          69
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        63.39
+      ],
+      "median_cp2k_time_s": 63.39
+    },
+    {
+      "case": "al-displacement-0.0005-+1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 72,
+      "last_scf_residual": 9.3797e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261345282109813,
+      "minus_TS_Ha": -0.00826041771195,
+      "objective_correction_Ha": -0.00826041771195,
+      "steps": [
+        [
+          72
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        67.623
+      ],
+      "median_cp2k_time_s": 67.623
+    },
+    {
+      "case": "al-strain-00--1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 70,
+      "last_scf_residual": 9.1994e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261371805683226,
+      "minus_TS_Ha": -0.0082610306623,
+      "objective_correction_Ha": -0.0082610306623,
+      "steps": [
+        [
+          70
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        64.609
+      ],
+      "median_cp2k_time_s": 64.609
+    },
+    {
+      "case": "al-strain-00-+1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 70,
+      "last_scf_residual": 9.1933e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261322346947216,
+      "minus_TS_Ha": -0.00825948854353,
+      "objective_correction_Ha": -0.00825948854353,
+      "steps": [
+        [
+          70
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        64.418
+      ],
+      "median_cp2k_time_s": 64.418
+    },
+    {
+      "case": "al-strain-11--1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 69,
+      "last_scf_residual": 9.2277e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261371806379171,
+      "minus_TS_Ha": -0.00826103078538,
+      "objective_correction_Ha": -0.00826103078538,
+      "steps": [
+        [
+          69
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        67.758
+      ],
+      "median_cp2k_time_s": 67.758
+    },
+    {
+      "case": "al-strain-11-+1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 70,
+      "last_scf_residual": 9.1865e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261322346245239,
+      "minus_TS_Ha": -0.0082594884294,
+      "objective_correction_Ha": -0.0082594884294,
+      "steps": [
+        [
+          70
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        51.441
+      ],
+      "median_cp2k_time_s": 51.441
+    },
+    {
+      "case": "al-strain-22--1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 71,
+      "last_scf_residual": 9.2093e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261317788342868,
+      "minus_TS_Ha": -0.00825693825768,
+      "objective_correction_Ha": -0.00825693825768,
+      "steps": [
+        [
+          71
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        52.238
+      ],
+      "median_cp2k_time_s": 52.238
+    },
+    {
+      "case": "al-strain-22-+1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 70,
+      "last_scf_residual": 9.1844e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261376354634134,
+      "minus_TS_Ha": -0.00826357713111,
+      "objective_correction_Ha": -0.00826357713111,
+      "steps": [
+        [
+          70
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        64.049
+      ],
+      "median_cp2k_time_s": 64.049
+    },
+    {
+      "case": "al-strain-01--1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 69,
+      "last_scf_residual": 9.19e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261417857536424,
+      "minus_TS_Ha": -0.00825957949049,
+      "objective_correction_Ha": -0.00825957949049,
+      "steps": [
+        [
+          69
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        63.864
+      ],
+      "median_cp2k_time_s": 63.864
+    },
+    {
+      "case": "al-strain-01-+1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 69,
+      "last_scf_residual": 9.2193e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261276299779401,
+      "minus_TS_Ha": -0.00826093962438,
+      "objective_correction_Ha": -0.00826093962438,
+      "steps": [
+        [
+          69
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        64.229
+      ],
+      "median_cp2k_time_s": 64.229
+    },
+    {
+      "case": "al-strain-02--1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 70,
+      "last_scf_residual": 9.1992e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261356834970047,
+      "minus_TS_Ha": -0.00826062244294,
+      "objective_correction_Ha": -0.00826062244294,
+      "steps": [
+        [
+          70
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        68.458
+      ],
+      "median_cp2k_time_s": 68.458
+    },
+    {
+      "case": "al-strain-02-+1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 65,
+      "last_scf_residual": 9.0481e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261337320590829,
+      "minus_TS_Ha": -0.00825989521668,
+      "objective_correction_Ha": -0.00825989521668,
+      "steps": [
+        [
+          65
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        60.225
+      ],
+      "median_cp2k_time_s": 60.225
+    },
+    {
+      "case": "al-strain-12--1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 73,
+      "last_scf_residual": 9.2106e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261337325519979,
+      "minus_TS_Ha": -0.00825989563871,
+      "objective_correction_Ha": -0.00825989563871,
+      "steps": [
+        [
+          73
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        74.019
+      ],
+      "median_cp2k_time_s": 74.019
+    },
+    {
+      "case": "al-strain-12-+1-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 70,
+      "last_scf_residual": 9.196e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261356830045697,
+      "minus_TS_Ha": -0.00826062228669,
+      "objective_correction_Ha": -0.00826062228669,
+      "steps": [
+        [
+          70
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        68.455
+      ],
+      "median_cp2k_time_s": 68.455
+    },
+    {
+      "case": "al-md-0.25-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 24,
+      "last_scf_residual": 9.041e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.26135783139379,
+      "minus_TS_Ha": -0.00825947058852,
+      "objective_correction_Ha": -0.00825947058852,
+      "steps": [
+        [
+          60,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          34,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24,
+          24
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        52
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        858.789
+      ],
+      "median_cp2k_time_s": 858.789
+    },
+    {
+      "case": "al-md-0.125-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 0,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 223,
+      "last_scf_residual": 1e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "al-geo_opt-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 1,
+      "last_scf_residual": 8.687e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.2613916098405,
+      "minus_TS_Ha": -0.00825633648167,
+      "objective_correction_Ha": -0.00825633648167,
+      "steps": [
+        [
+          60,
+          46,
+          46,
+          34,
+          34,
+          27,
+          1
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        12
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        249.593
+      ],
+      "median_cp2k_time_s": 249.593
+    },
+    {
+      "case": "al-cell_opt-thermal",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 0,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 70,
+      "last_scf_residual": 1e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "al-force-reference-thermal-diag",
+      "group": "thermal-properties",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 12,
+      "last_scf_residual": 9.1795e-10,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261347082783177,
+      "minus_TS_Ha": -0.00826034789149,
+      "objective_correction_Ha": -0.00826034789149,
+      "steps": [
+        [
+          12
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 26,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        9.133
+      ],
+      "median_cp2k_time_s": 9.133
+    },
+    {
+      "case": "al-gaussian-cg",
+      "group": "general-smearing",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 24,
+      "last_scf_residual": 7.6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.051043914238612,
+      "minus_TS_Ha": null,
+      "objective_correction_Ha": -0.00144311525295,
+      "steps": [
+        [
+          24
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        85.589
+      ],
+      "median_cp2k_time_s": 85.589
+    },
+    {
+      "case": "al-gaussian-diag",
+      "group": "general-smearing",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 6,
+      "last_scf_residual": 5.2e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.051043959256906,
+      "minus_TS_Ha": null,
+      "objective_correction_Ha": -0.00144318159262,
+      "steps": [
+        [
+          6
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        5.205
+      ],
+      "median_cp2k_time_s": 5.205
+    },
+    {
+      "case": "al-methfessel_paxton-cg",
+      "group": "general-smearing",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 7e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.049974618073837,
+      "minus_TS_Ha": null,
+      "objective_correction_Ha": -0.00028292151027,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        51.635
+      ],
+      "median_cp2k_time_s": 51.635
+    },
+    {
+      "case": "al-methfessel_paxton-diag",
+      "group": "general-smearing",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 6,
+      "last_scf_residual": 6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.049974625137032,
+      "minus_TS_Ha": null,
+      "objective_correction_Ha": -0.00028292098503,
+      "steps": [
+        [
+          6
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        5.327
+      ],
+      "median_cp2k_time_s": 5.327
+    },
+    {
+      "case": "al-marzari_vanderbilt-cg",
+      "group": "general-smearing",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 4.6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050678606979303,
+      "minus_TS_Ha": null,
+      "objective_correction_Ha": -0.00106999386834,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        52.099
+      ],
+      "median_cp2k_time_s": 52.099
+    },
+    {
+      "case": "al-marzari_vanderbilt-diag",
+      "group": "general-smearing",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 6,
+      "last_scf_residual": 5.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050678609409448,
+      "minus_TS_Ha": null,
+      "objective_correction_Ha": -0.00106998617601,
+      "steps": [
+        [
+          6
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        6.165
+      ],
+      "median_cp2k_time_s": 6.165
+    },
+    {
+      "case": "al-canonical-reduced",
+      "group": "symmetry-controls",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 17,
+      "last_scf_residual": 1e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337905087102,
+      "minus_TS_Ha": -0.0006976650586,
+      "objective_correction_Ha": -0.0006976650586,
+      "steps": [
+        [
+          17
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        32.35
+      ],
+      "median_cp2k_time_s": 32.35
+    },
+    {
+      "case": "al-canonical-full",
+      "group": "symmetry-controls",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 18,
+      "last_scf_residual": 9e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337904910282,
+      "minus_TS_Ha": -0.00069766345381,
+      "objective_correction_Ha": -0.00069766345381,
+      "steps": [
+        [
+          18
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 13,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        66.125
+      ],
+      "median_cp2k_time_s": 66.125
+    },
+    {
+      "case": "ni-fixed-moment-cg",
+      "group": "symmetry-controls",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 53,
+      "last_scf_residual": 8.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "fixed",
+      "requested_spin_difference": 1.0,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.3178859204612,
+      "minus_TS_Ha": -0.00097827654236,
+      "objective_correction_Ha": -0.00097827654236,
+      "steps": [
+        [
+          53
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        4
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 1.9999999992,
+      "cp2k_times_s": [
+        599.12
+      ],
+      "median_cp2k_time_s": 599.12,
+      "spin_constraint_error": 0.9999999991999999,
+      "spin_constraint_satisfied": false
+    },
+    {
+      "case": "ni-fixed-moment-diag",
+      "group": "symmetry-controls",
+      "attempts": 1,
+      "converged": 0,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 261,
+      "last_scf_residual": 2.233e-05,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "spin_constraint": "fixed",
+      "requested_spin_difference": 1.0,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "al-gfn1-diag",
+      "group": "tblite",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 500,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": null,
+      "last_scf_residual": null,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -1.147392467367807,
+      "minus_TS_Ha": -0.00118720770936,
+      "objective_correction_Ha": -0.00118720770936,
+      "steps": [
+        [
+          4
+        ]
+      ],
+      "electron_count": null,
+      "mo_count": 9,
+      "ao_count": 9.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        2.656
+      ],
+      "median_cp2k_time_s": 2.656
+    },
+    {
+      "case": "al-gfn1-ot",
+      "group": "tblite",
+      "attempts": 1,
+      "converged": 1,
+      "method": "OT",
+      "temperature_K": 500,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 6,
+      "last_scf_residual": 2.1194e-10,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -1.147392467367666,
+      "minus_TS_Ha": -0.00118720770937,
+      "objective_correction_Ha": -0.00118720770937,
+      "steps": [
+        [
+          6
+        ]
+      ],
+      "electron_count": null,
+      "mo_count": 9,
+      "ao_count": 9.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        3.505
+      ],
+      "median_cp2k_time_s": 3.505
+    },
+    {
+      "case": "al-gfn2-diag",
+      "group": "tblite",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 500,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": null,
+      "last_scf_residual": null,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -1.194939346652873,
+      "minus_TS_Ha": -0.00118720770937,
+      "objective_correction_Ha": -0.00118720770937,
+      "steps": [
+        [
+          10
+        ]
+      ],
+      "electron_count": null,
+      "mo_count": 9,
+      "ao_count": 9.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        1.229
+      ],
+      "median_cp2k_time_s": 1.229
+    },
+    {
+      "case": "al-gfn2-ot",
+      "group": "tblite",
+      "attempts": 1,
+      "converged": 1,
+      "method": "OT",
+      "temperature_K": 500,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": null,
+      "last_scf_residual": null,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -1.194939346652946,
+      "minus_TS_Ha": -0.00118720770937,
+      "objective_correction_Ha": -0.00118720770937,
+      "steps": [
+        [
+          10
+        ]
+      ],
+      "electron_count": null,
+      "mo_count": 9,
+      "ao_count": 9.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        2.116
+      ],
+      "median_cp2k_time_s": 2.116
+    },
+    {
+      "case": "al-spin-common-cg",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 26,
+      "last_scf_residual": 1e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "free",
+      "requested_spin_difference": null,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -2.092139323393955,
+      "minus_TS_Ha": -9.07977957e-06,
+      "objective_correction_Ha": -9.07977957e-06,
+      "steps": [
+        [
+          26
+        ]
+      ],
+      "electron_count": 2.9999999998,
+      "mo_count": 4,
+      "ao_count": 4.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        2
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.9997084222,
+      "cp2k_times_s": [
+        94.551
+      ],
+      "median_cp2k_time_s": 94.551
+    },
+    {
+      "case": "al-spin-common-diag",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 9,
+      "last_scf_residual": 2e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "free",
+      "requested_spin_difference": null,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -2.092139323392873,
+      "minus_TS_Ha": -9.07976869e-06,
+      "objective_correction_Ha": -9.07976869e-06,
+      "steps": [
+        [
+          9
+        ]
+      ],
+      "electron_count": 2.9999999998,
+      "mo_count": 4,
+      "ao_count": 4.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.9997084225,
+      "cp2k_times_s": [
+        8.55
+      ],
+      "median_cp2k_time_s": 8.55
+    },
+    {
+      "case": "al-spin-integer-cg",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 9,
+      "last_scf_residual": 3e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "initial-integer",
+      "requested_spin_difference": 1.0,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -2.092138401172137,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          9
+        ]
+      ],
+      "electron_count": 2.9999999998,
+      "mo_count": 4,
+      "ao_count": 4.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.9999999998,
+      "cp2k_times_s": [
+        20.329
+      ],
+      "median_cp2k_time_s": 20.329,
+      "spin_constraint_error": -2.000000165480742e-10,
+      "spin_constraint_satisfied": true
+    },
+    {
+      "case": "al-spin-integer-diag",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 9,
+      "last_scf_residual": 2e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "initial-integer",
+      "requested_spin_difference": 1.0,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -2.092138401172142,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          9
+        ]
+      ],
+      "electron_count": 2.9999999998,
+      "mo_count": 4,
+      "ao_count": 4.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.9999999998,
+      "cp2k_times_s": [
+        10.523
+      ],
+      "median_cp2k_time_s": 10.523,
+      "spin_constraint_error": -2.000000165480742e-10,
+      "spin_constraint_satisfied": true
+    },
+    {
+      "case": "al-spin-zero-cg",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 14,
+      "last_scf_residual": 1e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "fixed",
+      "requested_spin_difference": 0.0,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -2.082603195309172,
+      "minus_TS_Ha": -0.00439013825311,
+      "objective_correction_Ha": -0.00439013825311,
+      "steps": [
+        [
+          14
+        ]
+      ],
+      "electron_count": 2.9999999998,
+      "mo_count": 4,
+      "ao_count": 4.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.0,
+      "cp2k_times_s": [
+        33.132
+      ],
+      "median_cp2k_time_s": 33.132,
+      "spin_constraint_error": 0.0,
+      "spin_constraint_satisfied": true
+    },
+    {
+      "case": "al-spin-zero-diag",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 8,
+      "last_scf_residual": 2e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "fixed",
+      "requested_spin_difference": 0.0,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -2.082603195309269,
+      "minus_TS_Ha": -0.00439013825311,
+      "objective_correction_Ha": -0.00439013825311,
+      "steps": [
+        [
+          8
+        ]
+      ],
+      "electron_count": 2.9999999998,
+      "mo_count": 4,
+      "ao_count": 4.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.0,
+      "cp2k_times_s": [
+        9.164
+      ],
+      "median_cp2k_time_s": 9.164,
+      "spin_constraint_error": 0.0,
+      "spin_constraint_satisfied": true
+    },
+    {
+      "case": "al-spin-fractional-cg",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 18,
+      "last_scf_residual": 4e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "fixed",
+      "requested_spin_difference": 0.5,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -2.085246158389106,
+      "minus_TS_Ha": -0.0035616231281,
+      "objective_correction_Ha": -0.0035616231281,
+      "steps": [
+        [
+          18
+        ]
+      ],
+      "electron_count": 2.9999999998,
+      "mo_count": 4,
+      "ao_count": 4.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.4999999999,
+      "cp2k_times_s": [
+        54.321
+      ],
+      "median_cp2k_time_s": 54.321,
+      "spin_constraint_error": -1.000000082740371e-10,
+      "spin_constraint_satisfied": true
+    },
+    {
+      "case": "al-spin-fractional-diag",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        2,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 8,
+      "last_scf_residual": 2e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "fixed",
+      "requested_spin_difference": 0.5,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -2.085246158389218,
+      "minus_TS_Ha": -0.00356162312809,
+      "objective_correction_Ha": -0.00356162312809,
+      "steps": [
+        [
+          8
+        ]
+      ],
+      "electron_count": 2.9999999998,
+      "mo_count": 4,
+      "ao_count": 4.0,
+      "kpoint_count": 1.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.4999999999,
+      "cp2k_times_s": [
+        9.407
+      ],
+      "median_cp2k_time_s": 9.407,
+      "spin_constraint_error": -1.000000082740371e-10,
+      "spin_constraint_satisfied": true
+    },
+    {
+      "case": "ni-fixed-moment-corrected-cg",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 0,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 128,
+      "last_scf_residual": 3.03e-06,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "spin_constraint": "fixed",
+      "requested_spin_difference": 1.0,
+      "source_configuration": "spin-constraint-correction"
+    },
+    {
+      "case": "ni-fixed-moment-corrected-diag",
+      "group": "spin-probes",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 400,
+      "last_scf_residual": 8.1e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "spin_constraint": "fixed",
+      "requested_spin_difference": 1.0,
+      "source_configuration": "spin-constraint-correction",
+      "free_energy_Ha": -37.32634328318469,
+      "minus_TS_Ha": -0.00175225162139,
+      "objective_correction_Ha": -0.00175225162139,
+      "steps": [
+        [
+          400
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 18,
+      "ao_count": 18.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 0.9999999996,
+      "cp2k_times_s": [
+        1785.606
+      ],
+      "median_cp2k_time_s": 1785.606,
+      "spin_constraint_error": -4.000000330961484e-10,
+      "spin_constraint_satisfied": true
+    },
+    {
+      "case": "al-md-0.25-adaptive",
+      "group": "adaptive-dynamics",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 8,
+      "last_scf_residual": 4.5072e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540232196791604,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19,
+          9,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 7,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        266.779
+      ],
+      "median_cp2k_time_s": 266.779
+    },
+    {
+      "case": "al-md-0.125-adaptive",
+      "group": "adaptive-dynamics",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 8,
+      "last_scf_residual": 3.9064e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.540232225289131,
+      "minus_TS_Ha": -0.0,
+      "objective_correction_Ha": -0.0,
+      "steps": [
+        [
+          19,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 7,
+      "ao_count": 13.0,
+      "kpoint_count": 2.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        512.829
+      ],
+      "median_cp2k_time_s": 512.829
+    },
+    {
+      "case": "al-md-0.25-thermal-adaptive",
+      "group": "adaptive-dynamics",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 24,
+      "last_scf_residual": 7.8943e-09,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261357829829896,
+      "minus_TS_Ha": -0.00825947162475,
+      "objective_correction_Ha": -0.00825947162475,
+      "steps": [
+        [
+          65,
+          22,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23,
+          24,
+          22,
+          22,
+          23,
+          22,
+          23,
+          23,
+          22,
+          23,
+          24,
+          24,
+          22,
+          23,
+          24,
+          22,
+          22,
+          24,
+          23,
+          24,
+          23,
+          22,
+          22,
+          23,
+          22,
+          24,
+          24,
+          24,
+          24,
+          23,
+          23,
+          23,
+          24
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 11,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        42
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        757.606
+      ],
+      "median_cp2k_time_s": 757.606
+    },
+    {
+      "case": "al-md-0.125-thermal-adaptive",
+      "group": "adaptive-dynamics",
+      "attempts": 1,
+      "converged": 0,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 131,
+      "last_scf_residual": 1e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "al-md-0.25-thermal-lbfgs",
+      "group": "motion-minimizers",
+      "attempts": 1,
+      "converged": 0,
+      "method": "LBFGS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 17,
+      "last_scf_residual": 6e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "al-md-0.125-thermal-lbfgs",
+      "group": "motion-minimizers",
+      "attempts": 1,
+      "converged": 0,
+      "method": "LBFGS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 93,
+      "last_scf_residual": 1e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "wall-time limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "al-reduced-lbfgs",
+      "group": "variational-subspace",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 7.7e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.05033783241762,
+      "minus_TS_Ha": -0.00069766894749,
+      "objective_correction_Ha": -0.00069766894749,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 6,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        44.574
+      ],
+      "median_cp2k_time_s": 44.574
+    },
+    {
+      "case": "al-reduced-diag",
+      "group": "variational-subspace",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 6,
+      "last_scf_residual": 5.3e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -2.050337834332296,
+      "minus_TS_Ha": -0.00069766443636,
+      "objective_correction_Ha": -0.00069766443636,
+      "steps": [
+        [
+          6
+        ]
+      ],
+      "electron_count": 3.0,
+      "mo_count": 6,
+      "ao_count": 13.0,
+      "kpoint_count": 14.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        4.358
+      ],
+      "median_cp2k_time_s": 4.358
+    },
+    {
+      "case": "cu-reduced-cg",
+      "group": "variational-subspace",
+      "attempts": 1,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 15,
+      "last_scf_residual": 6.6e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.099639384052516,
+      "minus_TS_Ha": -0.00241886739932,
+      "objective_correction_Ha": -0.00241886739932,
+      "steps": [
+        [
+          15
+        ]
+      ],
+      "electron_count": 10.9999999949,
+      "mo_count": 10,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        89.301
+      ],
+      "median_cp2k_time_s": 89.301
+    },
+    {
+      "case": "cu-reduced-lbfgs",
+      "group": "variational-subspace",
+      "attempts": 1,
+      "converged": 1,
+      "method": "LBFGS",
+      "temperature_K": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 20,
+      "last_scf_residual": 7.2e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.099639382773304,
+      "minus_TS_Ha": -0.00241886740019,
+      "objective_correction_Ha": -0.00241886740019,
+      "steps": [
+        [
+          20
+        ]
+      ],
+      "electron_count": 10.999999995,
+      "mo_count": 10,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        1
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        68.272
+      ],
+      "median_cp2k_time_s": 68.272
+    },
+    {
+      "case": "cu-reduced-diag",
+      "group": "variational-subspace",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 11,
+      "last_scf_residual": 4.4e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -48.099639384264094,
+      "minus_TS_Ha": -0.0024188674007,
+      "objective_correction_Ha": -0.0024188674007,
+      "steps": [
+        [
+          11
+        ]
+      ],
+      "electron_count": 10.9999999949,
+      "mo_count": 10,
+      "ao_count": 18.0,
+      "kpoint_count": 4.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        32.57
+      ],
+      "median_cp2k_time_s": 32.57
+    },
+    {
+      "case": "ni-reduced-cg",
+      "group": "variational-subspace",
+      "attempts": 2,
+      "converged": 1,
+      "method": "CG",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 124,
+      "last_scf_iteration": 74,
+      "last_scf_residual": 4.69e-06,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.33692982112429,
+      "minus_TS_Ha": -0.00050272266561,
+      "objective_correction_Ha": -0.00050272266561,
+      "steps": [
+        [
+          83
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 10,
+      "ao_count": 18.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        4
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 1.3333333341,
+      "cp2k_times_s": [
+        1238.156
+      ],
+      "median_cp2k_time_s": 1238.156
+    },
+    {
+      "case": "ni-reduced-lbfgs",
+      "group": "variational-subspace",
+      "attempts": 2,
+      "converged": 2,
+      "method": "LBFGS",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 89,
+      "last_scf_residual": 8e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.336929921517964,
+      "minus_TS_Ha": -0.00050297915567,
+      "objective_correction_Ha": -0.00050297915567,
+      "steps": [
+        [
+          89
+        ],
+        [
+          89
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 10,
+      "ao_count": 18.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        4,
+        4
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 1.3333333341,
+      "cp2k_times_s": [
+        830.765,
+        833.792
+      ],
+      "median_cp2k_time_s": 832.2785
+    },
+    {
+      "case": "ni-reduced-diag",
+      "group": "variational-subspace",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIAG",
+      "temperature_K": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 68,
+      "last_scf_residual": 7e-08,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -37.33693001177807,
+      "minus_TS_Ha": -0.00050352571792,
+      "objective_correction_Ha": -0.00050352571792,
+      "steps": [
+        [
+          68
+        ]
+      ],
+      "electron_count": 9.9999999962,
+      "mo_count": 10,
+      "ao_count": 18.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        0
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": 1.3333333341,
+      "cp2k_times_s": [
+        322.758
+      ],
+      "median_cp2k_time_s": 322.758
+    },
+    {
+      "case": "al-md-0.25-thermal-cg",
+      "group": "default-motion",
+      "attempts": 1,
+      "converged": 0,
+      "method": "CG",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 1,
+      "last_scf_iteration": 500,
+      "last_scf_residual": 4e-08,
+      "iteration_limit_reached": true,
+      "stopping_status": "SCF limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "al-md-0.125-thermal-cg",
+      "group": "default-motion",
+      "attempts": 1,
+      "converged": 0,
+      "method": "CG",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 1,
+      "last_scf_iteration": 500,
+      "last_scf_residual": 4e-08,
+      "iteration_limit_reached": true,
+      "stopping_status": "SCF limit",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream"
+    },
+    {
+      "case": "al-md-0.25-thermal-eps7",
+      "group": "motion-tolerance",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 61,
+      "last_scf_residual": 1e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261357865269421,
+      "minus_TS_Ha": -0.0082588388957,
+      "objective_correction_Ha": -0.0082588388957,
+      "steps": [
+        [
+          53,
+          16,
+          15,
+          16,
+          16,
+          17,
+          18,
+          20,
+          36,
+          46,
+          74,
+          74,
+          76,
+          54,
+          46,
+          114,
+          129,
+          88,
+          45,
+          62,
+          39,
+          60,
+          31,
+          162,
+          130,
+          87,
+          92,
+          49,
+          16,
+          16,
+          16,
+          15,
+          15,
+          20,
+          22,
+          44,
+          86,
+          79,
+          101,
+          74,
+          61
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 11,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        3
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        1517.281
+      ],
+      "median_cp2k_time_s": 1517.281
+    },
+    {
+      "case": "al-md-0.125-thermal-eps7",
+      "group": "motion-tolerance",
+      "attempts": 1,
+      "converged": 1,
+      "method": "DIIS",
+      "temperature_K": 3000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "first_returncode": 0,
+      "last_scf_iteration": 42,
+      "last_scf_residual": 1e-07,
+      "iteration_limit_reached": false,
+      "stopping_status": "converged",
+      "requested_spin_difference": null,
+      "source_configuration": "upstream",
+      "free_energy_Ha": -4.261357886136052,
+      "minus_TS_Ha": -0.00825886107374,
+      "objective_correction_Ha": -0.00825886107374,
+      "steps": [
+        [
+          53,
+          15,
+          11,
+          13,
+          13,
+          13,
+          12,
+          14,
+          13,
+          13,
+          13,
+          15,
+          15,
+          15,
+          16,
+          17,
+          18,
+          24,
+          41,
+          54,
+          56,
+          63,
+          43,
+          54,
+          21,
+          86,
+          17,
+          17,
+          19,
+          57,
+          54,
+          66,
+          52,
+          74,
+          72,
+          70,
+          70,
+          59,
+          100,
+          45,
+          45,
+          25,
+          71,
+          69,
+          78,
+          21,
+          73,
+          91,
+          55,
+          18,
+          21,
+          71,
+          100,
+          66,
+          46,
+          56,
+          48,
+          43,
+          21,
+          60,
+          20,
+          66,
+          45,
+          69,
+          91,
+          11,
+          13,
+          13,
+          14,
+          14,
+          13,
+          14,
+          13,
+          15,
+          15,
+          15,
+          15,
+          15,
+          16,
+          41,
+          42
+        ]
+      ],
+      "electron_count": 6.0,
+      "mo_count": 11,
+      "ao_count": 13.0,
+      "kpoint_count": 3.0,
+      "full_ks_subspace_rebuilds": [
+        4
+      ],
+      "free_energy_range_Ha": 0.0,
+      "integrated_spin": null,
+      "cp2k_times_s": [
+        2148.69
+      ],
+      "median_cp2k_time_s": 2148.69
+    }
+  ],
+  "pairs": [
+    {
+      "case": "al-base-cg",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 4.833474953613859e-09,
+      "delta_minus_TS_Ha": -5.129749999993952e-09,
+      "delta_objective_correction_Ha": -5.129749999993952e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-base-lbfgs",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.540318095294424e-09,
+      "delta_minus_TS_Ha": -8.7727099999527e-09,
+      "delta_objective_correction_Ha": -8.7727099999527e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-base-cg",
+      "reference": "cu-base-diag",
+      "delta_free_energy_Ha": 3.831175376944884e-10,
+      "delta_minus_TS_Ha": -5.399999024324753e-13,
+      "delta_objective_correction_Ha": -5.399999024324753e-13,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-base-lbfgs",
+      "reference": "cu-base-diag",
+      "delta_free_energy_Ha": 2.1727686316808104e-10,
+      "delta_minus_TS_Ha": 2.0000017267318704e-13,
+      "delta_objective_correction_Ha": 2.0000017267318704e-13,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-hot-cg",
+      "reference": "al-hot-diag",
+      "delta_free_energy_Ha": 5.5829079137481585e-09,
+      "delta_minus_TS_Ha": 3.399345000019288e-08,
+      "delta_objective_correction_Ha": 3.399345000019288e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-dense-cg",
+      "reference": "al-dense-diag",
+      "delta_free_energy_Ha": 1.63911157979868e-07,
+      "delta_minus_TS_Ha": 2.1185573000005904e-07,
+      "delta_objective_correction_Ha": 2.1185573000005904e-07,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-hot-lbfgs",
+      "reference": "al-hot-diag",
+      "delta_free_energy_Ha": 8.471532808584925e-09,
+      "delta_minus_TS_Ha": 4.397198999969015e-08,
+      "delta_objective_correction_Ha": 4.397198999969015e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-dense-lbfgs",
+      "reference": "al-dense-diag",
+      "delta_free_energy_Ha": 2.282046862589482e-08,
+      "delta_minus_TS_Ha": -5.265735999993547e-08,
+      "delta_objective_correction_Ha": -5.265735999993547e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-hot-cg",
+      "reference": "cu-hot-diag",
+      "delta_free_energy_Ha": 3.9666758766543353e-10,
+      "delta_minus_TS_Ha": 5.409999965372281e-11,
+      "delta_objective_correction_Ha": 5.409999965372281e-11,
+      "delta_spin": null,
+      "delta_electron_count": -1.000000082740371e-10
+    },
+    {
+      "case": "cu-dense-cg",
+      "reference": "cu-dense-diag",
+      "delta_free_energy_Ha": 6.959275822282507e-08,
+      "delta_minus_TS_Ha": -2.8451620300000034e-06,
+      "delta_objective_correction_Ha": -2.8451620300000034e-06,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-hot-lbfgs",
+      "reference": "cu-hot-diag",
+      "delta_free_energy_Ha": 6.760672022210201e-09,
+      "delta_minus_TS_Ha": -7.200000057966394e-11,
+      "delta_objective_correction_Ha": -7.200000057966394e-11,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-strict-cg",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 4.833474953613859e-09,
+      "delta_minus_TS_Ha": -5.129749999993952e-09,
+      "delta_objective_correction_Ha": -5.129749999993952e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-strict-diis",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 5.563682847764539e-10,
+      "delta_minus_TS_Ha": -4.749439999921987e-09,
+      "delta_objective_correction_Ha": -4.749439999921987e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-strict-broyden",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 5.9223781434525335e-09,
+      "delta_minus_TS_Ha": -4.006089999986605e-09,
+      "delta_objective_correction_Ha": -4.006089999986605e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-strict-lbfgs",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.540318095294424e-09,
+      "delta_minus_TS_Ha": -8.7727099999527e-09,
+      "delta_objective_correction_Ha": -8.7727099999527e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-irac-cg",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 4.833079270127882e-09,
+      "delta_minus_TS_Ha": -5.16503999997437e-09,
+      "delta_objective_correction_Ha": -5.16503999997437e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-irac-diis",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 5.638010058817144e-10,
+      "delta_minus_TS_Ha": -4.763799999981701e-09,
+      "delta_objective_correction_Ha": -4.763799999981701e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-irac-broyden",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.4144596605092374e-10,
+      "delta_minus_TS_Ha": -4.728849999947882e-09,
+      "delta_objective_correction_Ha": -4.728849999947882e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-irac-lbfgs",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.013221950785237e-09,
+      "delta_minus_TS_Ha": -6.835999999572906e-10,
+      "delta_objective_correction_Ha": -6.835999999572906e-10,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-full_kinetic",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 2.1374431113940773e-09,
+      "delta_minus_TS_Ha": -3.973109999962261e-09,
+      "delta_objective_correction_Ha": -3.973109999962261e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-full_s_inverse",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 2.1372739134051244e-09,
+      "delta_minus_TS_Ha": -3.973069999949411e-09,
+      "delta_objective_correction_Ha": -3.973069999949411e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-full_all",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 2.1374488845538053e-09,
+      "delta_minus_TS_Ha": -3.973059999919093e-09,
+      "delta_objective_correction_Ha": -3.973059999919093e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-fermi_low_rank",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 1.1042754266554766e-08,
+      "delta_minus_TS_Ha": -1.8223099999478687e-09,
+      "delta_objective_correction_Ha": -1.8223099999478687e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-preconditioner-full_all_covariant",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 2.137518162470542e-09,
+      "delta_minus_TS_Ha": -3.973119999992579e-09,
+      "delta_objective_correction_Ha": -3.973119999992579e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-full-mesh",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 4.833474953613859e-09,
+      "delta_minus_TS_Ha": -5.129749999993952e-09,
+      "delta_objective_correction_Ha": -5.129749999993952e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-gamma",
+      "reference": "al-explicit-gamma",
+      "delta_free_energy_Ha": 0.0,
+      "delta_minus_TS_Ha": 0.0,
+      "delta_objective_correction_Ha": 0.0,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-auto",
+      "reference": "al-reduced-diag",
+      "delta_free_energy_Ha": 3.0859608202149502e-09,
+      "delta_minus_TS_Ha": -3.893369999985984e-09,
+      "delta_objective_correction_Ha": -3.893369999985984e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-no-occupation-preconditioner",
+      "reference": "al-base-diag",
+      "delta_free_energy_Ha": 0.0025394602062931426,
+      "delta_minus_TS_Ha": 0.00053936478459,
+      "delta_objective_correction_Ha": 0.00053936478459,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "ni-dense-cg-full-spin-space",
+      "reference": "ni-dense-diag-full-spin-space",
+      "delta_free_energy_Ha": 2.0654845656054022e-07,
+      "delta_minus_TS_Ha": 1.0910270000006987e-07,
+      "delta_objective_correction_Ha": 1.0910270000006987e-07,
+      "delta_spin": -1.3532000000537892e-06,
+      "delta_electron_count": -1.000000082740371e-10
+    },
+    {
+      "case": "ni-hot-lbfgs-full-spin-space",
+      "reference": "ni-hot-diag-full-spin-space",
+      "delta_free_energy_Ha": 1.9702834208601416e-07,
+      "delta_minus_TS_Ha": -1.479166300000223e-07,
+      "delta_objective_correction_Ha": -1.479166300000223e-07,
+      "delta_spin": -3.82000000520577e-08,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "ni-dense-lbfgs-full-spin-space",
+      "reference": "ni-dense-diag-full-spin-space",
+      "delta_free_energy_Ha": 7.692536385661697e-07,
+      "delta_minus_TS_Ha": -2.0389273300001117e-06,
+      "delta_objective_correction_Ha": -2.0389273300001117e-06,
+      "delta_spin": -9.229700000057406e-06,
+      "delta_electron_count": -1.000000082740371e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "reference": "al-force-reference-thermal-diag",
+      "delta_free_energy_Ha": -4.11182199400173e-11,
+      "delta_minus_TS_Ha": 8.877114999854274e-08,
+      "delta_objective_correction_Ha": 8.877114999854274e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-gaussian-cg",
+      "reference": "al-gaussian-diag",
+      "delta_free_energy_Ha": 4.501829398151358e-08,
+      "delta_minus_TS_Ha": null,
+      "delta_objective_correction_Ha": 6.633966999998117e-08,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-methfessel_paxton-cg",
+      "reference": "al-methfessel_paxton-diag",
+      "delta_free_energy_Ha": 7.063194917833471e-09,
+      "delta_minus_TS_Ha": null,
+      "delta_objective_correction_Ha": -5.252400000392912e-10,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-marzari_vanderbilt-cg",
+      "reference": "al-marzari_vanderbilt-diag",
+      "delta_free_energy_Ha": 2.4301449741415126e-09,
+      "delta_minus_TS_Ha": null,
+      "delta_objective_correction_Ha": -7.692329999971909e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-gfn1-ot",
+      "reference": "al-gfn1-diag",
+      "delta_free_energy_Ha": 1.4099832412739488e-13,
+      "delta_minus_TS_Ha": -1.0000030317702802e-14,
+      "delta_objective_correction_Ha": -1.0000030317702802e-14,
+      "delta_spin": null,
+      "delta_electron_count": null
+    },
+    {
+      "case": "al-gfn2-ot",
+      "reference": "al-gfn2-diag",
+      "delta_free_energy_Ha": -7.30526750203353e-14,
+      "delta_minus_TS_Ha": 0.0,
+      "delta_objective_correction_Ha": 0.0,
+      "delta_spin": null,
+      "delta_electron_count": null
+    },
+    {
+      "case": "al-spin-common-cg",
+      "reference": "al-spin-common-diag",
+      "delta_free_energy_Ha": -1.0822454044046026e-12,
+      "delta_minus_TS_Ha": -1.0880000000503616e-11,
+      "delta_objective_correction_Ha": -1.0880000000503616e-11,
+      "delta_spin": -3.000000248221113e-10,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-spin-integer-cg",
+      "reference": "al-spin-integer-diag",
+      "delta_free_energy_Ha": 4.884981308350689e-15,
+      "delta_minus_TS_Ha": 0.0,
+      "delta_objective_correction_Ha": 0.0,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-spin-zero-cg",
+      "reference": "al-spin-zero-diag",
+      "delta_free_energy_Ha": 9.681144774731365e-14,
+      "delta_minus_TS_Ha": 0.0,
+      "delta_objective_correction_Ha": 0.0,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-spin-fractional-cg",
+      "reference": "al-spin-fractional-diag",
+      "delta_free_energy_Ha": 1.1191048088221578e-13,
+      "delta_minus_TS_Ha": -1.0000247158137299e-14,
+      "delta_objective_correction_Ha": -1.0000247158137299e-14,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "al-reduced-lbfgs",
+      "reference": "al-reduced-diag",
+      "delta_free_energy_Ha": 1.91467597332462e-09,
+      "delta_minus_TS_Ha": -4.511130000041559e-09,
+      "delta_objective_correction_Ha": -4.511130000041559e-09,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-reduced-cg",
+      "reference": "cu-reduced-diag",
+      "delta_free_energy_Ha": 2.1157831042728503e-10,
+      "delta_minus_TS_Ha": 1.3799998470342967e-12,
+      "delta_objective_correction_Ha": 1.3799998470342967e-12,
+      "delta_spin": null,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "cu-reduced-lbfgs",
+      "reference": "cu-reduced-diag",
+      "delta_free_energy_Ha": 1.4907897138982662e-09,
+      "delta_minus_TS_Ha": 5.100000283198014e-13,
+      "delta_objective_correction_Ha": 5.100000283198014e-13,
+      "delta_spin": null,
+      "delta_electron_count": 1.000000082740371e-10
+    },
+    {
+      "case": "ni-reduced-cg",
+      "reference": "ni-reduced-diag",
+      "delta_free_energy_Ha": 1.90653778986416e-07,
+      "delta_minus_TS_Ha": 8.030523100000398e-07,
+      "delta_objective_correction_Ha": 8.030523100000398e-07,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    },
+    {
+      "case": "ni-reduced-lbfgs",
+      "reference": "ni-reduced-diag",
+      "delta_free_energy_Ha": 9.026010872048573e-08,
+      "delta_minus_TS_Ha": 5.465622500000619e-07,
+      "delta_objective_correction_Ha": 5.465622500000619e-07,
+      "delta_spin": 0.0,
+      "delta_electron_count": 0.0
+    }
+  ],
+  "force_checks": [
+    {
+      "case": "al-force-reference",
+      "step_A": 0.001,
+      "analytical_Ha_per_bohr": -0.00375368698,
+      "numerical_Ha_per_bohr": -0.0037537149408008973,
+      "absolute_error_Ha_per_bohr": 2.7960800897276067e-08
+    },
+    {
+      "case": "al-force-reference",
+      "step_A": 0.0005,
+      "analytical_Ha_per_bohr": -0.00375368698,
+      "numerical_Ha_per_bohr": -0.003753714621433331,
+      "absolute_error_Ha_per_bohr": 2.764143333102917e-08
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "step_A": 0.001,
+      "analytical_Ha_per_bohr": -0.00188691729,
+      "numerical_Ha_per_bohr": -0.0018869182023992024,
+      "absolute_error_Ha_per_bohr": 9.123992024146627e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "step_A": 0.0005,
+      "analytical_Ha_per_bohr": -0.00188691729,
+      "numerical_Ha_per_bohr": -0.0018869189341950829,
+      "absolute_error_Ha_per_bohr": 1.6441950828182533e-09
+    }
+  ],
+  "stress_checks": [
+    {
+      "case": "al-force-reference",
+      "component": [
+        0,
+        0
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0010820772336099275,
+      "numerical_Ha_per_bohr3": -0.0010820777456706434,
+      "absolute_error_Ha_per_bohr3": 5.120607158778934e-10
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        1,
+        1
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0010821234751958904,
+      "numerical_Ha_per_bohr3": -0.001082122762724394,
+      "absolute_error_Ha_per_bohr3": 7.124714962968015e-10
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        2,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0010821225162587487,
+      "numerical_Ha_per_bohr3": -0.0010821227629225188,
+      "absolute_error_Ha_per_bohr3": 2.466637701384333e-10
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        0,
+        1
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0031678937931858544,
+      "numerical_Ha_per_bohr3": -0.0031678937436744247,
+      "absolute_error_Ha_per_bohr3": 4.951142967835054e-11
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        0,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0031678943001568795,
+      "numerical_Ha_per_bohr3": -0.0031678937439121747,
+      "absolute_error_Ha_per_bohr3": 5.562447048107488e-10
+    },
+    {
+      "case": "al-force-reference",
+      "component": [
+        1,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": 0.003167636257632381,
+      "numerical_Ha_per_bohr3": 0.0031676363509895995,
+      "absolute_error_Ha_per_bohr3": 9.335721865705304e-11
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        0,
+        0
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0011032689356132862,
+      "numerical_Ha_per_bohr3": -0.0011032688000239578,
+      "absolute_error_Ha_per_bohr3": 1.3558932839344284e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        1,
+        1
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.001103299596915379,
+      "numerical_Ha_per_bohr3": -0.0011032999832410679,
+      "absolute_error_Ha_per_bohr3": 3.8632568888710694e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        2,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": 0.001306439066321622,
+      "numerical_Ha_per_bohr3": 0.0013064297048031852,
+      "absolute_error_Ha_per_bohr3": 9.36151843674779e-09
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        0,
+        1
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0031577088396455982,
+      "numerical_Ha_per_bohr3": -0.0031577082093448188,
+      "absolute_error_Ha_per_bohr3": 6.303007794514204e-10
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        0,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": -0.0004353023835139623,
+      "numerical_Ha_per_bohr3": -0.00043530440686460035,
+      "absolute_error_Ha_per_bohr3": 2.023350638077903e-09
+    },
+    {
+      "case": "al-force-reference-thermal",
+      "component": [
+        1,
+        2
+      ],
+      "step": 0.0001,
+      "analytical_Ha_per_bohr3": 0.0004350819416928363,
+      "numerical_Ha_per_bohr3": 0.0004350846062740388,
+      "absolute_error_Ha_per_bohr3": 2.6645812024926954e-09
+    }
+  ],
+  "dynamics": [
+    {
+      "case": "al-md-0.125",
+      "samples": 81,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 5.999999608263806e-09,
+      "endpoint_change_Ha": 1.9999992773023223e-09,
+      "least_squares_drift_Ha_per_fs": 1.712736908035641e-10,
+      "temperature_K": 600,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": -1
+    },
+    {
+      "case": "al-md-0.125-adaptive",
+      "samples": 81,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 5.000000413701855e-09,
+      "endpoint_change_Ha": 0.0,
+      "least_squares_drift_Ha_per_fs": 1.987353371299743e-11,
+      "temperature_K": 600,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": "AUTO"
+    },
+    {
+      "case": "al-md-0.125-thermal-eps7",
+      "samples": 81,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 1.147999999950855e-06,
+      "endpoint_change_Ha": -1.147000000756293e-06,
+      "least_squares_drift_Ha_per_fs": -1.45006504085281e-07,
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "eps_scf": 1e-07,
+      "added_mos": "AUTO"
+    },
+    {
+      "case": "al-md-0.25",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 2.6999999569454758e-08,
+      "endpoint_change_Ha": 1.3999999382008355e-08,
+      "least_squares_drift_Ha_per_fs": 1.4898954463501385e-09,
+      "temperature_K": 600,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": -1
+    },
+    {
+      "case": "al-md-0.25-adaptive",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 1.999999987845058e-08,
+      "endpoint_change_Ha": 9.999991945619513e-10,
+      "least_squares_drift_Ha_per_fs": 4.947734363135752e-11,
+      "temperature_K": 600,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": "AUTO"
+    },
+    {
+      "case": "al-md-0.25-thermal",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 9.000000744663339e-09,
+      "endpoint_change_Ha": -9.000000744663339e-09,
+      "least_squares_drift_Ha_per_fs": -7.623694010578158e-10,
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": -1
+    },
+    {
+      "case": "al-md-0.25-thermal-adaptive",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 6.000000496442226e-09,
+      "endpoint_change_Ha": -3.000000248221113e-09,
+      "least_squares_drift_Ha_per_fs": -2.5714287841895263e-10,
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "eps_scf": 1e-08,
+      "added_mos": "AUTO"
+    },
+    {
+      "case": "al-md-0.25-thermal-eps7",
+      "samples": 41,
+      "time_fs": 10.0,
+      "repeated_identical_samples": 0,
+      "conserved_energy_range_Ha": 1.1049999999457327e-06,
+      "endpoint_change_Ha": -1.1049999999457327e-06,
+      "least_squares_drift_Ha_per_fs": -1.2838466900599208e-07,
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "eps_scf": 1e-07,
+      "added_mos": "AUTO"
+    }
+  ],
+  "interrupted_dynamics": [
+    {
+      "case": "al-md-0.125-thermal",
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "timestep_fs": 0.125,
+      "added_mos": -1,
+      "completed_time_fs": 2.625,
+      "requested_time_fs": 10.0,
+      "returncode": 124,
+      "normal_end": false,
+      "stopping_status": "Time limit",
+      "last_scf_residual": 1e-08,
+      "last_scf_iteration": 223
+    },
+    {
+      "case": "al-md-0.125-thermal-adaptive",
+      "temperature_K": 3000,
+      "method": "DIIS",
+      "timestep_fs": 0.125,
+      "added_mos": "AUTO",
+      "completed_time_fs": 5.75,
+      "requested_time_fs": 10.0,
+      "returncode": 124,
+      "normal_end": false,
+      "stopping_status": "Time limit",
+      "last_scf_residual": 1e-08,
+      "last_scf_iteration": 131
+    },
+    {
+      "case": "al-md-0.125-thermal-cg",
+      "temperature_K": 3000,
+      "method": "CG",
+      "timestep_fs": 0.125,
+      "added_mos": "AUTO",
+      "completed_time_fs": 0.0,
+      "requested_time_fs": 10.0,
+      "returncode": 1,
+      "normal_end": false,
+      "stopping_status": "SCF limit",
+      "last_scf_residual": 4e-08,
+      "last_scf_iteration": 500
+    },
+    {
+      "case": "al-md-0.125-thermal-lbfgs",
+      "temperature_K": 3000,
+      "method": "LBFGS",
+      "timestep_fs": 0.125,
+      "added_mos": "AUTO",
+      "completed_time_fs": 3.875,
+      "requested_time_fs": 10.0,
+      "returncode": 124,
+      "normal_end": false,
+      "stopping_status": "Time limit",
+      "last_scf_residual": 1e-07,
+      "last_scf_iteration": 93
+    },
+    {
+      "case": "al-md-0.25-thermal-cg",
+      "temperature_K": 3000,
+      "method": "CG",
+      "timestep_fs": 0.25,
+      "added_mos": "AUTO",
+      "completed_time_fs": 0.0,
+      "requested_time_fs": 10.0,
+      "returncode": 1,
+      "normal_end": false,
+      "stopping_status": "SCF limit",
+      "last_scf_residual": 4e-08,
+      "last_scf_iteration": 500
+    },
+    {
+      "case": "al-md-0.25-thermal-lbfgs",
+      "temperature_K": 3000,
+      "method": "LBFGS",
+      "timestep_fs": 0.25,
+      "added_mos": "AUTO",
+      "completed_time_fs": 6.25,
+      "requested_time_fs": 10.0,
+      "returncode": 124,
+      "normal_end": false,
+      "stopping_status": "Time limit",
+      "last_scf_residual": 6e-08,
+      "last_scf_iteration": 17
+    }
+  ],
+  "attempts": 152,
+  "completed": 138,
+  "rejected_launcher_attempts": 0,
+  "scf_converged": 138,
+  "optimization": [
+    {
+      "case": "al-cell_opt",
+      "run_type": "CELL_OPT",
+      "temperature_K": 600,
+      "nuclear_steps": 15.0,
+      "converged": false,
+      "step_limit_reached": true,
+      "returncode": 0,
+      "scf_solves": 16
+    },
+    {
+      "case": "al-cell_opt-thermal",
+      "run_type": "CELL_OPT",
+      "temperature_K": 3000,
+      "nuclear_steps": 13.0,
+      "converged": false,
+      "step_limit_reached": false,
+      "returncode": 124,
+      "scf_solves": 14
+    },
+    {
+      "case": "al-geo_opt",
+      "run_type": "GEO_OPT",
+      "temperature_K": 600,
+      "nuclear_steps": 5.0,
+      "converged": true,
+      "step_limit_reached": false,
+      "returncode": 0,
+      "scf_solves": 7
+    },
+    {
+      "case": "al-geo_opt-thermal",
+      "run_type": "GEO_OPT",
+      "temperature_K": 3000,
+      "nuclear_steps": 5.0,
+      "converged": true,
+      "step_limit_reached": false,
+      "returncode": 0,
+      "scf_solves": 7
+    }
+  ],
+  "planned_first_attempts": 136,
+  "pending_first_attempts": []
+}
