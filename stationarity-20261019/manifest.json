@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-19",
+  "source_revision": "f6c7e1d6e4538564667591a51bda8dc52854de82",
+  "data_sha256": {
+    "BASIS_SET": "1d60d67ad5f22253185fda9d27b23558521e04a2b0c5efabaf44a33fe2208182",
+    "BASIS_MOLOPT": "686dd72e7601ee41d4a173e4c7c3946f1e750f03095090f44d3821c180a81a61",
+    "POTENTIAL": "b0e5adf52fc7b7dcf3f2d156ae3f1327780f6f4d11973db329545e5c73bdc361"
+  },
+  "cases": [
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-off",
+      "group": "stationarity",
+      "occupation_preconditioner": false,
+      "input_sha256": "694c6871d2fa8d54eed4a999bf953aaafbd6ed4628a20d9854832593d1c39830",
+      "executable_configuration": "endpoint_audit"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        3,
+        3
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-on",
+      "group": "stationarity",
+      "input_sha256": "3e5540aec61b4b7a9384bab6ef181e69d4384f0ed3355e4ab90b63bde04d9530",
+      "executable_configuration": "endpoint_audit"
+    },
+    {
+      "a": 3.615,
+      "basis": "DZV-GTH-PADE",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PBE-q11",
+      "functional": "PBE",
+      "electrons": 11,
+      "temperature": 800,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Cu",
+      "method": "CG",
+      "name": "cu-on",
+      "group": "stationarity",
+      "input_sha256": "5fe74dccc8f4a32240037da90e3968624513c7465ee31d721f86a4acc7198e8e",
+      "executable_configuration": "endpoint_audit"
+    },
+    {
+      "a": 3.52,
+      "basis": "DZV-GTH-PADE-q10",
+      "basis_file": "BASIS_SET",
+      "potential": "GTH-PADE-q10",
+      "functional": "PADE",
+      "electrons": 10,
+      "temperature": 1000,
+      "mesh": [
+        3,
+        2,
+        1
+      ],
+      "cutoff": 300,
+      "spin": true,
+      "element": "Ni",
+      "method": "LBFGS",
+      "added_mos": "AUTO",
+      "name": "ni-on",
+      "group": "stationarity",
+      "input_sha256": "2495a65a005abfa3488c206a78f255870335cb638e19b33e683df340b1121ecc",
+      "executable_configuration": "endpoint_audit"
+    },
+    {
+      "a": 4.05,
+      "basis": "SZV-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        3,
+        1,
+        1
+      ],
+      "cutoff": 80,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-small-off",
+      "group": "stationarity",
+      "occupation_preconditioner": false,
+      "input_sha256": "b3663acc2bcd3fb85c6df2776e5ad3db10f5ebf93d5fed1228b9d5f32c5233df",
+      "executable_configuration": "endpoint_audit"
+    }
+  ],
+  "executable_configuration": {
+    "name": "endpoint_audit",
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "source_patch": "provenance/source.patch",
+    "build_configuration": "validation-20261018: spin-correction GCC 14.3.0 / MPI / OpenMP CPU build"
+  }
+}

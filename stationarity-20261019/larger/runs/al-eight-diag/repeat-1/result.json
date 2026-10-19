@@ -1,0 +1,149 @@
+{
+  "case": "al-eight-diag",
+  "group": "larger",
+  "repetition": 1,
+  "ranks": 2,
+  "threads_per_rank": 1,
+  "returncode": 0,
+  "time_limit_s": 1800,
+  "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+  "elapsed_including_launcher_s": 20.107091050595045,
+  "hostname": "ctu016",
+  "command": [
+    "srun",
+    "--mpi=pmix",
+    "--exclusive",
+    "--exact",
+    "--mem=2G",
+    "--cpu-bind=cores",
+    "--nodes=1",
+    "--ntasks=2",
+    "--cpus-per-task=1",
+    "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+    "-i",
+    "input.inp",
+    "-o",
+    "output.out"
+  ],
+  "normal_end": true,
+  "scf_converged": true,
+  "converged_steps": [
+    8
+  ],
+  "printed_iterations": 7,
+  "free_energy_Ha": -16.55854278266191,
+  "minus_TS_Ha": -0.00407284688921,
+  "fermi_energy_Ha": 0.26225542687361,
+  "integrated_spin": null,
+  "total_charge_error": -6e-10,
+  "band_boundary_warnings": 0,
+  "cp2k_time_s": 15.487,
+  "actual_mpi_ranks": 2,
+  "launcher_valid": true,
+  "last_scf_row": "8 Broy./Diag. 0.10E+00    1.5     0.00000035       -16.5585359007 -5.17E-06",
+  "last_scf_iteration": 8,
+  "last_scf_residual": 3.5e-07,
+  "iteration_limit_reached": false,
+  "electron_count_grid": 24.0,
+  "electron_count_grid_error": 0.0,
+  "force_rows_Ha_per_bohr": [
+    [
+      1.00969257e-15,
+      5.83611665e-16,
+      -1.16763125e-15
+    ],
+    [
+      9.08241347e-16,
+      -4.0595573e-16,
+      -4.08163434e-16
+    ],
+    [
+      -1.35499597e-16,
+      7.04151382e-17,
+      -1.50167266e-15
+    ],
+    [
+      6.73367578e-17,
+      -4.53059102e-17,
+      -4.62331236e-16
+    ],
+    [
+      8.03840182e-16,
+      4.32646471e-16,
+      -9.16320559e-16
+    ],
+    [
+      -4.58116818e-16,
+      -1.11499268e-15,
+      -1.66685092e-15
+    ],
+    [
+      8.06598243e-16,
+      -7.20857338e-16,
+      -2.03986509e-15
+    ],
+    [
+      6.71852267e-16,
+      -2.84465418e-16,
+      -8.53337033e-16
+    ]
+  ],
+  "stress_bar": [
+    [
+      -6178.66652562,
+      -17614.098984,
+      -17614.0990031
+    ],
+    [
+      -17614.098984,
+      -6178.66648822,
+      -17614.0989759
+    ],
+    [
+      -17614.0990031,
+      -17614.0989759,
+      -6178.66654945
+    ]
+  ],
+  "finite_entropy": true,
+  "generalized_correction_Ha": null,
+  "objective_correction_Ha": -0.00407284688921,
+  "geometry_converged": false,
+  "kpoint_count": 4.0,
+  "printed_kpoints": [
+    [
+      1,
+      0.25,
+      -0.25,
+      -0.25,
+      -0.25
+    ],
+    [
+      2,
+      0.25,
+      -0.25,
+      -0.25,
+      0.25
+    ],
+    [
+      3,
+      0.25,
+      -0.25,
+      0.25,
+      -0.25
+    ],
+    [
+      4,
+      0.25,
+      -0.25,
+      0.25,
+      0.25
+    ]
+  ],
+  "ao_count": 13.0,
+  "printed_mo_counts": [
+    16
+  ],
+  "last_mo_count": 16,
+  "full_ks_subspace_rebuilds": 0
+}

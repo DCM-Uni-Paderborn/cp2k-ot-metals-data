@@ -1,0 +1,149 @@
+{
+  "case": "al-eight-cg",
+  "group": "larger",
+  "repetition": 1,
+  "ranks": 2,
+  "threads_per_rank": 1,
+  "returncode": 0,
+  "time_limit_s": 1800,
+  "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+  "elapsed_including_launcher_s": 165.98782064393163,
+  "hostname": "ctu016",
+  "command": [
+    "srun",
+    "--mpi=pmix",
+    "--exclusive",
+    "--exact",
+    "--mem=2G",
+    "--cpu-bind=cores",
+    "--nodes=1",
+    "--ntasks=2",
+    "--cpus-per-task=1",
+    "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+    "-i",
+    "input.inp",
+    "-o",
+    "output.out"
+  ],
+  "normal_end": true,
+  "scf_converged": true,
+  "converged_steps": [
+    33
+  ],
+  "printed_iterations": 33,
+  "free_energy_Ha": -16.558542781439193,
+  "minus_TS_Ha": -0.00407284681668,
+  "fermi_energy_Ha": 0.26225543411638,
+  "integrated_spin": null,
+  "total_charge_error": -6e-10,
+  "band_boundary_warnings": 0,
+  "cp2k_time_s": 161.343,
+  "actual_mpi_ranks": 2,
+  "launcher_valid": true,
+  "last_scf_row": "33 OT CG       0.23E+00    3.7     0.00000027       -16.5585427813 -6.37E-09",
+  "last_scf_iteration": 33,
+  "last_scf_residual": 2.7e-07,
+  "iteration_limit_reached": false,
+  "electron_count_grid": 24.0,
+  "electron_count_grid_error": 0.0,
+  "force_rows_Ha_per_bohr": [
+    [
+      -3.8610463e-06,
+      -3.75896513e-06,
+      -3.72672807e-06
+    ],
+    [
+      3.58038129e-06,
+      3.81173287e-06,
+      2.76419209e-06
+    ],
+    [
+      3.8313939e-06,
+      1.8222777e-06,
+      3.29022796e-06
+    ],
+    [
+      -2.64535676e-06,
+      -2.96933577e-06,
+      -3.42741631e-06
+    ],
+    [
+      2.08123388e-06,
+      3.86130587e-06,
+      3.14367939e-06
+    ],
+    [
+      -3.67760199e-06,
+      -2.76254548e-06,
+      -3.99636518e-06
+    ],
+    [
+      -2.93653536e-06,
+      -2.77698374e-06,
+      -1.93915569e-06
+    ],
+    [
+      3.62753127e-06,
+      2.77251365e-06,
+      3.89156588e-06
+    ]
+  ],
+  "stress_bar": [
+    [
+      -6178.80123256,
+      -17613.9769825,
+      -17613.7517107
+    ],
+    [
+      -17613.9769825,
+      -6178.7327113,
+      -17614.1049942
+    ],
+    [
+      -17613.7517107,
+      -17614.1049942,
+      -6178.77342942
+    ]
+  ],
+  "finite_entropy": true,
+  "generalized_correction_Ha": null,
+  "objective_correction_Ha": -0.00407284681668,
+  "geometry_converged": false,
+  "kpoint_count": 4.0,
+  "printed_kpoints": [
+    [
+      1,
+      0.25,
+      -0.25,
+      -0.25,
+      -0.25
+    ],
+    [
+      2,
+      0.25,
+      -0.25,
+      -0.25,
+      0.25
+    ],
+    [
+      3,
+      0.25,
+      -0.25,
+      0.25,
+      -0.25
+    ],
+    [
+      4,
+      0.25,
+      -0.25,
+      0.25,
+      0.25
+    ]
+  ],
+  "ao_count": 13.0,
+  "printed_mo_counts": [
+    16
+  ],
+  "last_mo_count": 16,
+  "full_ks_subspace_rebuilds": 2
+}

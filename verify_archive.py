@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -52,7 +53,35 @@ negative = next(row for row in analysis["pairs"]
                 if row["case"] == "al-no-occupation-preconditioner")
 assert negative["delta_free_energy_Ha"] > 1e-3, "Do not hide the inequivalent endpoint"
 coverage = json.loads((ROOT / "coverage.json").read_text())
+supplement = ROOT / "stationarity-20261019"
+audit = json.loads((supplement / "analysis.json").read_text())
+assert len(audit) == 11
+for prefix in ("", "larger", "recovery"):
+    directory = supplement / prefix
+    local_manifest = json.loads((directory / "manifest.json").read_text())
+    configuration = local_manifest["executable_configuration"]
+    assert (directory / configuration["source_patch"]).is_file()
+    local_cases = {case["name"]: case for case in local_manifest["cases"]}
+    for name, expected in local_manifest["data_sha256"].items():
+        assert hashlib.sha256((directory / "data" / name).read_bytes()).hexdigest() == expected
+    for path in (directory / "runs").glob("*/*/result.json"):
+        result = json.loads(path.read_text())
+        assert result["normal_end"] and result["scf_converged"], path
+        assert result["actual_mpi_ranks"] == result["ranks"] == 2 and result["launcher_valid"]
+        assert result["binary_sha256"] == configuration["binary_sha256"]
+        assert hashlib.sha256((path.parent / "input.inp").read_bytes()).hexdigest() == \
+            local_cases[result["case"]]["input_sha256"]
+by_name = {(row["cohort"], row["case"]): row for row in audit}
+assert by_name["baseline", "al-off"]["canonical_endpoint_checks"][-1]["frozen_gap_Ha"] > 1e-3
+assert by_name["recovery", "al-off"]["canonical_endpoint_checks"][-1]["frozen_gap_Ha"] < 1e-7
+assert abs(by_name["larger", "al-eight-cg"]["free_energy_error_Ha"]) < 1e-8
+for name in ("al-on", "cu-on", "al-small-off"):
+    assert by_name["recovery", name]["free_energy_change_from_baseline_Ha"] == 0.0
+    assert by_name["recovery", name]["steps_change_from_baseline"] == 0
+for ranks in (1, 2):
+    text = (supplement / f"recovery/provenance/unit-np{ranks}.out").read_text()
+    assert float(re.search(r"Canonical density metrics error:\s+(\S+)", text)[1]) < 1e-13
 print(json.dumps(dict(integrity="passed", files=len(checksums),
                       matrix_checks="passed", campaign_cases=len(manifest["cases"]),
-                      retained_attempts=analysis["attempts"],
+                      retained_attempts=analysis["attempts"], stationarity_controls=len(audit),
                       publication_ready=coverage["publication_ready"]), indent=2))

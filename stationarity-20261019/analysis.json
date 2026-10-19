@@ -1,0 +1,1685 @@
+[
+  {
+    "case": "al-off",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "elapsed_including_launcher_s": 347.99861476011574,
+    "hostname": "ctu017",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      199
+    ],
+    "printed_iterations": 199,
+    "free_energy_Ha": -2.047798374124628,
+    "minus_TS_Ha": -0.00015829965179,
+    "fermi_energy_Ha": 0.23186611623036,
+    "integrated_spin": null,
+    "total_charge_error": -1e-10,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 344.031,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "199 OT CG       0.46E+01    1.2     0.00000098        -2.0477983643 -1.86E-08",
+    "last_scf_iteration": 199,
+    "last_scf_residual": 9.8e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 3.0,
+    "electron_count_grid_error": -0.0,
+    "force_rows_Ha_per_bohr": [
+      [
+        7.6383566e-11,
+        6.25532619e-11,
+        1.61397202e-10
+      ]
+    ],
+    "stress_bar": [
+      [
+        -79508.1976792,
+        6557.09455541,
+        -38967.55404
+      ],
+      [
+        6557.09455541,
+        188081.500292,
+        128.574018642
+      ],
+      [
+        -38967.55404,
+        128.574018642,
+        -123758.368356
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00015829965179,
+    "geometry_converged": false,
+    "kpoint_count": 14.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        -0.33333
+      ],
+      [
+        2,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        0.0
+      ],
+      [
+        3,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        0.33333
+      ],
+      [
+        4,
+        0.07407,
+        -0.33333,
+        0.0,
+        -0.33333
+      ],
+      [
+        5,
+        0.07407,
+        -0.33333,
+        0.0,
+        0.0
+      ],
+      [
+        6,
+        0.07407,
+        -0.33333,
+        0.0,
+        0.33333
+      ],
+      [
+        7,
+        0.07407,
+        -0.33333,
+        0.33333,
+        -0.33333
+      ],
+      [
+        8,
+        0.07407,
+        -0.33333,
+        0.33333,
+        0.0
+      ],
+      [
+        9,
+        0.07407,
+        -0.33333,
+        0.33333,
+        0.33333
+      ],
+      [
+        10,
+        0.07407,
+        0.0,
+        -0.33333,
+        -0.33333
+      ],
+      [
+        11,
+        0.07407,
+        0.0,
+        -0.33333,
+        0.0
+      ],
+      [
+        12,
+        0.07407,
+        0.0,
+        -0.33333,
+        0.33333
+      ],
+      [
+        13,
+        0.07407,
+        0.0,
+        0.0,
+        -0.33333
+      ],
+      [
+        14,
+        0.03704,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ao_count": 13.0,
+    "printed_mo_counts": [
+      13
+    ],
+    "last_mo_count": 13,
+    "full_ks_subspace_rebuilds": 0,
+    "total_ao_count": 13,
+    "cohort": "baseline",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 0.2186943965018,
+        "frozen_gap_Ha": 0.002572647841387,
+        "commutator_Ha": 0.0001888869747038
+      }
+    ],
+    "input_sha256": "694c6871d2fa8d54eed4a999bf953aaafbd6ed4628a20d9854832593d1c39830"
+  },
+  {
+    "case": "al-on",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "elapsed_including_launcher_s": 55.93404618091881,
+    "hostname": "ctu017",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      14
+    ],
+    "printed_iterations": 14,
+    "free_energy_Ha": -2.050337829497446,
+    "minus_TS_Ha": -0.00069766956613,
+    "fermi_energy_Ha": 0.26851929674703,
+    "integrated_spin": null,
+    "total_charge_error": -1e-10,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 52.867,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "14 OT CG       0.64E-01    2.7     0.00000069        -2.0503378293 -1.09E-05",
+    "last_scf_iteration": 14,
+    "last_scf_residual": 6.9e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 3.0,
+    "electron_count_grid_error": 0.0,
+    "force_rows_Ha_per_bohr": [
+      [
+        -3.10844746e-13,
+        -1.57877911e-12,
+        1.40970518e-12
+      ]
+    ],
+    "stress_bar": [
+      [
+        -17341.0300936,
+        -841.663027831,
+        -1164.36345133
+      ],
+      [
+        -841.663027831,
+        -17287.3409157,
+        -1071.27967436
+      ],
+      [
+        -1164.36345133,
+        -1071.27967436,
+        -17728.7501508
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00069766956613,
+    "geometry_converged": false,
+    "kpoint_count": 14.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        -0.33333
+      ],
+      [
+        2,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        0.0
+      ],
+      [
+        3,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        0.33333
+      ],
+      [
+        4,
+        0.07407,
+        -0.33333,
+        0.0,
+        -0.33333
+      ],
+      [
+        5,
+        0.07407,
+        -0.33333,
+        0.0,
+        0.0
+      ],
+      [
+        6,
+        0.07407,
+        -0.33333,
+        0.0,
+        0.33333
+      ],
+      [
+        7,
+        0.07407,
+        -0.33333,
+        0.33333,
+        -0.33333
+      ],
+      [
+        8,
+        0.07407,
+        -0.33333,
+        0.33333,
+        0.0
+      ],
+      [
+        9,
+        0.07407,
+        -0.33333,
+        0.33333,
+        0.33333
+      ],
+      [
+        10,
+        0.07407,
+        0.0,
+        -0.33333,
+        -0.33333
+      ],
+      [
+        11,
+        0.07407,
+        0.0,
+        -0.33333,
+        0.0
+      ],
+      [
+        12,
+        0.07407,
+        0.0,
+        -0.33333,
+        0.33333
+      ],
+      [
+        13,
+        0.07407,
+        0.0,
+        0.0,
+        -0.33333
+      ],
+      [
+        14,
+        0.03704,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ao_count": 13.0,
+    "printed_mo_counts": [
+      13
+    ],
+    "last_mo_count": 13,
+    "full_ks_subspace_rebuilds": 1,
+    "total_ao_count": 13,
+    "cohort": "baseline",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 0.0001475586590986,
+        "frozen_gap_Ha": 5.652970275802e-09,
+        "commutator_Ha": 0.0001107870569139
+      }
+    ],
+    "input_sha256": "3e5540aec61b4b7a9384bab6ef181e69d4384f0ed3355e4ab90b63bde04d9530"
+  },
+  {
+    "case": "al-small-off",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "elapsed_including_launcher_s": 10.743592107668519,
+    "hostname": "ctu017",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      10
+    ],
+    "printed_iterations": 10,
+    "free_energy_Ha": -2.169114028985626,
+    "minus_TS_Ha": -0.00142464925124,
+    "fermi_energy_Ha": 0.31305140353842,
+    "integrated_spin": null,
+    "total_charge_error": -0.0,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 6.792,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "10 OT CG       0.12E+01    0.4     0.00000076        -2.1691140290 -4.53E-10",
+    "last_scf_iteration": 10,
+    "last_scf_residual": 7.6e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 3.0,
+    "electron_count_grid_error": 0.0,
+    "force_rows_Ha_per_bohr": [
+      [
+        5.07661397e-11,
+        -3.84323321e-10,
+        3.38981301e-10
+      ]
+    ],
+    "stress_bar": [
+      [
+        -46555.3486996,
+        -1374283.1288,
+        -1374271.69727
+      ],
+      [
+        -1374283.1288,
+        -46518.1128574,
+        1374284.828
+      ],
+      [
+        -1374271.69727,
+        1374284.828,
+        -46538.1961263
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00142464925124,
+    "geometry_converged": false,
+    "kpoint_count": 2.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.66667,
+        -0.33333,
+        0.0,
+        0.0
+      ],
+      [
+        2,
+        0.33333,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ao_count": 4.0,
+    "printed_mo_counts": [
+      4
+    ],
+    "last_mo_count": 4,
+    "full_ks_subspace_rebuilds": 0,
+    "total_ao_count": 4,
+    "cohort": "baseline",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 3.53311280868e-06,
+        "frozen_gap_Ha": 1.149387638018e-11,
+        "commutator_Ha": 5.613232902931e-06
+      }
+    ],
+    "input_sha256": "b3663acc2bcd3fb85c6df2776e5ad3db10f5ebf93d5fed1228b9d5f32c5233df"
+  },
+  {
+    "case": "cu-on",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "elapsed_including_launcher_s": 104.97729084454477,
+    "hostname": "ctu017",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      18
+    ],
+    "printed_iterations": 18,
+    "free_energy_Ha": -48.09963938388169,
+    "minus_TS_Ha": -0.00241886740123,
+    "fermi_energy_Ha": 0.28022916657069,
+    "integrated_spin": null,
+    "total_charge_error": 4.9e-09,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 101.059,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "18 OT CG       0.23E+00    2.0     0.00000047       -48.0996393838 -1.51E-09",
+    "last_scf_iteration": 18,
+    "last_scf_residual": 4.7e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 10.9999999949,
+    "electron_count_grid_error": 5.1e-09,
+    "force_rows_Ha_per_bohr": [
+      [
+        8.07079287e-16,
+        2.39625058e-15,
+        6.55965337e-16
+      ]
+    ],
+    "stress_bar": [
+      [
+        126012.845743,
+        -205410.706492,
+        -205410.059458
+      ],
+      [
+        -205410.706492,
+        126012.827493,
+        -205410.073023
+      ],
+      [
+        -205410.059458,
+        -205410.073023,
+        126011.604194
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00241886740123,
+    "geometry_converged": false,
+    "kpoint_count": 4.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      [
+        2,
+        0.25,
+        -0.25,
+        -0.25,
+        0.25
+      ],
+      [
+        3,
+        0.25,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      [
+        4,
+        0.25,
+        -0.25,
+        0.25,
+        0.25
+      ]
+    ],
+    "ao_count": 18.0,
+    "printed_mo_counts": [
+      18
+    ],
+    "last_mo_count": 18,
+    "full_ks_subspace_rebuilds": 0,
+    "total_ao_count": 18,
+    "cohort": "baseline",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 1.928032716449e-05,
+        "frozen_gap_Ha": 7.180794179759e-10,
+        "commutator_Ha": 3.462551770479e-05
+      }
+    ],
+    "input_sha256": "5fe74dccc8f4a32240037da90e3968624513c7465ee31d721f86a4acc7198e8e"
+  },
+  {
+    "case": "ni-on",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "elapsed_including_launcher_s": 831.7520836871117,
+    "hostname": "ctu017",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      89
+    ],
+    "printed_iterations": 89,
+    "free_energy_Ha": -37.336929921517964,
+    "minus_TS_Ha": -0.00050297915567,
+    "fermi_energy_Ha": 0.24537387380377,
+    "integrated_spin": 1.3333333341,
+    "total_charge_error": 3.6e-09,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 827.833,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "89 OT LBFGS    0.35E+01    4.6     0.00000080       -37.3369299170 -6.77E-09",
+    "last_scf_iteration": 89,
+    "last_scf_residual": 8e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 9.9999999962,
+    "electron_count_grid_error": 3.8e-09,
+    "force_rows_Ha_per_bohr": [
+      [
+        2.00296087e-15,
+        2.38671899e-15,
+        3.23754386e-15
+      ]
+    ],
+    "stress_bar": [
+      [
+        -568991.02821,
+        -499119.549305,
+        1943.6006488
+      ],
+      [
+        -499119.549305,
+        -568445.053641,
+        -2416.77126305
+      ],
+      [
+        1943.6006488,
+        -2416.77126305,
+        611065.567811
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00050297915567,
+    "geometry_converged": false,
+    "kpoint_count": 3.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.33333,
+        -0.33333,
+        -0.25,
+        0.0
+      ],
+      [
+        2,
+        0.33333,
+        -0.33333,
+        0.25,
+        0.0
+      ],
+      [
+        3,
+        0.33333,
+        0.0,
+        -0.25,
+        0.0
+      ]
+    ],
+    "ao_count": 18.0,
+    "printed_mo_counts": [
+      10,
+      10
+    ],
+    "last_mo_count": 10,
+    "full_ks_subspace_rebuilds": 4,
+    "total_ao_count": 18,
+    "cohort": "baseline",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 0.0001601513581174,
+        "frozen_gap_Ha": 7.573892940658e-08,
+        "commutator_Ha": 6.784189218482e-05
+      }
+    ],
+    "input_sha256": "2495a65a005abfa3488c206a78f255870335cb638e19b33e683df340b1121ecc"
+  },
+  {
+    "case": "al-eight-cg",
+    "group": "larger",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "elapsed_including_launcher_s": 165.98782064393163,
+    "hostname": "ctu016",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      33
+    ],
+    "printed_iterations": 33,
+    "free_energy_Ha": -16.558542781439193,
+    "minus_TS_Ha": -0.00407284681668,
+    "fermi_energy_Ha": 0.26225543411638,
+    "integrated_spin": null,
+    "total_charge_error": -6e-10,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 161.343,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "33 OT CG       0.23E+00    3.7     0.00000027       -16.5585427813 -6.37E-09",
+    "last_scf_iteration": 33,
+    "last_scf_residual": 2.7e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 24.0,
+    "electron_count_grid_error": 0.0,
+    "force_rows_Ha_per_bohr": [
+      [
+        -3.8610463e-06,
+        -3.75896513e-06,
+        -3.72672807e-06
+      ],
+      [
+        3.58038129e-06,
+        3.81173287e-06,
+        2.76419209e-06
+      ],
+      [
+        3.8313939e-06,
+        1.8222777e-06,
+        3.29022796e-06
+      ],
+      [
+        -2.64535676e-06,
+        -2.96933577e-06,
+        -3.42741631e-06
+      ],
+      [
+        2.08123388e-06,
+        3.86130587e-06,
+        3.14367939e-06
+      ],
+      [
+        -3.67760199e-06,
+        -2.76254548e-06,
+        -3.99636518e-06
+      ],
+      [
+        -2.93653536e-06,
+        -2.77698374e-06,
+        -1.93915569e-06
+      ],
+      [
+        3.62753127e-06,
+        2.77251365e-06,
+        3.89156588e-06
+      ]
+    ],
+    "stress_bar": [
+      [
+        -6178.80123256,
+        -17613.9769825,
+        -17613.7517107
+      ],
+      [
+        -17613.9769825,
+        -6178.7327113,
+        -17614.1049942
+      ],
+      [
+        -17613.7517107,
+        -17614.1049942,
+        -6178.77342942
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00407284681668,
+    "geometry_converged": false,
+    "kpoint_count": 4.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      [
+        2,
+        0.25,
+        -0.25,
+        -0.25,
+        0.25
+      ],
+      [
+        3,
+        0.25,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      [
+        4,
+        0.25,
+        -0.25,
+        0.25,
+        0.25
+      ]
+    ],
+    "ao_count": 13.0,
+    "printed_mo_counts": [
+      16
+    ],
+    "last_mo_count": 16,
+    "full_ks_subspace_rebuilds": 2,
+    "total_ao_count": 104,
+    "cohort": "larger",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 3.660322119121e-05,
+        "frozen_gap_Ha": 1.74090982602e-09,
+        "commutator_Ha": 2.261676725565e-05
+      }
+    ],
+    "input_sha256": "5b61a0d2e8d91a946b0f1e810aaf63b816d458e29476a182dc4718e59eacd16d",
+    "free_energy_error_Ha": 1.2227161505506956e-09
+  },
+  {
+    "case": "al-eight-diag",
+    "group": "larger",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "elapsed_including_launcher_s": 20.107091050595045,
+    "hostname": "ctu016",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      8
+    ],
+    "printed_iterations": 7,
+    "free_energy_Ha": -16.55854278266191,
+    "minus_TS_Ha": -0.00407284688921,
+    "fermi_energy_Ha": 0.26225542687361,
+    "integrated_spin": null,
+    "total_charge_error": -6e-10,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 15.487,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "8 Broy./Diag. 0.10E+00    1.5     0.00000035       -16.5585359007 -5.17E-06",
+    "last_scf_iteration": 8,
+    "last_scf_residual": 3.5e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 24.0,
+    "electron_count_grid_error": 0.0,
+    "force_rows_Ha_per_bohr": [
+      [
+        1.00969257e-15,
+        5.83611665e-16,
+        -1.16763125e-15
+      ],
+      [
+        9.08241347e-16,
+        -4.0595573e-16,
+        -4.08163434e-16
+      ],
+      [
+        -1.35499597e-16,
+        7.04151382e-17,
+        -1.50167266e-15
+      ],
+      [
+        6.73367578e-17,
+        -4.53059102e-17,
+        -4.62331236e-16
+      ],
+      [
+        8.03840182e-16,
+        4.32646471e-16,
+        -9.16320559e-16
+      ],
+      [
+        -4.58116818e-16,
+        -1.11499268e-15,
+        -1.66685092e-15
+      ],
+      [
+        8.06598243e-16,
+        -7.20857338e-16,
+        -2.03986509e-15
+      ],
+      [
+        6.71852267e-16,
+        -2.84465418e-16,
+        -8.53337033e-16
+      ]
+    ],
+    "stress_bar": [
+      [
+        -6178.66652562,
+        -17614.098984,
+        -17614.0990031
+      ],
+      [
+        -17614.098984,
+        -6178.66648822,
+        -17614.0989759
+      ],
+      [
+        -17614.0990031,
+        -17614.0989759,
+        -6178.66654945
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00407284688921,
+    "geometry_converged": false,
+    "kpoint_count": 4.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      [
+        2,
+        0.25,
+        -0.25,
+        -0.25,
+        0.25
+      ],
+      [
+        3,
+        0.25,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      [
+        4,
+        0.25,
+        -0.25,
+        0.25,
+        0.25
+      ]
+    ],
+    "ao_count": 13.0,
+    "printed_mo_counts": [
+      16
+    ],
+    "last_mo_count": 16,
+    "full_ks_subspace_rebuilds": 0,
+    "total_ao_count": 104,
+    "cohort": "larger",
+    "canonical_endpoint_checks": [],
+    "input_sha256": "77eefbb982ccb244c41de1f139bd9b8f515ae453fa71d87d8a21d47664429894"
+  },
+  {
+    "case": "al-off",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "5bd515281ed9053c85c30a43e366af02c307de9d3f9fe2de1675b2cb2091d3f6",
+    "elapsed_including_launcher_s": 50.66553118824959,
+    "hostname": "ctu016",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      27
+    ],
+    "printed_iterations": 27,
+    "free_energy_Ha": -2.050337834128505,
+    "minus_TS_Ha": -0.00069766897414,
+    "fermi_energy_Ha": 0.26852052145216,
+    "integrated_spin": null,
+    "total_charge_error": -1e-10,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 47.859,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "27 OT CG       0.80E-01    2.4     0.00000025        -2.0503378341 -5.62E-08",
+    "last_scf_iteration": 27,
+    "last_scf_residual": 2.5e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 3.0,
+    "electron_count_grid_error": -0.0,
+    "force_rows_Ha_per_bohr": [
+      [
+        -1.02677417e-14,
+        3.77836993e-13,
+        -3.7635052e-13
+      ]
+    ],
+    "stress_bar": [
+      [
+        -17455.968203,
+        68.0231774038,
+        -165.694685688
+      ],
+      [
+        68.0231774038,
+        -17395.908771,
+        99.7294227031
+      ],
+      [
+        -165.694685688,
+        99.7294227031,
+        -17485.061378
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00069766897414,
+    "geometry_converged": false,
+    "kpoint_count": 14.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        -0.33333
+      ],
+      [
+        2,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        0.0
+      ],
+      [
+        3,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        0.33333
+      ],
+      [
+        4,
+        0.07407,
+        -0.33333,
+        0.0,
+        -0.33333
+      ],
+      [
+        5,
+        0.07407,
+        -0.33333,
+        0.0,
+        0.0
+      ],
+      [
+        6,
+        0.07407,
+        -0.33333,
+        0.0,
+        0.33333
+      ],
+      [
+        7,
+        0.07407,
+        -0.33333,
+        0.33333,
+        -0.33333
+      ],
+      [
+        8,
+        0.07407,
+        -0.33333,
+        0.33333,
+        0.0
+      ],
+      [
+        9,
+        0.07407,
+        -0.33333,
+        0.33333,
+        0.33333
+      ],
+      [
+        10,
+        0.07407,
+        0.0,
+        -0.33333,
+        -0.33333
+      ],
+      [
+        11,
+        0.07407,
+        0.0,
+        -0.33333,
+        0.0
+      ],
+      [
+        12,
+        0.07407,
+        0.0,
+        -0.33333,
+        0.33333
+      ],
+      [
+        13,
+        0.07407,
+        0.0,
+        0.0,
+        -0.33333
+      ],
+      [
+        14,
+        0.03704,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ao_count": 13.0,
+    "printed_mo_counts": [
+      13
+    ],
+    "last_mo_count": 13,
+    "full_ks_subspace_rebuilds": 2,
+    "total_ao_count": 13,
+    "cohort": "recovery",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 3.271957352607e-05,
+        "frozen_gap_Ha": 2.563695850662e-10,
+        "commutator_Ha": 2.123774342826e-05
+      }
+    ],
+    "input_sha256": "694c6871d2fa8d54eed4a999bf953aaafbd6ed4628a20d9854832593d1c39830",
+    "free_energy_change_from_baseline_Ha": -0.0025394600038768367,
+    "steps_change_from_baseline": -172
+  },
+  {
+    "case": "al-on",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "5bd515281ed9053c85c30a43e366af02c307de9d3f9fe2de1675b2cb2091d3f6",
+    "elapsed_including_launcher_s": 49.855262691155076,
+    "hostname": "ctu016",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      14
+    ],
+    "printed_iterations": 14,
+    "free_energy_Ha": -2.050337829497446,
+    "minus_TS_Ha": -0.00069766956613,
+    "fermi_energy_Ha": 0.26851929674703,
+    "integrated_spin": null,
+    "total_charge_error": -1e-10,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 46.987,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "14 OT CG       0.64E-01    2.7     0.00000069        -2.0503378293 -1.09E-05",
+    "last_scf_iteration": 14,
+    "last_scf_residual": 6.9e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 3.0,
+    "electron_count_grid_error": 0.0,
+    "force_rows_Ha_per_bohr": [
+      [
+        -3.10844746e-13,
+        -1.57877911e-12,
+        1.40970518e-12
+      ]
+    ],
+    "stress_bar": [
+      [
+        -17341.0300936,
+        -841.663027831,
+        -1164.36345133
+      ],
+      [
+        -841.663027831,
+        -17287.3409157,
+        -1071.27967436
+      ],
+      [
+        -1164.36345133,
+        -1071.27967436,
+        -17728.7501508
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00069766956613,
+    "geometry_converged": false,
+    "kpoint_count": 14.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        -0.33333
+      ],
+      [
+        2,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        0.0
+      ],
+      [
+        3,
+        0.07407,
+        -0.33333,
+        -0.33333,
+        0.33333
+      ],
+      [
+        4,
+        0.07407,
+        -0.33333,
+        0.0,
+        -0.33333
+      ],
+      [
+        5,
+        0.07407,
+        -0.33333,
+        0.0,
+        0.0
+      ],
+      [
+        6,
+        0.07407,
+        -0.33333,
+        0.0,
+        0.33333
+      ],
+      [
+        7,
+        0.07407,
+        -0.33333,
+        0.33333,
+        -0.33333
+      ],
+      [
+        8,
+        0.07407,
+        -0.33333,
+        0.33333,
+        0.0
+      ],
+      [
+        9,
+        0.07407,
+        -0.33333,
+        0.33333,
+        0.33333
+      ],
+      [
+        10,
+        0.07407,
+        0.0,
+        -0.33333,
+        -0.33333
+      ],
+      [
+        11,
+        0.07407,
+        0.0,
+        -0.33333,
+        0.0
+      ],
+      [
+        12,
+        0.07407,
+        0.0,
+        -0.33333,
+        0.33333
+      ],
+      [
+        13,
+        0.07407,
+        0.0,
+        0.0,
+        -0.33333
+      ],
+      [
+        14,
+        0.03704,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ao_count": 13.0,
+    "printed_mo_counts": [
+      13
+    ],
+    "last_mo_count": 13,
+    "full_ks_subspace_rebuilds": 1,
+    "total_ao_count": 13,
+    "cohort": "recovery",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 0.0001475586590986,
+        "frozen_gap_Ha": 5.65297040428e-09,
+        "commutator_Ha": 0.0001107870569139
+      }
+    ],
+    "input_sha256": "3e5540aec61b4b7a9384bab6ef181e69d4384f0ed3355e4ab90b63bde04d9530",
+    "free_energy_change_from_baseline_Ha": 0.0,
+    "steps_change_from_baseline": 0
+  },
+  {
+    "case": "al-small-off",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "5bd515281ed9053c85c30a43e366af02c307de9d3f9fe2de1675b2cb2091d3f6",
+    "elapsed_including_launcher_s": 9.546015793457627,
+    "hostname": "ctu016",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      10
+    ],
+    "printed_iterations": 10,
+    "free_energy_Ha": -2.169114028985626,
+    "minus_TS_Ha": -0.00142464925124,
+    "fermi_energy_Ha": 0.31305140353842,
+    "integrated_spin": null,
+    "total_charge_error": -0.0,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 6.59,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "10 OT CG       0.12E+01    0.4     0.00000076        -2.1691140290 -4.53E-10",
+    "last_scf_iteration": 10,
+    "last_scf_residual": 7.6e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 3.0,
+    "electron_count_grid_error": 0.0,
+    "force_rows_Ha_per_bohr": [
+      [
+        5.07661397e-11,
+        -3.84323321e-10,
+        3.38981301e-10
+      ]
+    ],
+    "stress_bar": [
+      [
+        -46555.3486996,
+        -1374283.1288,
+        -1374271.69727
+      ],
+      [
+        -1374283.1288,
+        -46518.1128574,
+        1374284.828
+      ],
+      [
+        -1374271.69727,
+        1374284.828,
+        -46538.1961263
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00142464925124,
+    "geometry_converged": false,
+    "kpoint_count": 2.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.66667,
+        -0.33333,
+        0.0,
+        0.0
+      ],
+      [
+        2,
+        0.33333,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "ao_count": 4.0,
+    "printed_mo_counts": [
+      4
+    ],
+    "last_mo_count": 4,
+    "full_ks_subspace_rebuilds": 0,
+    "total_ao_count": 4,
+    "cohort": "recovery",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 3.53311280868e-06,
+        "frozen_gap_Ha": 1.149417041581e-11,
+        "commutator_Ha": 5.613232902931e-06
+      }
+    ],
+    "input_sha256": "b3663acc2bcd3fb85c6df2776e5ad3db10f5ebf93d5fed1228b9d5f32c5233df",
+    "free_energy_change_from_baseline_Ha": 0.0,
+    "steps_change_from_baseline": 0
+  },
+  {
+    "case": "cu-on",
+    "group": "stationarity",
+    "repetition": 1,
+    "ranks": 2,
+    "threads_per_rank": 1,
+    "returncode": 0,
+    "time_limit_s": 1800,
+    "binary_sha256": "5bd515281ed9053c85c30a43e366af02c307de9d3f9fe2de1675b2cb2091d3f6",
+    "elapsed_including_launcher_s": 102.91525306738913,
+    "hostname": "ctu016",
+    "command": [
+      "srun",
+      "--mpi=pmix",
+      "--exclusive",
+      "--exact",
+      "--mem=2G",
+      "--cpu-bind=cores",
+      "--nodes=1",
+      "--ntasks=2",
+      "--cpus-per-task=1",
+      "/data/home2/kuehne88/ot-metals-validation-20261018/build-spin-fix/bin/cp2k.psmp",
+      "-i",
+      "input.inp",
+      "-o",
+      "output.out"
+    ],
+    "normal_end": true,
+    "scf_converged": true,
+    "converged_steps": [
+      18
+    ],
+    "printed_iterations": 18,
+    "free_energy_Ha": -48.09963938388169,
+    "minus_TS_Ha": -0.00241886740123,
+    "fermi_energy_Ha": 0.28022916657069,
+    "integrated_spin": null,
+    "total_charge_error": 4.9e-09,
+    "band_boundary_warnings": 0,
+    "cp2k_time_s": 100.161,
+    "actual_mpi_ranks": 2,
+    "launcher_valid": true,
+    "last_scf_row": "18 OT CG       0.23E+00    2.1     0.00000047       -48.0996393838 -1.51E-09",
+    "last_scf_iteration": 18,
+    "last_scf_residual": 4.7e-07,
+    "iteration_limit_reached": false,
+    "electron_count_grid": 10.9999999949,
+    "electron_count_grid_error": 5.1e-09,
+    "force_rows_Ha_per_bohr": [
+      [
+        8.07079287e-16,
+        2.39625058e-15,
+        6.55965337e-16
+      ]
+    ],
+    "stress_bar": [
+      [
+        126012.845743,
+        -205410.706492,
+        -205410.059458
+      ],
+      [
+        -205410.706492,
+        126012.827493,
+        -205410.073023
+      ],
+      [
+        -205410.059458,
+        -205410.073023,
+        126011.604194
+      ]
+    ],
+    "finite_entropy": true,
+    "generalized_correction_Ha": null,
+    "objective_correction_Ha": -0.00241886740123,
+    "geometry_converged": false,
+    "kpoint_count": 4.0,
+    "printed_kpoints": [
+      [
+        1,
+        0.25,
+        -0.25,
+        -0.25,
+        -0.25
+      ],
+      [
+        2,
+        0.25,
+        -0.25,
+        -0.25,
+        0.25
+      ],
+      [
+        3,
+        0.25,
+        -0.25,
+        0.25,
+        -0.25
+      ],
+      [
+        4,
+        0.25,
+        -0.25,
+        0.25,
+        0.25
+      ]
+    ],
+    "ao_count": 18.0,
+    "printed_mo_counts": [
+      18
+    ],
+    "last_mo_count": 18,
+    "full_ks_subspace_rebuilds": 0,
+    "total_ao_count": 18,
+    "cohort": "recovery",
+    "canonical_endpoint_checks": [
+      {
+        "density_residual": 1.928032716449e-05,
+        "frozen_gap_Ha": 7.180807133807e-10,
+        "commutator_Ha": 3.462551770479e-05
+      }
+    ],
+    "input_sha256": "5fe74dccc8f4a32240037da90e3968624513c7465ee31d721f86a4acc7198e8e",
+    "free_energy_change_from_baseline_Ha": 0.0,
+    "steps_change_from_baseline": 0
+  }
+]

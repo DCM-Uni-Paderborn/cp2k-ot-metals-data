@@ -37,6 +37,13 @@ Credentials, correspondence, local author notes, and unrelated development
 files are excluded. Publication of the dataset does not imply approval of
 an article or its author declarations.
 
+stationarity-20261019/ supplements the frozen campaign with independent
+canonical-density checks, a matched eight-atom Al calculation, and a
+metric-independent recovery-policy control. The baseline negative result
+is retained. Its README.txt distinguishes the two executable patches and
+the limited scope of the additional measurements. The cumulative follow-up
+release is validation-2026-10-19; the earlier release remains immutable.
+
 CP2K-derived inputs, numerical data definitions, and source patches retain
 their upstream licensing. The CP2K license text is included as
 LICENSE.cp2k. The exact upstream source and dependency pins are recorded

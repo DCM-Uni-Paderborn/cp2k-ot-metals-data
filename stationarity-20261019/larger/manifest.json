@@ -1,0 +1,180 @@
+{
+  "source_revision": "f6c7e1d6e4538564667591a51bda8dc52854de82",
+  "cases": [
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "CG",
+      "name": "al-eight-cg",
+      "group": "larger",
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          4.05,
+          0,
+          4.05
+        ],
+        [
+          4.05,
+          4.05,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          2.025,
+          2.025,
+          0.0
+        ],
+        [
+          2.025,
+          0.0,
+          2.025
+        ],
+        [
+          4.05,
+          2.025,
+          2.025
+        ],
+        [
+          0.0,
+          2.025,
+          2.025
+        ],
+        [
+          2.025,
+          4.05,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          4.05
+        ],
+        [
+          4.05,
+          4.05,
+          4.05
+        ]
+      ],
+      "added_mos": "AUTO",
+      "input_sha256": "5b61a0d2e8d91a946b0f1e810aaf63b816d458e29476a182dc4718e59eacd16d",
+      "executable_configuration": "endpoint_audit"
+    },
+    {
+      "a": 4.05,
+      "basis": "DZVP-MOLOPT-SR-GTH",
+      "basis_file": "BASIS_MOLOPT",
+      "potential": "GTH-PBE-q3",
+      "functional": "PBE",
+      "electrons": 3,
+      "temperature": 600,
+      "mesh": [
+        2,
+        2,
+        2
+      ],
+      "cutoff": 300,
+      "spin": false,
+      "element": "Al",
+      "method": "DIAG",
+      "name": "al-eight-diag",
+      "group": "larger",
+      "cell": [
+        [
+          0,
+          4.05,
+          4.05
+        ],
+        [
+          4.05,
+          0,
+          4.05
+        ],
+        [
+          4.05,
+          4.05,
+          0
+        ]
+      ],
+      "coordinates": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          2.025,
+          2.025,
+          0.0
+        ],
+        [
+          2.025,
+          0.0,
+          2.025
+        ],
+        [
+          4.05,
+          2.025,
+          2.025
+        ],
+        [
+          0.0,
+          2.025,
+          2.025
+        ],
+        [
+          2.025,
+          4.05,
+          2.025
+        ],
+        [
+          2.025,
+          2.025,
+          4.05
+        ],
+        [
+          4.05,
+          4.05,
+          4.05
+        ]
+      ],
+      "added_mos": "AUTO",
+      "input_sha256": "77eefbb982ccb244c41de1f139bd9b8f515ae453fa71d87d8a21d47664429894",
+      "executable_configuration": "endpoint_audit"
+    }
+  ],
+  "data_sha256": {
+    "BASIS_SET": "1d60d67ad5f22253185fda9d27b23558521e04a2b0c5efabaf44a33fe2208182",
+    "BASIS_MOLOPT": "686dd72e7601ee41d4a173e4c7c3946f1e750f03095090f44d3821c180a81a61",
+    "POTENTIAL": "b0e5adf52fc7b7dcf3f2d156ae3f1327780f6f4d11973db329545e5c73bdc361"
+  },
+  "executable_configuration": {
+    "name": "endpoint_audit",
+    "binary_sha256": "34072a76d4248a588a73fa1f5d99c999c99a73d60bfac1f63452891558652d28",
+    "source_patch": "../provenance/source.patch",
+    "build_configuration": "validation-20261018: spin-correction GCC 14.3.0 / MPI / OpenMP CPU build"
+  }
+}

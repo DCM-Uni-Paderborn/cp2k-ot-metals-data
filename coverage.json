@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "publication_ready": true,
   "publication_scope": "Verified dataset only, not manuscript or author approval",
-  "release": "validation-2026-10-18",
+  "release": "validation-2026-10-19",
   "public_release_authorized": true,
   "matrix_experiment": {
     "status": "reproduced",
@@ -33,10 +33,16 @@
     "status": "transcriptions_not_used_for_replacement_tables",
     "raw_evidence_complete": false
   },
+  "stationarity_controls": {
+    "root": "stationarity-20261019",
+    "status": "eleven_completed_MPI2_controls_with_separate_source_patches",
+    "analysis": "stationarity-20261019/analysis.json",
+    "scope": "Independent canonical-density diagnosis, matched recovery-policy control, and one eight-atom Al example"
+  },
   "limitations": [
     "Full-AO Ni and several denser-mesh or constrained cases exhaust their numerical budgets",
     "Tight finite-temperature dynamics does not complete for every minimizer",
-    "Occupation-preconditioner OFF can report SCF convergence at an inequivalent endpoint",
+    "The baseline occupation-metric-dependent recovery policy reports false physical stationarity in the Al OFF control; the separate metric-independent recovery control resolves this case but is not a universal convergence certificate",
     "Only wavefunctions, not complete minimizer histories, are restarted",
     "Compact models do not establish materials accuracy, general speedup, or long-time stability"
   ],

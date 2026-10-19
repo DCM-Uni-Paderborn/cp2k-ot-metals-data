@@ -1,0 +1,1 @@
+5bd515281ed9053c85c30a43e366af02c307de9d3f9fe2de1675b2cb2091d3f6  build-spin-fix/bin/cp2k.psmp
